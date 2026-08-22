@@ -322,9 +322,10 @@ function App() {
       Register Your Interest
     </a>
     <a href="#contact" className="outline-button">
-    Download Brochure
-    <span>↓</span>
-  </a>
+  Download Brochure
+  <span>↓</span>
+</a>
+    
 
   </div>
 
