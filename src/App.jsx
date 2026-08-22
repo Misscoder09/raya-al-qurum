@@ -321,6 +321,10 @@ function App() {
     <a href="#contact" className="outline-button">
       Register Your Interest
     </a>
+    <a href="#contact" className="outline-button">
+    Download Brochure
+    <span>↓</span>
+  </a>
 
   </div>
 
