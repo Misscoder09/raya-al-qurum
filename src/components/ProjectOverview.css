@@ -1,0 +1,1100 @@
+/* =========================================================
+   RAYA AL QURUM — PROJECT OVERVIEW
+   FINAL LUXURY EDITORIAL DESIGN
+   ========================================================= */
+
+.project-overview {
+  --cream: #f5efe4;
+  --cream-2: #fbf8f1;
+  --gold: #b58a4a;
+  --gold-soft: #d4b47c;
+  --black: #10100f;
+  --text: #1b1a17;
+  --muted: #69645c;
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+
+  display: grid;
+  grid-template-columns: 43% 57%;
+  grid-template-rows: minmax(720px, 780px) auto;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   LEFT EDITORIAL PANEL
+   ========================================================= */
+
+.po-left {
+  position: relative;
+  z-index: 10;
+
+  min-height: 780px;
+  padding: 80px 55px 70px 7vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 18%,
+      rgba(181, 138, 74, 0.055),
+      transparent 25%
+    ),
+    var(--cream);
+
+  box-sizing: border-box;
+}
+
+
+/* Large section number */
+
+.po-number {
+  position: absolute;
+  top: 34px;
+  left: 38px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 138px;
+  line-height: 0.8;
+  font-weight: 400;
+
+  color: rgba(181, 138, 74, 0.09);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.po-eyebrow {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 25px;
+
+  color: #8c642f;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.po-eyebrow span {
+  width: 42px;
+  height: 1px;
+  flex-shrink: 0;
+
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+.po-title {
+  position: relative;
+  z-index: 4;
+
+  max-width: 570px;
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(52px, 4.4vw, 72px);
+  line-height: 0.96;
+  font-weight: 500;
+  letter-spacing: -2.8px;
+
+  color: #11110f;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.po-subtitle {
+  position: relative;
+  z-index: 4;
+
+  margin: 22px 0 29px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(31px, 2.7vw, 46px);
+  line-height: 1.08;
+  font-weight: 400;
+  font-style: italic;
+
+  letter-spacing: -1px;
+
+  color: #a27a45;
+}
+
+
+/* =========================================================
+   DECORATIVE DIVIDER
+   ========================================================= */
+
+.po-divider {
+  width: 100%;
+  max-width: 450px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin: 0 0 27px;
+
+  color: var(--gold);
+}
+
+.po-divider::before,
+.po-divider::after {
+  content: "";
+
+  height: 1px;
+  flex: 1;
+
+  background: linear-gradient(
+    to right,
+    rgba(181, 138, 74, 0.15),
+    rgba(181, 138, 74, 0.65)
+  );
+}
+
+.po-divider::after {
+  background: linear-gradient(
+    to left,
+    rgba(181, 138, 74, 0.15),
+    rgba(181, 138, 74, 0.65)
+  );
+}
+
+.po-divider span {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   BODY COPY
+   ========================================================= */
+
+.po-text {
+  position: relative;
+  z-index: 4;
+
+  max-width: 500px;
+
+  margin: 0 0 16px;
+
+  font-size: 13.5px;
+  line-height: 1.85;
+  font-weight: 400;
+
+  color: #5e5951;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.po-button {
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  max-width: 425px;
+
+  min-height: 58px;
+
+  margin-top: 18px;
+  padding: 0 22px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(181, 138, 74, 0.72);
+
+  background: transparent;
+
+  color: #8a622f;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.po-button span {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.po-button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.po-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   RIGHT IMAGE AREA
+   ========================================================= */
+
+.po-right {
+  position: relative;
+  z-index: 2;
+
+  min-height: 780px;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+
+/* Actual building image */
+
+.po-building-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center center;
+
+  filter: saturate(0.92) contrast(1.03);
+
+  transform: scale(1.015);
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   MAIN LARGE CURVED CREAM EDGE
+   THIS CREATES THE REAL EDITORIAL ARC
+   ========================================================= */
+
+.po-right::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 3;
+
+  left: -27%;
+  top: -12%;
+
+  width: 53%;
+  height: 124%;
+
+  background: var(--cream);
+
+  /*
+    The right side of this shape is curved.
+    This gives the image a large smooth architectural arc.
+  */
+
+  border-radius: 0 58% 58% 0 / 0 50% 50% 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SUBTLE GOLD ARC
+   ========================================================= */
+
+.po-gold-curve {
+  position: absolute;
+
+  z-index: 4;
+
+  left: -29%;
+  top: -14%;
+
+  width: 55%;
+  height: 128%;
+
+  border: 1px solid rgba(181, 138, 74, 0.55);
+
+  border-left: none;
+
+  border-radius: 0 58% 58% 0 / 0 50% 50% 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BLACK LUXURY INFORMATION CARD
+   ========================================================= */
+
+.po-card {
+  position: absolute;
+
+  z-index: 8;
+
+  /*
+    Smaller than previous version.
+    Sits naturally over the building.
+  */
+
+  left: 12%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 245px;
+  min-height: 390px;
+
+  padding: 32px 27px 25px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #171715 0%,
+      #0d0d0c 100%
+    );
+
+  border: 1px solid rgba(210, 178, 123, 0.68);
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Card symbol */
+
+.po-card-symbol {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border: 1px solid rgba(210, 178, 123, 0.8);
+
+  color: var(--gold-soft);
+
+  font-size: 16px;
+}
+
+
+/* Card location */
+
+.po-card-location {
+  margin-bottom: 7px;
+
+  color: var(--gold-soft);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+
+/* Muscat */
+
+.po-card h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1;
+
+  color: #fff;
+}
+
+
+/* Oman */
+
+.po-card-country {
+  margin-top: 7px;
+
+  color: var(--gold-soft);
+
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+
+/* Card divider */
+
+.po-card-line {
+  width: 62px;
+  height: 1px;
+
+  margin: 23px 0;
+
+  background: var(--gold);
+}
+
+
+/* Card paragraph */
+
+.po-card p {
+  max-width: 175px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 11.5px;
+  line-height: 1.8;
+}
+
+
+/* Card bottom */
+
+.po-card-bottom {
+  margin-top: auto;
+    color: #b99a62 !important;
+
+
+  color: var(--gold-soft);
+
+  font-size: 12px;
+
+  letter-spacing: 7px;
+}
+
+
+/* =========================================================
+   TOP RIGHT STAR
+   ========================================================= */
+
+.po-star {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 30px;
+  right: 30px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(210, 178, 123, 0.65);
+
+  border-radius: 50%;
+
+  color: var(--gold-soft);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   LOCATION BAR
+   ========================================================= */
+
+.po-location-bar {
+  position: absolute;
+
+  z-index: 12;
+
+  right: 3.5%;
+  bottom: 27px;
+
+  width: 465px;
+  min-height: 82px;
+
+  padding: 15px 22px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(250, 247, 239, 0.97);
+
+  border: 1px solid rgba(181, 138, 74, 0.18);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Location item */
+
+.po-location-item {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* Icon */
+
+.po-location-icon {
+  color: var(--gold);
+
+  font-size: 21px;
+
+  flex-shrink: 0;
+}
+
+
+/* Small title */
+
+.po-location-item small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9b713d;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+/* Value */
+
+.po-location-item strong {
+  display: block;
+
+  color: #24221e;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* Divider */
+
+.po-location-line {
+  width: 1px;
+  height: 40px;
+
+  margin: 0 16px;
+
+  background: rgba(181, 138, 74, 0.30);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTTOM FEATURES
+   ========================================================= */
+
+.po-features {
+  grid-column: 1 / -1;
+
+  position: relative;
+  z-index: 20;
+
+  min-height: 165px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  background: #11110f;
+
+  border-top: 1px solid rgba(210, 178, 123, 0.30);
+}
+
+
+/* Feature */
+
+.po-feature {
+  position: relative;
+
+  padding: 27px 22px 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* Separators */
+
+.po-feature:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 25px;
+
+  width: 1px;
+  height: calc(100% - 50px);
+
+  background: rgba(210, 178, 123, 0.25);
+}
+
+
+/* Feature number/icon */
+
+.po-feature-icon {
+  height: 27px;
+
+  margin-bottom: 8px;
+
+  color: var(--gold-soft);
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 18px;
+}
+
+
+/* Feature heading */
+
+.po-feature h4 {
+  margin: 0 0 8px;
+
+  color: var(--gold-soft);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* Feature text */
+
+.po-feature p {
+  max-width: 205px;
+
+  margin: auto;
+
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 10.5px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+  .project-overview {
+    grid-template-columns: 42% 58%;
+    grid-template-rows: minmax(760px, 820px) auto;
+  }
+
+  .po-left {
+    min-height: 820px;
+    padding-left: 7vw;
+  }
+
+  .po-right {
+    min-height: 820px;
+  }
+
+  .po-card {
+    left: 12%;
+    width: 255px;
+    min-height: 405px;
+  }
+
+  .po-location-bar {
+    width: 500px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .project-overview {
+    grid-template-columns: 43% 57%;
+  }
+
+  .po-left {
+    min-height: 720px;
+
+    padding-left: 45px;
+    padding-right: 30px;
+  }
+
+  .po-right {
+    min-height: 720px;
+  }
+
+  .po-title {
+    font-size: 51px;
+  }
+
+  .po-subtitle {
+    font-size: 35px;
+  }
+
+  .po-text {
+    font-size: 12.5px;
+  }
+
+  .po-card {
+    left: 10%;
+    width: 225px;
+    min-height: 370px;
+
+    padding: 29px 23px 24px;
+  }
+
+  .po-card h3 {
+    font-size: 28px;
+  }
+
+  .po-location-bar {
+    width: 405px;
+  }
+
+  .po-feature {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .project-overview {
+    display: block;
+  }
+
+  .po-left {
+    min-height: auto;
+
+    padding:
+      100px
+      40px
+      65px;
+  }
+
+  .po-number {
+    top: 28px;
+    left: 28px;
+    font-size: 105px;
+    
+  }
+
+  .po-title {
+    font-size: 53px;
+  }
+
+  .po-subtitle {
+    font-size: 37px;
+  }
+
+  .po-right {
+    min-height: 690px;
+  }
+
+
+  /* Bigger mobile/tablet arc */
+
+  .po-right::before {
+    left: -45%;
+    width: 70%;
+
+    border-radius:
+      0 60% 60% 0 /
+      0 50% 50% 0;
+  }
+
+  .po-gold-curve {
+    left: -47%;
+    width: 72%;
+  }
+
+
+  .po-card {
+    left: 15%;
+
+    width: 235px;
+    min-height: 380px;
+  }
+
+  .po-location-bar {
+    right: 5%;
+    bottom: 22px;
+
+    width: 430px;
+  }
+
+  .po-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .po-feature:not(:last-child)::after {
+    display: none;
+  }
+
+  .po-feature {
+
+      color: #b99a62 !important;
+
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .project-overview {
+    display: block;
+  }
+
+  .po-left {
+    padding:
+      85px
+      23px
+      50px;
+  }
+
+  .po-number {
+    top: 24px;
+    left: 18px;
+    font-size: 82px;
+  }
+
+  .po-eyebrow {
+    gap: 11px;
+
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .po-eyebrow span {
+    width: 26px;
+  }
+
+  .po-title {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+
+  .po-subtitle {
+    font-size: 31px;
+  }
+
+  .po-text {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .po-button {
+    max-width: 100%;
+
+    min-height: 56px;
+
+    padding: 0 17px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+
+  /* Mobile image */
+
+  .po-right {
+    min-height: 650px;
+  }
+
+
+  /* Mobile arc */
+
+  .po-right::before {
+    left: -70%;
+    width: 100%;
+    height: 115%;
+    top: -7%;
+
+    border-radius:
+      0 65% 65% 0 /
+      0 50% 50% 0;
+  }
+
+  .po-gold-curve {
+    left: -72%;
+    width: 102%;
+    height: 117%;
+    top: -8%;
+  }
+
+
+  /* Smaller card */
+
+  .po-card {
+    left: 50%;
+    top: 43%;
+
+    width: 215px;
+    min-height: 355px;
+
+    transform: translate(-50%, -50%);
+
+    padding: 28px 22px 23px;
+  }
+
+  .po-card h3 {
+    font-size: 28px;
+  }
+
+  .po-card p {
+    font-size: 11px;
+  }
+
+
+  /* Star */
+
+  .po-star {
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+  }
+
+
+  /* Location */
+
+  .po-location-bar {
+    position: absolute;
+
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    width: auto;
+
+    display: block;
+
+    padding: 14px 17px;
+  }
+
+  .po-location-item {
+    padding: 7px 0;
+  }
+
+  .po-location-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 4px 0;
+  }
+
+
+  /* Features */
+
+  .po-features {
+    grid-template-columns: 1fr;
+  }
+
+  .po-feature {
+    padding: 25px 22px;
+  }
+
+  .po-feature:not(:last-child)::after {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .po-title {
+    font-size: 38px;
+  }
+
+  .po-subtitle {
+    font-size: 28px;
+  }
+
+  .po-card {
+    width: 200px;
+    min-height: 340px;
+  }
+
+  .po-button {
+    font-size: 8.5px;
+    letter-spacing: 1.7px;
+  }
+}
+
+

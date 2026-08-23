@@ -1,3 +1,4 @@
+import ProjectOverview from "./components/ProjectOverview";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -18,9 +19,10 @@ function App() {
         Home
       </a>
       <div className="mobile-submenu">
-        <a href="#project-overview" onClick={() => setMenuOpen(false)}>
-          Project Overview
+         <a href="#project-overview" onClick={() => setMenuOpen(false)}>
+      Project Overview
         </a>
+      
         <a href="#architecture" onClick={() => setMenuOpen(false)}>
           Architecture
         </a>
@@ -357,52 +359,124 @@ function App() {
 
         </section>
 
+        {/* ================= PROJECT OVERVIEW ================= */}
 
-        {/* ================= INTRO ================= */}
-        <section className="intro section" id="about">
+        <ProjectOverview />
 
-          <div className="section-number">01</div>
+        {/* ================= ARCHITECTURE ================= */}
+    
+      
+       <section className="architecture section" id="architecture">
+          <div className="section-top">
+             <div>
+       <div className="eyebrow dark-eyebrow">
+        <span></span>
+        ARCHITECTURE
+      </div>
 
-          <div className="intro-grid">
+      <h2>
+        Designed with
+        <br />
+        <i>purpose.</i>
+      </h2>
+    </div>
 
-            <div className="intro-title">
-              <div className="eyebrow dark-eyebrow">
-                <span></span>
-                THE PROJECT
-              </div>
+    <p>
+      A refined architectural vision combining contemporary
+      design, elegant proportions and thoughtful planning.
+    </p>
+  </div>
 
-              <h2>
-                More than a residence.
-                <br />
-                <i>A position in Muscat's future.</i>
-              </h2>
-            </div>
+  <div className="architecture-content">
+    <div className="architecture-card">
+      <span>01</span>
+      <h3>Contemporary Design</h3>
+      <p>
+        Clean architectural lines and sophisticated details
+        create a distinctive modern identity.
+      </p>
+    </div>
 
-            <div className="intro-text">
+    <div className="architecture-card">
+      <span>02</span>
+      <h3>Thoughtful Planning</h3>
+      <p>
+        Every space is carefully planned to balance comfort,
+        functionality and refined living.
+      </p>
+    </div>
 
-              <p>
-                Raya Al Qurum brings together refined architecture,
-                contemporary residences and a prime Al Qurum address
-                to create a distinctive opportunity for living and
-                investment.
-              </p>
+    <div className="architecture-card">
+      <span>03</span>
+      <h3>Elegant Living</h3>
+      <p>
+        A cohesive architectural approach designed around
+        contemporary lifestyles.
+      </p>
+    </div>
+  </div>
+</section>
+ 
+ {/* ================= DAY & NIGHT ================= */}
+<section className="day-night section" id="day-night">
+  <div className="section-top">
+    <div>
+      <div className="eyebrow dark-eyebrow">
+        <span></span>
+        DAY & NIGHT
+      </div>
 
-              <p>
-                Designed around modern lifestyles, the development
-                offers a carefully considered collection of homes,
-                lifestyle amenities and investment potential.
-              </p>
+      <h2>
+        A different experience
+        <br />
+        <i>throughout the day.</i>
+      </h2>
+    </div>
 
-              <a href="#investment" className="text-link">
-                Discover the opportunity
-                <span>→</span>
-              </a>
+    <p>
+      From calm mornings to vibrant evenings, Raya Al Qurum
+      is designed to offer a refined lifestyle at every hour.
+    </p>
+  </div>
 
-            </div>
+  <div className="day-night-grid">
+    <div className="day-night-card">
+      <span>01</span>
+      <h3>Morning</h3>
+      <p>
+        Start the day with natural light, peaceful surroundings
+        and thoughtfully designed spaces.
+      </p>
+    </div>
 
-          </div>
+    <div className="day-night-card">
+      <span>02</span>
+      <h3>Afternoon</h3>
+      <p>
+        Enjoy contemporary amenities and comfortable spaces
+        designed for everyday living.
+      </p>
+    </div>
 
-        </section>
+    <div className="day-night-card">
+      <span>03</span>
+      <h3>Evening</h3>
+      <p>
+        Experience the city as it comes alive with elegant
+        spaces created for relaxation and connection.
+      </p>
+    </div>
+
+    <div className="day-night-card">
+      <span>04</span>
+      <h3>Night</h3>
+      <p>
+        Unwind in a sophisticated environment surrounded by
+        the atmosphere of Muscat after sunset.
+      </p>
+    </div>
+  </div>
+</section>
 
 
         {/* ================= RESIDENCES ================= */}
@@ -451,7 +525,7 @@ function App() {
               <span className="card-arrow">↗</span>
             </article>
 
-            <article id="2bhk-Study" className="residence-card">
+            <article id="2bhk-study" className="residence-card">
               <div className="card-number">03</div>
               <div className="residence-icon">03</div>
               <h3>2 BHK + Study</h3>
