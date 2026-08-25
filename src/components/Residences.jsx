@@ -10,7 +10,7 @@ const residences = [
     description:
       "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
     area: "65.02 SQ.M.",
-    price: "OMR 48,765",
+    price: "OMR 48,765.000",
     bedrooms: "1",
     baths: "1",
     utility: "1",
