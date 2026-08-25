@@ -648,138 +648,7 @@ footer {
   font-size: 17px;
 }
 
-/* =====================================================
-   RESIDENCES
-===================================================== */
 
-.residences {
-  background: var(--sand);
-}
-
-.section-top {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  margin-bottom: 65px;
-}
-
-.section-top h2 {
-  margin-top: 25px;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(43px, 5vw, 70px);
-  font-weight: 400;
-  line-height: 1;
-}
-
-.section-top h2 i {
-  color: var(--gold);
-}
-
-.section-top > p {
-  width: 350px;
-  color: #625e57;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.residence-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  border: none;
-}
-
-.residence-card {
-  position: relative;
-  min-height: 370px;
-  padding: 34px 28px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.58);
-  border: 1px solid rgba(167, 123, 61, 0.18);
-  border-radius: 18px;
-  box-shadow:
-    0 8px 25px rgba(45, 38, 28, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  color: var(--text);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    background 0.35s ease,
-    border-color 0.35s ease;
-}
-
-.residence-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(167, 123, 61, 0.55),
-    transparent
-  );
-}
-
-.residence-card:hover {
-  background: rgba(255, 255, 255, 0.82);
-  border-color: rgba(167, 123, 61, 0.38);
-  transform: translateY(-7px);
-  box-shadow:
-    0 18px 40px rgba(45, 38, 28, 0.11),
-    0 2px 8px rgba(167, 123, 61, 0.08);
-}
-
-.featured-residence {
-  background: rgba(255, 255, 255, 0.46);
-}
-
-.card-number {
-  position: absolute;
-  top: 27px;
-  right: 25px;
-  color: rgba(36, 34, 30, 0.28);
-  font-size: 9px;
-  letter-spacing: 1px;
-}
-
-.residence-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 55px;
-  margin-bottom: 90px;
-  border: 1px solid rgba(167, 123, 61, 0.45);
-  color: var(--gold);
-  font-family: "Playfair Display", serif;
-  font-size: 13px;
-}
-
-.residence-card h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  font-weight: 400;
-}
-
-.residence-card p {
-  max-width: 230px;
-  margin-top: 10px;
-  color: #625e57;
-  font-size: 10px;
-  line-height: 1.7;
-}
-
-.card-arrow {
-  position: absolute;
-  right: 27px;
-  bottom: 28px;
-  color: var(--gold);
-  font-size: 19px;
-}
 
 /* =====================================================
    AMENITIES
@@ -1635,17 +1504,6 @@ footer {
     font-size: 45px;
   }
 
-  .residence-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .residence-card {
-    min-height: 300px;
-  }
-
-  .residence-icon {
-    margin-bottom: 65px;
-  }
 
   .amenities {
     padding: 90px 6%;
@@ -1850,7 +1708,7 @@ footer {
     padding-right: 20px;
   }
 
-  .residence-grid,
+
   .floor-plan-grid,
   .investment-grid {
     grid-template-columns: 1fr;

@@ -1,4 +1,5 @@
 import ProjectOverview from "./components/ProjectOverview";
+import Residences from "./components/Residences";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -362,6 +363,7 @@ function App() {
         {/* ================= PROJECT OVERVIEW ================= */}
 
         <ProjectOverview />
+        <Residences />
 
         {/* ================= ARCHITECTURE ================= */}
     
@@ -477,79 +479,6 @@ function App() {
     </div>
   </div>
 </section>
-
-
-        {/* ================= RESIDENCES ================= */}
-        <section className="residences section" id="residences">
-
-          <div className="section-top">
-
-            <div>
-              <div className="eyebrow dark-eyebrow">
-                <span></span>
-                RESIDENCES
-              </div>
-
-              <h2>Designed around <i>you.</i></h2>
-            </div>
-
-            <p>
-              Thoughtfully planned residences combining
-              comfort, functionality and contemporary design.
-            </p>
-
-          </div>
-
-
-          <div className="residence-grid">
-
-            <article id="1bhk" className="residence-card featured-residence">
-              <div className="card-number">01</div>
-              <div className="residence-icon">01</div>
-              <h3>1 BHK</h3>
-              <p>
-                A refined and efficient home designed
-                for modern urban living.
-              </p>
-              <span className="card-arrow">↗</span>
-            </article>
-
-            <article id="2bhk" className="residence-card">
-              <div className="card-number">02</div>
-              <div className="residence-icon">02</div>
-              <h3>2 BHK</h3>
-              <p>
-                Spacious interiors offering comfort
-                for contemporary family living.
-              </p>
-              <span className="card-arrow">↗</span>
-            </article>
-
-            <article id="2bhk-study" className="residence-card">
-              <div className="card-number">03</div>
-              <div className="residence-icon">03</div>
-              <h3>2 BHK + Study</h3>
-              <p>
-                Flexible space created for work,
-                creativity and everyday life.
-              </p>
-              <span className="card-arrow">↗</span>
-            </article>
-
-            <article id="3bhk" className="residence-card">
-              <div className="card-number">04</div>
-              <div className="residence-icon">04</div>
-              <h3>3 BHK</h3>
-              <p>
-                Generous living spaces created for
-                elevated family lifestyles.
-              </p>
-              <span className="card-arrow">↗</span>
-            </article>
-
-          </div>
-
-        </section>
 
         {/* ================= FLOOR PLANS ================= */}
 

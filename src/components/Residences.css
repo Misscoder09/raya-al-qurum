@@ -1,0 +1,2445 @@
+/* =========================================================
+   RAYA AL QURUM — RESIDENCES
+   LUXURY RESIDENCE CARD SECTION
+========================================================= */
+
+.residences-section {
+  position: relative;
+  width: 100%;
+  padding: 115px 5vw 140px;
+  overflow: hidden;
+
+  background-image: url("/images/residences-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Elegant dark overlay over the ENTIRE section */
+.residences-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 14, 13, 0.55) 0%,
+      rgba(15, 14, 13, 0.42) 45%,
+      rgba(15, 14, 13, 0.62) 100%
+    );
+}
+
+/* Keep all content above background */
+.residences-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   HEADER / INTRO
+========================================================= */
+
+.residences-intro {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 950px;
+
+  margin: 0 auto 75px;
+  padding: 0;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  text-align: center;
+}
+
+.residences-intro-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* Small luxury label */
+
+.residences-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-bottom: 25px;
+
+  color: #d0b487;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.residences-eyebrow::before,
+.residences-eyebrow::after {
+  content: "";
+
+  width: 42px;
+  height: 1px;
+
+  background: rgba(208, 180, 135, 0.75);
+}
+
+
+/* Main heading */
+
+.residences-intro h2,
+.residences-header h2 {
+  margin: 0;
+
+  color: #fffaf1;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 5.5vw, 78px);
+
+  font-weight: 400;
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+
+  text-shadow:
+    0 3px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Italic luxury line */
+
+.residences-intro h2 em,
+.residences-header h2 em {
+  display: block;
+
+  color: #d3b27d;
+
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+
+/* Description */
+
+.residences-intro p,
+.residences-header p {
+  max-width: 680px;
+
+  margin: 28px auto 0;
+
+  color: rgba(255, 250, 241, 0.86);
+
+  font-size: 13px;
+  line-height: 1.9;
+  letter-spacing: 0.25px;
+
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.residence-grid {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  padding: 0;
+
+  background: transparent !important;
+}
+
+
+/* =========================================================
+   RESIDENCE CARD
+========================================================= */
+
+.residence-card {
+  position: relative;
+
+  height: 360px;
+  min-height: 360px;
+
+  padding: 27px 25px 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 253, 248, 0.97),
+      rgba(239, 232, 220, 0.94)
+    ) !important;
+
+  border: 1px solid rgba(201, 166, 112, 0.42);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+  transition:
+    transform 0.65s cubic-bezier(.16,.84,.24,1),
+    box-shadow 0.65s ease,
+    border-color 0.5s ease;
+}
+
+
+/* Card hover */
+
+.residence-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(205, 169, 112, 0.75);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+
+/* Click effect */
+
+.residence-card:active {
+  transform: translateY(-5px) scale(0.992);
+}
+
+
+/* =========================================================
+   CARD GOLD CORNER DETAILS
+========================================================= */
+
+.residence-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 17px;
+  right: 17px;
+
+  width: 38px;
+  height: 38px;
+
+  border-top: 1px solid rgba(165, 126, 69, 0.55);
+  border-right: 1px solid rgba(165, 126, 69, 0.55);
+
+  pointer-events: none;
+}
+
+.residence-card::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 17px;
+  left: 17px;
+
+  width: 30px;
+  height: 30px;
+
+  border-left: 1px solid rgba(165, 126, 69, 0.38);
+  border-bottom: 1px solid rgba(165, 126, 69, 0.38);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.card-number,
+.residence-card .card-number {
+  position: absolute;
+
+  top: 23px;
+  right: 27px;
+
+  color: #967344;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.card-number::after {
+  content: "";
+
+  display: block;
+
+  width: 19px;
+  height: 1px;
+
+  margin-top: 7px;
+  margin-left: auto;
+
+  background: #b79a6c;
+}
+
+
+/* =========================================================
+   UNIT CIRCLE
+========================================================= */
+
+.residence-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(151, 116, 68, 0.38);
+
+  border-radius: 50%;
+
+  background: rgba(255, 253, 248, 0.82);
+
+  color: #765a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 15px;
+
+  transition:
+    background 0.45s ease,
+    color 0.45s ease,
+    transform 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.residence-card:hover .residence-icon {
+  background: #8e682f;
+
+  color: #fff;
+
+  border-color: #8e682f;
+
+  transform: rotate(5deg);
+}
+
+
+/* =========================================================
+   UNIT IMAGE
+========================================================= */
+
+.residence-card-image {
+  width: 100%;
+  height: 110px;
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 252, 246, 0.72);
+
+  border: 1px solid rgba(153, 121, 72, 0.20);
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.residence-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 8px;
+
+  display: block;
+
+  transition: transform 0.7s ease;
+}
+
+.residence-card:hover .residence-card-image img {
+  transform: scale(1.035);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.residence-card-content {
+  margin-top: 17px;
+}
+
+.card-label,
+.residence-card .residence-type {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #9a7747;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2.7px;
+
+  text-transform: uppercase;
+}
+
+.residence-card-content h3,
+.residence-card h3 {
+  max-width: 300px;
+
+  margin: 0 0 10px;
+
+  color: #211e19;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.3px;
+}
+
+.residence-card-content p,
+.residence-card > p {
+  max-width: 310px;
+
+  margin: 0;
+
+  color: #716a5f;
+
+  font-size: 10.5px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.card-arrow,
+.residence-card .residence-arrow,
+.residence-card a {
+  width: 41px;
+  height: 41px;
+
+  margin-top: auto;
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(145, 109, 61, 0.35);
+
+  border-radius: 50%;
+
+  background: rgba(255, 253, 248, 0.6);
+
+  color: #80613a;
+
+  font-size: 15px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.residence-card:hover .card-arrow,
+.residence-card:hover .residence-arrow,
+.residence-card:hover a {
+  background: #8e682f;
+
+  color: #fff;
+
+  border-color: #8e682f;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   FEATURED CARD
+========================================================= */
+
+.residence-card.featured-residence {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(248, 240, 226, 0.98),
+      rgba(232, 218, 195, 0.96)
+    ) !important;
+}
+
+.residence-card.featured-residence h3 {
+  color: #171511;
+}
+
+
+/* =========================================================
+   SUBTLE LIGHT / GOLD GLOW
+========================================================= */
+
+.residences-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  bottom: -280px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(220, 190, 140, 0.15);
+
+  box-shadow:
+    0 0 100px rgba(220, 190, 140, 0.07);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FULL SCREEN RESIDENCE DETAIL
+========================================================= */
+
+.residence-detail-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #f5f1e9;
+
+  overflow: hidden;
+
+  animation:
+    residenceOverlayIn 0.45s ease both;
+}
+
+.residence-detail-modal {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #f5f1e9;
+
+  animation:
+    residenceDetailIn
+    0.8s
+    cubic-bezier(.16,.84,.24,1)
+    both;
+}
+
+
+/* =========================================================
+   DETAIL ANIMATION
+========================================================= */
+
+@keyframes residenceOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes residenceDetailIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   DETAIL SCROLLBAR
+========================================================= */
+
+.residence-detail-modal::-webkit-scrollbar {
+  width: 7px;
+}
+
+.residence-detail-modal::-webkit-scrollbar-track {
+  background: #eee9df;
+}
+
+.residence-detail-modal::-webkit-scrollbar-thumb {
+  background: #aa8a59;
+  border-radius: 10px;
+}
+
+.residence-detail-modal {
+  scrollbar-color: #aa8a59 #eee9df;
+  scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 1500px) {
+
+  .residences-section {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .residence-grid {
+    gap: 24px;
+  }
+
+  .residence-card {
+    height: 470px;
+    min-height: 470px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .residences-section {
+    padding: 90px 4vw 100px;
+  }
+
+  .residence-grid {
+    grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+  }
+
+  .residence-card {
+    height: 380px;
+    min-height: 380px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .residences-section {
+    padding: 85px 20px 100px;
+  }
+
+  .residences-intro {
+    margin-bottom: 55px;
+  }
+
+  .residences-eyebrow {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .residences-eyebrow::before,
+  .residences-eyebrow::after {
+    width: 25px;
+  }
+
+  .residences-intro h2,
+  .residences-header h2 {
+    font-size: 45px;
+    letter-spacing: -1.5px;
+  }
+
+  .residences-intro p,
+  .residences-header p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .residence-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .residence-card {
+    height: 380px;
+    min-height: 380px;
+
+    padding: 24px;
+  }
+
+  .residence-card-content h3,
+  .residence-card h3 {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   RESIDENCE DETAIL — LUXURY FULL PAGE
+========================================================= */
+
+.residence-detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #eee9df;
+
+  overflow: hidden;
+
+  animation: residenceOverlayIn 0.45s ease both;
+}
+
+
+/* MAIN DETAIL PAGE */
+
+.residence-detail-modal {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f4f0e8 0%,
+      #eee8de 45%,
+      #f6f2eb 100%
+    );
+
+  color: #201d18;
+
+  animation: residenceDetailIn
+    0.7s cubic-bezier(.16,.84,.24,1) both;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.detail-topbar {
+  width: min(1380px, 90%);
+  margin: 0 auto;
+
+  padding: 28px 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-residences,
+.detail-close {
+  border: 0;
+  background: transparent;
+
+  font-family: "Manrope", sans-serif;
+
+  cursor: pointer;
+}
+
+.back-residences {
+  padding: 10px 0;
+
+  color: #8e682f;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+}
+
+.back-residences:hover {
+  color: #8e682f;
+}
+
+.detail-close {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(120, 94, 62, 0.25);
+  border-radius: 50%;
+
+  color: #5f5649;
+
+  font-size: 22px;
+  font-weight: 300;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.detail-close:hover {
+  background: #806442;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.details-header {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding: 45px 0 70px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  align-items: end;
+
+  gap: 50px;
+
+  border-bottom: 1px solid rgba(105, 85, 59, 0.16);
+}
+
+.details-title > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #9a794c;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.details-title h2 {
+  margin: 0;
+
+  max-width: 800px;
+
+  color: #201d18;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5vw, 72px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+.details-title p {
+  margin: 18px 0 0;
+
+  color: #927148;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+/* UNIT BADGE */
+
+.unit-badge {
+  min-width: 150px;
+
+  padding: 24px 26px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(153, 121, 72, 0.28);
+
+  background: rgba(255, 252, 246, 0.55);
+
+  text-align: center;
+}
+
+.unit-badge small {
+  margin-bottom: 10px;
+
+  color: #927148;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.unit-badge strong {
+  color: #211e19;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.unit-badge span {
+  margin-top: 5px;
+
+  color: #756c60;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   UNIT LAYOUT — LUXURY FULL WIDTH SECTION
+========================================================= */
+
+.detail-layout-section {
+  width: 100%;
+  margin: 0;
+  padding: 95px 6vw 110px;
+  background: #f5f1e9;
+}
+
+/* ---------- HEADING ---------- */
+
+.detail-section-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.detail-section-heading > span {
+  display: block;
+  margin-bottom: 14px;
+  color: #9a794c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.detail-section-heading h3 {
+  margin: 0;
+  color: #211e19;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.detail-section-heading p {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: #71695e;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ---------- LARGE FLOOR PLAN ---------- */
+
+.detail-layout-image {
+  width: 100%;
+  max-width: 1350px;
+  min-height: 560px;
+  margin: 0 auto;
+  padding: 20px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fffdf9;
+  border: 1px solid rgba(120, 94, 62, 0.18);
+
+  box-shadow:
+    0 25px 70px rgba(50, 40, 27, 0.10);
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* subtle luxury frame */
+
+.detail-layout-image::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(153, 121, 72, 0.12);
+  pointer-events: none;
+}
+
+/* image */
+.detail-layout-image {
+  width: 100%;
+  max-width: 1350px;
+  min-height: 560px;
+  margin: 0 auto;
+
+  padding: 15px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fffdf9;
+  border: 1px solid rgba(120, 94, 62, 0.18);
+
+  box-shadow:
+    0 25px 70px rgba(50, 40, 27, 0.10);
+
+  overflow: hidden;
+  position: relative;
+}
+
+.detail-layout-image img {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1350px;
+  height: auto;
+  max-height: 650px;
+
+  object-fit: contain;
+  object-position: center;
+
+  padding: 0;
+  display: block;
+
+  transition: transform 0.8s cubic-bezier(.16,.84,.24,1);
+}
+
+
+/* subtle hover */
+
+.detail-layout-image:hover img {
+  transform: scale(1.015);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .detail-layout-section {
+    padding: 75px 5vw 90px;
+  }
+
+  .detail-section-heading {
+    margin-bottom: 38px;
+  }
+
+  .detail-section-heading h3 {
+    font-size: 42px;
+  }
+
+  .detail-layout-image {
+    min-height: 450px;
+    padding: 28px;
+  }
+
+  .detail-layout-image img {
+    max-height: 520px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .detail-layout-section {
+    padding: 65px 20px 75px;
+  }
+
+  .detail-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .detail-section-heading > span {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .detail-section-heading h3 {
+    font-size: 36px;
+  }
+
+  .detail-section-heading p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .detail-layout-image {
+    min-height: 300px;
+    padding: 20px 15px;
+  }
+
+  .detail-layout-image::before {
+    inset: 9px;
+  }
+
+  .detail-layout-image img {
+    max-height: 380px;
+  }
+}
+
+.detail-layout-image:hover img {
+  transform: scale(1.015);
+}
+
+
+/* =========================================================
+   PRICE + AREA
+========================================================= */
+
+.details-price {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid rgba(105, 85, 59, 0.16);
+  border-bottom: 1px solid rgba(105, 85, 59, 0.16);
+}
+
+.details-price > div {
+  padding: 30px 35px;
+}
+
+.details-price > div + div {
+  border-left: 1px solid rgba(105, 85, 59, 0.16);
+}
+
+.details-price small {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #9a794c;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.details-price strong {
+  color: #211e19;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.details-stats {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding: 38px 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-bottom: 1px solid rgba(105, 85, 59, 0.16);
+}
+
+.details-stats > div {
+  padding: 0 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  border-left: 1px solid rgba(105, 85, 59, 0.13);
+}
+
+.details-stats > div:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.details-stats span {
+  color: #887e70;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.details-stats strong {
+  color: #29251f;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RESIDENCE OVERVIEW
+========================================================= */
+
+.detail-description {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding: 110px 0;
+
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.description-copy > span,
+.layout-details-copy > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #9a794c;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.description-copy h3,
+.layout-details-copy h3 {
+  max-width: 650px;
+
+  margin: 0 0 28px;
+
+  color: #211e19;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -1.5px;
+}
+
+.description-copy h3 em,
+.layout-details-copy h3 em {
+  color: #927148;
+  font-weight: 400;
+}
+
+.description-copy p,
+.layout-details-copy p {
+  max-width: 650px;
+
+  margin: 0 0 14px;
+
+  color: #6f675c;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* SIDE INFO */
+
+.description-info {
+  padding: 28px;
+
+  background: rgba(255, 252, 246, 0.55);
+
+  border: 1px solid rgba(120, 94, 62, 0.16);
+}
+
+.description-info > div {
+  padding: 18px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(120, 94, 62, 0.13);
+}
+
+.description-info > div:last-child {
+  border-bottom: 0;
+}
+
+.description-info span {
+  color: #887e70;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.description-info strong {
+  color: #29251f;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   LAYOUT DETAILS
+========================================================= */
+
+.layout-details {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding: 95px 0;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 80px;
+
+  align-items: center;
+
+  border-top: 1px solid rgba(105, 85, 59, 0.16);
+}
+
+.layout-highlights {
+  margin-top: 40px;
+
+  display: flex;
+  gap: 40px;
+}
+
+.layout-highlights > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.layout-highlights strong {
+  color: #29251f;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+
+  font-weight: 400;
+}
+
+.layout-highlights span {
+  color: #8c8172;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.layout-details-image {
+  min-height: 430px;
+
+  padding: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #faf7f1;
+
+  border: 1px solid rgba(120, 94, 62, 0.16);
+
+  box-shadow:
+    0 20px 60px rgba(50, 40, 27, 0.07);
+}
+
+.layout-details-image img {
+  width: 100%;
+  height: 390px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================================
+   FINAL INFORMATION
+========================================================= */
+
+.detail-bottom {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding: 45px 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(105, 85, 59, 0.16);
+  border-bottom: 1px solid rgba(105, 85, 59, 0.16);
+}
+
+.detail-bottom > div {
+  padding: 0 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  border-left: 1px solid rgba(105, 85, 59, 0.13);
+}
+
+.detail-bottom > div:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.detail-bottom span {
+  color: #8c8172;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.detail-bottom strong {
+  color: #28241e;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 21px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   END BUTTON
+========================================================= */
+
+.detail-end {
+  padding: 70px 20px 100px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.detail-end button {
+  padding: 15px 28px;
+
+  border: 1px solid rgba(120, 94, 62, 0.30);
+
+  background: transparent;
+
+  color: #8e682f;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.detail-end button:hover {
+  background: #806442;
+  color: #fff;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes residenceOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes residenceDetailIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.residence-detail-modal::-webkit-scrollbar {
+  width: 7px;
+}
+
+.residence-detail-modal::-webkit-scrollbar-track {
+  background: #e8e1d6;
+}
+
+.residence-detail-modal::-webkit-scrollbar-thumb {
+  background: #aa8a59;
+  border-radius: 10px;
+}
+
+.residence-detail-modal {
+  scrollbar-color: #aa8a59 #e8e1d6;
+  scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .details-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .unit-badge {
+    width: 170px;
+  }
+
+  .detail-description {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .layout-details {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .details-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 0;
+  }
+
+  .details-stats > div:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .detail-topbar {
+    width: 88%;
+    padding-top: 20px;
+  }
+
+  .details-header,
+  .detail-layout-section,
+  .details-price,
+  .details-stats,
+  .detail-description,
+  .layout-details,
+  .detail-bottom {
+    width: 88%;
+  }
+
+  .details-header {
+    padding: 35px 0 50px;
+  }
+
+  .details-title h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .detail-layout-section {
+    padding: 65px 0;
+  }
+
+  .detail-layout-image {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .detail-layout-image img {
+    height: 270px;
+  }
+
+  .details-price {
+    grid-template-columns: 1fr;
+  }
+
+  .details-price > div {
+    padding: 25px 0;
+  }
+
+  .details-price > div + div {
+    border-left: 0;
+    border-top: 1px solid rgba(105, 85, 59, 0.16);
+  }
+
+  .details-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .details-stats > div {
+    padding: 0 15px;
+  }
+
+  .detail-description {
+    padding: 75px 0;
+  }
+
+  .description-copy h3,
+  .layout-details-copy h3 {
+    font-size: 38px;
+  }
+
+  .layout-details {
+    padding: 70px 0;
+  }
+
+  .layout-details-image {
+    min-height: 280px;
+    padding: 20px;
+  }
+
+  .layout-details-image img {
+    height: 250px;
+  }
+
+  .detail-bottom {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .detail-bottom > div {
+    padding: 0 0 20px;
+    border-left: 0;
+    border-bottom: 1px solid rgba(105, 85, 59, 0.13);
+  }
+
+  .detail-bottom > div:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* =========================================================
+   RAYA AL QURUM — VISIBLE LUXURY ANIMATION
+========================================================= */
+
+@keyframes luxuryRevealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes luxuryRevealScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes luxuryRevealLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes luxuryRevealRight {
+  0% {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   RESIDENCES INTRO
+========================================================= */
+
+.residences-intro-content {
+  animation:
+    luxuryRevealUp 1.2s cubic-bezier(.16,.84,.24,1) both;
+}
+
+
+/* =========================================================
+   RESIDENCE CARDS
+========================================================= */
+
+.residence-card {
+  opacity: 0;
+  animation:
+    luxuryRevealUp 1.1s cubic-bezier(.16,.84,.24,1) forwards;
+}
+
+.residence-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.residence-card:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.residence-card:nth-child(3) {
+  animation-delay: 0.55s;
+}
+
+.residence-card:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.residence-card {
+  transition:
+    transform 0.6s cubic-bezier(.16,.84,.24,1),
+    box-shadow 0.6s ease;
+}
+
+.residence-card:hover {
+  transform: translateY(-12px);
+  box-shadow:
+    0 25px 60px rgba(35, 27, 18, 0.18);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.residence-card-content {
+  transition:
+    transform 0.6s cubic-bezier(.16,.84,.24,1);
+}
+
+.residence-card:hover .residence-card-content {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.card-arrow {
+  transition:
+    transform 0.6s cubic-bezier(.16,.84,.24,1),
+    background 0.4s ease;
+}
+
+.residence-card:hover .card-arrow {
+  transform: translate(6px, -6px) scale(1.08);
+}
+
+
+/* =========================================================
+   DETAIL PAGE — MAIN IMAGE
+========================================================= */
+
+.detail-layout-image {
+  opacity: 0;
+  animation:
+    luxuryRevealScale 1.3s cubic-bezier(.16,.84,.24,1) 0.2s forwards;
+}
+
+
+/* =========================================================
+   DETAIL HEADING
+========================================================= */
+
+.detail-section-heading {
+  opacity: 0;
+  animation:
+    luxuryRevealLeft 1.1s cubic-bezier(.16,.84,.24,1) forwards;
+}
+
+
+/* =========================================================
+   PRICE + STATS
+========================================================= */
+
+.details-price {
+  opacity: 0;
+  animation:
+    luxuryRevealUp 1s cubic-bezier(.16,.84,.24,1) 0.25s forwards;
+}
+
+.details-stats {
+  opacity: 0;
+  animation:
+    luxuryRevealUp 1s cubic-bezier(.16,.84,.24,1) 0.4s forwards;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.detail-description {
+  opacity: 0;
+  animation:
+    luxuryRevealRight 1.1s cubic-bezier(.16,.84,.24,1) forwards;
+}
+
+
+/* =========================================================
+   LAYOUT DETAILS
+========================================================= */
+
+.layout-details-copy {
+  opacity: 0;
+  animation:
+    luxuryRevealLeft 1.1s cubic-bezier(.16,.84,.24,1) forwards;
+}
+
+.layout-details-image {
+  opacity: 0;
+  animation:
+    luxuryRevealScale 1.3s cubic-bezier(.16,.84,.24,1) 0.25s forwards;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.detail-layout-image img,
+.layout-details-image img {
+  transition:
+    transform 1s cubic-bezier(.16,.84,.24,1);
+}
+
+.detail-layout-image:hover img,
+.layout-details-image:hover img {
+  transform: scale(1.025);
+}
+
+/* =========================================================
+   RESIDENCES — PREMIUM SCROLL ANIMATION
+========================================================= */
+
+.reveal-element {
+  opacity: 0;
+  transform: translateY(65px);
+  transition:
+    opacity 1s cubic-bezier(.16, .84, .24, 1),
+    transform 1.1s cubic-bezier(.16, .84, .24, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   HEADING — STRONGER REVEAL
+========================================================= */
+
+.residences-intro h2.reveal-element {
+  transform: translateY(80px);
+  transition:
+    opacity 1.1s ease,
+    transform 1.2s cubic-bezier(.16, .84, .24, 1);
+}
+
+.residences-intro h2.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+.residences-intro p.reveal-element {
+  transform: translateY(35px);
+  transition-delay: .18s;
+}
+
+.residences-intro p.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.residences-eyebrow.reveal-element {
+  transform: translateY(25px);
+  transition-delay: .05s;
+}
+
+.residences-eyebrow.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESIDENCE CARDS
+========================================================= */
+
+.residence-card.reveal-element {
+  transform: translateY(90px) scale(.96);
+  transition:
+    opacity .9s ease,
+    transform 1.15s cubic-bezier(.16, .84, .24, 1),
+    box-shadow .6s ease,
+    border-color .5s ease;
+}
+
+.residence-card.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   CARD STAGGER
+========================================================= */
+
+.residence-card:nth-child(1) {
+  transition-delay: .05s;
+}
+
+.residence-card:nth-child(2) {
+  transition-delay: .18s;
+}
+
+.residence-card:nth-child(3) {
+  transition-delay: .31s;
+}
+
+.residence-card:nth-child(4) {
+  transition-delay: .44s;
+}
+
+
+/* =========================================================
+   CARD CONTENT REVEAL
+========================================================= */
+
+.residence-card.reveal-element .residence-icon {
+  opacity: 0;
+  transform: scale(.75) rotate(-8deg);
+  transition:
+    opacity .7s ease,
+    transform .8s cubic-bezier(.16, .84, .24, 1);
+  transition-delay: .25s;
+}
+
+.residence-card.reveal-element.reveal-visible .residence-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+
+.residence-card.reveal-element .residence-card-content {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity .8s ease,
+    transform .9s cubic-bezier(.16, .84, .24, 1);
+  transition-delay: .35s;
+}
+
+.residence-card.reveal-element.reveal-visible .residence-card-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.residence-card.reveal-element .card-arrow {
+  opacity: 0;
+  transform: translateY(20px) scale(.8);
+  transition:
+    opacity .7s ease,
+    transform .8s cubic-bezier(.16, .84, .24, 1),
+    background .4s ease,
+    color .4s ease;
+  transition-delay: .5s;
+}
+
+.residence-card.reveal-element.reveal-visible .card-arrow {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.residences-intro::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: 35px auto 0;
+  background: #a8895b;
+  transition: width 1.2s cubic-bezier(.16, .84, .24, 1);
+}
+
+.residences-intro:has(.reveal-visible)::after {
+  width: 70px;
+}
+
+
+/* =========================================================
+   DETAIL PAGE ANIMATION
+========================================================= */
+
+.residence-detail-modal .details-header,
+.residence-detail-modal .detail-layout-section,
+.residence-detail-modal .details-price,
+.residence-detail-modal .details-stats,
+.residence-detail-modal .detail-description,
+.residence-detail-modal .layout-details,
+.residence-detail-modal .detail-bottom {
+  animation: luxurySectionReveal 1s cubic-bezier(.16, .84, .24, 1) both;
+}
+
+
+.residence-detail-modal .details-header {
+  animation-delay: .05s;
+}
+
+.residence-detail-modal .detail-layout-section {
+  animation-delay: .15s;
+}
+
+.residence-detail-modal .details-price {
+  animation-delay: .25s;
+}
+
+.residence-detail-modal .details-stats {
+  animation-delay: .35s;
+}
+
+.residence-detail-modal .detail-description {
+  animation-delay: .45s;
+}
+
+.residence-detail-modal .layout-details {
+  animation-delay: .55s;
+}
+
+.residence-detail-modal .detail-bottom {
+  animation-delay: .65s;
+}
+
+
+@keyframes luxurySectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .reveal-element {
+    transform: translateY(45px);
+    transition-duration: .9s;
+  }
+
+  .residence-card.reveal-element {
+    transform: translateY(55px) scale(.97);
+  }
+
+  .residence-card.reveal-element.reveal-visible {
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal-element,
+  .residence-card.reveal-element,
+  .residences-intro h2.reveal-element,
+  .residences-intro p.reveal-element {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* =========================================
+   STRONG LUXURY REVEAL ANIMATION
+========================================= */
+
+.reveal-element {
+  opacity: 0;
+  transform: translateY(60px);
+  filter: blur(8px);
+  transition:
+    opacity 1s cubic-bezier(.16,.84,.24,1),
+    transform 1s cubic-bezier(.16,.84,.24,1),
+    filter 1s ease;
+}
+
+.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Heading comes slightly slower */
+.detail-description h3.reveal-element {
+  transition-delay: 0.1s;
+}
+
+/* Paragraph follows heading */
+.detail-description p.reveal-element {
+  transition-delay: 0.22s;
+}
+
+/* Layout details */
+.layout-details h3.reveal-element {
+  transition-delay: 0.1s;
+}
+
+.layout-details p.reveal-element {
+  transition-delay: 0.22s;
+}
+
+.layout-details-image.reveal-element {
+  transform: translateX(70px);
+  transition-delay: 0.15s;
+}
+
+.layout-details-image.reveal-visible {
+  transform: translateX(0);
+}
+
+/* Unit layout image */
+.detail-layout-image {
+  opacity: 0;
+  transform: translateY(70px) scale(.96);
+  filter: blur(6px);
+  transition:
+    opacity 1.1s ease,
+    transform 1.1s cubic-bezier(.16,.84,.24,1),
+    filter 1.1s ease;
+}
+
+.detail-layout-image.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* =========================================================
+   RESIDENCE DETAILS — LUXURY REVEAL ANIMATION
+   ========================================================= */
+
+.detail-reveal {
+  opacity: 0;
+  transform: translateY(55px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.detail-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Slightly stronger movement for headings */
+
+.detail-reveal h3,
+h3.detail-reveal {
+  transition-delay: 0.05s;
+}
+
+
+/* Paragraphs come slightly after heading */
+
+p.detail-reveal {
+  transition-delay: 0.15s;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .detail-reveal {
+    transform: translateY(35px);
+    transition-duration: 0.75s;
+
+  }
+}
+
+/* =========================================================
+   STRONG LUXURY REVEAL ANIMATION
+========================================================= */
+
+.reveal-element {
+  opacity: 0;
+  transform: translateY(60px);
+  filter: blur(8px);
+  transition:
+    opacity 1s cubic-bezier(.16,.84,.24,1),
+    transform 1s cubic-bezier(.16,.84,.24,1),
+    filter 1s ease;
+}
+
+.reveal-element.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+
+/* =========================================================
+   RESIDENCE DETAILS — STRONG TEXT REVEAL
+========================================================= */
+
+.detail-reveal {
+  opacity: 0;
+  transform: translateY(65px);
+  transition:
+    opacity 1s cubic-bezier(.16,.84,.24,1),
+    transform 1.1s cubic-bezier(.16,.84,.24,1);
+  will-change: opacity, transform;
+}
+
+.detail-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Heading */
+h3.detail-reveal {
+  transition-delay: 0.05s;
+}
+
+
+/* Paragraph */
+p.detail-reveal {
+  transition-delay: 0.18s;
+}
+
+
+/* =========================================================
+   FLOOR PLAN IMAGES — ALWAYS SHARP
+========================================================= */
+
+.detail-layout-image,
+.layout-details-image {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  backdrop-filter: none !important;
+}
+
+.detail-layout-image img,
+.layout-details-image img {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  display: block;
+  image-rendering: auto !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .detail-reveal {
+    transform: translateY(40px);
+    transition-duration: 0.8s;
+  }
+
+  .reveal-element {
+    transform: translateY(40px);
+  }
+
+}
