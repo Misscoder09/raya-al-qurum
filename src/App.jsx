@@ -1,5 +1,8 @@
 import ProjectOverview from "./components/ProjectOverview";
 import Residences from "./components/Residences";
+import Architecture from "./components/Architecture";
+import DayNight from "./components/DayNight";
+import Amenities from "./components/Amenities";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -367,118 +370,10 @@ function App() {
 
         {/* ================= ARCHITECTURE ================= */}
     
-      
-       <section className="architecture section" id="architecture">
-          <div className="section-top">
-             <div>
-       <div className="eyebrow dark-eyebrow">
-        <span></span>
-        ARCHITECTURE
-      </div>
-
-      <h2>
-        Designed with
-        <br />
-        <i>purpose.</i>
-      </h2>
-    </div>
-
-    <p>
-      A refined architectural vision combining contemporary
-      design, elegant proportions and thoughtful planning.
-    </p>
-  </div>
-
-  <div className="architecture-content">
-    <div className="architecture-card">
-      <span>01</span>
-      <h3>Contemporary Design</h3>
-      <p>
-        Clean architectural lines and sophisticated details
-        create a distinctive modern identity.
-      </p>
-    </div>
-
-    <div className="architecture-card">
-      <span>02</span>
-      <h3>Thoughtful Planning</h3>
-      <p>
-        Every space is carefully planned to balance comfort,
-        functionality and refined living.
-      </p>
-    </div>
-
-    <div className="architecture-card">
-      <span>03</span>
-      <h3>Elegant Living</h3>
-      <p>
-        A cohesive architectural approach designed around
-        contemporary lifestyles.
-      </p>
-    </div>
-  </div>
-</section>
+    <Architecture />
  
  {/* ================= DAY & NIGHT ================= */}
-<section className="day-night section" id="day-night">
-  <div className="section-top">
-    <div>
-      <div className="eyebrow dark-eyebrow">
-        <span></span>
-        DAY & NIGHT
-      </div>
-
-      <h2>
-        A different experience
-        <br />
-        <i>throughout the day.</i>
-      </h2>
-    </div>
-
-    <p>
-      From calm mornings to vibrant evenings, Raya Al Qurum
-      is designed to offer a refined lifestyle at every hour.
-    </p>
-  </div>
-
-  <div className="day-night-grid">
-    <div className="day-night-card">
-      <span>01</span>
-      <h3>Morning</h3>
-      <p>
-        Start the day with natural light, peaceful surroundings
-        and thoughtfully designed spaces.
-      </p>
-    </div>
-
-    <div className="day-night-card">
-      <span>02</span>
-      <h3>Afternoon</h3>
-      <p>
-        Enjoy contemporary amenities and comfortable spaces
-        designed for everyday living.
-      </p>
-    </div>
-
-    <div className="day-night-card">
-      <span>03</span>
-      <h3>Evening</h3>
-      <p>
-        Experience the city as it comes alive with elegant
-        spaces created for relaxation and connection.
-      </p>
-    </div>
-
-    <div className="day-night-card">
-      <span>04</span>
-      <h3>Night</h3>
-      <p>
-        Unwind in a sophisticated environment surrounded by
-        the atmosphere of Muscat after sunset.
-      </p>
-    </div>
-  </div>
-</section>
+<DayNight />
 
         {/* ================= FLOOR PLANS ================= */}
 
@@ -540,83 +435,7 @@ function App() {
 
 
         {/* ================= AMENITIES ================= */}
-        <section className="amenities section-dark" id="amenities">
-
-          <div className="amenities-inner">
-
-            <div className="amenities-heading">
-
-              <div className="eyebrow light-eyebrow">
-                <span></span>
-                LIFESTYLE
-              </div>
-
-              <h2>
-                Life above
-                <br />
-                <i>the ordinary.</i>
-              </h2>
-
-              <p>
-                A collection of thoughtfully curated spaces
-                designed to make everyday living feel elevated.
-              </p>
-
-            </div>
-
-
-            <div className="amenity-list">
-
-              <div className="amenity">
-                <span>01</span>
-                <div>
-                  <h3>Rooftop Pool</h3>
-                  <p>Relax above the city with an elevated rooftop experience.</p>
-                </div>
-                <b>↗</b>
-              </div>
-
-              <div className="amenity">
-                <span>02</span>
-                <div>
-                  <h3>Sky Lounge</h3>
-                  <p>A refined social space with views across Muscat.</p>
-                </div>
-                <b>↗</b>
-              </div>
-
-              <div className="amenity">
-                <span>03</span>
-                <div>
-                  <h3>Wellness & Fitness</h3>
-                  <p>Spaces created for movement, wellbeing and balance.</p>
-                </div>
-                <b>↗</b>
-              </div>
-
-              <div className="amenity">
-                <span>04</span>
-                <div>
-                  <h3>Leisure Zones</h3>
-                  <p>Thoughtful areas for relaxation, recreation and connection.</p>
-                </div>
-                <b>↗</b>
-              </div>
-
-              <div className="amenity">
-                <span>05</span>
-                <div>
-                  <h3>Gaming & Social Spaces</h3>
-                  <p>Contemporary spaces designed around modern lifestyles.</p>
-                </div>
-                <b>↗</b>
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
+        <Amenities />
 
 
         {/* ================= LOCATION ================= */}

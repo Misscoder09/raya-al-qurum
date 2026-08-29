@@ -1,0 +1,922 @@
+/* =========================================================
+   RAYA AL QURUM — ARCHITECTURE PAGE
+   LUXURY / MODERN / REFINED / PREMIUM
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.architecture-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #f4f0e9;
+  color: #27231e;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.architecture-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 88vh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #171512;
+}
+
+
+/* HERO IMAGE */
+
+.architecture-hero-image {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+}
+
+.architecture-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.01);
+}
+
+
+/* HERO OVERLAY */
+
+.architecture-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 12, 10, 0.84) 0%,
+      rgba(13, 12, 10, 0.62) 32%,
+      rgba(13, 12, 10, 0.28) 65%,
+      rgba(13, 12, 10, 0.08) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(10, 9, 8, 0.55) 0%,
+      rgba(10, 9, 8, 0.08) 68%,
+      transparent 100%
+    );
+}
+
+
+/* HERO CONTENT */
+
+.architecture-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1180px, 88%);
+
+  margin: 0 auto;
+
+  padding: 85px 0 75px;
+
+  color: #fffaf2;
+
+  text-align: left;
+}
+
+
+/* EYEBROW */
+
+.architecture-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.32em;
+
+  text-transform: uppercase;
+
+  color: #d1b078;
+}
+
+.architecture-eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 1px;
+
+  background: #c8a56c;
+}
+
+
+/* HERO HEADING */
+
+.architecture-hero h1 {
+  max-width: 780px;
+
+  margin: 22px 0 28px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(46px, 5.3vw, 76px);
+
+  line-height: 1.03;
+
+  font-weight: 400;
+
+  letter-spacing: -0.035em;
+
+  color: #fffaf2 !important;
+}
+
+.architecture-hero h1 em {
+  display: inline-block;
+
+  color: #d5b477 !important;
+
+  font-weight: 400;
+}
+
+
+/* GOLD LINE */
+
+.architecture-gold-line {
+  width: 58px;
+  height: 1px;
+
+  margin: 0 0 25px;
+
+  background: #c8a56c;
+}
+
+
+/* HERO DESCRIPTION */
+
+.architecture-hero p {
+  max-width: 540px;
+
+  margin: 0 0 32px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+
+  font-weight: 400;
+
+  color: rgba(255, 250, 242, 0.78);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.architecture-primary-btn,
+.architecture-outline-btn {
+  min-height: 52px;
+
+  padding: 0 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* GOLD BUTTON */
+
+.architecture-primary-btn {
+  border: 1px solid #c8a56c;
+
+  background: #c8a56c;
+
+  color: #211d18;
+}
+
+.architecture-primary-btn:hover {
+  background: #ddc18e;
+
+  border-color: #ddc18e;
+
+  transform: translateY(-2px);
+}
+
+.architecture-primary-btn span {
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.architecture-primary-btn:hover span {
+  transform: translateX(4px);
+}
+
+
+/* OUTLINE BUTTON */
+
+.architecture-outline-btn {
+  border: 1px solid rgba(200, 165, 108, 0.65);
+
+  background: transparent;
+
+  color: #c8a56c;
+}
+
+.architecture-outline-btn:hover {
+  background: #c8a56c;
+
+  border-color: #c8a56c;
+
+  color: #211d18;
+
+  transform: translateY(-2px);
+}
+
+.architecture-outline-btn span {
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.architecture-outline-btn:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DESIGN PHILOSOPHY
+   ========================================================= */
+
+.architecture-philosophy {
+  position: relative;
+
+  padding: 125px 7vw 135px;
+
+  background: #f4f0e9;
+}
+
+
+/* SECTION HEADING */
+
+.architecture-section-heading {
+  max-width: 720px;
+
+  margin: 0 auto 80px;
+
+  text-align: center;
+}
+
+.architecture-section-heading > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.27em;
+
+  text-transform: uppercase;
+
+  color: #9c7a47;
+}
+
+.architecture-section-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 4.5vw, 64px);
+
+  line-height: 1.08;
+
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+
+  color: #29251f;
+}
+
+
+/* SMALL GOLD LINE */
+
+.architecture-small-line {
+  width: 48px;
+  height: 1px;
+
+  margin: 28px auto;
+
+  background: #b99660;
+}
+
+
+/* SECTION DESCRIPTION */
+
+.architecture-section-heading p {
+  max-width: 580px;
+
+  margin: 0 auto;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  color: #716b61;
+}
+
+
+/* =========================================================
+   DESIGN PRINCIPLES
+   ========================================================= */
+
+.architecture-principles {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* PRINCIPLE */
+
+.architecture-principle {
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 20px 48px;
+
+  border-left: 1px solid rgba(103, 85, 59, 0.2);
+}
+
+.architecture-principle:last-child {
+  border-right: 1px solid rgba(103, 85, 59, 0.2);
+}
+
+
+/* NUMBER */
+
+.principle-number {
+  display: block;
+
+  margin-bottom: 42px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.15em;
+
+  color: #b18c57;
+}
+
+
+/* TITLE */
+
+.architecture-principle h3 {
+  margin: 0 0 15px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  line-height: 1.2;
+
+  font-weight: 400;
+
+  color: #2c2822;
+}
+
+
+/* TEXT */
+
+.architecture-principle p {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: #777066;
+}
+
+
+/* =========================================================
+   ARCHITECTURAL EXCELLENCE
+   ========================================================= */
+
+.architecture-excellence {
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  min-height: 720px;
+
+  background: #211e1a;
+}
+
+
+/* IMAGE */
+
+.architecture-excellence-image {
+  position: relative;
+
+  min-height: 650px;
+
+  overflow: hidden;
+}
+
+.architecture-excellence-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* IMAGE OVERLAY */
+
+.architecture-excellence-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 65%,
+      rgba(33, 30, 26, 0.78) 100%
+    );
+}
+
+
+/* CONTENT */
+
+.architecture-excellence-content {
+  align-self: center;
+
+  padding: 90px clamp(45px, 7vw, 110px) 90px 75px;
+
+  color: #fffaf2;
+}
+
+
+/* TITLE */
+
+.architecture-excellence-content h2 {
+  margin: 22px 0 28px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 4.5vw, 66px);
+
+  line-height: 1.02;
+
+  font-weight: 400;
+
+  letter-spacing: -0.03em;
+
+  color: #fffaf2;
+}
+
+.architecture-excellence-content h2 em {
+  color: #d0ae77;
+
+  font-weight: 400;
+}
+
+
+/* DESCRIPTION */
+
+.architecture-excellence-content > p {
+  max-width: 540px;
+
+  margin: 0 0 40px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  color: rgba(255, 250, 242, 0.68);
+}
+
+
+/* =========================================================
+   FEATURE LIST
+   ========================================================= */
+
+.architecture-feature-list {
+  margin-bottom: 42px;
+}
+
+
+/* FEATURE ITEM */
+
+.architecture-feature-list > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid rgba(208, 174, 119, 0.18);
+}
+
+.architecture-feature-list > div:first-child {
+  border-top: 1px solid rgba(208, 174, 119, 0.18);
+}
+
+
+/* FEATURE NUMBER */
+
+.architecture-feature-list span {
+  width: 25px;
+
+  flex-shrink: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+
+  color: #c8a56c;
+}
+
+
+/* FEATURE TEXT */
+
+.architecture-feature-list p {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 250, 242, 0.8);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.architecture-cta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  padding: 80px 7vw;
+
+  background: #f4f0e9;
+
+  border-top: 1px solid rgba(103, 85, 59, 0.16);
+}
+
+
+/* CTA LABEL */
+
+.architecture-cta > div:first-child > span {
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+
+  color: #9c7a47;
+}
+
+
+/* CTA HEADING */
+
+.architecture-cta h3 {
+  max-width: 620px;
+
+  margin: 15px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(30px, 3vw, 46px);
+
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  color: #29251f;
+}
+
+
+/* CTA BUTTON AREA */
+
+.architecture-cta-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   SUBTLE HOVER DETAILS
+   ========================================================= */
+
+.architecture-principle {
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.architecture-principle:hover {
+  transform: translateY(-4px);
+}
+
+.architecture-principle:hover .principle-number {
+  color: #8e6b3c;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .architecture-hero {
+    min-height: 82vh;
+  }
+
+  .architecture-hero-content {
+    width: 88%;
+  }
+
+  .architecture-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-principle,
+  .architecture-principle:last-child {
+    min-height: auto;
+
+    padding: 35px 25px;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(103, 85, 59, 0.2);
+  }
+
+  .architecture-principle:last-child {
+    border-bottom: none;
+  }
+
+  .architecture-excellence {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-excellence-image {
+    min-height: 520px;
+  }
+
+  .architecture-excellence-content {
+    padding: 80px 8vw;
+  }
+
+  .architecture-cta {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* HERO */
+
+  .architecture-hero {
+    min-height: 82vh;
+  }
+
+  .architecture-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(13, 12, 10, 0.86),
+        rgba(13, 12, 10, 0.48)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(10, 9, 8, 0.65),
+        transparent 70%
+      );
+  }
+
+  .architecture-hero-content {
+    width: 86%;
+
+    padding: 70px 0 55px;
+  }
+
+  .architecture-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 0.25em;
+  }
+
+  .architecture-hero h1 {
+    max-width: 100%;
+
+    margin: 18px 0 24px;
+
+    font-size: clamp(39px, 11vw, 52px);
+
+    line-height: 1.02;
+  }
+
+  .architecture-hero p {
+    max-width: 100%;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+  .architecture-hero .architecture-primary-btn {
+    width: auto;
+  }
+
+
+  /* PHILOSOPHY */
+
+  .architecture-philosophy {
+    padding: 90px 7vw;
+  }
+
+  .architecture-section-heading {
+    margin-bottom: 55px;
+  }
+
+  .architecture-section-heading h2 {
+    font-size: 38px;
+  }
+
+  .architecture-section-heading p {
+    font-size: 13px;
+  }
+
+
+  /* PRINCIPLES */
+
+  .architecture-principle {
+    padding: 32px 10px;
+  }
+
+  .principle-number {
+    margin-bottom: 25px;
+  }
+
+  .architecture-principle h3 {
+    font-size: 23px;
+  }
+
+
+  /* EXCELLENCE */
+
+  .architecture-excellence-image {
+    min-height: 380px;
+  }
+
+  .architecture-excellence-content {
+    padding: 65px 7vw;
+  }
+
+  .architecture-excellence-content h2 {
+    font-size: 43px;
+  }
+
+  .architecture-excellence-content > p {
+    font-size: 13px;
+  }
+
+
+  /* CTA */
+
+  .architecture-cta {
+    padding: 65px 7vw;
+  }
+
+  .architecture-cta h3 {
+    font-size: 34px;
+  }
+
+  .architecture-cta-actions {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .architecture-cta-actions
+  .architecture-primary-btn,
+  .architecture-cta-actions
+  .architecture-outline-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .architecture-hero h1 {
+    font-size: 38px;
+  }
+
+  .architecture-hero-content {
+    padding-top: 55px;
+  }
+
+  .architecture-excellence-content h2 {
+    font-size: 38px;
+  }
+
+  .architecture-section-heading h2 {
+    font-size: 34px;
+  }
+}

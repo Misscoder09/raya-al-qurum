@@ -1,84 +1,61 @@
 /* =========================================================
    RAYA AL QURUM — RESIDENCES
-   LUXURY RESIDENCE CARD SECTION
-========================================================= */
+   CLEAN / PREMIUM / RESPONSIVE
+   ========================================================= */
 
 .residences-section {
   position: relative;
   width: 100%;
-  padding: 115px 5vw 140px;
+  padding: 105px 5vw 125px;
   overflow: hidden;
-
-  background-image: url("/images/residences-bg.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Elegant dark overlay over the ENTIRE section */
-.residences-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-
   background:
     linear-gradient(
       180deg,
-      rgba(15, 14, 13, 0.55) 0%,
-      rgba(15, 14, 13, 0.42) 45%,
-      rgba(15, 14, 13, 0.62) 100%
-    );
+      rgba(15, 14, 13, 0.55),
+      rgba(15, 14, 13, 0.45),
+      rgba(15, 14, 13, 0.62)
+    ),
+    url("/images/residences-bg.jpg") center / cover no-repeat;
 }
 
-/* Keep all content above background */
 .residences-section > * {
   position: relative;
   z-index: 1;
 }
 
-
-/* =========================================================
-   HEADER / INTRO
-========================================================= */
+/* =========================
+   INTRO
+   ========================= */
 
 .residences-intro {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  max-width: 950px;
-
-  margin: 0 auto 75px;
-  padding: 0;
-
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-
+  width: min(900px, 100%);
+  margin: 0 auto 62px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.residences-intro.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .residences-intro-content {
-  max-width: 850px;
+  width: 100%;
   margin: 0 auto;
-  text-align: center;
 }
-
-
-/* Small luxury label */
 
 .residences-eyebrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
-
-  margin-bottom: 25px;
-
+  margin-bottom: 22px;
   color: #d0b487;
-
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -87,397 +64,195 @@
 .residences-eyebrow::before,
 .residences-eyebrow::after {
   content: "";
-
   width: 42px;
   height: 1px;
-
   background: rgba(208, 180, 135, 0.75);
 }
 
-
-/* Main heading */
-
-.residences-intro h2,
-.residences-header h2 {
+.residences-intro h2 {
   margin: 0;
-
   color: #fffaf1;
-
   font-family: "Playfair Display", serif;
-
-  font-size: clamp(48px, 5.5vw, 78px);
-
+  font-size: clamp(48px, 5.5vw, 76px);
   font-weight: 400;
-  line-height: 0.98;
-
+  line-height: 1.02;
   letter-spacing: -2.5px;
-
-  text-shadow:
-    0 3px 20px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.35);
 }
 
-
-/* Italic luxury line */
-
-.residences-intro h2 em,
-.residences-header h2 em {
+.residences-intro h2 em {
   display: block;
-
   color: #d3b27d;
-
-  font-family: "Playfair Display", serif;
   font-weight: 400;
 }
 
-
-/* Description */
-
-.residences-intro p,
-.residences-header p {
-  max-width: 680px;
-
-  margin: 28px auto 0;
-
-  color: rgba(255, 250, 241, 0.86);
-
-  font-size: 13px;
-  line-height: 1.9;
-  letter-spacing: 0.25px;
-
-  text-shadow:
-    0 2px 12px rgba(0, 0, 0, 0.35);
+.residences-intro p {
+  max-width: 690px;
+  margin: 25px auto 0;
+  color: rgba(255, 250, 241, 0.9);
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: 0.2px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
+.residences-intro::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  margin: 30px auto 0;
+  background: #a8895b;
+}
 
-/* =========================================================
-   GRID
-========================================================= */
+/* =========================
+   CARDS GRID
+   ========================= */
 
 .residence-grid {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  max-width: 1450px;
-
+  width: min(1450px, 100%);
   margin: 0 auto;
-
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 20px;
-
-  padding: 0;
-
-  background: transparent !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
 }
 
-
-/* =========================================================
-   RESIDENCE CARD
-========================================================= */
+/* =========================
+   CARD
+   ========================= */
 
 .residence-card {
   position: relative;
-
-  height: 360px;
-  min-height: 360px;
-
-  padding: 27px 25px 24px;
-
+  min-height: 365px;
+  padding: 26px 25px 24px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 253, 248, 0.97),
-      rgba(239, 232, 220, 0.94)
-    ) !important;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 253, 248, 0.98),
+    rgba(239, 232, 220, 0.95)
+  );
 
   border: 1px solid rgba(201, 166, 112, 0.42);
-
   border-radius: 22px;
-
-  overflow: hidden;
-
-  cursor: pointer;
 
   box-shadow:
     0 18px 50px rgba(0, 0, 0, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.75);
 
+  opacity: 0;
+  transform: translateY(40px);
+
   transition:
-    transform 0.65s cubic-bezier(.16,.84,.24,1),
-    box-shadow 0.65s ease,
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.16, 0.84, 0.24, 1),
+    box-shadow 0.5s ease,
     border-color 0.5s ease;
 }
 
+.residence-card.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-/* Card hover */
+.residence-card:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.residence-card:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.residence-card:nth-child(3) {
+  transition-delay: 0.19s;
+}
+
+.residence-card:nth-child(4) {
+  transition-delay: 0.26s;
+}
 
 .residence-card:hover {
-  transform: translateY(-10px);
-
+  transform: translateY(-9px);
   border-color: rgba(205, 169, 112, 0.75);
-
   box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.30),
+    0 28px 65px rgba(0, 0, 0, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
-
-/* Click effect */
-
 .residence-card:active {
-  transform: translateY(-5px) scale(0.992);
+  transform: translateY(-4px) scale(0.995);
 }
-
-
-/* =========================================================
-   CARD GOLD CORNER DETAILS
-========================================================= */
 
 .residence-card::before {
   content: "";
-
   position: absolute;
-
-  top: 17px;
-  right: 17px;
-
+  top: 16px;
+  right: 16px;
   width: 38px;
   height: 38px;
-
   border-top: 1px solid rgba(165, 126, 69, 0.55);
   border-right: 1px solid rgba(165, 126, 69, 0.55);
-
   pointer-events: none;
 }
 
 .residence-card::after {
   content: "";
-
   position: absolute;
-
-  bottom: 17px;
-  left: 17px;
-
+  bottom: 16px;
+  left: 16px;
   width: 30px;
   height: 30px;
-
   border-left: 1px solid rgba(165, 126, 69, 0.38);
   border-bottom: 1px solid rgba(165, 126, 69, 0.38);
-
   pointer-events: none;
 }
 
-
-/* =========================================================
+/* =========================
    CARD NUMBER
-========================================================= */
+   ========================= */
 
-.card-number,
-.residence-card .card-number {
+.card-number {
   position: absolute;
-
-  top: 23px;
-  right: 27px;
-
+  top: 22px;
+  right: 26px;
   color: #967344;
-
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
-
   letter-spacing: 3px;
 }
 
 .card-number::after {
   content: "";
-
   display: block;
-
   width: 19px;
   height: 1px;
-
   margin-top: 7px;
   margin-left: auto;
-
   background: #b79a6c;
 }
 
-
-/* =========================================================
-   UNIT CIRCLE
-========================================================= */
+/* =========================
+   UNIT ICON
+   ========================= */
 
 .residence-icon {
   width: 54px;
   height: 54px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
 
   border: 1px solid rgba(151, 116, 68, 0.38);
-
   border-radius: 50%;
-
   background: rgba(255, 253, 248, 0.82);
 
   color: #765a35;
-
   font-family: "Playfair Display", serif;
-
   font-size: 15px;
-
-  transition:
-    background 0.45s ease,
-    color 0.45s ease,
-    transform 0.45s ease,
-    border-color 0.45s ease;
-}
-
-.residence-card:hover .residence-icon {
-  background: #8e682f;
-
-  color: #fff;
-
-  border-color: #8e682f;
-
-  transform: rotate(5deg);
-}
-
-
-/* =========================================================
-   UNIT IMAGE
-========================================================= */
-
-.residence-card-image {
-  width: 100%;
-  height: 110px;
-  margin-top: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(255, 252, 246, 0.72);
-
-  border: 1px solid rgba(153, 121, 72, 0.20);
-  border-radius: 14px;
-
-  overflow: hidden;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
-}
-
-.residence-card-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-
-  padding: 8px;
-
-  display: block;
-
-  transition: transform 0.7s ease;
-}
-
-.residence-card:hover .residence-card-image img {
-  transform: scale(1.035);
-}
-
-
-/* =========================================================
-   CARD CONTENT
-========================================================= */
-
-.residence-card-content {
-  margin-top: 17px;
-}
-
-.card-label,
-.residence-card .residence-type {
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: #9a7747;
-
-  font-size: 9px;
-  font-weight: 600;
-
-  letter-spacing: 2.7px;
-
-  text-transform: uppercase;
-}
-
-.residence-card-content h3,
-.residence-card h3 {
-  max-width: 300px;
-
-  margin: 0 0 10px;
-
-  color: #211e19;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 23px;
-
-  font-weight: 400;
-
-  line-height: 1.1;
-
-  letter-spacing: -0.3px;
-}
-
-.residence-card-content p,
-.residence-card > p {
-  max-width: 310px;
-
-  margin: 0;
-
-  color: #716a5f;
-
-  font-size: 10.5px;
-
-  line-height: 1.65;
-}
-
-
-/* =========================================================
-   CARD ARROW
-========================================================= */
-
-.card-arrow,
-.residence-card .residence-arrow,
-.residence-card a {
-  width: 41px;
-  height: 41px;
-
-  margin-top: auto;
-  margin-left: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(145, 109, 61, 0.35);
-
-  border-radius: 50%;
-
-  background: rgba(255, 253, 248, 0.6);
-
-  color: #80613a;
-
-  font-size: 15px;
-
-  text-decoration: none;
 
   transition:
     background 0.4s ease,
@@ -486,315 +261,123 @@
     border-color 0.4s ease;
 }
 
-.residence-card:hover .card-arrow,
-.residence-card:hover .residence-arrow,
-.residence-card:hover a {
+.residence-card:hover .residence-icon {
   background: #8e682f;
-
   color: #fff;
-
   border-color: #8e682f;
-
-  transform: translateX(4px);
+  transform: rotate(5deg);
 }
 
+/* =========================
+   CARD CONTENT
+   ========================= */
 
-/* =========================================================
-   FEATURED CARD
-========================================================= */
-
-.residence-card.featured-residence {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(248, 240, 226, 0.98),
-      rgba(232, 218, 195, 0.96)
-    ) !important;
+.residence-card-content {
+  margin-top: 28px;
 }
 
-.residence-card.featured-residence h3 {
-  color: #171511;
+.card-label {
+  display: block;
+  margin-bottom: 9px;
+  color: #9a7747;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
 }
 
+.residence-card-content h3 {
+  max-width: 310px;
+  margin: 0 0 10px;
+  color: #211e19;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+}
 
-/* =========================================================
-   SUBTLE LIGHT / GOLD GLOW
-========================================================= */
+.residence-card-content p {
+  max-width: 315px;
+  margin: 0;
+  color: #716a5f;
+  font-size: 14px;
+  line-height: 1.65;
+}
 
-.residences-section::after {
-  content: "";
+/* =========================
+   CARD ARROW
+   ========================= */
 
-  position: absolute;
+.card-arrow {
+  width: 41px;
+  height: 41px;
+  margin-top: auto;
+  margin-left: auto;
 
-  width: 500px;
-  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  right: -250px;
-  bottom: -280px;
-
+  border: 1px solid rgba(145, 109, 61, 0.35);
   border-radius: 50%;
+  background: rgba(255, 253, 248, 0.6);
 
-  border: 1px solid rgba(220, 190, 140, 0.15);
+  color: #80613a;
+  font-size: 15px;
 
-  box-shadow:
-    0 0 100px rgba(220, 190, 140, 0.07);
-
-  pointer-events: none;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
 }
 
-
-/* =========================================================
-   FULL SCREEN RESIDENCE DETAIL
-========================================================= */
-
-.residence-detail-overlay {
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 99999;
-
-  width: 100%;
-  height: 100vh;
-
-  background: #f5f1e9;
-
-  overflow: hidden;
-
-  animation:
-    residenceOverlayIn 0.45s ease both;
+.residence-card:hover .card-arrow {
+  background: #8e682f;
+  color: #fff;
+  transform: translate(4px, -3px);
 }
 
-.residence-detail-modal {
-  position: relative;
-
-  width: 100%;
-  height: 100%;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  background: #f5f1e9;
-
-  animation:
-    residenceDetailIn
-    0.8s
-    cubic-bezier(.16,.84,.24,1)
-    both;
-}
-
-
-/* =========================================================
-   DETAIL ANIMATION
-========================================================= */
-
-@keyframes residenceOverlayIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes residenceDetailIn {
-  from {
-    opacity: 0;
-
-    transform:
-      translateY(35px)
-      scale(0.985);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-  }
-}
-
-
-/* =========================================================
-   DETAIL SCROLLBAR
-========================================================= */
-
-.residence-detail-modal::-webkit-scrollbar {
-  width: 7px;
-}
-
-.residence-detail-modal::-webkit-scrollbar-track {
-  background: #eee9df;
-}
-
-.residence-detail-modal::-webkit-scrollbar-thumb {
-  background: #aa8a59;
-  border-radius: 10px;
-}
-
-.residence-detail-modal {
-  scrollbar-color: #aa8a59 #eee9df;
-  scrollbar-width: thin;
-}
-
-
-/* =========================================================
-   LARGE SCREEN
-========================================================= */
-
-@media (min-width: 1500px) {
-
-  .residences-section {
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
-
-  .residence-grid {
-    gap: 24px;
-  }
-
-  .residence-card {
-    height: 470px;
-    min-height: 470px;
-  }
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1150px) {
-
-  .residences-section {
-    padding: 90px 4vw 100px;
-  }
-
-  .residence-grid {
-    grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
-  }
-
-  .residence-card {
-    height: 380px;
-    min-height: 380px;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 650px) {
-
-  .residences-section {
-    padding: 85px 20px 100px;
-  }
-
-  .residences-intro {
-    margin-bottom: 55px;
-  }
-
-  .residences-eyebrow {
-    font-size: 8px;
-    letter-spacing: 3px;
-  }
-
-  .residences-eyebrow::before,
-  .residences-eyebrow::after {
-    width: 25px;
-  }
-
-  .residences-intro h2,
-  .residences-header h2 {
-    font-size: 45px;
-    letter-spacing: -1.5px;
-  }
-
-  .residences-intro p,
-  .residences-header p {
-    font-size: 12px;
-    line-height: 1.8;
-  }
-
-  .residence-grid {
-    grid-template-columns: 1fr;
-    gap: 17px;
-  }
-
-  .residence-card {
-    height: 380px;
-    min-height: 380px;
-
-    padding: 24px;
-  }
-
-  .residence-card-content h3,
-  .residence-card h3 {
-    font-size: 24px;
-  }
-}
-
-
-/* =========================================================
-   RESIDENCE DETAIL — LUXURY FULL PAGE
-========================================================= */
+/* =========================
+   DETAIL OVERLAY
+   ========================= */
 
 .residence-detail-overlay {
   position: fixed;
   inset: 0;
   z-index: 99999;
-
   width: 100%;
   height: 100vh;
-
-  background: #eee9df;
-
   overflow: hidden;
-
-  animation: residenceOverlayIn 0.45s ease both;
+  background: #eee9df;
+  animation: overlayIn 0.4s ease both;
 }
 
-
-/* MAIN DETAIL PAGE */
-
 .residence-detail-modal {
-  position: relative;
-
   width: 100%;
   height: 100%;
-
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
 
-  background:
-    linear-gradient(
-      180deg,
-      #f4f0e8 0%,
-      #eee8de 45%,
-      #f6f2eb 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #f4f0e8 0%,
+    #eee8de 45%,
+    #f6f2eb 100%
+  );
 
   color: #201d18;
-
-  animation: residenceDetailIn
-    0.7s cubic-bezier(.16,.84,.24,1) both;
+  animation: detailIn 0.6s cubic-bezier(0.16, 0.84, 0.24, 1) both;
 }
 
-
-/* =========================================================
+/* =========================
    TOP BAR
-========================================================= */
+   ========================= */
 
 .detail-topbar {
   width: min(1380px, 90%);
   margin: 0 auto;
-
-  padding: 28px 0 18px;
+  padding: 25px 0 15px;
 
   display: flex;
   align-items: center;
@@ -805,28 +388,17 @@
 .detail-close {
   border: 0;
   background: transparent;
-
   font-family: "Manrope", sans-serif;
-
   cursor: pointer;
 }
 
 .back-residences {
   padding: 10px 0;
-
   color: #8e682f;
-
   font-size: 11px;
   font-weight: 600;
-
   letter-spacing: 1.5px;
   text-transform: uppercase;
-
-  transition: color 0.3s ease;
-}
-
-.back-residences:hover {
-  color: #8e682f;
 }
 
 .detail-close {
@@ -841,7 +413,6 @@
   border-radius: 50%;
 
   color: #5f5649;
-
   font-size: 22px;
   font-weight: 300;
 
@@ -857,333 +428,259 @@
   transform: rotate(90deg);
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
+/* =========================
+   DETAIL HEADER
+   ========================= */
 
 .details-header {
   width: min(1180px, 88%);
   margin: 0 auto;
-
-  padding: 45px 0 70px;
+  padding: 42px 0 55px;
 
   display: grid;
   grid-template-columns: 1fr auto;
-
   align-items: end;
-
-  gap: 50px;
+  gap: 45px;
 
   border-bottom: 1px solid rgba(105, 85, 59, 0.16);
 }
 
 .details-title > span {
   display: block;
-
-  margin-bottom: 18px;
-
+  margin-bottom: 16px;
   color: #9a794c;
-
-  font-family: "Manrope", sans-serif;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 4px;
   text-transform: uppercase;
 }
 
 .details-title h2 {
-  margin: 0;
-
   max-width: 800px;
-
+  margin: 0;
   color: #201d18;
-
   font-family: "Playfair Display", serif;
-
-  font-size: clamp(42px, 5vw, 72px);
-
-  line-height: 1;
-
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: 1.02;
   font-weight: 400;
-
   letter-spacing: -2px;
 }
 
 .details-title p {
-  margin: 18px 0 0;
-
+  margin: 17px 0 0;
   color: #927148;
-
-  font-family: "Manrope", sans-serif;
-
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-
-/* UNIT BADGE */
+/* =========================
+   UNIT BADGE
+   ========================= */
 
 .unit-badge {
-  min-width: 150px;
-
-  padding: 24px 26px;
+  min-width: 145px;
+  padding: 22px 25px;
 
   display: flex;
   flex-direction: column;
 
   border: 1px solid rgba(153, 121, 72, 0.28);
-
   background: rgba(255, 252, 246, 0.55);
 
   text-align: center;
 }
 
 .unit-badge small {
-  margin-bottom: 10px;
-
+  margin-bottom: 9px;
   color: #927148;
-
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 2.5px;
 }
 
 .unit-badge strong {
   color: #211e19;
-
   font-family: "Playfair Display", serif;
-
   font-size: 30px;
   font-weight: 400;
 }
 
 .unit-badge span {
   margin-top: 5px;
-
   color: #756c60;
-
   font-size: 9px;
-
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 
 /* =========================================================
-   UNIT LAYOUT — LUXURY FULL WIDTH SECTION
-========================================================= */
+   UNIT LAYOUT — PREMIUM TEXT + LARGE IMAGE
+   ========================================================= */
 
 .detail-layout-section {
   width: 100%;
-  margin: 0;
-  padding: 95px 6vw 110px;
+  min-height: 720px;
+  padding: 85px 5vw;
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  align-items: center;
+  gap: 65px;
   background: #f5f1e9;
 }
 
-/* ---------- HEADING ---------- */
+/* LEFT TEXT */
 
 .detail-section-heading {
-  max-width: 720px;
-  margin: 0 auto 48px;
-  text-align: center;
+  grid-column: 1;
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+  text-align: left;
 }
 
 .detail-section-heading > span {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 22px;
   color: #9a794c;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 3.5px;
   text-transform: uppercase;
 }
 
 .detail-section-heading h3 {
-  margin: 0;
+  margin: 0 0 10px;
   color: #211e19;
   font-family: "Playfair Display", serif;
-  font-size: clamp(38px, 4vw, 58px);
+  font-size: clamp(52px, 5vw, 78px);
   font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -1px;
+  line-height: 0.98;
+  letter-spacing: -2px;
+}
+
+.detail-section-heading h4 {
+  margin: 0 0 28px;
+  color: #211e19;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(27px, 2.5vw, 39px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.detail-section-heading h4::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 1px;
+  margin-top: 20px;
+  background: #a8895b;
 }
 
 .detail-section-heading p {
-  max-width: 620px;
-  margin: 20px auto 0;
+  max-width: 500px;
+  margin: 0 0 18px;
   color: #71695e;
-  font-size: 13px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.85;
 }
 
-/* ---------- LARGE FLOOR PLAN ---------- */
+.detail-section-heading .layout-description {
+  margin-top: 8px;
+  color: #81776a;
+}
+
+/* =========================================
+   UNIT LAYOUT IMAGE — SEAMLESS STYLE
+========================================= */
+/* =========================================================
+   UNIT LAYOUT IMAGE — SEAMLESS / NO BOX
+   ========================================================= */
 
 .detail-layout-image {
-  width: 100%;
-  max-width: 1350px;
-  min-height: 560px;
-  margin: 0 auto;
-  padding: 20px 30px;
+  padding: 0;
+}
 
+.detail-layout-image::before {
+  display: none;
+}
+
+.detail-layout-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  opacity: 1;
+}
+
+.detail-layout-image:hover img {
+  transform: scale(1.01);
+}
+
+/* Image moves to right */
+
+.detail-layout-image {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: #fffdf9;
-  border: 1px solid rgba(120, 94, 62, 0.18);
-
-  box-shadow:
-    0 25px 70px rgba(50, 40, 27, 0.10);
-
-  overflow: hidden;
-  position: relative;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
 }
 
-/* subtle luxury frame */
 
 .detail-layout-image::before {
   content: "";
   position: absolute;
   inset: 14px;
-  border: 1px solid rgba(153, 121, 72, 0.12);
+
+  border: 1px solid rgba(153, 121, 72, 0.16);
+
   pointer-events: none;
-}
-
-/* image */
-.detail-layout-image {
-  width: 100%;
-  max-width: 1350px;
-  min-height: 560px;
-  margin: 0 auto;
-
-  padding: 15px 25px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #fffdf9;
-  border: 1px solid rgba(120, 94, 62, 0.18);
-
-  box-shadow:
-    0 25px 70px rgba(50, 40, 27, 0.10);
-
-  overflow: hidden;
-  position: relative;
 }
 
 .detail-layout-image img {
   position: relative;
   z-index: 1;
 
+  display: block;
+
   width: 100%;
-  max-width: 1350px;
-  height: auto;
-  max-height: 650px;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 580px;
+
+  margin: 0;
+  padding: 0;
 
   object-fit: contain;
   object-position: center;
 
-  padding: 0;
-  display: block;
+  filter: none;
+  opacity: 1;
 
-  transition: transform 0.8s cubic-bezier(.16,.84,.24,1);
-}
+  image-rendering: auto;
 
-
-/* subtle hover */
-
-.detail-layout-image:hover img {
-  transform: scale(1.015);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-  .detail-layout-section {
-    padding: 75px 5vw 90px;
-  }
-
-  .detail-section-heading {
-    margin-bottom: 38px;
-  }
-
-  .detail-section-heading h3 {
-    font-size: 42px;
-  }
-
-  .detail-layout-image {
-    min-height: 450px;
-    padding: 28px;
-  }
-
-  .detail-layout-image img {
-    max-height: 520px;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-  .detail-layout-section {
-    padding: 65px 20px 75px;
-  }
-
-  .detail-section-heading {
-    margin-bottom: 30px;
-  }
-
-  .detail-section-heading > span {
-    font-size: 8px;
-    letter-spacing: 2.5px;
-  }
-
-  .detail-section-heading h3 {
-    font-size: 36px;
-  }
-
-  .detail-section-heading p {
-    font-size: 12px;
-    line-height: 1.7;
-  }
-
-  .detail-layout-image {
-    min-height: 300px;
-    padding: 20px 15px;
-  }
-
-  .detail-layout-image::before {
-    inset: 9px;
-  }
-
-  .detail-layout-image img {
-    max-height: 380px;
-  }
+  transition: transform 0.6s ease;
 }
 
 .detail-layout-image:hover img {
   transform: scale(1.015);
 }
-
-
-/* =========================================================
-   PRICE + AREA
-========================================================= */
+/* =========================
+   PRICE
+   ========================= */
 
 .details-price {
   width: min(1180px, 88%);
@@ -1197,7 +694,7 @@
 }
 
 .details-price > div {
-  padding: 30px 35px;
+  padding: 28px 32px;
 }
 
 .details-price > div + div {
@@ -1206,36 +703,28 @@
 
 .details-price small {
   display: block;
-
-  margin-bottom: 9px;
-
+  margin-bottom: 8px;
   color: #9a794c;
-
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 2.5px;
 }
 
 .details-price strong {
   color: #211e19;
-
   font-family: "Playfair Display", serif;
-
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 400;
 }
 
-
-/* =========================================================
+/* =========================
    STATS
-========================================================= */
+   ========================= */
 
 .details-stats {
   width: min(1180px, 88%);
   margin: 0 auto;
-
-  padding: 38px 0;
+  padding: 35px 0;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1244,70 +733,55 @@
 }
 
 .details-stats > div {
-  padding: 0 25px;
-
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
-
   gap: 7px;
-
   border-left: 1px solid rgba(105, 85, 59, 0.13);
 }
 
 .details-stats > div:first-child {
-  border-left: 0;
   padding-left: 0;
+  border-left: 0;
 }
 
 .details-stats span {
   color: #887e70;
-
   font-size: 9px;
   font-weight: 600;
-
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .details-stats strong {
   color: #29251f;
-
   font-family: "Playfair Display", serif;
-
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 400;
 }
 
-
-/* =========================================================
+/* =========================
    RESIDENCE OVERVIEW
-========================================================= */
+   ========================= */
 
 .detail-description {
   width: min(1180px, 88%);
   margin: 0 auto;
-
-  padding: 110px 0;
+  padding: 90px 0;
 
   display: grid;
   grid-template-columns: 1.35fr 0.65fr;
-
-  gap: 100px;
-
+  gap: 80px;
   align-items: start;
 }
 
 .description-copy > span,
 .layout-details-copy > span {
   display: block;
-
-  margin-bottom: 18px;
-
+  margin-bottom: 17px;
   color: #9a794c;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -1315,19 +789,13 @@
 .description-copy h3,
 .layout-details-copy h3 {
   max-width: 650px;
-
-  margin: 0 0 28px;
+  margin: 0 0 23px;
 
   color: #211e19;
-
   font-family: "Playfair Display", serif;
-
-  font-size: clamp(38px, 4vw, 58px);
-
-  line-height: 1.05;
-
+  font-size: clamp(36px, 4vw, 55px);
+  line-height: 1.06;
   font-weight: 400;
-
   letter-spacing: -1.5px;
 }
 
@@ -1340,33 +808,28 @@
 .description-copy p,
 .layout-details-copy p {
   max-width: 650px;
-
-  margin: 0 0 14px;
-
+  margin: 0 0 13px;
   color: #6f675c;
-
-  font-size: 13px;
-
+  font-size: 14px;
   line-height: 1.9;
 }
 
-
-/* SIDE INFO */
+/* =========================
+   SIDE INFORMATION
+   ========================= */
 
 .description-info {
-  padding: 28px;
-
+  padding: 25px;
   background: rgba(255, 252, 246, 0.55);
-
   border: 1px solid rgba(120, 94, 62, 0.16);
 }
 
 .description-info > div {
-  padding: 18px 0;
+  padding: 17px 0;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   border-bottom: 1px solid rgba(120, 94, 62, 0.13);
 }
@@ -1377,112 +840,136 @@
 
 .description-info span {
   color: #887e70;
-
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 2px;
 }
 
 .description-info strong {
   color: #29251f;
-
   font-family: "Playfair Display", serif;
-
   font-size: 17px;
   font-weight: 400;
 }
 
-
-/* =========================================================
+/* =========================
    LAYOUT DETAILS
-========================================================= */
+   ========================= */
 
 .layout-details {
   width: min(1180px, 88%);
   margin: 0 auto;
-
-  padding: 95px 0;
+  padding: 65px 0 70px;
 
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-
-  gap: 80px;
+  gap: 55px;
 
   align-items: center;
 
-  border-top: 1px solid rgba(105, 85, 59, 0.16);
+  border-top: 1px solid rgba(105, 85, 59, 0.14);
 }
 
 .layout-highlights {
-  margin-top: 40px;
-
+  margin-top: 34px;
   display: flex;
-  gap: 40px;
+  gap: 35px;
 }
 
 .layout-highlights > div {
   display: flex;
   flex-direction: column;
-
   gap: 5px;
 }
 
 .layout-highlights strong {
   color: #29251f;
-
   font-family: "Playfair Display", serif;
-
-  font-size: 27px;
-
+  font-size: 26px;
   font-weight: 400;
 }
 
 .layout-highlights span {
   color: #8c8172;
-
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 2px;
 }
 
+/* =========================
+   SECOND IMAGE
+   ========================= */
 .layout-details-image {
-  min-height: 430px;
-
-  padding: 35px;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #faf7f1;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 
-  border: 1px solid rgba(120, 94, 62, 0.16);
-
-  box-shadow:
-    0 20px 60px rgba(50, 40, 27, 0.07);
+  overflow: hidden;
 }
 
 .layout-details-image img {
   width: 100%;
-  height: 390px;
-
-  object-fit: contain;
+  height: auto;
+  max-width: 620px;
 
   display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  filter: none;
+  opacity: 0.96;
+
+  /* white image background ko page ke saath blend karega */
+  mix-blend-mode: multiply;
+
+  transition: transform 0.5s ease;
 }
 
+.layout-details-image:hover img {
+  transform: scale(1.01);
+}
 
-/* =========================================================
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .layout-details {
+    width: 88%;
+    padding: 55px 0 60px;
+
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .layout-details-image {
+    width: 100%;
+  }
+
+  .layout-details-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* =========================
    FINAL INFORMATION
-========================================================= */
+   ========================= */
 
 .detail-bottom {
   width: min(1180px, 88%);
   margin: 0 auto;
-
-  padding: 45px 0;
+  padding: 42px 0;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1492,65 +979,54 @@
 }
 
 .detail-bottom > div {
-  padding: 0 30px;
+  padding: 0 28px;
 
   display: flex;
   flex-direction: column;
-
   gap: 8px;
 
   border-left: 1px solid rgba(105, 85, 59, 0.13);
 }
 
 .detail-bottom > div:first-child {
-  border-left: 0;
   padding-left: 0;
+  border-left: 0;
 }
 
 .detail-bottom span {
   color: #8c8172;
-
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 2px;
 }
 
 .detail-bottom strong {
   color: #28241e;
-
   font-family: "Playfair Display", serif;
-
   font-size: 21px;
   font-weight: 400;
 }
 
-
-/* =========================================================
+/* =========================
    END BUTTON
-========================================================= */
+   ========================= */
 
 .detail-end {
-  padding: 70px 20px 100px;
-
+  padding: 65px 20px 90px;
   display: flex;
   justify-content: center;
 }
 
 .detail-end button {
-  padding: 15px 28px;
+  padding: 14px 27px;
 
-  border: 1px solid rgba(120, 94, 62, 0.30);
-
+  border: 1px solid rgba(120, 94, 62, 0.3);
   background: transparent;
 
   color: #8e682f;
-
   font-family: "Manrope", sans-serif;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 2px;
   text-transform: uppercase;
 
@@ -1566,12 +1042,29 @@
   color: #fff;
 }
 
+/* =========================
+   REVEAL
+   ========================= */
 
-/* =========================================================
-   ANIMATION
-========================================================= */
+.detail-reveal {
+  opacity: 0;
+  transform: translateY(35px);
 
-@keyframes residenceOverlayIn {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+
+.detail-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes overlayIn {
   from {
     opacity: 0;
   }
@@ -1581,10 +1074,10 @@
   }
 }
 
-@keyframes residenceDetailIn {
+@keyframes detailIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(25px);
   }
 
   to {
@@ -1593,10 +1086,14 @@
   }
 }
 
-
-/* =========================================================
+/* =========================
    SCROLLBAR
-========================================================= */
+   ========================= */
+
+.residence-detail-modal {
+  scrollbar-width: thin;
+  scrollbar-color: #aa8a59 #e8e1d6;
+}
 
 .residence-detail-modal::-webkit-scrollbar {
   width: 7px;
@@ -1611,35 +1108,49 @@
   border-radius: 10px;
 }
 
-.residence-detail-modal {
-  scrollbar-color: #aa8a59 #e8e1d6;
-  scrollbar-width: thin;
-}
-
-
-/* =========================================================
+/* =========================
    TABLET
-========================================================= */
+   ========================= */
 
-@media (max-width: 900px) {
-
-  .details-header {
-    grid-template-columns: 1fr;
-    gap: 30px;
+@media (max-width: 1150px) {
+  .residences-section {
+    padding: 90px 4vw 105px;
   }
 
-  .unit-badge {
-    width: 170px;
+  .residence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .detail-description {
-    grid-template-columns: 1fr;
-    gap: 50px;
+  .residence-card {
+    min-height: 350px;
+  }
+
+  .detail-layout-image {
+    height: 440px;
   }
 
   .layout-details {
+    gap: 45px;
+  }
+}
+
+/* =========================
+   TABLET / SMALL LAPTOP
+   ========================= */
+
+@media (max-width: 900px) {
+  .details-header {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 28px;
+  }
+
+  .unit-badge {
+    width: 160px;
+  }
+
+  .detail-description,
+  .layout-details {
+    grid-template-columns: 1fr;
   }
 
   .details-stats {
@@ -1648,61 +1159,125 @@
   }
 
   .details-stats > div:nth-child(3) {
-    border-left: 0;
     padding-left: 0;
+    border-left: 0;
+  }
+
+  .detail-layout-image {
+    height: 420px;
+  }
+
+  .layout-details-image {
+    min-height: 360px;
   }
 }
 
-
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+   ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+  .residences-section {
+    padding: 75px 20px 90px;
+  }
+
+  .residences-intro {
+    margin-bottom: 45px;
+  }
+
+  .residences-eyebrow {
+    gap: 9px;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .residences-eyebrow::before,
+  .residences-eyebrow::after {
+    width: 22px;
+  }
+
+  .residences-intro h2 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+
+  .residences-intro p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .residence-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .residence-card {
+    min-height: 345px;
+    padding: 24px;
+  }
+
+  .residence-card-content h3 {
+    font-size: 24px;
+  }
+
+  .residence-card-content p {
+    font-size: 13px;
+  }
 
   .detail-topbar {
     width: 88%;
-    padding-top: 20px;
-  }
-
-  .details-header,
-  .detail-layout-section,
-  .details-price,
-  .details-stats,
-  .detail-description,
-  .layout-details,
-  .detail-bottom {
-    width: 88%;
+    padding-top: 18px;
   }
 
   .details-header {
-    padding: 35px 0 50px;
+    width: 88%;
+    padding: 30px 0 45px;
   }
 
   .details-title h2 {
-    font-size: 40px;
+    font-size: 39px;
     letter-spacing: -1px;
   }
 
   .detail-layout-section {
-    padding: 65px 0;
+    padding: 60px 5%;
+  }
+
+  .detail-section-heading {
+    margin-bottom: 28px;
+  }
+
+  .detail-section-heading h3 {
+    font-size: 34px;
+  }
+
+  .detail-section-heading p {
+    font-size: 12px;
+    line-height: 1.7;
   }
 
   .detail-layout-image {
-    min-height: 300px;
-    padding: 20px;
+    height: 300px;
+    padding: 12px;
+  }
+
+  .detail-layout-image::before {
+    inset: 8px;
   }
 
   .detail-layout-image img {
-    height: 270px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
   }
 
   .details-price {
+    width: 88%;
     grid-template-columns: 1fr;
   }
 
   .details-price > div {
-    padding: 25px 0;
+    padding: 24px 0;
   }
 
   .details-price > div + div {
@@ -1711,6 +1286,7 @@
   }
 
   .details-stats {
+    width: 88%;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1719,34 +1295,45 @@
   }
 
   .detail-description {
-    padding: 75px 0;
+    width: 88%;
+    padding: 70px 0;
+    gap: 45px;
   }
 
   .description-copy h3,
   .layout-details-copy h3 {
-    font-size: 38px;
+    font-size: 36px;
+  }
+
+  .description-copy p,
+  .layout-details-copy p {
+    font-size: 13px;
+    line-height: 1.8;
   }
 
   .layout-details {
-    padding: 70px 0;
+    width: 88%;
+    padding: 65px 0;
+    gap: 40px;
   }
 
   .layout-details-image {
-    min-height: 280px;
-    padding: 20px;
+    min-height: 270px;
+    padding: 15px;
   }
 
   .layout-details-image img {
-    height: 250px;
+    height: 245px;
   }
 
   .detail-bottom {
+    width: 88%;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 24px;
   }
 
   .detail-bottom > div {
-    padding: 0 0 20px;
+    padding: 0 0 18px;
     border-left: 0;
     border-bottom: 1px solid rgba(105, 85, 59, 0.13);
   }
@@ -1754,692 +1341,917 @@
   .detail-bottom > div:last-child {
     border-bottom: 0;
   }
-}
 
-/* =========================================================
-   RAYA AL QURUM — VISIBLE LUXURY ANIMATION
-========================================================= */
-
-@keyframes luxuryRevealUp {
-  0% {
-    opacity: 0;
-    transform: translateY(70px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  .layout-highlights {
+    gap: 25px;
   }
 }
 
-@keyframes luxuryRevealScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.88);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes luxuryRevealLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-70px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes luxuryRevealRight {
-  0% {
-    opacity: 0;
-    transform: translateX(70px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-/* =========================================================
-   RESIDENCES INTRO
-========================================================= */
-
-.residences-intro-content {
-  animation:
-    luxuryRevealUp 1.2s cubic-bezier(.16,.84,.24,1) both;
-}
-
-
-/* =========================================================
-   RESIDENCE CARDS
-========================================================= */
-
-.residence-card {
-  opacity: 0;
-  animation:
-    luxuryRevealUp 1.1s cubic-bezier(.16,.84,.24,1) forwards;
-}
-
-.residence-card:nth-child(1) {
-  animation-delay: 0.15s;
-}
-
-.residence-card:nth-child(2) {
-  animation-delay: 0.35s;
-}
-
-.residence-card:nth-child(3) {
-  animation-delay: 0.55s;
-}
-
-.residence-card:nth-child(4) {
-  animation-delay: 0.75s;
-}
-
-
-/* =========================================================
-   CARD HOVER
-========================================================= */
-
-.residence-card {
-  transition:
-    transform 0.6s cubic-bezier(.16,.84,.24,1),
-    box-shadow 0.6s ease;
-}
-
-.residence-card:hover {
-  transform: translateY(-12px);
-  box-shadow:
-    0 25px 60px rgba(35, 27, 18, 0.18);
-}
-
-
-/* =========================================================
-   CARD CONTENT
-========================================================= */
-
-.residence-card-content {
-  transition:
-    transform 0.6s cubic-bezier(.16,.84,.24,1);
-}
-
-.residence-card:hover .residence-card-content {
-  transform: translateY(-5px);
-}
-
-
-/* =========================================================
-   ARROW
-========================================================= */
-
-.card-arrow {
-  transition:
-    transform 0.6s cubic-bezier(.16,.84,.24,1),
-    background 0.4s ease;
-}
-
-.residence-card:hover .card-arrow {
-  transform: translate(6px, -6px) scale(1.08);
-}
-
-
-/* =========================================================
-   DETAIL PAGE — MAIN IMAGE
-========================================================= */
-
-.detail-layout-image {
-  opacity: 0;
-  animation:
-    luxuryRevealScale 1.3s cubic-bezier(.16,.84,.24,1) 0.2s forwards;
-}
-
-
-/* =========================================================
-   DETAIL HEADING
-========================================================= */
-
-.detail-section-heading {
-  opacity: 0;
-  animation:
-    luxuryRevealLeft 1.1s cubic-bezier(.16,.84,.24,1) forwards;
-}
-
-
-/* =========================================================
-   PRICE + STATS
-========================================================= */
-
-.details-price {
-  opacity: 0;
-  animation:
-    luxuryRevealUp 1s cubic-bezier(.16,.84,.24,1) 0.25s forwards;
-}
-
-.details-stats {
-  opacity: 0;
-  animation:
-    luxuryRevealUp 1s cubic-bezier(.16,.84,.24,1) 0.4s forwards;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.detail-description {
-  opacity: 0;
-  animation:
-    luxuryRevealRight 1.1s cubic-bezier(.16,.84,.24,1) forwards;
-}
-
-
-/* =========================================================
-   LAYOUT DETAILS
-========================================================= */
-
-.layout-details-copy {
-  opacity: 0;
-  animation:
-    luxuryRevealLeft 1.1s cubic-bezier(.16,.84,.24,1) forwards;
-}
-
-.layout-details-image {
-  opacity: 0;
-  animation:
-    luxuryRevealScale 1.3s cubic-bezier(.16,.84,.24,1) 0.25s forwards;
-}
-
-
-/* =========================================================
-   IMAGE HOVER
-========================================================= */
-
-.detail-layout-image img,
-.layout-details-image img {
-  transition:
-    transform 1s cubic-bezier(.16,.84,.24,1);
-}
-
-.detail-layout-image:hover img,
-.layout-details-image:hover img {
-  transform: scale(1.025);
-}
-
-/* =========================================================
-   RESIDENCES — PREMIUM SCROLL ANIMATION
-========================================================= */
-
-.reveal-element {
-  opacity: 0;
-  transform: translateY(65px);
-  transition:
-    opacity 1s cubic-bezier(.16, .84, .24, 1),
-    transform 1.1s cubic-bezier(.16, .84, .24, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-element.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* =========================================================
-   HEADING — STRONGER REVEAL
-========================================================= */
-
-.residences-intro h2.reveal-element {
-  transform: translateY(80px);
-  transition:
-    opacity 1.1s ease,
-    transform 1.2s cubic-bezier(.16, .84, .24, 1);
-}
-
-.residences-intro h2.reveal-element.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* =========================================================
-   PARAGRAPH
-========================================================= */
-
-.residences-intro p.reveal-element {
-  transform: translateY(35px);
-  transition-delay: .18s;
-}
-
-.residences-intro p.reveal-element.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* =========================================================
-   EYEBROW
-========================================================= */
-
-.residences-eyebrow.reveal-element {
-  transform: translateY(25px);
-  transition-delay: .05s;
-}
-
-.residences-eyebrow.reveal-element.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* =========================================================
-   RESIDENCE CARDS
-========================================================= */
-
-.residence-card.reveal-element {
-  transform: translateY(90px) scale(.96);
-  transition:
-    opacity .9s ease,
-    transform 1.15s cubic-bezier(.16, .84, .24, 1),
-    box-shadow .6s ease,
-    border-color .5s ease;
-}
-
-.residence-card.reveal-element.reveal-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-
-/* =========================================================
-   CARD STAGGER
-========================================================= */
-
-.residence-card:nth-child(1) {
-  transition-delay: .05s;
-}
-
-.residence-card:nth-child(2) {
-  transition-delay: .18s;
-}
-
-.residence-card:nth-child(3) {
-  transition-delay: .31s;
-}
-
-.residence-card:nth-child(4) {
-  transition-delay: .44s;
-}
-
-
-/* =========================================================
-   CARD CONTENT REVEAL
-========================================================= */
-
-.residence-card.reveal-element .residence-icon {
-  opacity: 0;
-  transform: scale(.75) rotate(-8deg);
-  transition:
-    opacity .7s ease,
-    transform .8s cubic-bezier(.16, .84, .24, 1);
-  transition-delay: .25s;
-}
-
-.residence-card.reveal-element.reveal-visible .residence-icon {
-  opacity: 1;
-  transform: scale(1) rotate(0);
-}
-
-
-.residence-card.reveal-element .residence-card-content {
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity .8s ease,
-    transform .9s cubic-bezier(.16, .84, .24, 1);
-  transition-delay: .35s;
-}
-
-.residence-card.reveal-element.reveal-visible .residence-card-content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-.residence-card.reveal-element .card-arrow {
-  opacity: 0;
-  transform: translateY(20px) scale(.8);
-  transition:
-    opacity .7s ease,
-    transform .8s cubic-bezier(.16, .84, .24, 1),
-    background .4s ease,
-    color .4s ease;
-  transition-delay: .5s;
-}
-
-.residence-card.reveal-element.reveal-visible .card-arrow {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-
-/* =========================================================
-   GOLD LINE
-========================================================= */
-
-.residences-intro::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 1px;
-  margin: 35px auto 0;
-  background: #a8895b;
-  transition: width 1.2s cubic-bezier(.16, .84, .24, 1);
-}
-
-.residences-intro:has(.reveal-visible)::after {
-  width: 70px;
-}
-
-
-/* =========================================================
-   DETAIL PAGE ANIMATION
-========================================================= */
-
-.residence-detail-modal .details-header,
-.residence-detail-modal .detail-layout-section,
-.residence-detail-modal .details-price,
-.residence-detail-modal .details-stats,
-.residence-detail-modal .detail-description,
-.residence-detail-modal .layout-details,
-.residence-detail-modal .detail-bottom {
-  animation: luxurySectionReveal 1s cubic-bezier(.16, .84, .24, 1) both;
-}
-
-
-.residence-detail-modal .details-header {
-  animation-delay: .05s;
-}
-
-.residence-detail-modal .detail-layout-section {
-  animation-delay: .15s;
-}
-
-.residence-detail-modal .details-price {
-  animation-delay: .25s;
-}
-
-.residence-detail-modal .details-stats {
-  animation-delay: .35s;
-}
-
-.residence-detail-modal .detail-description {
-  animation-delay: .45s;
-}
-
-.residence-detail-modal .layout-details {
-  animation-delay: .55s;
-}
-
-.residence-detail-modal .detail-bottom {
-  animation-delay: .65s;
-}
-
-
-@keyframes luxurySectionReveal {
-  from {
-    opacity: 0;
-    transform: translateY(55px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 650px) {
-
-  .reveal-element {
-    transform: translateY(45px);
-    transition-duration: .9s;
-  }
-
-  .residence-card.reveal-element {
-    transform: translateY(55px) scale(.97);
-  }
-
-  .residence-card.reveal-element.reveal-visible {
-    transform: translateY(0) scale(1);
-  }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
+/* =========================
+   REDUCED MOTION
+   ========================= */
 
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 
-  .reveal-element,
-  .residence-card.reveal-element,
-  .residences-intro h2.reveal-element,
-  .residences-intro p.reveal-element {
+  .residences-intro,
+  .residence-card,
+  .detail-reveal {
     opacity: 1;
     transform: none;
-    transition: none;
   }
 }
 
 /* =========================================
-   STRONG LUXURY REVEAL ANIMATION
+   MOBILE — UNIT LAYOUT
 ========================================= */
 
-.reveal-element {
-  opacity: 0;
-  transform: translateY(60px);
-  filter: blur(8px);
-  transition:
-    opacity 1s cubic-bezier(.16,.84,.24,1),
-    transform 1s cubic-bezier(.16,.84,.24,1),
-    filter 1s ease;
-}
-
-.reveal-element.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
-}
-
-/* Heading comes slightly slower */
-.detail-description h3.reveal-element {
-  transition-delay: 0.1s;
-}
-
-/* Paragraph follows heading */
-.detail-description p.reveal-element {
-  transition-delay: 0.22s;
-}
-
-/* Layout details */
-.layout-details h3.reveal-element {
-  transition-delay: 0.1s;
-}
-
-.layout-details p.reveal-element {
-  transition-delay: 0.22s;
-}
-
-.layout-details-image.reveal-element {
-  transform: translateX(70px);
-  transition-delay: 0.15s;
-}
-
-.layout-details-image.reveal-visible {
-  transform: translateX(0);
-}
-
-/* Unit layout image */
-.detail-layout-image {
-  opacity: 0;
-  transform: translateY(70px) scale(.96);
-  filter: blur(6px);
-  transition:
-    opacity 1.1s ease,
-    transform 1.1s cubic-bezier(.16,.84,.24,1),
-    filter 1.1s ease;
-}
-
-.detail-layout-image.reveal-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
-/* =========================================================
-   RESIDENCE DETAILS — LUXURY REVEAL ANIMATION
-   ========================================================= */
-
-.detail-reveal {
-  opacity: 0;
-  transform: translateY(55px);
-  transition:
-    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-
-.detail-reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Slightly stronger movement for headings */
-
-.detail-reveal h3,
-h3.detail-reveal {
-  transition-delay: 0.05s;
-}
-
-
-/* Paragraphs come slightly after heading */
-
-p.detail-reveal {
-  transition-delay: 0.15s;
-}
-
-
-/* Mobile */
-
 @media (max-width: 650px) {
-  .detail-reveal {
-    transform: translateY(35px);
-    transition-duration: 0.75s;
 
+  .detail-layout-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 60px 5%;
+    gap: 35px;
   }
+
+  .detail-section-heading {
+    grid-column: 1;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .detail-section-heading h3 {
+    font-size: 52px;
+  }
+
+  .detail-section-heading h4 {
+    font-size: 28px;
+  }
+
+  .detail-section-heading p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .detail-layout-image {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    padding: 10px;
+  }
+
+  .detail-layout-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+  }
+
 }
 
-/* =========================================================
-   STRONG LUXURY REVEAL ANIMATION
-========================================================= */
+/* =========================================
+   UNIT FEATURES
+========================================= */
 
-.reveal-element {
-  opacity: 0;
-  transform: translateY(60px);
-  filter: blur(8px);
-  transition:
-    opacity 1s cubic-bezier(.16,.84,.24,1),
-    transform 1s cubic-bezier(.16,.84,.24,1),
-    filter 1s ease;
+.unit-features {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 520px;
 }
 
-.reveal-element.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
+.unit-feature {
+  min-height: 92px;
+  padding: 15px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  background: rgba(255, 252, 246, 0.65);
+  border: 1px solid rgba(120, 94, 62, 0.16);
 }
 
+.feature-icon {
+  width: 58px;
+  height: 58px;
 
-/* =========================================================
-   RESIDENCE DETAILS — STRONG TEXT REVEAL
-========================================================= */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.detail-reveal {
-  opacity: 0;
-  transform: translateY(65px);
-  transition:
-    opacity 1s cubic-bezier(.16,.84,.24,1),
-    transform 1.1s cubic-bezier(.16,.84,.24,1);
-  will-change: opacity, transform;
+  color: #b18a52;
 }
 
-.detail-reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
+.feature-icon svg {
+  width: 48px;
+  height: 48px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-
-/* Heading */
-h3.detail-reveal {
-  transition-delay: 0.05s;
-}
-
-
-/* Paragraph */
-p.detail-reveal {
-  transition-delay: 0.18s;
-}
-
-
-/* =========================================================
-   FLOOR PLAN IMAGES — ALWAYS SHARP
-========================================================= */
-
-.detail-layout-image,
-.layout-details-image {
-  filter: none !important;
-  opacity: 1 !important;
-  transform: none !important;
-  backdrop-filter: none !important;
-}
-
-.detail-layout-image img,
-.layout-details-image img {
-  filter: none !important;
-  opacity: 1 !important;
-  transform: none !important;
+.unit-feature strong {
   display: block;
-  image-rendering: auto !important;
+  color: #29251f;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.unit-feature span {
+  display: block;
+  margin-top: 2px;
+
+  color: #887e70;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* =========================================
+   MOBILE UNIT FEATURES
+========================================= */
 
 @media (max-width: 650px) {
 
-  .detail-reveal {
-    transform: translateY(40px);
-    transition-duration: 0.8s;
+  .unit-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 28px;
   }
 
-  .reveal-element {
-    transform: translateY(40px);
+  .unit-feature {
+    min-height: 85px;
   }
 
 }
+
+/* =========================================
+   UNIT FEATURES — PREMIUM ICON ROW
+========================================= */
+
+.unit-features {
+  width: 100%;
+  max-width: 620px;
+  margin-top: 38px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(154, 121, 76, 0.28);
+  border-bottom: 1px solid rgba(154, 121, 76, 0.28);
+}
+
+.unit-feature {
+  min-height: 125px;
+  padding: 18px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background: transparent;
+}
+
+.unit-feature + .unit-feature {
+  border-left: 1px solid rgba(154, 121, 76, 0.28);
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #b18a52;
+}
+
+.feature-icon svg {
+  width: 48px;
+  height: 48px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.unit-feature strong {
+  display: block;
+  margin-top: 3px;
+
+  color: #29251f;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.unit-feature span {
+  display: block;
+  margin-top: 9px;
+
+  color: #81776a;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MOBILE — UNIT FEATURES
+========================================= */
+
+@media (max-width: 650px) {
+
+  .unit-features {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 28px;
+  }
+
+  .unit-feature {
+    min-height: 105px;
+    padding: 15px 10px;
+  }
+
+  .unit-feature:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid rgba(154, 121, 76, 0.28);
+  }
+
+  .unit-feature:nth-child(4) {
+    border-top: 1px solid rgba(154, 121, 76, 0.28);
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-icon svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .unit-feature strong {
+    font-size: 20px;
+  }
+
+  .unit-feature span {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .unit-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .unit-feature:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid rgba(154, 121, 76, 0.28);
+  }
+
+  .unit-feature:nth-child(4) {
+    border-top: 1px solid rgba(154, 121, 76, 0.28);
+  }
+
+}
+
+/* =========================================
+   UNIT FEATURES — FINAL LUXURY VERSION
+   ========================================= */
+
+.detail-section-heading {
+  min-width: 0;
+  width: 100%;
+}
+
+
+/* ================================
+   UNIT FEATURES — LUXURY STYLE
+================================ */
+
+.unit-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 620px;
+  margin-top: 42px;
+  border: none;
+}
+
+.unit-feature {
+  min-height: 115px;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border: none;
+  border-right: 1px solid rgba(166, 128, 72, 0.35);
+}
+
+/* Last item ke baad line nahi */
+.unit-feature:last-child {
+  border-right: none;
+}
+
+/* Kisi bhi purani box/bottom line ko remove */
+.unit-feature:nth-child(1),
+.unit-feature:nth-child(2),
+.unit-feature:nth-child(3),
+.unit-feature:nth-child(4) {
+  border-bottom: none;
+}
+
+/* ICON */
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+  fill: none;
+  stroke: #b88945;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* NUMBER + LABEL */
+.feature-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-info strong {
+  margin: 0 0 9px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  color: #171717;
+}
+
+.feature-info span {
+  display: block;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  line-height: 1.2;
+  color: #81796e;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .unit-features {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    margin-top: 28px;
+  }
+
+  .unit-feature {
+    min-height: 105px;
+    padding: 0 8px;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 15px;
+  }
+
+  .feature-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .feature-info strong {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .feature-info span {
+    font-size: 7px;
+    letter-spacing: 1.8px;
+  }
+}
+
+/* =====================================================
+   F2 · 1 BHK — LUXURY SALES OFFER
+===================================================== */
+
+.sales-offer-section {
+  width: 100%;
+  padding: 120px 5vw 130px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(190, 158, 106, 0.08),
+      transparent 32%
+    ),
+    #faf7f1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle luxury line */
+
+.sales-offer-section::before {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 5vw;
+  right: 5vw;
+  height: 1px;
+  background: rgba(164, 132, 85, 0.25);
+}
+
+
+/* MAIN GRID */
+
+.sales-offer-inner {
+  width: min(1380px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.sales-offer-content {
+  padding: 20px 0;
+}
+
+.sales-offer-eyebrow {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+
+  color: #a48455;
+}
+
+.sales-offer-content h2 {
+  margin: 0;
+
+  max-width: 520px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 4.5vw, 68px);
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  color: #25221e;
+}
+
+.sales-offer-content h2 em {
+  display: block;
+
+  color: #a77c3b;
+  font-style: italic;
+}
+
+
+/* DESCRIPTION */
+
+.sales-offer-intro {
+  max-width: 440px;
+
+  margin: 32px 0 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+
+  color: #777067;
+}
+
+
+/* GOLD LINE */
+
+.sales-offer-line {
+  width: 55px;
+  height: 1px;
+
+  margin: 35px 0;
+
+  background: #b78a48;
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.sales-offer-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  max-width: 500px;
+
+  border-top: 1px solid rgba(164, 132, 85, 0.28);
+}
+
+.sales-info-item {
+  padding: 18px 20px 18px 0;
+
+  border-bottom: 1px solid rgba(164, 132, 85, 0.22);
+}
+
+.sales-info-item:nth-child(even) {
+  padding-left: 20px;
+  border-left: 1px solid rgba(164, 132, 85, 0.22);
+}
+
+.sales-info-item span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #a48455;
+}
+
+.sales-info-item strong {
+  display: block;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #2d2925;
+}
+
+
+/* =====================================================
+   DOWNLOAD BUTTON
+===================================================== */
+
+.sales-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  margin-top: 38px;
+
+  min-width: 230px;
+  height: 52px;
+
+  padding: 0 24px;
+
+  border: 1px solid #b78946;
+  background: transparent;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  color: #9b6f32;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.sales-download-btn span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.sales-download-btn:hover {
+  background: #8e682f;
+  color: #fffaf1;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(35, 28, 20, 0.14);
+}
+
+.sales-download-note {
+  margin: 12px 0 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+
+  color: #999087;
+}
+
+
+/* =====================================================
+   RIGHT — SALES OFFER IMAGE
+===================================================== */
+
+.sales-offer-visual {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =====================================================
+   SALES OFFER IMAGE — SEAMLESS
+===================================================== */
+
+.sales-offer-image-wrap {
+  position: relative;
+
+  width: min(100%, 650px);
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+
+  overflow: visible;
+
+  transition: transform 0.5s ease;
+}
+
+.sales-offer-image-wrap::before {
+  display: none;
+}
+
+.sales-offer-image-wrap img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  border: none;
+  box-shadow: none;
+
+  /* image ko surrounding background ke saath blend karega */
+  mix-blend-mode: multiply;
+
+  transition: transform 0.5s ease;
+}
+
+.sales-offer-image-wrap:hover {
+  transform: translateY(-5px);
+
+  box-shadow: none;
+}
+
+.sales-offer-image-wrap:hover img {
+  transform: scale(1.01);
+}
+.sales-offer-image-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 1px solid rgba(164, 132, 85, 0.18);
+
+  pointer-events: none;
+}
+
+.sales-offer-image-wrap img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* CAPTION */
+
+.sales-offer-caption {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 22px;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+.sales-offer-caption span {
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  color: #a48455;
+}
+
+.sales-offer-caption strong {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+
+  color: #403a34;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .sales-offer-section {
+    padding: 90px 5vw 100px;
+  }
+
+  .sales-offer-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .sales-offer-content {
+    max-width: 650px;
+  }
+
+  .sales-offer-content h2 {
+    max-width: 650px;
+  }
+
+  .sales-offer-intro {
+    max-width: 600px;
+  }
+
+  .sales-offer-info {
+    max-width: 600px;
+  }
+
+  .sales-offer-visual {
+    width: 100%;
+  }
+
+  .sales-offer-image-wrap {
+    width: min(100%, 800px);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .sales-offer-section {
+    padding: 75px 20px 85px;
+  }
+
+  .sales-offer-section::before {
+    top: 45px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .sales-offer-inner {
+    gap: 45px;
+  }
+
+  .sales-offer-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .sales-offer-content h2 {
+    font-size: 43px;
+  }
+
+  .sales-offer-intro {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .sales-offer-info {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-info-item {
+    padding: 15px 0;
+  }
+
+  .sales-info-item:nth-child(even) {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .sales-download-btn {
+    width: 100%;
+  }
+
+  .sales-offer-image-wrap {
+    padding: 10px;
+  }
+
+  .sales-offer-caption {
+    margin-top: 15px;
+  }
+}
+/* =========================================
+   SALES OFFER — CLEAN IMAGE
+========================================= */
+
+.sales-offer-visual {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.sales-offer-image-wrap {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.sales-offer-main-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  background: transparent;
+  object-fit: contain;
+
+  mix-blend-mode: multiply;
+}
+
+
+
+

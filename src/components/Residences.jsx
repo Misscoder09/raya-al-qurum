@@ -1,5 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Residences.css";
+import F6OneBHK from "./F6OneBHK.jsx";
+import F7OneBHK from "./F7OneBHK.jsx";
+import F8OneBHK from "./F8OneBHK.jsx";
+
+
+
+const downloadSalesOffer = async () => {
+  try {
+    const response = await fetch(
+      "/images/Residences/f2-1bhk-sales-offer.jpg"
+    );
+
+    if (!response.ok) {
+      throw new Error("Sales offer file not found");
+    }
+
+    const blob = await response.blob();
+
+    const url = window.URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Raya-Al-Qurum-F2-1BHK-Sales-Offer.jpg";
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error("Sales offer download failed:", error);
+  }
+};
 
 const residences = [
   {
@@ -17,6 +50,9 @@ const residences = [
     balcony: "—",
     unitLayout: "/images/Residences/f2 unit layout.jpeg",
     layoutDetails: "/images/Residences/f2 layout detail.jpeg",
+    salesOffer: "/images/Residences/f2-1bhk-sales-offer.jpg",
+    paymentPlan: "/images/Residences/f2-1bhk-payment-plan.jpg",
+    offerNotes: "/images/Residences/f2-1bhk-offer-notes.jpg",
   },
   {
     id: "2bhk",
@@ -51,8 +87,8 @@ const residences = [
     layoutDetails: "/images/Residences/layout_details.jpeg",
   },
   {
-    id: "2bhk-maid",
-    type: "2 BHK + Maid",
+    id: "3bhk",
+    type: "3 BHK",
     unit: "F3",
     title: "Two Bedroom Residence with Maid Room",
     description:
@@ -70,38 +106,34 @@ const residences = [
 
 function ResidenceDetails({ residence, onClose }) {
   useEffect(() => {
-  const modal = document.querySelector(".residence-detail-modal");
+    const modal = document.querySelector(".residence-detail-modal");
 
-  if (!modal) return;
+    if (!modal) return;
 
-  const elements = modal.querySelectorAll(".detail-reveal");
+    const elements = modal.querySelectorAll(".detail-reveal");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("detail-reveal-visible");
-        }
-      });
-    },
-    {
-      root: modal,
-      threshold: 0.15,
-    }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("detail-reveal-visible");
+          }
+        });
+      },
+      {
+        root: modal,
+        threshold: 0.12,
+      }
+    );
 
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
+    elements.forEach((element) => observer.observe(element));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="residence-detail-overlay">
       <div className="residence-detail-modal">
-
-        {/* TOP BAR */}
         <div className="detail-topbar">
           <button className="back-residences" onClick={onClose}>
             ← Back to Residences
@@ -116,8 +148,7 @@ function ResidenceDetails({ residence, onClose }) {
           </button>
         </div>
 
-        {/* HEADER */}
-        <div className="details-header">
+        <header className="details-header">
           <div className="details-title">
             <span>RAYA AL QURUM · RESIDENCES</span>
 
@@ -131,215 +162,418 @@ function ResidenceDetails({ residence, onClose }) {
             <strong>{residence.unit}</strong>
             <span>{residence.type}</span>
           </div>
-        </div>
+        </header>
 
-        {/* MAIN LAYOUT IMAGE */}
         <section className="detail-layout-section">
 
-          <div className="detail-section-heading">
-  <span>UNIT LAYOUT</span>
+  <div className="detail-section-heading">
 
-  <h3 className="detail-reveal">
-    {residence.type}
-  </h3>
+    <span>UNIT LAYOUT</span>
 
-  <p className="detail-reveal">
-    Explore the complete floor layout and spatial arrangement
-    of this residence.
-  </p>
+    <h3 className="detail-reveal">
+      {residence.type}
+    </h3>
+
+    <h4 className="detail-reveal">
+      Refined {residence.type} Living
+    </h4>
+
+    <p className="detail-reveal">
+      A thoughtfully designed residence that blends comfort,
+      functionality and modern elegance. Every space is carefully
+      planned to maximise natural light, privacy and seamless
+      movement, creating a refined and inviting home.
+    </p>
+
+    <p className="detail-reveal layout-description">
+      Designed for contemporary living, the layout makes the most
+      of every square metre while maintaining a perfect balance
+      between spaciousness, privacy and everyday functionality.
+    </p>
+
+    <div className="unit-features detail-reveal">
+
+  {/* BEDROOM */}
+<div className="unit-feature">
+  <div className="feature-icon">
+    <svg
+  viewBox="0 0 80 80"
+  aria-hidden="true"
+  className="bedroom-icon"
+>
+  {/* HEADBOARD */}
+  <path d="M16 30V16c0-3 2-5 5-5h38c3 0 5 2 5 5v14" />
+
+  {/* LEFT PILLOW */}
+  <path d="M20 28c0-4 3-6 7-6h9c3 0 5 2 5 5v3H20v-2z" />
+
+  {/* RIGHT PILLOW */}
+  <path d="M39 27c0-3 2-5 5-5h9c4 0 7 2 7 6v2H39v-3z" />
+
+  {/* MATTRESS */}
+  <path d="M12 31h56v14c0 3-2 5-5 5H17c-3 0-5-2-5-5V31z" />
+
+  {/* MATTRESS DETAIL */}
+  <path d="M12 39h56" />
+
+  {/* BED BASE */}
+  <path d="M15 50h50" />
+
+  {/* LEFT LEGS */}
+  <path d="M18 50v14" />
+
+  {/* RIGHT LEGS */}
+  <path d="M62 50v14" />
+
+  {/* SMALL SIDE DETAILS */}
+  <path d="M12 34v16" />
+  <path d="M68 34v16" />
+</svg>
+  </div>
+
+  <div>
+    <strong>{residence.bedrooms}</strong>
+    <span>BEDROOM</span>
+  </div>
 </div>
 
-          <div className="detail-layout-image">
-            <img
-              src={residence.unitLayout}
-              alt={`${residence.type} unit layout`}
-            />
-          </div>
 
-        </section>
-
-        {/* PRICE + AREA */}
-       <section className="details-price">
-
-  <div className="detail-reveal">
-    <small>GROSS UNIT AREA</small>
-    <strong>{residence.area}</strong>
-  </div>
-
-  <div className="detail-reveal">
-    <small>INDICATIVE SELLING PRICE</small>
-    <strong>{residence.price}</strong>
-  </div>
-
-</section>
-
-        {/* STATS */}
-        <section className="details-stats">
-
-  <div className="detail-reveal">
-    <span>Bedrooms</span>
-    <strong>{residence.bedrooms}</strong>
-  </div>
-
-  <div className="detail-reveal">
-    <span>Bathrooms</span>
-    <strong>{residence.baths}</strong>
-  </div>
-
-  <div className="detail-reveal">
-    <span>Utility</span>
-    <strong>{residence.utility}</strong>
-  </div>
-
-  <div className="detail-reveal">
-    <span>Balcony</span>
-    <strong>{residence.balcony}</strong>
-  </div>
-
-</section>
-        {/* DESCRIPTION */}
-        <section className="detail-description">
-  <div className="description-copy">
-    <span>RESIDENCE OVERVIEW</span>
-
-    <h3 className="detail-reveal">
-      Designed around
-      <em> the way you live.</em>
-    </h3>
-
-    <p className="detail-reveal">
-      {residence.description}
-    </p>
-
-    <p className="detail-reveal">
-      Every area has been considered to create a refined balance
-      between privacy, comfort and everyday functionality.
-    </p>
-  </div>
-
-  <div className="description-info">
-    <div>
-      <span>UNIT TYPE</span>
-      <strong>{residence.type}</strong>
+  {/* BATHROOM */}
+  <div className="unit-feature">
+    <div className="feature-icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M8 34h48" />
+        <path d="M11 34v7c0 10 9 16 21 16s21-6 21-16v-7" />
+        <path d="M17 57v3M47 57v3" />
+        <path d="M19 34V17c0-6 4-10 10-10 5 0 9 3 10 8" />
+        <path d="M39 15h10" />
+        <path d="M45 20v7" />
+        <path d="M49 27h-9" />
+      </svg>
     </div>
 
-    <div>
-      <span>UNIT</span>
-      <strong>{residence.unit}</strong>
-    </div>
-
-    <div>
-      <span>AREA</span>
-      <strong>{residence.area}</strong>
-    </div>
-  </div>
-</section>
-
-
-       
-
-        {/* SECOND IMAGE + TEXT */}
-        <section className="layout-details">
-  <div className="layout-details-copy">
-    <span>LAYOUT DETAILS</span>
-
-    <h3 className="detail-reveal">
-      Thoughtfully planned
-      <em> living spaces.</em>
-    </h3>
-
-    <p className="detail-reveal">
-      From the entrance and living areas to the bedrooms, dining
-      spaces and utility areas, the residence is planned to make
-      everyday living comfortable and effortless.
-    </p>
-
-    <div className="layout-highlights">
-      <div>
-        <strong>{residence.bedrooms}</strong>
-        <span>BEDROOMS</span>
-      </div>
-
-      <div>
-        <strong>{residence.baths}</strong>
-        <span>BATHROOMS</span>
-      </div>
-
-      <div>
-        <strong>{residence.balcony}</strong>
-        <span>BALCONIES</span>
-      </div>
+    <div className="feature-info">
+      <strong>{residence.baths}</strong>
+      <span>BATHROOM</span>
     </div>
   </div>
 
-  <div className="layout-details-image">
+
+  {/* UTILITY */}
+  <div className="unit-feature">
+    <div className="feature-icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="12" y="8" width="40" height="48" rx="2" />
+        <rect x="20" y="17" width="24" height="13" rx="1" />
+        <path d="M21 37h22" />
+        <path d="M21 44h22" />
+        <path d="M21 51h22" />
+        <circle cx="47" cy="13" r="2" />
+      </svg>
+    </div>
+
+    <div className="feature-info">
+      <strong>{residence.utility}</strong>
+      <span>UTILITY</span>
+    </div>
+  </div>
+
+
+  {/* BALCONY */}
+  <div className="unit-feature">
+    <div className="feature-icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M8 18h48" />
+        <path d="M13 18v35M51 18v35" />
+        <path d="M8 53h48" />
+        <path d="M6 58h52" />
+        <path d="M21 31v22M32 31v22M43 31v22" />
+        <path d="M16 18v-7h32v7" />
+      </svg>
+    </div>
+
+    <div className="feature-info">
+      <strong>{residence.balcony}</strong>
+      <span>BALCONY</span>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+
+  <div className="detail-layout-image">
     <img
-      src={residence.layoutDetails}
+      src={residence.unitLayout}
       alt={`${residence.type} unit layout`}
     />
   </div>
+
 </section>
 
-        {/* FINAL INFORMATION */}
-        <section className="detail-bottom">
-
-          <div>
-            <span>UNIT TYPE</span>
-            <strong>{residence.type}</strong>
+        <section className="details-price">
+          <div className="detail-reveal">
+            <small>GROSS UNIT AREA</small>
+            <strong>{residence.area}</strong>
           </div>
 
-          <div>
+          <div className="detail-reveal">
+            <small>INDICATIVE SELLING PRICE</small>
+            <strong>{residence.price}</strong>
+          </div>
+        </section>
+
+        <section className="details-stats">
+          <div className="detail-reveal">
+            <span>Bedrooms</span>
+            <strong>{residence.bedrooms}</strong>
+          </div>
+
+          <div className="detail-reveal">
+            <span>Bathrooms</span>
+            <strong>{residence.baths}</strong>
+          </div>
+
+          <div className="detail-reveal">
+            <span>Utility</span>
+            <strong>{residence.utility}</strong>
+          </div>
+
+          <div className="detail-reveal">
+            <span>Balcony</span>
+            <strong>{residence.balcony}</strong>
+          </div>
+        </section>
+
+        <section className="detail-description">
+          <div className="description-copy">
+            <span>RESIDENCE OVERVIEW</span>
+
+            <h3 className="detail-reveal">
+              Designed around <em>the way you live.</em>
+            </h3>
+
+            <p className="detail-reveal">{residence.description}</p>
+
+            <p className="detail-reveal">
+              Every area has been considered to create a refined balance
+              between privacy, comfort and everyday functionality.
+            </p>
+          </div>
+
+          <div className="description-info">
+            <div>
+              <span>UNIT TYPE</span>
+              <strong>{residence.type}</strong>
+            </div>
+
+            <div>
+              <span>UNIT</span>
+              <strong>{residence.unit}</strong>
+            </div>
+
+            <div>
+              <span>AREA</span>
+              <strong>{residence.area}</strong>
+            </div>
+          </div>
+        </section>
+
+        <section className="layout-details">
+          <div className="layout-details-copy">
+            <span>LAYOUT DETAILS</span>
+
+            <h3 className="detail-reveal">
+              Thoughtfully planned <em>living spaces.</em>
+            </h3>
+
+            <p className="detail-reveal">
+              From the entrance and living areas to the bedrooms, dining
+              spaces and utility areas, the residence is planned to make
+              everyday living comfortable and effortless.
+            </p>
+
+            <div className="layout-highlights">
+              <div>
+                <strong>{residence.bedrooms}</strong>
+                <span>BEDROOMS</span>
+              </div>
+
+              <div>
+                <strong>{residence.baths}</strong>
+                <span>BATHROOMS</span>
+              </div>
+
+              <div>
+                <strong>{residence.balcony}</strong>
+                <span>BALCONIES</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="layout-details-image">
+            <img
+              src={residence.layoutDetails}
+              alt={`${residence.type} layout details`}
+            />
+          </div>
+        </section>
+
+
+      {/* =====================================================
+    F2 · 1 BHK — SALES OFFER
+===================================================== */}
+
+{residence.id === "1bhk" && residence.unit === "F2" && (
+  <section className="sales-offer-section">
+
+    <div className="sales-offer-inner">
+
+      {/* LEFT — CONTENT */}
+      <div className="sales-offer-content">
+
+        <span className="sales-offer-eyebrow">
+          RAYA AL QURUM · SALES OFFER
+        </span>
+
+        <h2>
+          A refined opportunity
+          <em> at Raya Al Qurum.</em>
+        </h2>
+
+        <p className="sales-offer-intro">
+          Discover the F2 · 1 BHK residence, thoughtfully planned
+          for contemporary living with a flexible payment structure
+          designed around comfort and convenience.
+        </p>
+
+
+        <div className="sales-offer-info">
+
+          <div className="sales-info-item">
+            <span>UNIT TYPE</span>
+            <strong>F2 · 1 BHK</strong>
+          </div>
+
+          <div className="sales-info-item">
             <span>UNIT AREA</span>
             <strong>{residence.area}</strong>
           </div>
 
-          <div>
+          <div className="sales-info-item">
+            <span>LOCATION</span>
+            <strong>Qurum, Muscat, Oman</strong>
+          </div>
+
+          <div className="sales-info-item">
+            <span>PROJECT STATUS</span>
+            <strong>Off-Plan</strong>
+          </div>
+
+          <div className="sales-info-item">
             <span>INDICATIVE PRICE</span>
             <strong>{residence.price}</strong>
           </div>
 
-        </section>
-
-        {/* BOTTOM CLOSE */}
-        <div className="detail-end">
-          <button onClick={onClose}>
-            ← Back to all residences
-          </button>
         </div>
 
+ <button
+  type="button"
+  className="sales-download-btn"
+  onClick={downloadSalesOffer}
+>
+  <span>↓</span>
+  DOWNLOAD SALES OFFER
+</button>
+
+<p className="sales-download-note">
+  Download the F2 · 1 BHK sales offer
+</p>
+
+
+      </div>
+
+
+      {/* RIGHT — SALES OFFER VISUAL */}
+<div className="sales-offer-visual">
+
+  <img
+    className="sales-offer-main-image"
+    src="/images/Residences/f2-1bhk-sales-offer.jpg"
+    alt="F2 1 BHK Sales Offer"
+  />
+
+</div>
+
+    </div>
+
+  </section>
+)}
+        <section className="detail-bottom"> 
+          <div> 
+            <span>UNIT TYPE</span> 
+            <strong>{residence.type}</strong> 
+          </div> 
+ 
+          <div> 
+            <span>UNIT AREA</span> 
+            <strong>{residence.area}</strong> 
+          </div> 
+ 
+          <div> 
+            <span>INDICATIVE PRICE</span> 
+            <strong>{residence.price}</strong> 
+          </div> 
+        </section>
+
+        {/* =====================================================
+    F6 + F7 + F8· 1 BHK NEXT UNITS
+===================================================== */}
+
+{residence.id === "1bhk" && residence.unit === "F2" && (
+  <>
+    <F6OneBHK />
+    <F7OneBHK />
+    <F8OneBHK />
+
+  </>
+)}
+        <div className="detail-end"> 
+          <button onClick={onClose}>
+            ← Back to all residences
+          </button> 
+        </div>
       </div>
     </div>
   );
 }
 
 export default function Residences() {
-  useEffect(() => {
-  const elements = document.querySelectorAll(
-  ".residence-card, .residences-intro, .residences-intro h2, .residences-intro p, .detail-description h3, .detail-description p, .layout-details h3, .layout-details p"
-);
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15,
-    }
-  );
-
-  elements.forEach((element) => {
-    element.classList.add("reveal-element");
-    observer.observe(element);
-  });
-
-  return () => observer.disconnect();
-}, []);
   const [selectedResidence, setSelectedResidence] = useState(null);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".residences-intro, .residence-card"
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+      }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
 
   const openResidence = (residence) => {
     setSelectedResidence(residence);
@@ -354,77 +588,54 @@ export default function Residences() {
   return (
     <>
       <section id="residences" className="residences-section">
-
-        {/* INTRO */}
         <div className="residences-intro">
-
           <div className="residences-intro-content">
-
             <span className="residences-eyebrow">
               RAYA AL QURUM · RESIDENCES
             </span>
 
             <h2>
               Designed around
-              <em> the way you live.</em>
+              <em>the way you live.</em>
             </h2>
 
             <p>
-              Discover a considered collection of residences at Raya Al
-              Qurum, offering thoughtfully designed layouts, refined
-              interiors and comfortable spaces for modern living.
+              Discover a considered collection of residences at Raya Al Qurum,
+              offering thoughtfully designed layouts, refined interiors and
+              comfortable spaces for modern living.
             </p>
-
           </div>
-
         </div>
 
-        {/* CARDS */}
+
         <div className="residence-grid">
-
           {residences.map((residence, index) => (
-
             <article
               id={residence.id}
-              className="residence-card reveal-element"
+              className="residence-card"
               key={residence.id}
               onClick={() => openResidence(residence)}
             >
 
               <div className="card-number">
-                0{index + 1}
+                {String(index + 1).padStart(2, "0")}
+
               </div>
 
-              <div className="residence-icon">
-  {residence.unit}
-</div>
 
-
-<div className="residence-card-content">
-
-                <span className="card-label">
-                  {residence.type}
-                </span>
+              <div className="residence-card-content">
+                <span className="card-label">{residence.type}</span>
 
                 <h3>{residence.title}</h3>
 
                 <p>{residence.description}</p>
-
               </div>
 
-              <div className="card-arrow">
-                ↗
-              </div>
-
+              <div className="card-arrow">↗</div>
             </article>
-
           ))}
-
         </div>
-
       </section>
-
-      {/* DETAIL OVERLAY */}
       {selectedResidence && (
         <ResidenceDetails
           residence={selectedResidence}

@@ -1,0 +1,956 @@
+/* =========================================================
+   RAYA AL QURUM
+   F6 · 1 BHK
+   PREMIUM RESIDENCE DETAIL
+   CLEAN / LUXURY / RESPONSIVE
+   ========================================================= */
+
+.f6-onebhk {
+  position: relative;
+  width: 100%;
+  background: #f7f3ec;
+  color: #262626;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.f6-reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.f6-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.f6-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 72px 5vw 30px;
+
+  border-bottom: 1px solid rgba(93, 75, 52, 0.18);
+}
+
+.f6-header-copy span {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #a47b43;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.f6-header-copy h2 {
+  margin: 0;
+
+  color: #272727;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(46px, 6vw, 82px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   UNIT BADGE
+   ========================================================= */
+
+.f6-unit-badge {
+  width: 165px;
+  flex-shrink: 0;
+
+  padding: 20px 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  background: #242729;
+  color: #fff;
+}
+
+.f6-unit-badge small {
+  color: #d5b77f;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.f6-unit-badge strong {
+  margin-top: 5px;
+
+  color: #d8b87e;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.f6-unit-badge span {
+  color: #eee7dc;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   MAIN UNIT LAYOUT
+   ========================================================= */
+
+.f6-layout {
+  width: 100%;
+  padding: 20px 5vw 0;
+}
+
+
+/* =========================================================
+   F6 UNIT LAYOUT IMAGE
+   SEAMLESS / NO BOX / NO BORDER
+   ========================================================= */
+
+.f6-layout-image {
+  position: relative;
+
+  width: 100%;
+  min-height: 570px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* IMPORTANT:
+     Image background ab kisi separate box mein nahi rahega */
+  background: transparent !important;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  overflow: visible;
+}
+
+/* Remove decorative frame */
+.f6-layout-image::before,
+.f6-layout-image::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+/* MAIN F6 IMAGE */
+
+.f6-layout-image img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 620px;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+
+  /*
+    Image ka light/white background
+    surrounding cream background ke saath blend hoga.
+  */
+  mix-blend-mode: multiply;
+
+  opacity: 1;
+
+  image-rendering: auto;
+
+  transition: transform 0.5s ease;
+}
+
+.f6-layout-image:hover img {
+  transform: scale(1.01);
+}
+
+
+/* =========================================================
+   PRICE BAR
+   ========================================================= */
+
+.f6-price-bar {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+
+  background: #242729;
+  color: #fff;
+}
+
+.f6-price-item {
+  min-height: 95px;
+
+  padding: 20px 26px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.f6-price-item + .f6-price-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.f6-price-item span {
+  margin-bottom: 6px;
+
+  color: #d4b27d;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.f6-price-item strong {
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.f6-price-item small {
+  margin-top: 4px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.f6-intro {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+
+  padding: 105px 5vw;
+
+  border-bottom: 1px solid rgba(93, 75, 52, 0.18);
+}
+
+.f6-intro-copy {
+  max-width: 720px;
+}
+
+.f6-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #a47b43;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.f6-intro-copy h3,
+.f6-overview-copy h3 {
+  margin: 0 0 25px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(38px, 4vw, 60px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.f6-intro-copy h3 em,
+.f6-overview-copy h3 em {
+  color: #a47b43;
+  font-weight: 400;
+}
+
+.f6-intro-copy p,
+.f6-overview-copy p {
+  max-width: 650px;
+
+  margin: 0 0 18px;
+
+  color: #70695f;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   FEATURE STATS
+   ========================================================= */
+
+.f6-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid rgba(93, 75, 52, 0.2);
+  border-left: 1px solid rgba(93, 75, 52, 0.2);
+}
+
+.f6-stat {
+  min-height: 135px;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-right: 1px solid rgba(93, 75, 52, 0.2);
+  border-bottom: 1px solid rgba(93, 75, 52, 0.2);
+}
+
+.f6-stat span {
+  color: #948878;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.f6-stat strong {
+  margin-top: 7px;
+
+  color: #2d2a27;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   LAYOUT DETAILS
+   ========================================================= */
+
+.f6-details {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 70px;
+
+  padding: 95px 5vw;
+}
+
+
+/* =========================================================
+   SECOND IMAGE
+   CLEAN / SEAMLESS
+   ========================================================= */
+
+.f6-details-image {
+  position: relative;
+
+  width: 100%;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent !important;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  overflow: visible;
+}
+
+.f6-details-image::before,
+.f6-details-image::after {
+  display: none !important;
+  content: none !important;
+}
+
+.f6-details-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 620px;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: transparent !important;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  mix-blend-mode: multiply;
+
+  opacity: 1;
+
+  transition: transform 0.5s ease;
+}
+
+.f6-details-image:hover img {
+  transform: scale(1.01);
+}
+
+
+/* =========================================================
+   IMAGE LABEL
+   ========================================================= */
+
+.f6-image-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.f6-image-label span {
+  color: #a47b43;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.f6-image-label strong {
+  color: #3a3733;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   FLAT DETAILS
+   ========================================================= */
+
+.f6-flat-details {
+  padding-top: 5px;
+}
+
+
+/* =========================================================
+   DETAIL CARDS
+   ========================================================= */
+
+.f6-detail-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+
+  margin: 25px 0;
+}
+
+.f6-detail-cards > div {
+  min-height: 82px;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #ebe4da;
+}
+
+.f6-detail-cards span {
+  color: #81786d;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.f6-detail-cards strong {
+  margin-top: 5px;
+
+  color: #2c2926;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   ROOM DIMENSIONS
+   ========================================================= */
+
+.f6-room-list {
+  border-top: 1px solid rgba(93, 75, 52, 0.25);
+}
+
+.f6-room-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid rgba(93, 75, 52, 0.18);
+
+  font-size: 12px;
+}
+
+.f6-room-list span {
+  color: #514c45;
+}
+
+.f6-room-list strong {
+  color: #5e574e;
+
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RESIDENCE OVERVIEW
+   ========================================================= */
+
+.f6-overview {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 90px;
+
+  padding: 100px 5vw;
+
+  background: #242729;
+  color: #fff;
+}
+
+.f6-overview-copy {
+  max-width: 720px;
+}
+
+.f6-overview-copy h3 {
+  color: #f7f2e9;
+}
+
+.f6-overview-copy p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================================================
+   OVERVIEW INFO
+   ========================================================= */
+
+.f6-overview-info {
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.f6-overview-info > div {
+  min-height: 120px;
+
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.f6-overview-info span {
+  color: #d4b27d;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.f6-overview-info strong {
+  margin-top: 8px;
+
+  color: #fff;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 21px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   FINAL SUMMARY
+   ========================================================= */
+
+.f6-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin: 0 5vw;
+
+  border-top: 1px solid rgba(93, 75, 52, 0.22);
+  border-bottom: 1px solid rgba(93, 75, 52, 0.22);
+}
+
+.f6-bottom > div {
+  padding: 28px;
+}
+
+.f6-bottom > div + div {
+  border-left: 1px solid rgba(93, 75, 52, 0.22);
+}
+
+.f6-bottom span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #a47b43;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.f6-bottom strong {
+  color: #292724;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.f6-footer {
+  padding: 38px 5vw;
+
+  text-align: center;
+
+  color: #8c8378;
+
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .f6-header {
+    padding-top: 55px;
+  }
+
+  .f6-intro,
+  .f6-details,
+  .f6-overview {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .f6-layout-image {
+    min-height: 450px;
+  }
+
+  .f6-layout-image img {
+    max-height: 450px;
+  }
+
+  .f6-details-image {
+    width: 100%;
+  }
+
+  .f6-details-image img {
+    max-width: 700px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* HEADER */
+
+  .f6-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    padding: 55px 5vw 25px;
+  }
+
+  .f6-header-copy h2 {
+    font-size: 48px;
+  }
+
+  .f6-unit-badge {
+    width: 100%;
+  }
+
+
+  /* MAIN LAYOUT */
+
+  .f6-layout {
+    padding: 15px 4vw 0;
+  }
+
+  .f6-layout-image {
+    min-height: 350px;
+
+    padding: 0;
+
+    background: transparent !important;
+  }
+
+  .f6-layout-image img {
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+    max-height: none;
+
+    object-fit: contain;
+  }
+
+
+  /* PRICE */
+
+  .f6-price-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .f6-price-item {
+    min-height: 85px;
+    padding: 18px 20px;
+  }
+
+  .f6-price-item + .f6-price-item {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .f6-price-item strong {
+    font-size: 25px;
+  }
+
+
+  /* INTRO / DETAILS / OVERVIEW */
+
+  .f6-intro,
+  .f6-details,
+  .f6-overview {
+    padding: 65px 5vw;
+  }
+
+  .f6-intro-copy h3,
+  .f6-overview-copy h3 {
+    font-size: 40px;
+  }
+
+
+  /* STATS */
+
+  .f6-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .f6-stat {
+    min-height: 105px;
+    padding: 18px;
+  }
+
+  .f6-stat strong {
+    font-size: 28px;
+  }
+
+
+  /* DETAIL CARDS */
+
+  .f6-detail-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .f6-detail-cards > div {
+    min-height: 75px;
+    padding: 13px;
+  }
+
+  .f6-detail-cards strong {
+    font-size: 21px;
+  }
+
+
+  /* ROOM LIST */
+
+  .f6-room-list > div {
+    font-size: 11px;
+  }
+
+
+  /* SECOND IMAGE */
+
+  .f6-details-image {
+    padding: 0;
+
+    background: transparent !important;
+
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .f6-details-image img {
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+  }
+
+
+  /* OVERVIEW */
+
+  .f6-overview-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .f6-overview-info > div {
+    min-height: 100px;
+    padding: 17px;
+  }
+
+
+  /* FINAL SUMMARY */
+
+  .f6-bottom {
+    grid-template-columns: 1fr;
+
+    margin: 0 5vw;
+  }
+
+  .f6-bottom > div {
+    padding: 23px 0;
+  }
+
+  .f6-bottom > div + div {
+    border-left: 0;
+
+    border-top: 1px solid rgba(93, 75, 52, 0.22);
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .f6-header-copy h2 {
+    font-size: 43px;
+  }
+
+  .f6-price-item strong {
+    font-size: 22px;
+  }
+
+  .f6-intro-copy h3,
+  .f6-overview-copy h3 {
+    font-size: 35px;
+  }
+
+  .f6-detail-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .f6-overview-info {
+    grid-template-columns: 1fr;
+  }
+
+  .f6-stat strong {
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .f6-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .f6-layout-image img,
+  .f6-details-image img {
+    transition: none;
+  }
+}

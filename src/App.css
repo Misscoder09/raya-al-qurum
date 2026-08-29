@@ -112,7 +112,7 @@ footer {
 .nav-links a {
   position: relative;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.8px;
   transition: 0.3s ease;
@@ -147,7 +147,7 @@ footer {
   padding: 13px 18px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.7px;
   transition: 0.3s ease;
@@ -259,7 +259,7 @@ footer {
 .section-number {
   margin-bottom: 50px;
   color: var(--gold);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 3px;
 }
 
@@ -267,7 +267,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 3px;
   font-weight: 500;
 }
@@ -419,8 +419,8 @@ footer {
   width: 480px;
   max-width: 100%;
   margin: 21px 0 22px 3px;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 11px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
   line-height: 1.7;
   letter-spacing: 0.15px;
 }
@@ -542,7 +542,7 @@ footer {
   display: block;
   margin-bottom: 7px;
   color: #fff;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 3px;
 }
@@ -565,7 +565,7 @@ footer {
 .hero-scroll span {
   display: block;
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
   white-space: nowrap;
@@ -628,7 +628,7 @@ footer {
 .intro-text p {
   margin-bottom: 19px;
   color: #625e57;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
 }
 
@@ -639,7 +639,7 @@ footer {
   margin-top: 12px;
   padding-bottom: 7px;
   border-bottom: 1px solid var(--text);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
 }
 
@@ -687,7 +687,7 @@ footer {
   max-width: 370px;
   margin-top: 28px;
   color: rgba(255, 255, 255, 0.48);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.9;
 }
 
@@ -720,7 +720,7 @@ footer {
 .amenity p {
   margin-top: 6px;
   color: rgba(255, 255, 255, 0.38);
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .amenity b {
@@ -775,7 +775,7 @@ footer {
   max-width: 470px;
   margin-top: 28px;
   color: #625e57;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
 }
 
@@ -787,7 +787,7 @@ footer {
   padding: 15px 20px;
   background: var(--charcoal);
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.8px;
   transition: 0.3s ease;
@@ -946,7 +946,7 @@ footer {
   max-width: 300px;
   margin-top: 10px;
   color: #625e57;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.75;
 }
 
@@ -980,7 +980,7 @@ footer {
   max-width: 600px;
   margin-top: 30px;
   color: rgba(255, 255, 255, 0.48);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
 }
 
@@ -1080,7 +1080,7 @@ footer {
   max-width: 190px;
   margin: 9px auto 0;
   color: #625e57;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.7;
 }
 
@@ -1143,7 +1143,7 @@ footer {
   max-width: 500px;
   margin: 25px auto 35px;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -1182,7 +1182,7 @@ footer {
 }
 
 .footer-links a {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1px;
   transition: 0.3s ease;
 }
@@ -1195,7 +1195,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding-top: 22px;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.5px;
 }
 
@@ -1256,12 +1256,12 @@ footer {
   .hero-buttons .gold-button {
     min-width: 195px;
     height: 46px;
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .hero-buttons .outline-button {
     height: 46px;
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .hero-location small,
