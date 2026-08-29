@@ -54,26 +54,41 @@ const amenities = [
   ),
 },
 
-  {
-    number: "03",
-    title: "ROOFTOP LOUNGE",
-    description:
-      "Unwind, gather and connect in thoughtfully designed elevated spaces.",
-    icon: (
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M16 31h32v14H16z" />
-        <path d="M16 35h-5v11h5" />
-        <path d="M48 35h5v11h-5" />
-        <path d="M20 45v7" />
-        <path d="M44 45v7" />
-        <path d="M21 31v-7c0-5 4-8 9-8h4c5 0 9 3 9 8v7" />
-        <path d="M27 16v-5h10v5" />
-        <path d="M49 17h7" />
-        <path d="M52.5 13.5v7" />
-      </svg>
-    ),
-  },
+ {
+  number: "03",
+  title: "ROOFTOP LOUNGE",
+  description:
+    "Unwind, gather and connect in thoughtfully designed elevated spaces.",
+  icon: (
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      {/* Lounge chair back */}
+      <path d="M19 27v-5c0-6 5-10 11-10h4c6 0 11 4 11 10v5" />
 
+      {/* Chair arms */}
+      <path d="M19 27h-4v15h4" />
+      <path d="M45 27h4v15h-4" />
+
+      {/* Seat */}
+      <path d="M19 27h26v15H19z" />
+
+      {/* Seat cushion */}
+      <path d="M22 30h20v9H22z" />
+
+      {/* Chair legs */}
+      <path d="M23 42v10" />
+      <path d="M41 42v10" />
+
+      {/* Side table */}
+      <path d="M51 34h6" />
+      <path d="M54 34v18" />
+      <path d="M50 52h8" />
+
+      {/* Small lamp / decor */}
+      <path d="M53 28v-7" />
+      <path d="M50 21h6" />
+    </svg>
+  ),
+},
   {
     number: "04",
     title: "LANDSCAPED TERRACES",
