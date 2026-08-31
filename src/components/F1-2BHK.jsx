@@ -1,14 +1,14 @@
 import React from "react";
-import "./Flatdetail.css";
+import "./F1-2BHK.css";
 
 const downloadSalesOffer = async () => {
   try {
     const response = await fetch(
-      "/images/Residences/f6-1bhk-sales-offer.jpg"
+      "/images/Residences/F1-2BHK-sales-offer.png"
     );
 
     if (!response.ok) {
-      throw new Error("F6 Sales offer file not found");
+      throw new Error("F1 Sales offer file not found");
     }
 
     const blob = await response.blob();
@@ -17,7 +17,7 @@ const downloadSalesOffer = async () => {
 
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Raya-Al-Qurum-F6-1BHK-Sales-Offer.jpg";
+    link.download = "Raya-Al-Qurum-F1-2BHK-Sales-Offer.png";
 
     document.body.appendChild(link);
     link.click();
@@ -25,56 +25,64 @@ const downloadSalesOffer = async () => {
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
   } catch (error) {
-    console.error("F6 Sales offer download failed:", error);
+    console.error("F1 Sales offer download failed:", error);
   }
 };
 
-export default function F6OneBHK() {
+export default function F1TwoBHK() {
   const residence = {
-    type: "1 BHK",
-    unit: "F6",
-    title: "Refined 1 Bedroom Living",
+    type: "2 BHK",
+    unit: "F1",
+    title: "Spacious Two Bedroom Living",
     description:
-      "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
-    area: "69.45 m²",
-    price: "OMR 54,692.000",
-    bedrooms: "1",
-    baths: "1 + 1",
+      "A thoughtfully planned two-bedroom residence designed for comfortable, elegant and efficient modern living.",
+    area: "90.64 SQ.M.",
+    price: "OMR 71,379.000",
+    bedrooms: "2",
+    baths: "3",
     utility: "1",
-    balcony: "—",
+    balcony: "1",
 
-    // F6 images
-        unitLayout: "/images/Residences/F6-1BHK-unit-layout.png",
-        layoutDetails: "/images/Residences/F6-1BHK-layout-details.png",
-
+    // F1 images
+    unitLayout: "/images/Residences/F1-2BHK-unit-layout.png",
+    layoutDetails: "/images/Residences/F1-2BHK-layout-details.png",
   };
 
   return (
-    <section className="f6-one-bhk">
+    <section className="f1-two-bhk">
 
       {/* =====================================================
-          F6 · HEADER
+          F1 · HEADER
       ===================================================== */}
-
+{residence.unit !== "F1" && (
       <header className="details-header">
+
         <div className="details-title">
+
           <span>RAYA AL QURUM · RESIDENCES</span>
 
           <h2>{residence.title}</h2>
 
           <p>{residence.type}</p>
+
         </div>
 
         <div className="unit-badge">
+
           <small>UNIT TYPE</small>
+
           <strong>{residence.unit}</strong>
+
           <span>{residence.type}</span>
+
         </div>
+
       </header>
+)}
 
 
       {/* =====================================================
-          F6 · UNIT LAYOUT
+          F1 · UNIT LAYOUT
       ===================================================== */}
 
       <section className="detail-layout-section">
@@ -88,7 +96,7 @@ export default function F6OneBHK() {
           </h3>
 
           <h4>
-            Refined {residence.type} Living
+            Spacious {residence.type} Living
           </h4>
 
           <p>
@@ -121,23 +129,14 @@ export default function F6OneBHK() {
                   className="bedroom-icon"
                 >
                   <path d="M16 30V16c0-3 2-5 5-5h38c3 0 5 2 5 5v14" />
-
                   <path d="M20 28c0-4 3-6 7-6h9c3 0 5 2 5 5v3H20v-2z" />
-
                   <path d="M39 27c0-3 2-5 5-5h9c4 0 7 2 7 6v2H39v-3z" />
-
                   <path d="M12 31h56v14c0 3-2 5-5 5H17c-3 0-5-2-5-5V31z" />
-
                   <path d="M12 39h56" />
-
                   <path d="M15 50h50" />
-
                   <path d="M18 50v14" />
-
                   <path d="M62 50v14" />
-
                   <path d="M12 34v16" />
-
                   <path d="M68 34v16" />
                 </svg>
 
@@ -184,6 +183,7 @@ export default function F6OneBHK() {
               <div className="feature-icon">
 
                 <svg viewBox="0 0 64 64" aria-hidden="true">
+
                   <rect
                     x="12"
                     y="8"
@@ -209,6 +209,7 @@ export default function F6OneBHK() {
                     cy="13"
                     r="2"
                   />
+
                 </svg>
 
               </div>
@@ -250,13 +251,13 @@ export default function F6OneBHK() {
         </div>
 
 
-        {/* F6 MAIN IMAGE */}
+        {/* F1 MAIN IMAGE */}
 
         <div className="detail-layout-image">
 
           <img
             src={residence.unitLayout}
-            alt="F6 1 BHK unit layout"
+            alt="F1 2 BHK unit layout"
           />
 
         </div>
@@ -265,7 +266,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · PRICE
+          F1 · PRICE
       ===================================================== */}
 
       <section className="details-price">
@@ -284,7 +285,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · STATS
+          F1 · STATS
       ===================================================== */}
 
       <section className="details-stats">
@@ -313,7 +314,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · RESIDENCE OVERVIEW
+          F1 · RESIDENCE OVERVIEW
       ===================================================== */}
 
       <section className="detail-description">
@@ -361,7 +362,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · LAYOUT DETAILS
+          F1 · LAYOUT DETAILS
       ===================================================== */}
 
       <section className="layout-details">
@@ -375,7 +376,7 @@ export default function F6OneBHK() {
           </h3>
 
           <p>
-            From the entrance and living areas to the bedroom, dining
+            From the entrance and living areas to the bedrooms, dining
             spaces and utility areas, the residence is planned to make
             everyday living comfortable and effortless.
           </p>
@@ -403,106 +404,112 @@ export default function F6OneBHK() {
         </div>
 
 
-        {/* F6 LAYOUT DETAIL IMAGE */}
+        {/* F1 LAYOUT DETAIL IMAGE */}
 
         <div className="layout-details-image">
 
           <img
             src={residence.layoutDetails}
-            alt="F6 1 BHK layout details"
+            alt="F1 2 BHK layout details"
           />
 
         </div>
 
       </section>
 
-{/* =====================================================
-    F6 · 1 BHK — SALES OFFER
-===================================================== */}
-
-<section className="sales-offer-section">
-
-  <div className="sales-offer-inner">
-
-    {/* LEFT — CONTENT */}
-    <div className="sales-offer-content">
-
-      <span className="sales-offer-eyebrow">
-        RAYA AL QURUM · SALES OFFER
-      </span>
-
-      <h2>
-        A refined opportunity
-        <em> at Raya Al Qurum.</em>
-      </h2>
-
-      <p className="sales-offer-intro">
-        Discover the F6 · 1 BHK residence, thoughtfully planned
-        for contemporary living with a flexible payment structure
-        designed around comfort and convenience.
-      </p>
-
-      <div className="sales-offer-info">
-
-        <div className="sales-info-item">
-          <span>UNIT TYPE</span>
-          <strong>F6 · 1 BHK</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>UNIT AREA</span>
-          <strong>69.45 m²</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>LOCATION</span>
-          <strong>Qurum, Muscat, Oman</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>PROJECT STATUS</span>
-          <strong>Off-Plan</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>INDICATIVE PRICE</span>
-          <strong>OMR 54,692.000</strong>
-        </div>
-
-      </div>
-
-      <button
-        type="button"
-        className="sales-download-btn"
-        onClick={downloadSalesOffer}
-      >
-        <span>↓</span>
-        DOWNLOAD SALES OFFER
-      </button>
-
-      <p className="sales-download-note">
-        Download the F6 · 1 BHK sales offer
-      </p>
-
-    </div>
-
-    {/* RIGHT — SALES OFFER IMAGE */}
-    <div className="sales-offer-visual">
-
-      <img
-        className="sales-offer-main-image"
-        src="/images/Residences/f6-1bhk-sales-offer.jpg"
-        alt="F6 1 BHK Sales Offer"
-      />
-
-    </div>
-
-  </div>
-
-</section>
 
       {/* =====================================================
-          F6 · BOTTOM INFORMATION
+          F1 · 2 BHK — SALES OFFER
+      ===================================================== */}
+
+      <section className="sales-offer-section">
+
+        <div className="sales-offer-inner">
+
+          {/* LEFT — CONTENT */}
+
+          <div className="sales-offer-content">
+
+            <span className="sales-offer-eyebrow">
+              RAYA AL QURUM · SALES OFFER
+            </span>
+
+            <h2>
+              A refined opportunity
+              <em> at Raya Al Qurum.</em>
+            </h2>
+
+            <p className="sales-offer-intro">
+              Discover the F1 · 2 BHK residence, thoughtfully planned
+              for contemporary living with generous living spaces,
+              comfortable bedrooms and a practical layout designed
+              around everyday comfort.
+            </p>
+
+            <div className="sales-offer-info">
+
+              <div className="sales-info-item">
+                <span>UNIT TYPE</span>
+                <strong>F1 · 2 BHK</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>UNIT AREA</span>
+                <strong>90.64 SQ.M.</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>LOCATION</span>
+                <strong>Qurum, Muscat, Oman</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>PROJECT STATUS</span>
+                <strong>Off-Plan</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>INDICATIVE PRICE</span>
+                <strong>OMR 71,379.000</strong>
+              </div>
+
+            </div>
+
+            <button
+              type="button"
+              className="sales-download-btn"
+              onClick={downloadSalesOffer}
+            >
+              <span>↓</span>
+              DOWNLOAD SALES OFFER
+            </button>
+
+            <p className="sales-download-note">
+              Download the F1 · 2 BHK sales offer
+            </p>
+
+          </div>
+
+
+          {/* RIGHT — SALES OFFER IMAGE */}
+
+          <div className="sales-offer-visual">
+
+            <img
+              className="sales-offer-main-image"
+              src="/images/Residences/F1-2BHK-sales-offer.png"
+              alt="F1 2 BHK Sales Offer"
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          F1 · BOTTOM INFORMATION
       ===================================================== */}
 
       <section className="detail-bottom">

@@ -4,11 +4,11 @@ import "./Flatdetail.css";
 const downloadSalesOffer = async () => {
   try {
     const response = await fetch(
-      "/images/Residences/f6-1bhk-sales-offer.jpg"
+      "/images/Residences/f9-2bhk-sales-offer.jpg"
     );
 
     if (!response.ok) {
-      throw new Error("F6 Sales offer file not found");
+      throw new Error("F9 Sales offer file not found");
     }
 
     const blob = await response.blob();
@@ -17,7 +17,7 @@ const downloadSalesOffer = async () => {
 
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Raya-Al-Qurum-F6-1BHK-Sales-Offer.jpg";
+    link.download = "Raya-Al-Qurum-F9-2BHK-Sales-Offer.jpg";
 
     document.body.appendChild(link);
     link.click();
@@ -29,23 +29,23 @@ const downloadSalesOffer = async () => {
   }
 };
 
-export default function F6OneBHK() {
+export default function F9TwoBHK() {
   const residence = {
-    type: "1 BHK",
-    unit: "F6",
-    title: "Refined 1 Bedroom Living",
+    type: "2 BHK",
+    unit: "F9",
+    title: "Refined 2 Bedroom Living",
     description:
-      "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
-    area: "69.45 m²",
-    price: "OMR 54,692.000",
-    bedrooms: "1",
-    baths: "1 + 1",
-    utility: "1",
-    balcony: "—",
+      "A thoughtfully planned two-bedroom residence designed for comfortable, elegant and efficient modern living.",
+    area: "92.12 m²",
+    price: "OMR 72,545.000",
+    bedrooms: "2",
+    baths: "3",
+    utility: "—",
+    balcony: "1",
 
-    // F6 images
-        unitLayout: "/images/Residences/F6-1BHK-unit-layout.png",
-        layoutDetails: "/images/Residences/F6-1BHK-layout-details.png",
+    // F9 images
+        unitLayout: "/images/Residences/F9-2BHK-unit-layout.png",
+        layoutDetails: "/images/Residences/F9-2BHK-layout-details.png",
 
   };
 
@@ -53,7 +53,7 @@ export default function F6OneBHK() {
     <section className="f6-one-bhk">
 
       {/* =====================================================
-          F6 · HEADER
+          F9 · HEADER
       ===================================================== */}
 
       <header className="details-header">
@@ -74,7 +74,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · UNIT LAYOUT
+          F9 · UNIT LAYOUT
       ===================================================== */}
 
       <section className="detail-layout-section">
@@ -103,160 +103,125 @@ export default function F6OneBHK() {
             of every square metre while maintaining a perfect balance
             between spaciousness, privacy and everyday functionality.
           </p>
-
+</div>
 
           {/* FEATURES */}
+<div className="unit-features detail-reveal">
 
-          <div className="unit-features">
+  {/* BEDROOM */}
+  <div className="unit-feature">
 
-            {/* BEDROOM */}
+    <div className="feature-icon">
+      <svg
+        viewBox="0 0 80 80"
+        aria-hidden="true"
+        className="bedroom-icon"
+      >
+        <path d="M16 30V16c0-3 2-5 5-5h38c3 0 5 2 5 5v14" />
+        <path d="M20 28c0-4 3-6 7-6h9c3 0 5 2 5 5v3H20v-2z" />
+        <path d="M39 27c0-3 2-5 5-5h9c4 0 7 2 7 6v2H39v-3z" />
+        <path d="M12 31h56v14c0 3-2 5-5 5H17c-3 0-5-2-5-5V31z" />
+        <path d="M12 39h56" />
+        <path d="M15 50h50" />
+        <path d="M18 50v14" />
+        <path d="M62 50v14" />
+        <path d="M12 34v16" />
+        <path d="M68 34v16" />
+      </svg>
+    </div>
 
-            <div className="unit-feature">
+    <div className="feature-info">
+      <strong>2</strong>
+      <span>BEDROOM</span>
+    </div>
 
-              <div className="feature-icon">
-
-                <svg
-                  viewBox="0 0 80 80"
-                  aria-hidden="true"
-                  className="bedroom-icon"
-                >
-                  <path d="M16 30V16c0-3 2-5 5-5h38c3 0 5 2 5 5v14" />
-
-                  <path d="M20 28c0-4 3-6 7-6h9c3 0 5 2 5 5v3H20v-2z" />
-
-                  <path d="M39 27c0-3 2-5 5-5h9c4 0 7 2 7 6v2H39v-3z" />
-
-                  <path d="M12 31h56v14c0 3-2 5-5 5H17c-3 0-5-2-5-5V31z" />
-
-                  <path d="M12 39h56" />
-
-                  <path d="M15 50h50" />
-
-                  <path d="M18 50v14" />
-
-                  <path d="M62 50v14" />
-
-                  <path d="M12 34v16" />
-
-                  <path d="M68 34v16" />
-                </svg>
-
-              </div>
-
-              <div>
-                <strong>{residence.bedrooms}</strong>
-                <span>BEDROOM</span>
-              </div>
-
-            </div>
+  </div>
 
 
-            {/* BATHROOM */}
+  {/* BATHROOM */}
+  <div className="unit-feature">
 
-            <div className="unit-feature">
+    <div className="feature-icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M8 34h48" />
+        <path d="M11 34v7c0 10 9 16 21 16s21-6 21-16v-7" />
+        <path d="M17 57v3M47 57v3" />
+        <path d="M19 34V17c0-6 4-10 10-10 5 0 9 3 10 8" />
+        <path d="M39 15h10" />
+        <path d="M45 20v7" />
+        <path d="M49 27h-9" />
+      </svg>
+    </div>
 
-              <div className="feature-icon">
+    <div className="feature-info">
+      <strong>3</strong>
+      <span>BATHROOM</span>
+    </div>
 
-                <svg viewBox="0 0 64 64" aria-hidden="true">
-                  <path d="M8 34h48" />
-                  <path d="M11 34v7c0 10 9 16 21 16s21-6 21-16v-7" />
-                  <path d="M17 57v3M47 57v3" />
-                  <path d="M19 34V17c0-6 4-10 10-10 5 0 9 3 10 8" />
-                  <path d="M39 15h10" />
-                  <path d="M45 20v7" />
-                  <path d="M49 27h-9" />
-                </svg>
-
-              </div>
-
-              <div className="feature-info">
-                <strong>{residence.baths}</strong>
-                <span>BATHROOM</span>
-              </div>
-
-            </div>
+  </div>
 
 
-            {/* UTILITY */}
+  {/* DRESSING */}
+  <div className="unit-feature">
 
-            <div className="unit-feature">
+    <div className="feature-icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
 
-              <div className="feature-icon">
+        {/* Wardrobe */}
+        <rect x="10" y="8" width="44" height="48" rx="2" />
+        <path d="M32 8v48" />
+        <path d="M10 14h44" />
 
-                <svg viewBox="0 0 64 64" aria-hidden="true">
-                  <rect
-                    x="12"
-                    y="8"
-                    width="40"
-                    height="48"
-                    rx="2"
-                  />
+        {/* Handles */}
+        <path d="M24 31h4" />
+        <path d="M36 31h4" />
 
-                  <rect
-                    x="20"
-                    y="17"
-                    width="24"
-                    height="13"
-                    rx="1"
-                  />
+        {/* Hanging clothes */}
+        <path d="M16 22c3-3 6-3 9 0l-5 4h-7l3-4z" />
+        <path d="M40 22c3-3 6-3 9 0l-5 4h-7l3-4z" />
 
-                  <path d="M21 37h22" />
-                  <path d="M21 44h22" />
-                  <path d="M21 51h22" />
+      </svg>
+    </div>
 
-                  <circle
-                    cx="47"
-                    cy="13"
-                    r="2"
-                  />
-                </svg>
+    <div className="feature-info">
+      <strong>1</strong>
+      <span>DRESSING</span>
+    </div>
 
-              </div>
-
-              <div className="feature-info">
-                <strong>{residence.utility}</strong>
-                <span>UTILITY</span>
-              </div>
-
-            </div>
+  </div>
 
 
-            {/* BALCONY */}
+  {/* BALCONY */}
+  <div className="unit-feature">
 
-            <div className="unit-feature">
+    <div className="feature-icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M8 18h48" />
+        <path d="M13 18v35M51 18v35" />
+        <path d="M8 53h48" />
+        <path d="M6 58h52" />
+        <path d="M21 31v22M32 31v22M43 31v22" />
+        <path d="M16 18v-7h32v7" />
+      </svg>
+    </div>
 
-              <div className="feature-icon">
+    <div className="feature-info">
+      <strong>1</strong>
+      <span>BALCONY</span>
+    </div>
 
-                <svg viewBox="0 0 64 64" aria-hidden="true">
-                  <path d="M8 18h48" />
-                  <path d="M13 18v35M51 18v35" />
-                  <path d="M8 53h48" />
-                  <path d="M6 58h52" />
-                  <path d="M21 31v22M32 31v22M43 31v22" />
-                  <path d="M16 18v-7h32v7" />
-                </svg>
+  </div>
 
-              </div>
-
-              <div className="feature-info">
-                <strong>{residence.balcony}</strong>
-                <span>BALCONY</span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
+</div>
 
 
-        {/* F6 MAIN IMAGE */}
+        {/* F9 MAIN IMAGE */}
 
         <div className="detail-layout-image">
 
           <img
             src={residence.unitLayout}
-            alt="F6 1 BHK unit layout"
+            alt="F9 2 BHK unit layout"
           />
 
         </div>
@@ -265,7 +230,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · PRICE
+          F9 · PRICE
       ===================================================== */}
 
       <section className="details-price">
@@ -284,7 +249,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · STATS
+          F9 · STATS
       ===================================================== */}
 
       <section className="details-stats">
@@ -299,11 +264,10 @@ export default function F6OneBHK() {
           <strong>{residence.baths}</strong>
         </div>
 
-        <div>
-          <span>Utility</span>
-          <strong>{residence.utility}</strong>
-        </div>
-
+       <div className="detail-stat">
+  <span>DRESSING</span>
+  <strong>1</strong>
+</div>
         <div>
           <span>Balcony</span>
           <strong>{residence.balcony}</strong>
@@ -313,7 +277,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · RESIDENCE OVERVIEW
+          F9 · RESIDENCE OVERVIEW
       ===================================================== */}
 
       <section className="detail-description">
@@ -361,7 +325,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · LAYOUT DETAILS
+          F9 · LAYOUT DETAILS
       ===================================================== */}
 
       <section className="layout-details">
@@ -409,7 +373,7 @@ export default function F6OneBHK() {
 
           <img
             src={residence.layoutDetails}
-            alt="F6 1 BHK layout details"
+            alt="F9 2 BHK layout details"
           />
 
         </div>
@@ -417,7 +381,7 @@ export default function F6OneBHK() {
       </section>
 
 {/* =====================================================
-    F6 · 1 BHK — SALES OFFER
+    F9 · 2 BHK — SALES OFFER
 ===================================================== */}
 
 <section className="sales-offer-section">
@@ -437,7 +401,7 @@ export default function F6OneBHK() {
       </h2>
 
       <p className="sales-offer-intro">
-        Discover the F6 · 1 BHK residence, thoughtfully planned
+        Discover the F9 · 2 BHK residence, thoughtfully planned
         for contemporary living with a flexible payment structure
         designed around comfort and convenience.
       </p>
@@ -446,12 +410,12 @@ export default function F6OneBHK() {
 
         <div className="sales-info-item">
           <span>UNIT TYPE</span>
-          <strong>F6 · 1 BHK</strong>
+          <strong>F9 · 2 BHK</strong>
         </div>
 
         <div className="sales-info-item">
           <span>UNIT AREA</span>
-          <strong>69.45 m²</strong>
+          <strong>92.12 m²</strong>
         </div>
 
         <div className="sales-info-item">
@@ -466,7 +430,7 @@ export default function F6OneBHK() {
 
         <div className="sales-info-item">
           <span>INDICATIVE PRICE</span>
-          <strong>OMR 54,692.000</strong>
+          <strong>OMR 72,545.000</strong>
         </div>
 
       </div>
@@ -481,7 +445,7 @@ export default function F6OneBHK() {
       </button>
 
       <p className="sales-download-note">
-        Download the F6 · 1 BHK sales offer
+        Download the F9 · 2 BHK sales offer
       </p>
 
     </div>
@@ -491,8 +455,8 @@ export default function F6OneBHK() {
 
       <img
         className="sales-offer-main-image"
-        src="/images/Residences/f6-1bhk-sales-offer.jpg"
-        alt="F6 1 BHK Sales Offer"
+        src="/images/Residences/f9-2bhk-sales-offer.jpg"
+        alt="F9 2 BHK Sales Offer"
       />
 
     </div>
@@ -502,7 +466,7 @@ export default function F6OneBHK() {
 </section>
 
       {/* =====================================================
-          F6 · BOTTOM INFORMATION
+          F9 · BOTTOM INFORMATION
       ===================================================== */}
 
       <section className="detail-bottom">

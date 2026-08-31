@@ -1,0 +1,394 @@
+/* =========================================================
+   RAYA AL QURUM
+   WHY INVEST · INVESTMENT ADVANTAGES
+   COMPLETELY ISOLATED CSS
+   ========================================================= */
+
+.investment-advantages {
+  position: relative;
+  width: 100%;
+  padding: 120px 0 130px;
+  background: #f5f0e8;
+  color: #26231f;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.investment-advantages *,
+.investment-advantages *::before,
+.investment-advantages *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.investment-advantages-container {
+  width: min(1240px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.investment-advantages-heading {
+  max-width: 850px;
+  margin-bottom: 75px;
+}
+
+.investment-advantages-heading > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  color: #a7834d;
+}
+
+.investment-advantages-heading > span::before {
+  content: "";
+  display: block;
+
+  width: 34px;
+  height: 1px;
+
+  background: #b8955e;
+}
+
+.investment-advantages-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+
+  color: #26231f;
+}
+
+.investment-advantages-heading p {
+  margin: 28px 0 0;
+
+  max-width: 570px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #716b63;
+}
+
+
+/* =========================================================
+   INVESTMENT HIGHLIGHTS GRID
+   ========================================================= */
+
+.investment-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(52, 45, 37, 0.16);
+  border-left: 1px solid rgba(52, 45, 37, 0.16);
+}
+
+
+/* =========================================================
+   HIGHLIGHT CARD
+   ========================================================= */
+
+.investment-highlight {
+  position: relative;
+
+  min-height: 300px;
+  padding: 38px 38px 42px;
+
+  border-right: 1px solid rgba(52, 45, 37, 0.16);
+  border-bottom: 1px solid rgba(52, 45, 37, 0.16);
+
+  background: rgba(255, 252, 246, 0.42);
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.investment-highlight:hover {
+  background: rgba(255, 252, 246, 0.8);
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.investment-number {
+  display: block;
+
+  margin-bottom: 52px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  color: #a7834d;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.investment-highlight h3 {
+  margin: 0 0 16px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  color: #29251f;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.investment-highlight p {
+  max-width: 310px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+
+  color: #716b63;
+}
+
+
+/* =========================================================
+   ROI / APPRECIATION VALUE
+   ========================================================= */
+
+.investment-highlight strong {
+  display: block;
+
+  margin: -3px 0 12px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: #a7834d;
+}
+
+
+/* =========================================================
+   BOTTOM FEATURE GRID
+   ========================================================= */
+
+.investment-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-top: 80px;
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   BOTTOM FEATURE CARDS
+   ========================================================= */
+
+.investment-bottom-card {
+  position: relative;
+
+  min-height: 330px;
+  padding: 48px;
+
+  background: #26231f;
+  color: #f8f3eb;
+
+  overflow: hidden;
+}
+
+.investment-bottom-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -90px;
+  bottom: -100px;
+
+  width: 280px;
+  height: 280px;
+
+  border: 1px solid rgba(190, 157, 103, 0.22);
+  border-radius: 50%;
+}
+
+.investment-bottom-card > span {
+  display: block;
+
+  margin-bottom: 38px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+
+  color: #c5a56f;
+}
+
+.investment-bottom-card h3 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1.12;
+  font-weight: 500;
+
+  color: #f8f3eb;
+}
+
+.investment-bottom-card p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 480px;
+
+  margin: 25px 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: rgba(248, 243, 235, 0.68);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .investment-advantages {
+    padding: 100px 0 110px;
+  }
+
+  .investment-advantages-container {
+    width: min(100% - 50px, 850px);
+  }
+
+  .investment-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .investment-highlight {
+    min-height: 280px;
+  }
+
+  .investment-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .investment-advantages {
+    padding: 80px 0 90px;
+  }
+
+  .investment-advantages-container {
+    width: calc(100% - 36px);
+  }
+
+  .investment-advantages-heading {
+    margin-bottom: 55px;
+  }
+
+  .investment-advantages-heading h2 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .investment-advantages-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .investment-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .investment-highlight {
+    min-height: auto;
+    padding: 30px 26px 35px;
+  }
+
+  .investment-number {
+    margin-bottom: 35px;
+  }
+
+  .investment-highlight h3 {
+    font-size: 25px;
+  }
+
+  .investment-highlight p {
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .investment-highlight strong {
+    font-size: 38px;
+  }
+
+  .investment-bottom-grid {
+    margin-top: 55px;
+    gap: 16px;
+  }
+
+  .investment-bottom-card {
+    min-height: 290px;
+    padding: 35px 28px;
+  }
+
+  .investment-bottom-card > span {
+    margin-bottom: 30px;
+  }
+
+  .investment-bottom-card h3 {
+    font-size: 32px;
+  }
+
+  .investment-bottom-card p {
+    font-size: 13px;
+  }
+
+}

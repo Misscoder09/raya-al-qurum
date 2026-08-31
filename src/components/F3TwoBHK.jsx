@@ -4,11 +4,11 @@ import "./Flatdetail.css";
 const downloadSalesOffer = async () => {
   try {
     const response = await fetch(
-      "/images/Residences/f7-1bhk-sales-offer.jpg"
+      "/images/Residences/f3-2bhk-sales-offer.jpg"
     );
 
     if (!response.ok) {
-      throw new Error("F7 Sales offer file not found");
+      throw new Error("F3 Sales offer file not found");
     }
 
     const blob = await response.blob();
@@ -17,7 +17,7 @@ const downloadSalesOffer = async () => {
 
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Raya-Al-Qurum-F7-1BHK-Sales-Offer.jpg";
+    link.download = "Raya-Al-Qurum-F3-2BHK-Sales-Offer.jpg";
 
     document.body.appendChild(link);
     link.click();
@@ -25,43 +25,130 @@ const downloadSalesOffer = async () => {
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
   } catch (error) {
-    console.error("F7 Sales offer download failed:", error);
+    console.error("F3 Sales offer download failed:", error);
   }
 };
 
-export default function F7OneBHK() {
+export default function F3TwoBHK() {
   const residence = {
-    type: "1 BHK",
-    unit: "F7",
+    type: "2 BHK + Maid",
+    unit: "F3",
 
-    title: "Refined 1 Bedroom Living",
+    title: "Refined 2 Bedroom Living",
 
     description:
-      "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
+      "A thoughtfully planned two-bedroom residence with a dedicated maid room, designed to provide comfortable, elegant and efficient modern living.",
 
-    area: "70.73 m²",
-    price: "OMR 55,700.000",
+    area: "110.68 m²",
+    price: "OMR 91,311.000",
 
-    bedrooms: "1",
-    baths: "2",
+    bedrooms: "2",
+    baths: "3",
+    maidRoom: "1",
     utility: "1",
-    balcony: "—",
+    balcony: "1",
 
-    unitLayout:
-      "/images/Residences/F7-1BHK-unit-layout.png",
+    // F3 images
+    unitLayout: "/images/Residences/F3-2BHK-unit-layout.png",
+    layoutDetails: "/images/Residences/F3-2BHK-layout-details.png",
 
-    layoutDetails:
-      "/images/Residences/F7-1BHK-layout-details.png",
-
+    // Sales offer image
     salesOffer:
-      "/images/Residences/f7-1bhk-sales-offer.jpg",
+      "/images/Residences/f3-2bhk-sales-offer.jpg",
   };
 
+  const paymentPlan = [
+    {
+      stage: "Down Payment",
+      percentage: "20%",
+      due: "On booking / reservation",
+      amount: "OMR 18,262.200",
+    },
+    {
+      stage: "Quarterly Installment 01",
+      percentage: "5%",
+      due: "Month 3",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 02",
+      percentage: "5%",
+      due: "Month 6",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 03",
+      percentage: "5%",
+      due: "Month 9",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 04",
+      percentage: "5%",
+      due: "Month 12",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 05",
+      percentage: "5%",
+      due: "Month 15",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 06",
+      percentage: "5%",
+      due: "Month 18",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 07",
+      percentage: "5%",
+      due: "Month 21",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 08",
+      percentage: "5%",
+      due: "Month 24",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 09",
+      percentage: "5%",
+      due: "Month 27",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 10",
+      percentage: "5%",
+      due: "Month 30",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 11",
+      percentage: "5%",
+      due: "Month 33",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Quarterly Installment 12",
+      percentage: "5%",
+      due: "Month 36",
+      amount: "OMR 4,565.550",
+    },
+    {
+      stage: "Final Payment",
+      percentage: "20%",
+      due: "On handover",
+      amount: "OMR 18,262.200",
+    },
+  ];
+
   return (
-    <section className="f7-one-bhk">
+    <section className="f6-one-bhk">
 
       {/* =====================================================
-          F7 · HEADER
+          F3 · HEADER
       ===================================================== */}
 
       <header className="details-header">
@@ -93,7 +180,7 @@ export default function F7OneBHK() {
           </strong>
 
           <span>
-            {residence.type}
+            2 BHK + Maid
           </span>
 
         </div>
@@ -102,7 +189,7 @@ export default function F7OneBHK() {
 
 
       {/* =====================================================
-          F7 · UNIT LAYOUT
+          F3 · UNIT LAYOUT
       ===================================================== */}
 
       <section className="detail-layout-section">
@@ -118,7 +205,7 @@ export default function F7OneBHK() {
           </h3>
 
           <h4>
-            Refined {residence.type} Living
+            Refined 2 Bedroom Living
           </h4>
 
           <p>
@@ -129,17 +216,16 @@ export default function F7OneBHK() {
           </p>
 
           <p className="layout-description">
-            Designed for contemporary living, the layout makes the most
-            of every square metre while maintaining a perfect balance
-            between spaciousness, privacy and everyday functionality.
+            Designed for contemporary family living, the layout makes
+            the most of every square metre while providing generous
+            bedrooms, spacious living areas and a dedicated maid room.
           </p>
 
 
-          {/* =================================================
-              FEATURES
-          ================================================= */}
+          {/* FEATURES */}
 
           <div className="unit-features">
+
 
             {/* BEDROOM */}
 
@@ -152,7 +238,6 @@ export default function F7OneBHK() {
                   aria-hidden="true"
                   className="bedroom-icon"
                 >
-
                   <path d="M16 30V16c0-3 2-5 5-5h38c3 0 5 2 5 5v14" />
 
                   <path d="M20 28c0-4 3-6 7-6h9c3 0 5 2 5 5v3H20v-2z" />
@@ -172,19 +257,20 @@ export default function F7OneBHK() {
                   <path d="M12 34v16" />
 
                   <path d="M68 34v16" />
-
                 </svg>
 
               </div>
 
               <div>
+
                 <strong>
                   {residence.bedrooms}
                 </strong>
 
                 <span>
-                  BEDROOM
+                  BEDROOMS
                 </span>
+
               </div>
 
             </div>
@@ -200,7 +286,6 @@ export default function F7OneBHK() {
                   viewBox="0 0 64 64"
                   aria-hidden="true"
                 >
-
                   <path d="M8 34h48" />
 
                   <path d="M11 34v7c0 10 9 16 21 16s21-6 21-16v-7" />
@@ -214,7 +299,6 @@ export default function F7OneBHK() {
                   <path d="M45 20v7" />
 
                   <path d="M49 27h-9" />
-
                 </svg>
 
               </div>
@@ -226,7 +310,46 @@ export default function F7OneBHK() {
                 </strong>
 
                 <span>
-                  BATHROOM
+                  BATHROOMS
+                </span>
+
+              </div>
+
+            </div>
+
+
+            {/* MAID ROOM */}
+
+            <div className="unit-feature">
+
+              <div className="feature-icon">
+
+                <svg
+                  viewBox="0 0 64 64"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="32"
+                    cy="18"
+                    r="8"
+                  />
+
+                  <path d="M17 54c1-11 7-18 15-18s14 7 15 18" />
+
+                  <path d="M10 54h44" />
+
+                </svg>
+
+              </div>
+
+              <div className="feature-info">
+
+                <strong>
+                  {residence.maidRoom}
+                </strong>
+
+                <span>
+                  MAID ROOM
                 </span>
 
               </div>
@@ -244,7 +367,6 @@ export default function F7OneBHK() {
                   viewBox="0 0 64 64"
                   aria-hidden="true"
                 >
-
                   <rect
                     x="12"
                     y="8"
@@ -302,7 +424,6 @@ export default function F7OneBHK() {
                   viewBox="0 0 64 64"
                   aria-hidden="true"
                 >
-
                   <path d="M8 18h48" />
 
                   <path d="M13 18v35M51 18v35" />
@@ -338,13 +459,13 @@ export default function F7OneBHK() {
         </div>
 
 
-        {/* F7 MAIN IMAGE */}
+        {/* F3 MAIN IMAGE */}
 
         <div className="detail-layout-image">
 
           <img
             src={residence.unitLayout}
-            alt="F7 1 BHK unit layout"
+            alt="F3 2 BHK unit layout"
           />
 
         </div>
@@ -353,7 +474,7 @@ export default function F7OneBHK() {
 
 
       {/* =====================================================
-          F7 · PRICE
+          F3 · PRICE
       ===================================================== */}
 
       <section className="details-price">
@@ -386,7 +507,7 @@ export default function F7OneBHK() {
 
 
       {/* =====================================================
-          F7 · STATS
+          F3 · STATS
       ===================================================== */}
 
       <section className="details-stats">
@@ -411,6 +532,18 @@ export default function F7OneBHK() {
 
           <strong>
             {residence.baths}
+          </strong>
+
+        </div>
+
+        <div>
+
+          <span>
+            Maid Room
+          </span>
+
+          <strong>
+            {residence.maidRoom}
           </strong>
 
         </div>
@@ -443,7 +576,7 @@ export default function F7OneBHK() {
 
 
       {/* =====================================================
-          F7 · RESIDENCE OVERVIEW
+          F3 · RESIDENCE OVERVIEW
       ===================================================== */}
 
       <section className="detail-description">
@@ -464,7 +597,9 @@ export default function F7OneBHK() {
 
           <p>
             Every area has been considered to create a refined balance
-            between privacy, comfort and everyday functionality.
+            between privacy, comfort and everyday functionality, with
+            generous living and dining spaces complemented by a dedicated
+            maid room.
           </p>
 
         </div>
@@ -514,7 +649,7 @@ export default function F7OneBHK() {
 
 
       {/* =====================================================
-          F7 · LAYOUT DETAILS
+          F3 · LAYOUT DETAILS
       ===================================================== */}
 
       <section className="layout-details">
@@ -530,9 +665,10 @@ export default function F7OneBHK() {
           </h3>
 
           <p>
-            From the entrance and living areas to the bedroom, dining
-            spaces and utility areas, the residence is planned to make
-            everyday living comfortable and effortless.
+            From the entrance and living areas to the bedrooms,
+            dining space, kitchen, maid room and utility areas,
+            the residence is planned to make everyday living
+            comfortable and effortless.
           </p>
 
 
@@ -565,11 +701,23 @@ export default function F7OneBHK() {
             <div>
 
               <strong>
+                {residence.maidRoom}
+              </strong>
+
+              <span>
+                MAID ROOM
+              </span>
+
+            </div>
+
+            <div>
+
+              <strong>
                 {residence.balcony}
               </strong>
 
               <span>
-                BALCONIES
+                BALCONY
               </span>
 
             </div>
@@ -579,13 +727,13 @@ export default function F7OneBHK() {
         </div>
 
 
-        {/* F7 LAYOUT DETAIL IMAGE */}
+        {/* F3 LAYOUT DETAIL IMAGE */}
 
         <div className="layout-details-image">
 
           <img
             src={residence.layoutDetails}
-            alt="F7 1 BHK layout details"
+            alt="F3 2 BHK layout details"
           />
 
         </div>
@@ -593,13 +741,16 @@ export default function F7OneBHK() {
       </section>
 
 
+
+
       {/* =====================================================
-          F7 · 1 BHK — SALES OFFER
+          F3 · SALES OFFER
       ===================================================== */}
 
       <section className="sales-offer-section">
 
         <div className="sales-offer-inner">
+
 
           {/* LEFT — CONTENT */}
 
@@ -615,9 +766,10 @@ export default function F7OneBHK() {
             </h2>
 
             <p className="sales-offer-intro">
-              Discover the F7 · 1 BHK residence, thoughtfully planned
-              for contemporary living with a flexible payment structure
-              designed around comfort and convenience.
+              Discover the F3 · 2 BHK + Maid residence, thoughtfully
+              planned for contemporary family living with a flexible
+              three-year payment structure designed around comfort
+              and convenience.
             </p>
 
 
@@ -630,7 +782,7 @@ export default function F7OneBHK() {
                 </span>
 
                 <strong>
-                  F7 · 1 BHK
+                  F3 · 2 BHK + Maid
                 </strong>
 
               </div>
@@ -643,7 +795,7 @@ export default function F7OneBHK() {
                 </span>
 
                 <strong>
-                  {residence.area}
+                  110.68 m²
                 </strong>
 
               </div>
@@ -669,7 +821,7 @@ export default function F7OneBHK() {
                 </span>
 
                 <strong>
-                  Preliminary
+                  Off-Plan
                 </strong>
 
               </div>
@@ -682,7 +834,20 @@ export default function F7OneBHK() {
                 </span>
 
                 <strong>
-                  {residence.price}
+                  OMR 91,311.000
+                </strong>
+
+              </div>
+
+
+              <div className="sales-info-item">
+
+                <span>
+                  PAYMENT PLAN
+                </span>
+
+                <strong>
+                  3 Years
                 </strong>
 
               </div>
@@ -695,18 +860,12 @@ export default function F7OneBHK() {
               className="sales-download-btn"
               onClick={downloadSalesOffer}
             >
-
-              <span>
-                ↓
-              </span>
-
+              <span>↓</span>
               DOWNLOAD SALES OFFER
-
             </button>
 
-
             <p className="sales-download-note">
-              Download the F7 · 1 BHK sales offer
+              Download the F3 · 2 BHK + Maid sales offer
             </p>
 
           </div>
@@ -718,8 +877,8 @@ export default function F7OneBHK() {
 
             <img
               className="sales-offer-main-image"
-              src="/images/Residences/f7-1bhk-sales-offer.jpg"
-              alt="F7 1 BHK Sales Offer"
+              src={residence.salesOffer}
+              alt="F3 2 BHK Sales Offer"
             />
 
           </div>
@@ -729,8 +888,11 @@ export default function F7OneBHK() {
       </section>
 
 
+
+
+
       {/* =====================================================
-          F7 · BOTTOM INFORMATION
+          F3 · BOTTOM INFORMATION
       ===================================================== */}
 
       <section className="detail-bottom">

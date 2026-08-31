@@ -1,14 +1,14 @@
 import React from "react";
-import "./Flatdetail.css";
+import "./F13-1BHK-Study.css";
 
 const downloadSalesOffer = async () => {
   try {
     const response = await fetch(
-      "/images/Residences/f6-1bhk-sales-offer.jpg"
+      "/images/Residences/f13-1bhk-study-sales-offer.jpg"
     );
 
     if (!response.ok) {
-      throw new Error("F6 Sales offer file not found");
+      throw new Error("F13 Sales offer file not found");
     }
 
     const blob = await response.blob();
@@ -17,7 +17,7 @@ const downloadSalesOffer = async () => {
 
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Raya-Al-Qurum-F6-1BHK-Sales-Offer.jpg";
+    link.download = "Raya-Al-Qurum-F13-1BHK-Study-Sales-Offer.jpg";
 
     document.body.appendChild(link);
     link.click();
@@ -25,63 +25,91 @@ const downloadSalesOffer = async () => {
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
   } catch (error) {
-    console.error("F6 Sales offer download failed:", error);
+    console.error("F13 Sales offer download failed:", error);
   }
 };
 
-export default function F6OneBHK() {
+export default function F13OneBHK() {
   const residence = {
-    type: "1 BHK",
-    unit: "F6",
-    title: "Refined 1 Bedroom Living",
+    type: "1 BHK + Study",
+    unit: "F13",
+    title: "Refined 1 Bedroom + Study Living",
+
     description:
-      "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
-    area: "69.45 m²",
-    price: "OMR 54,692.000",
+      "A thoughtfully planned one-bedroom residence with a dedicated study, designed for comfortable, elegant and efficient modern living.",
+
+    area: "81.78 m²",
+    price: "OMR 67,469.000",
+
     bedrooms: "1",
-    baths: "1 + 1",
+    baths: "1+1",
     utility: "1",
-    balcony: "—",
+    balcony: "1",
+    study: "1",
+    store: "1",
 
-    // F6 images
-        unitLayout: "/images/Residences/F6-1BHK-unit-layout.png",
-        layoutDetails: "/images/Residences/F6-1BHK-layout-details.png",
+    unitLayout:
+      "/images/Residences/F13-1BHK-study-unit-layout.png",
 
+    layoutDetails:
+      "/images/Residences/F13-1BHK-study-layout-details.png",
   };
 
   return (
     <section className="f6-one-bhk">
 
       {/* =====================================================
-          F6 · HEADER
+          F13 · HEADER
       ===================================================== */}
 
       <header className="details-header">
+
         <div className="details-title">
-          <span>RAYA AL QURUM · RESIDENCES</span>
 
-          <h2>{residence.title}</h2>
+          <span>
+            RAYA AL QURUM · RESIDENCES
+          </span>
 
-          <p>{residence.type}</p>
+          <h2>
+            {residence.title}
+          </h2>
+
+          <p>
+            {residence.type}
+          </p>
+
         </div>
 
         <div className="unit-badge">
-          <small>UNIT TYPE</small>
-          <strong>{residence.unit}</strong>
-          <span>{residence.type}</span>
+
+          <small>
+            UNIT TYPE
+          </small>
+
+          <strong>
+            {residence.unit}
+          </strong>
+
+          <span>
+            {residence.type}
+          </span>
+
         </div>
+
       </header>
 
 
       {/* =====================================================
-          F6 · UNIT LAYOUT
+          F13 · UNIT LAYOUT
       ===================================================== */}
 
       <section className="detail-layout-section">
 
         <div className="detail-section-heading">
 
-          <span>UNIT LAYOUT</span>
+          <span>
+            UNIT LAYOUT
+          </span>
 
           <h3>
             {residence.type}
@@ -92,16 +120,15 @@ export default function F6OneBHK() {
           </h4>
 
           <p>
-            A thoughtfully designed residence that blends comfort,
-            functionality and modern elegance. Every space is carefully
-            planned to maximise natural light, privacy and seamless
-            movement, creating a refined and inviting home.
+            A thoughtfully designed one-bedroom residence with a
+            dedicated study space that blends comfort, functionality
+            and modern elegance.
           </p>
 
           <p className="layout-description">
             Designed for contemporary living, the layout makes the most
-            of every square metre while maintaining a perfect balance
-            between spaciousness, privacy and everyday functionality.
+            of every square metre while providing a private study,
+            practical storage and comfortable living spaces.
           </p>
 
 
@@ -120,6 +147,7 @@ export default function F6OneBHK() {
                   aria-hidden="true"
                   className="bedroom-icon"
                 >
+
                   <path d="M16 30V16c0-3 2-5 5-5h38c3 0 5 2 5 5v14" />
 
                   <path d="M20 28c0-4 3-6 7-6h9c3 0 5 2 5 5v3H20v-2z" />
@@ -139,6 +167,7 @@ export default function F6OneBHK() {
                   <path d="M12 34v16" />
 
                   <path d="M68 34v16" />
+
                 </svg>
 
               </div>
@@ -158,6 +187,7 @@ export default function F6OneBHK() {
               <div className="feature-icon">
 
                 <svg viewBox="0 0 64 64" aria-hidden="true">
+
                   <path d="M8 34h48" />
                   <path d="M11 34v7c0 10 9 16 21 16s21-6 21-16v-7" />
                   <path d="M17 57v3M47 57v3" />
@@ -165,57 +195,46 @@ export default function F6OneBHK() {
                   <path d="M39 15h10" />
                   <path d="M45 20v7" />
                   <path d="M49 27h-9" />
+
                 </svg>
 
               </div>
 
               <div className="feature-info">
                 <strong>{residence.baths}</strong>
-                <span>BATHROOM</span>
+                <span>BATHROOMS</span>
               </div>
 
             </div>
 
 
-            {/* UTILITY */}
+            {/* STUDY */}
 
             <div className="unit-feature">
 
               <div className="feature-icon">
 
                 <svg viewBox="0 0 64 64" aria-hidden="true">
-                  <rect
-                    x="12"
-                    y="8"
-                    width="40"
-                    height="48"
-                    rx="2"
-                  />
 
-                  <rect
-                    x="20"
-                    y="17"
-                    width="24"
-                    height="13"
-                    rx="1"
-                  />
+                  <rect x="10" y="12" width="44" height="38" rx="2" />
 
-                  <path d="M21 37h22" />
-                  <path d="M21 44h22" />
-                  <path d="M21 51h22" />
+                  <path d="M10 22h44" />
 
-                  <circle
-                    cx="47"
-                    cy="13"
-                    r="2"
-                  />
+                  <path d="M20 22v28" />
+
+                  <path d="M30 30h16" />
+
+                  <path d="M30 37h16" />
+
+                  <path d="M30 44h11" />
+
                 </svg>
 
               </div>
 
               <div className="feature-info">
-                <strong>{residence.utility}</strong>
-                <span>UTILITY</span>
+                <strong>{residence.study}</strong>
+                <span>STUDY</span>
               </div>
 
             </div>
@@ -228,12 +247,14 @@ export default function F6OneBHK() {
               <div className="feature-icon">
 
                 <svg viewBox="0 0 64 64" aria-hidden="true">
+
                   <path d="M8 18h48" />
                   <path d="M13 18v35M51 18v35" />
                   <path d="M8 53h48" />
                   <path d="M6 58h52" />
                   <path d="M21 31v22M32 31v22M43 31v22" />
                   <path d="M16 18v-7h32v7" />
+
                 </svg>
 
               </div>
@@ -250,13 +271,13 @@ export default function F6OneBHK() {
         </div>
 
 
-        {/* F6 MAIN IMAGE */}
+        {/* F13 MAIN IMAGE */}
 
         <div className="detail-layout-image">
 
           <img
             src={residence.unitLayout}
-            alt="F6 1 BHK unit layout"
+            alt="F13 1 BHK plus Study unit layout"
           />
 
         </div>
@@ -265,7 +286,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · PRICE
+          F13 · PRICE
       ===================================================== */}
 
       <section className="details-price">
@@ -284,7 +305,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · STATS
+          F13 · STATS
       ===================================================== */}
 
       <section className="details-stats">
@@ -300,8 +321,8 @@ export default function F6OneBHK() {
         </div>
 
         <div>
-          <span>Utility</span>
-          <strong>{residence.utility}</strong>
+          <span>Study / Store</span>
+          <strong>{residence.study} / {residence.store}</strong>
         </div>
 
         <div>
@@ -313,7 +334,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · RESIDENCE OVERVIEW
+          F13 · RESIDENCE OVERVIEW
       ===================================================== */}
 
       <section className="detail-description">
@@ -331,8 +352,9 @@ export default function F6OneBHK() {
           </p>
 
           <p>
-            Every area has been considered to create a refined balance
-            between privacy, comfort and everyday functionality.
+            The dedicated study provides a flexible space for work,
+            creativity or personal use, while the integrated dressing
+            area and practical storage enhance everyday functionality.
           </p>
 
         </div>
@@ -361,7 +383,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · LAYOUT DETAILS
+          F13 · LAYOUT DETAILS
       ===================================================== */}
 
       <section className="layout-details">
@@ -375,9 +397,10 @@ export default function F6OneBHK() {
           </h3>
 
           <p>
-            From the entrance and living areas to the bedroom, dining
-            spaces and utility areas, the residence is planned to make
-            everyday living comfortable and effortless.
+            Every space has been carefully planned to provide a
+            comfortable balance between living, privacy and everyday
+            functionality, with the added flexibility of a dedicated
+            study and practical storage.
           </p>
 
 
@@ -389,13 +412,13 @@ export default function F6OneBHK() {
             </div>
 
             <div>
-              <strong>{residence.baths}</strong>
-              <span>BATHROOMS</span>
+              <strong>{residence.study}</strong>
+              <span>STUDY</span>
             </div>
 
             <div>
               <strong>{residence.balcony}</strong>
-              <span>BALCONIES</span>
+              <span>BALCONY</span>
             </div>
 
           </div>
@@ -403,106 +426,113 @@ export default function F6OneBHK() {
         </div>
 
 
-        {/* F6 LAYOUT DETAIL IMAGE */}
+        {/* F13 LAYOUT DETAIL IMAGE */}
 
         <div className="layout-details-image">
 
           <img
             src={residence.layoutDetails}
-            alt="F6 1 BHK layout details"
+            alt="F13 1 BHK plus Study layout details"
           />
 
         </div>
 
       </section>
 
-{/* =====================================================
-    F6 · 1 BHK — SALES OFFER
-===================================================== */}
-
-<section className="sales-offer-section">
-
-  <div className="sales-offer-inner">
-
-    {/* LEFT — CONTENT */}
-    <div className="sales-offer-content">
-
-      <span className="sales-offer-eyebrow">
-        RAYA AL QURUM · SALES OFFER
-      </span>
-
-      <h2>
-        A refined opportunity
-        <em> at Raya Al Qurum.</em>
-      </h2>
-
-      <p className="sales-offer-intro">
-        Discover the F6 · 1 BHK residence, thoughtfully planned
-        for contemporary living with a flexible payment structure
-        designed around comfort and convenience.
-      </p>
-
-      <div className="sales-offer-info">
-
-        <div className="sales-info-item">
-          <span>UNIT TYPE</span>
-          <strong>F6 · 1 BHK</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>UNIT AREA</span>
-          <strong>69.45 m²</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>LOCATION</span>
-          <strong>Qurum, Muscat, Oman</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>PROJECT STATUS</span>
-          <strong>Off-Plan</strong>
-        </div>
-
-        <div className="sales-info-item">
-          <span>INDICATIVE PRICE</span>
-          <strong>OMR 54,692.000</strong>
-        </div>
-
-      </div>
-
-      <button
-        type="button"
-        className="sales-download-btn"
-        onClick={downloadSalesOffer}
-      >
-        <span>↓</span>
-        DOWNLOAD SALES OFFER
-      </button>
-
-      <p className="sales-download-note">
-        Download the F6 · 1 BHK sales offer
-      </p>
-
-    </div>
-
-    {/* RIGHT — SALES OFFER IMAGE */}
-    <div className="sales-offer-visual">
-
-      <img
-        className="sales-offer-main-image"
-        src="/images/Residences/f6-1bhk-sales-offer.jpg"
-        alt="F6 1 BHK Sales Offer"
-      />
-
-    </div>
-
-  </div>
-
-</section>
 
       {/* =====================================================
-          F6 · BOTTOM INFORMATION
+          F13 · SALES OFFER
+      ===================================================== */}
+
+      <section className="sales-offer-section">
+
+        <div className="sales-offer-inner">
+
+          {/* LEFT — CONTENT */}
+
+          <div className="sales-offer-content">
+
+            <span className="sales-offer-eyebrow">
+              RAYA AL QURUM · SALES OFFER
+            </span>
+
+            <h2>
+              A refined opportunity
+              <em> at Raya Al Qurum.</em>
+            </h2>
+
+            <p className="sales-offer-intro">
+              Discover the F13 · 1 BHK + Study residence, thoughtfully
+              planned for contemporary living with a flexible payment
+              structure designed around comfort and convenience.
+            </p>
+
+
+            <div className="sales-offer-info">
+
+              <div className="sales-info-item">
+                <span>UNIT TYPE</span>
+                <strong>F13 · 1 BHK + Study</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>UNIT AREA</span>
+                <strong>81.78 m²</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>LOCATION</span>
+                <strong>Qurum, Muscat, Oman</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>PROJECT STATUS</span>
+                <strong>Off-Plan</strong>
+              </div>
+
+              <div className="sales-info-item">
+                <span>INDICATIVE PRICE</span>
+                <strong>OMR 67,469.000</strong>
+              </div>
+
+            </div>
+
+
+            <button
+              type="button"
+              className="sales-download-btn"
+              onClick={downloadSalesOffer}
+            >
+              <span>↓</span>
+              DOWNLOAD SALES OFFER
+            </button>
+
+            <p className="sales-download-note">
+              Download the F13 · 1 BHK + Study sales offer
+            </p>
+
+          </div>
+
+
+          {/* RIGHT — SALES OFFER IMAGE */}
+
+          <div className="sales-offer-visual">
+
+            <img
+              className="sales-offer-main-image"
+              src="/images/Residences/f13-1bhk-study-sales-offer.jpg"
+              alt="F13 1 BHK Study Sales Offer"
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          F13 · BOTTOM INFORMATION
       ===================================================== */}
 
       <section className="detail-bottom">

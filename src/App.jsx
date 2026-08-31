@@ -3,6 +3,7 @@ import Residences from "./components/Residences";
 import Architecture from "./components/Architecture";
 import DayNight from "./components/DayNight";
 import Amenities from "./components/Amenities";
+import InvestmentAdvantages from "./components/WhyInvest/InvestmentAdvantages";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -502,90 +503,11 @@ function App() {
 
 
         {/* ================= INVESTMENT ================= */}
-        <section className="investment section" id="investment">
+<InvestmentAdvantages />
+           
 
-          <div className="section-top">
-
-            <div>
-              <div className="eyebrow dark-eyebrow">
-                <span></span>
-                INVESTMENT
-              </div>
-
-              <h2>
-                Built for living.
-                <br />
-                <i>Positioned for value.</i>
-              </h2>
-            </div>
-
-            <p>
-              A premium address paired with an investment
-              proposition designed for long-term confidence.
-            </p>
-
-          </div>
-
-
-          <div className="investment-grid">
-
-            <div className="investment-item">
-              <span>01</span>
-              <h3>Prime Address</h3>
-              <p>
-                A strategic Al Qurum location within
-                a highly established part of Muscat.
-              </p>
-            </div>
-
-            <div className="investment-item">
-              <span>02</span>
-              <h3>ITC Positioning</h3>
-              <p>
-                A compelling ownership opportunity
-                within an ITC framework.
-              </p>
-            </div>
-
-            <div className="investment-item">
-              <span>03</span>
-              <h3>Freehold Opportunity</h3>
-              <p>
-                Attractive ownership potential for
-                eligible buyers and investors.
-              </p>
-            </div>
-
-            <div className="investment-item">
-              <span>04</span>
-              <h3>Residency Eligibility</h3>
-              <p>
-                Investment may offer residency eligibility
-                subject to applicable regulations.
-              </p>
-            </div>
-
-            <div className="investment-item">
-              <span>05</span>
-              <h3>Rental Potential</h3>
-              <p>
-                A desirable location supporting long-term
-                rental and investment appeal.
-              </p>
-            </div>
-
-            <div className="investment-item">
-              <span>06</span>
-              <h3>Rooftop Lifestyle</h3>
-              <p>
-                Lifestyle amenities add distinction
-                and desirability to the development.
-              </p>
-            </div>
-
-          </div>
-
-        </section>
+            
+          
 
 
         {/* ================= OWNERSHIP ================= */}

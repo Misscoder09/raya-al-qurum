@@ -5,49 +5,56 @@ const Architecture = () => {
   return (
     <main className="architecture-page" id="architecture">
 
-      {/* ================= HERO ================= */}
-      <section className="architecture-hero">
+{/* ================= HERO ================= */}
+<section className="architecture-hero">
 
-        <div className="architecture-hero-image">
-          <img
-            src="/images/architecture-hero.jpeg"
+  <div className="architecture-hero-image">
+    <img
+      src="/images/architecture-hero.jpeg"
+      alt="Raya Al Qurum Architecture"
+    />
+  </div>
 
-            alt="Raya Al Qurum Architecture"
-          />
-        </div>
+  <div className="architecture-hero-overlay"></div>
 
-        <div className="architecture-hero-overlay"></div>
+  <div className="architecture-hero-content">
 
-        <div className="architecture-hero-content">
-          <span className="architecture-eyebrow">
-            ARCHITECTURE
-          </span>
+    <span className="architecture-eyebrow">
+      ARCHITECTURE
+    </span>
 
-          <h1>
-            Timeless by Design.
-            <br />
-            <em>Built for Generations.</em>
-          </h1>
+    <h1>
+      Timeless by Design.
+      <br />
+      <em>Built for Generations.</em>
+    </h1>
 
-          <div className="architecture-gold-line"></div>
+    <div className="architecture-gold-line"></div>
 
-          <p>
-            A refined architectural vision combining
-            contemporary design, elegant proportions
-            and thoughtful planning.
-          </p>
+    <p>
+      A refined architectural vision combining
+      contemporary design, elegant proportions
+      and thoughtful planning.
+    </p>
+    
+<button
+  className="architecture-primary-btn"
+  onClick={() =>
+    document.getElementById("architecture-philosophy")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+>
+  DISCOVER THE VISION
+  <span>→</span>
+</button>
 
-          <button className="architecture-primary-btn">
-            DISCOVER THE VISION
-            <span>→</span>
-          </button>
-        </div>
+  </div>
 
-      </section>
-
+</section>
 
       {/* ================= DESIGN PHILOSOPHY ================= */}
-      <section className="architecture-philosophy">
+      <section className="architecture-philosophy"id="architecture-philosophy">
 
         <div className="architecture-section-heading">
           <span>OUR DESIGN PHILOSOPHY</span>
@@ -76,6 +83,7 @@ const Architecture = () => {
 
             <p>
               Clean architectural lines and sophisticated
+              <br/>
               details create a distinctive modern identity.
             </p>
           </article>
@@ -88,6 +96,7 @@ const Architecture = () => {
 
             <p>
               Every space is carefully planned to balance
+              <br/>
               comfort, functionality and refined living.
             </p>
           </article>
@@ -100,6 +109,7 @@ const Architecture = () => {
 
             <p>
               A cohesive architectural approach designed
+              <br/>
               around contemporary lifestyles.
             </p>
           </article>
@@ -107,67 +117,77 @@ const Architecture = () => {
         </div>
 
       </section>
+      
+{/* =========================================================
+    ARCHITECTURAL EXCELLENCE
+    ========================================================= */}
 
+<section className="architecture-excellence">
 
-      {/* ================= ARCHITECTURAL EXCELLENCE ================= */}
-      <section className="architecture-excellence">
+  {/* ================= LEFT IMAGE ================= */}
+  <div className="architecture-excellence-image">
+    <img
+      src="/images/architecture-detail.jpeg"
+      alt="Raya Al Qurum Architecture"
+    />
+  </div>
 
-        <div className="architecture-excellence-image">
-          <img
-            src="/images/architecture-detail.jpeg"
+  {/* ================= RIGHT CONTENT ================= */}
+  <div className="architecture-excellence-content">
 
-            alt="Raya Al Qurum Architectural Excellence"
-          />
-        </div>
+    <div className="architecture-excellence-eyebrow">
+      <span></span>
+      ARCHITECTURAL EXCELLENCE
+    </div>
 
-        <div className="architecture-excellence-content">
+    <h2>
+      Where Form
+      <br />
+      <em>Meets Function.</em>
+    </h2>
 
-          <span className="architecture-eyebrow">
-            ARCHITECTURAL EXCELLENCE
-          </span>
+    <div className="architecture-excellence-line"></div>
 
-          <h2>
-            Where Form
-            <br />
-            <em>Meets Function.</em>
-          </h2>
+    <p>
+      From the proportions of the façade to the relationship between light,
+      landscape and living spaces, every detail has been considered to create
+      an enduring architectural character.
+    </p>
 
-          <div className="architecture-gold-line"></div>
+    <div className="architecture-excellence-features">
 
-          <p>
-            From the proportions of the façade to the
-            relationship between light, landscape and
-            living spaces, every detail has been considered
-            to create an enduring architectural character.
-          </p>
+      <div className="architecture-excellence-feature">
+        <span>01</span>
+        <p>Distinctive façade design</p>
+      </div>
 
-          <div className="architecture-feature-list">
+      <div className="architecture-excellence-feature">
+        <span>02</span>
+        <p>Thoughtful use of natural light</p>
+      </div>
 
-            <div>
-              <span>01</span>
-              <p>Distinctive façade design</p>
-            </div>
+      <div className="architecture-excellence-feature">
+        <span>03</span>
+        <p>Elegant indoor-outdoor connection</p>
+      </div>
 
-            <div>
-              <span>02</span>
-              <p>Thoughtful use of natural light</p>
-            </div>
+    </div>
 
-            <div>
-              <span>03</span>
-              <p>Elegant indoor-outdoor connection</p>
-            </div>
+    <button
+      className="architecture-excellence-button"
+      onClick={() => {
+        document
+          .getElementById("architecture-philosophy")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }}
+    >
+      <span>EXPLORE ARCHITECTURE</span>
+      <b>→</b>
+    </button>
 
-          </div>
+  </div>
 
-          <button className="architecture-outline-btn">
-            EXPLORE RESIDENCES
-            <span>→</span>
-          </button>
-
-        </div>
-
-      </section>
+</section>
 
 
       {/* ================= CTA ================= */}
@@ -180,20 +200,6 @@ const Architecture = () => {
             Architecture that elevates
             everyday living.
           </h3>
-        </div>
-
-        <div className="architecture-cta-actions">
-
-          <button className="architecture-primary-btn">
-            DOWNLOAD BROCHURE
-            <span>↓</span>
-          </button>
-
-          <button className="architecture-outline-btn">
-            REGISTER YOUR INTEREST
-            <span>→</span>
-          </button>
-
         </div>
 
       </section>

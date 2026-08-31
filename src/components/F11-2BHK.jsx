@@ -4,11 +4,11 @@ import "./Flatdetail.css";
 const downloadSalesOffer = async () => {
   try {
     const response = await fetch(
-      "/images/Residences/f6-1bhk-sales-offer.jpg"
+      "/images/Residences/f11-2bhk-sales-offer.jpg"
     );
 
     if (!response.ok) {
-      throw new Error("F6 Sales offer file not found");
+      throw new Error("F11 Sales offer file not found");
     }
 
     const blob = await response.blob();
@@ -17,7 +17,7 @@ const downloadSalesOffer = async () => {
 
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Raya-Al-Qurum-F6-1BHK-Sales-Offer.jpg";
+    link.download = "Raya-Al-Qurum-F11-2BHK-Sales-Offer.jpg";
 
     document.body.appendChild(link);
     link.click();
@@ -25,27 +25,27 @@ const downloadSalesOffer = async () => {
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
   } catch (error) {
-    console.error("F6 Sales offer download failed:", error);
+    console.error("F11 Sales offer download failed:", error);
   }
 };
 
-export default function F6OneBHK() {
+export default function F11TwoBHK() {
   const residence = {
-    type: "1 BHK",
-    unit: "F6",
-    title: "Refined 1 Bedroom Living",
+    type: "2 BHK",
+    unit: "F11",
+    title: "Refined 2 Bedroom Living",
     description:
-      "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
-    area: "69.45 m²",
-    price: "OMR 54,692.000",
-    bedrooms: "1",
-    baths: "1 + 1",
-    utility: "1",
-    balcony: "—",
+      "A thoughtfully planned two-bedroom residence designed for comfortable, elegant and efficient modern living.",
+    area: "89.72 m²",
+    price: "OMR 70,655.000",
+    bedrooms: "2",
+    baths: "2 + 1",
+    utility: "—",
+    balcony: "2",
 
-    // F6 images
-        unitLayout: "/images/Residences/F6-1BHK-unit-layout.png",
-        layoutDetails: "/images/Residences/F6-1BHK-layout-details.png",
+    // F11 images
+        unitLayout: "/images/Residences/F11-2BHK-unit-layout.png",
+        layoutDetails: "/images/Residences/F11-2BHK-layout-details.png",
 
   };
 
@@ -53,7 +53,7 @@ export default function F6OneBHK() {
     <section className="f6-one-bhk">
 
       {/* =====================================================
-          F6 · HEADER
+          F11 · HEADER
       ===================================================== */}
 
       <header className="details-header">
@@ -74,7 +74,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · UNIT LAYOUT
+          F11 · UNIT LAYOUT
       ===================================================== */}
 
       <section className="detail-layout-section">
@@ -181,42 +181,42 @@ export default function F6OneBHK() {
 
             <div className="unit-feature">
 
-              <div className="feature-icon">
+              {/* WALK-IN */}
+<div className="unit-feature">
 
-                <svg viewBox="0 0 64 64" aria-hidden="true">
-                  <rect
-                    x="12"
-                    y="8"
-                    width="40"
-                    height="48"
-                    rx="2"
-                  />
+  <div className="feature-icon">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="10" y="8" width="44" height="48" rx="2" />
+      <path d="M32 8v48" />
+      <path d="M10 14h44" />
 
-                  <rect
-                    x="20"
-                    y="17"
-                    width="24"
-                    height="13"
-                    rx="1"
-                  />
+      {/* Hanging clothes */}
+      <path d="M16 24h11" />
+      <path d="M37 24h11" />
 
-                  <path d="M21 37h22" />
-                  <path d="M21 44h22" />
-                  <path d="M21 51h22" />
+      <path d="M19 24v12" />
+      <path d="M45 24v12" />
 
-                  <circle
-                    cx="47"
-                    cy="13"
-                    r="2"
-                  />
-                </svg>
+      {/* Shelves */}
+      <path d="M14 38h15" />
+      <path d="M35 38h15" />
+      <path d="M14 47h15" />
+      <path d="M35 47h15" />
 
-              </div>
+      {/* Handles */}
+      <circle cx="29" cy="30" r="1.5" />
+      <circle cx="35" cy="30" r="1.5" />
+    </svg>
+  </div>
 
-              <div className="feature-info">
-                <strong>{residence.utility}</strong>
-                <span>UTILITY</span>
-              </div>
+  <div className="feature-info">
+    <strong>1</strong>
+    <span>WALK-IN</span>
+  </div>
+
+</div>
+
+              
 
             </div>
 
@@ -250,13 +250,13 @@ export default function F6OneBHK() {
         </div>
 
 
-        {/* F6 MAIN IMAGE */}
+        {/* F11 MAIN IMAGE */}
 
         <div className="detail-layout-image">
 
           <img
             src={residence.unitLayout}
-            alt="F6 1 BHK unit layout"
+            alt="F11 2 BHK unit layout"
           />
 
         </div>
@@ -265,7 +265,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · PRICE
+          F11 · PRICE
       ===================================================== */}
 
       <section className="details-price">
@@ -284,7 +284,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · STATS
+          F11 · STATS
       ===================================================== */}
 
       <section className="details-stats">
@@ -299,10 +299,10 @@ export default function F6OneBHK() {
           <strong>{residence.baths}</strong>
         </div>
 
-        <div>
-          <span>Utility</span>
-          <strong>{residence.utility}</strong>
-        </div>
+        <div className="detail-stat">
+  <span>WALK-IN</span>
+  <strong>1</strong>
+</div>
 
         <div>
           <span>Balcony</span>
@@ -313,7 +313,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · RESIDENCE OVERVIEW
+          F11 · RESIDENCE OVERVIEW
       ===================================================== */}
 
       <section className="detail-description">
@@ -361,7 +361,7 @@ export default function F6OneBHK() {
 
 
       {/* =====================================================
-          F6 · LAYOUT DETAILS
+          F11 · LAYOUT DETAILS
       ===================================================== */}
 
       <section className="layout-details">
@@ -409,7 +409,7 @@ export default function F6OneBHK() {
 
           <img
             src={residence.layoutDetails}
-            alt="F6 1 BHK layout details"
+            alt="F11 2 BHK layout details"
           />
 
         </div>
@@ -417,7 +417,7 @@ export default function F6OneBHK() {
       </section>
 
 {/* =====================================================
-    F6 · 1 BHK — SALES OFFER
+    F11 · 2 BHK — SALES OFFER
 ===================================================== */}
 
 <section className="sales-offer-section">
@@ -437,7 +437,7 @@ export default function F6OneBHK() {
       </h2>
 
       <p className="sales-offer-intro">
-        Discover the F6 · 1 BHK residence, thoughtfully planned
+        Discover the F11 · 2 BHK residence, thoughtfully planned
         for contemporary living with a flexible payment structure
         designed around comfort and convenience.
       </p>
@@ -446,12 +446,12 @@ export default function F6OneBHK() {
 
         <div className="sales-info-item">
           <span>UNIT TYPE</span>
-          <strong>F6 · 1 BHK</strong>
+          <strong>F11 · 2 BHK</strong>
         </div>
 
         <div className="sales-info-item">
           <span>UNIT AREA</span>
-          <strong>69.45 m²</strong>
+          <strong>89.72 m²</strong>
         </div>
 
         <div className="sales-info-item">
@@ -466,7 +466,7 @@ export default function F6OneBHK() {
 
         <div className="sales-info-item">
           <span>INDICATIVE PRICE</span>
-          <strong>OMR 54,692.000</strong>
+          <strong>OMR 70,655.000</strong>
         </div>
 
       </div>
@@ -481,7 +481,7 @@ export default function F6OneBHK() {
       </button>
 
       <p className="sales-download-note">
-        Download the F6 · 1 BHK sales offer
+        Download the F11 · 2 BHK sales offer
       </p>
 
     </div>
@@ -491,8 +491,8 @@ export default function F6OneBHK() {
 
       <img
         className="sales-offer-main-image"
-        src="/images/Residences/f6-1bhk-sales-offer.jpg"
-        alt="F6 1 BHK Sales Offer"
+        src="/images/Residences/f11-2bhk-sales-offer.jpg"
+        alt="F11 2 BHK Sales Offer"
       />
 
     </div>
@@ -502,7 +502,7 @@ export default function F6OneBHK() {
 </section>
 
       {/* =====================================================
-          F6 · BOTTOM INFORMATION
+          F11 · BOTTOM INFORMATION
       ===================================================== */}
 
       <section className="detail-bottom">

@@ -1,5 +1,5 @@
 import React from "react";
-import "./F8OneBHK.css";
+import "./Flatdetail.css";
 
 const downloadSalesOffer = async () => {
   try {

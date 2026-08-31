@@ -1,6 +1,913 @@
 /* =========================================================
-   RAYA AL QURUM — ARCHITECTURE PAGE
-   LUXURY / MODERN / REFINED / PREMIUM
+   RAYA AL QURUM
+   ARCHITECTURE
+   PREMIUM / LUXURY / EDITORIAL
+   ========================================================= */
+
+.architecture-page {
+  width: 100%;
+  overflow: hidden;
+  background: #f5f0e7;
+  color: #28241f;
+}
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.architecture-page button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.architecture-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #cda25f;
+}
+
+.architecture-eyebrow::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #cda25f;
+}
+
+.architecture-gold-line {
+  width: 42px;
+  height: 1px;
+  background: #cda25f;
+}
+
+.architecture-small-line {
+  width: 48px;
+  height: 1px;
+  margin: 28px auto 30px;
+  background: #cda25f;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.architecture-hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  background: #1d1b18;
+}
+
+/* ================= IMAGE ================= */
+
+.architecture-hero-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.architecture-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* ================= OVERLAY ================= */
+
+.architecture-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 17, 15, 0.82) 0%,
+      rgba(18, 17, 15, 0.65) 25%,
+      rgba(18, 17, 15, 0.38) 48%,
+      rgba(18, 17, 15, 0.12) 72%,
+      rgba(18, 17, 15, 0.02) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(15, 14, 12, 0.30) 0%,
+      transparent 50%
+    );
+}
+
+/* ================= CONTENT ================= */
+
+.architecture-hero-content {
+  position: absolute;
+  z-index: 3;
+  left: 6%;
+  top: 50%;
+  width: 720px;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+/* ================= EYEBROW ================= */
+
+.architecture-hero-content .architecture-eyebrow {
+  margin-bottom: 42px;
+  justify-content: flex-start;
+}
+
+/* ================= HEADING ================= */
+
+.architecture-hero-content h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(54px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -2.5px;
+  color: #fffaf1;
+  text-align: left;
+}
+
+.architecture-hero-content h1 em {
+  display: inline-block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #d3a762;
+}
+
+/* ================= GOLD LINE ================= */
+
+.architecture-hero-content .architecture-gold-line {
+  margin: 28px 0 28px;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.architecture-hero-content > p {
+  width: min(520px, 100%);
+  margin: 0 0 38px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  color: rgba(255, 250, 241, 0.86);
+  text-align: left;
+}
+
+/* ================= BUTTON ================= */
+
+.architecture-hero-content .architecture-primary-btn {
+  min-width: 248px;
+  width: 248px;
+  height: 56px;
+  margin: 0;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #d2aa68;
+  border-radius: 0;
+  background: #d2aa68;
+  color: #211e19;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  white-space: nowrap;
+  text-align: left;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.architecture-hero-content .architecture-primary-btn span {
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+.architecture-hero-content .architecture-primary-btn:hover {
+  background: #e0bb7b;
+  border-color: #e0bb7b;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   DESIGN PHILOSOPHY
+   PREMIUM EDITORIAL
+   ========================================================= */
+
+.architecture-philosophy {
+  position: relative;
+  width: 100%;
+  padding: 125px 7vw 130px;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(210, 170, 104, 0.08),
+      transparent 35%
+    ),
+    #f5f0e7;
+  overflow: hidden;
+}
+
+/* subtle luxury vertical detail */
+
+.architecture-philosophy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 75px;
+  background: linear-gradient(
+    to bottom,
+    #cda25f,
+    transparent
+  );
+  opacity: 0.7;
+}
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.architecture-section-heading {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto 95px;
+  text-align: center;
+}
+
+/* eyebrow */
+
+.architecture-section-heading > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #b98543;
+}
+
+/* lines around eyebrow */
+
+.architecture-section-heading > span::before,
+.architecture-section-heading > span::after {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: #cda25f;
+  opacity: 0.8;
+}
+
+/* heading */
+
+.architecture-section-heading h2 {
+  max-width: 760px;
+  margin: 0 auto;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -2px;
+  color: #29251f;
+}
+
+/* make second line elegant */
+
+.architecture-section-heading h2 br + * {
+  color: #b98543;
+}
+
+/* gold divider */
+
+.architecture-section-heading .architecture-small-line {
+  position: relative;
+  width: 62px;
+  height: 1px;
+  margin: 31px auto 29px;
+  background: #cda25f;
+}
+
+/* little center diamond */
+
+.architecture-section-heading .architecture-small-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: #cda25f;
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+}
+
+/* description */
+
+.architecture-section-heading > p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.1px;
+  color: #6f665b;
+}
+
+/* =========================================================
+   PRINCIPLES
+   ========================================================= */
+
+.architecture-principles {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(103, 87, 68, 0.25);
+  border-bottom: 1px solid rgba(103, 89, 68, 0.25);
+}
+
+/* vertical separators */
+
+.architecture-principle + .architecture-principle {
+  border-left: 1px solid rgba(103, 87, 68, 0.20);
+}
+
+/* individual item */
+
+.architecture-principle {
+  min-height: 230px;
+  padding: 40px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  background: transparent;
+}
+
+/* number */
+
+.principle-number {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 28px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #b98543;
+}
+
+/* number line */
+
+.principle-number::after {
+  content: "";
+  width: 38px;
+  height: 1px;
+  background: #cda25f;
+}
+
+/* title */
+
+.architecture-principle h3 {
+  margin: 0 0 15px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #29251f;
+}
+
+/* description */
+
+.architecture-principle p {
+  max-width: 280px;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #786f65;
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.architecture-principle:hover {
+  background: rgba(255, 252, 246, 0.55);
+}
+
+.architecture-principle:hover .principle-number {
+  color: #9e6e32;
+}
+
+.architecture-principle:hover .principle-number::after {
+  width: 55px;
+  transition: width 0.35s ease;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .architecture-philosophy {
+    padding: 105px 5vw 110px;
+  }
+
+  .architecture-section-heading {
+    margin-bottom: 75px;
+  }
+
+  .architecture-section-heading h2 {
+    font-size: clamp(44px, 6vw, 62px);
+  }
+
+  .architecture-principle {
+    padding: 38px 32px;
+  }
+
+  .architecture-principle h3 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ================= HERO ================= */
+
+  .architecture-hero {
+    height: 650px;
+  }
+
+  .architecture-hero-image img {
+    object-position: 62% center;
+  }
+
+  .architecture-hero-content {
+    left: 6%;
+    top: 50%;
+    width: 88%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+
+  .architecture-hero-content .architecture-eyebrow {
+    margin-bottom: 32px;
+  }
+
+  .architecture-hero-content h1 {
+    font-size: clamp(47px, 13vw, 65px);
+    letter-spacing: -1.8px;
+  }
+
+  .architecture-hero-content > p {
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .architecture-hero-content .architecture-primary-btn {
+    width: 215px;
+    min-width: 215px;
+  }
+
+  /* ================= PHILOSOPHY ================= */
+
+  .architecture-philosophy {
+    padding: 78px 6% 80px;
+  }
+
+  .architecture-philosophy::before {
+    height: 55px;
+  }
+
+  .architecture-section-heading {
+    margin-bottom: 60px;
+  }
+
+  .architecture-section-heading > span {
+    gap: 11px;
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .architecture-section-heading > span::before,
+  .architecture-section-heading > span::after {
+    width: 22px;
+  }
+
+  .architecture-section-heading h2 {
+    font-size: clamp(39px, 11vw, 52px);
+    letter-spacing: -1.4px;
+  }
+
+  .architecture-section-heading .architecture-small-line {
+    margin: 25px auto 25px;
+  }
+
+  .architecture-section-heading > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  /* ================= PRINCIPLES ================= */
+
+  .architecture-philosophy .architecture-principles {
+    grid-template-columns: 1fr !important;
+  }
+
+  .architecture-philosophy .architecture-principle,
+  .architecture-philosophy .architecture-principle:nth-child(1),
+  .architecture-philosophy .architecture-principle:nth-child(2),
+  .architecture-philosophy .architecture-principle:nth-child(3) {
+    min-height: auto;
+    padding: 35px 28px;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .architecture-philosophy
+  .architecture-principle
+  + .architecture-principle {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 1px solid rgba(103, 87, 68, 0.20) !important;
+  }
+
+  .principle-number {
+    margin-bottom: 25px;
+  }
+
+  .architecture-principle h3 {
+    font-size: 25px;
+  }
+
+  .architecture-principle p {
+    max-width: 100%;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .architecture-hero {
+    min-height: 650px;
+  }
+
+  .architecture-hero-content {
+    padding-top: 120px;
+  }
+
+  .architecture-hero-content h1 {
+    font-size: 45px;
+  }
+
+  .architecture-eyebrow {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .architecture-section-heading h2 {
+    font-size: 38px;
+  }
+
+  .architecture-section-heading > p {
+    font-size: 11.5px;
+  }
+
+  .architecture-principle {
+    padding: 30px 22px 36px;
+  }
+
+  .architecture-principle h3 {
+    font-size: 23px;
+  }
+}
+
+/* =========================================================
+   FINAL — DESIGN PHILOSOPHY 3 COLUMNS
+   LEFT / CENTER / RIGHT
+   ========================================================= */
+
+.architecture-philosophy .architecture-principles {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  border-top: 1px solid rgba(103, 87, 68, 0.22);
+  border-bottom: 1px solid rgba(103, 87, 68, 0.22);
+}
+
+.architecture-philosophy .architecture-principle {
+  position: relative;
+  min-height: 250px;
+  padding: 42px 48px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start !important;
+  text-align: left !important;
+  box-sizing: border-box;
+}
+
+/* LEFT / CENTER / RIGHT */
+
+.architecture-philosophy .architecture-principle:nth-child(1) {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+.architecture-philosophy .architecture-principle:nth-child(2) {
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.architecture-philosophy .architecture-principle:nth-child(3) {
+  text-align: right !important;
+  align-items: flex-end !important;
+}
+
+/* SEPARATORS */
+
+.architecture-philosophy
+.architecture-principle
++ .architecture-principle {
+  border-left: 1px solid rgba(103, 87, 68, 0.20);
+}
+
+/* NUMBER */
+
+.architecture-philosophy .principle-number {
+  margin-bottom: 25px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #b98543;
+}
+
+/* HEADINGS */
+
+.architecture-philosophy .architecture-principle h3 {
+  margin: 0 0 15px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  color: #29251f;
+}
+
+/* DESCRIPTION */
+
+.architecture-philosophy .architecture-principle p {
+  width: 100%;
+  max-width: 340px;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+  color: #756c61;
+}
+
+/* =========================================================
+   REMOVE CARD LOOK
+   ========================================================= */
+
+.architecture-philosophy .architecture-principles {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: none !important;
+  background: transparent;
+}
+
+.architecture-philosophy .architecture-principle {
+  min-height: 220px;
+  padding: 35px 45px;
+  border: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* subtle luxury divider — only vertical lines */
+
+.architecture-philosophy
+.architecture-principle:nth-child(2) {
+  border-left: 1px solid rgba(103, 87, 68, 0.16) !important;
+  border-right: 1px solid rgba(103, 87, 68, 0.16) !important;
+}
+
+/* no clickable/card hover feeling */
+
+.architecture-philosophy .architecture-principle:hover {
+  transform: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* descriptions readable */
+
+.architecture-philosophy .architecture-principle p {
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   DESCRIPTION LINE ALIGNMENT
+   ========================================================= */
+
+.architecture-philosophy .architecture-principle p {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* LEFT */
+
+.architecture-philosophy .architecture-principle:nth-child(1) p {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* CENTER */
+
+.architecture-philosophy .architecture-principle:nth-child(2) p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* RIGHT */
+
+.architecture-philosophy .architecture-principle:nth-child(3) p {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+/* =========================================================
+   FINAL CLEAN LUXURY
+   ========================================================= */
+
+.architecture-philosophy {
+  background: #f5f0e7;
+  padding-top: 90px;
+  padding-bottom: 95px;
+}
+
+/* heading spacing */
+
+.architecture-section-heading {
+  margin-bottom: 68px;
+}
+
+/* subtle divider above principles */
+
+.architecture-philosophy .architecture-principles {
+  position: relative;
+  border-top: 1px solid rgba(103, 87, 68, 0.18);
+  border-bottom: 1px solid rgba(103, 87, 68, 0.18);
+}
+
+/* clean principle columns */
+
+.architecture-philosophy .architecture-principle {
+  min-height: 245px;
+  padding: 42px 48px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* subtle center separators */
+
+.architecture-philosophy
+.architecture-principle:nth-child(2) {
+  border-left: 1px solid rgba(103, 87, 68, 0.15) !important;
+  border-right: 1px solid rgba(103, 87, 68, 0.15) !important;
+}
+
+/* numbers */
+
+.architecture-philosophy .principle-number {
+  margin-bottom: 28px;
+}
+
+/* principle headings */
+
+.architecture-philosophy .architecture-principle h3 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+/* descriptions */
+
+.architecture-philosophy .architecture-principle p {
+  width: 100%;
+  max-width: 340px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.75;
+  color: #756c61;
+}
+
+/* no card/hover feeling */
+
+.architecture-philosophy .architecture-principle:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================================
+   MOBILE — FINAL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .architecture-philosophy .architecture-principles {
+    grid-template-columns: 1fr !important;
+  }
+
+  .architecture-philosophy .architecture-principle,
+  .architecture-philosophy .architecture-principle:nth-child(1),
+  .architecture-philosophy .architecture-principle:nth-child(2),
+  .architecture-philosophy .architecture-principle:nth-child(3) {
+    min-height: auto;
+    padding: 35px 28px;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .architecture-philosophy
+  .architecture-principle
+  + .architecture-principle {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 1px solid rgba(103, 87, 68, 0.20) !important;
+  }
+}
+
+/* =========================================================
+   RAYA AL QURUM
+   ARCHITECTURE
+   PREMIUM / LUXURY / EDITORIAL
+   COMPLETE FINAL CSS
    ========================================================= */
 
 
@@ -10,11 +917,58 @@
 
 .architecture-page {
   width: 100%;
-  min-height: 100vh;
   overflow: hidden;
+  background: #f5f0e7;
+  color: #28241f;
+}
 
-  background: #f4f0e9;
-  color: #27231e;
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.architecture-page button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.architecture-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #cda25f;
+}
+
+.architecture-eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 1px;
+
+  background: #cda25f;
+}
+
+.architecture-gold-line {
+  width: 42px;
+  height: 1px;
+
+  background: #cda25f;
+}
+
+.architecture-small-line {
+  width: 48px;
+  height: 1px;
+
+  margin: 28px auto 30px;
+
+  background: #cda25f;
 }
 
 
@@ -26,265 +980,208 @@
   position: relative;
 
   width: 100%;
-  min-height: 88vh;
-
-  display: flex;
-  align-items: center;
+  height: auto;
+  min-height: 0;
 
   overflow: hidden;
 
-  background: #171512;
+  background: #1d1b18;
 }
 
 
-/* HERO IMAGE */
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
 
 .architecture-hero-image {
-  position: absolute;
-  inset: 0;
+  position: relative;
 
-  z-index: 0;
+  width: 100%;
+  height: auto;
+
+  z-index: 1;
 }
 
 .architecture-hero-image img {
-  width: 100%;
-  height: 100%;
-
   display: block;
 
-  object-fit: cover;
-  object-position: center;
+  width: 100%;
+  height: auto;
 
-  transform: scale(1.01);
+  object-fit: contain;
+  object-position: center center;
 }
 
 
-/* HERO OVERLAY */
+/* =========================================================
+   HERO OVERLAY
+   ========================================================= */
 
 .architecture-hero-overlay {
   position: absolute;
   inset: 0;
 
-  z-index: 1;
+  z-index: 2;
 
   background:
     linear-gradient(
       90deg,
-      rgba(13, 12, 10, 0.84) 0%,
-      rgba(13, 12, 10, 0.62) 32%,
-      rgba(13, 12, 10, 0.28) 65%,
-      rgba(13, 12, 10, 0.08) 100%
+      rgba(18, 17, 15, 0.82) 0%,
+      rgba(18, 17, 15, 0.65) 25%,
+      rgba(18, 17, 15, 0.38) 48%,
+      rgba(18, 17, 15, 0.12) 72%,
+      rgba(18, 17, 15, 0.02) 100%
     ),
     linear-gradient(
       0deg,
-      rgba(10, 9, 8, 0.55) 0%,
-      rgba(10, 9, 8, 0.08) 68%,
-      transparent 100%
+      rgba(15, 14, 12, 0.30) 0%,
+      transparent 50%
     );
 }
 
 
-/* HERO CONTENT */
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
 .architecture-hero-content {
-  position: relative;
+  position: absolute;
 
-  z-index: 2;
+  z-index: 3;
 
-  width: min(1180px, 88%);
+  left: 6%;
+  top: 50%;
 
-  margin: 0 auto;
+  width: 720px;
 
-  padding: 85px 0 75px;
+  margin: 0;
+  padding: 0;
 
-  color: #fffaf2;
+  transform: translateY(-50%);
 
   text-align: left;
 }
 
 
-/* EYEBROW */
+/* =========================================================
+   HERO EYEBROW
+   ========================================================= */
 
-.architecture-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+.architecture-hero-content .architecture-eyebrow {
+  margin-bottom: 42px;
 
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 10px;
-  font-weight: 600;
-
-  letter-spacing: 0.32em;
-
-  text-transform: uppercase;
-
-  color: #d1b078;
-}
-
-.architecture-eyebrow::before {
-  content: "";
-
-  width: 30px;
-  height: 1px;
-
-  background: #c8a56c;
-}
-
-
-/* HERO HEADING */
-
-.architecture-hero h1 {
-  max-width: 780px;
-
-  margin: 22px 0 28px;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(46px, 5.3vw, 76px);
-
-  line-height: 1.03;
-
-  font-weight: 400;
-
-  letter-spacing: -0.035em;
-
-  color: #fffaf2 !important;
-}
-
-.architecture-hero h1 em {
-  display: inline-block;
-
-  color: #d5b477 !important;
-
-  font-weight: 400;
-}
-
-
-/* GOLD LINE */
-
-.architecture-gold-line {
-  width: 58px;
-  height: 1px;
-
-  margin: 0 0 25px;
-
-  background: #c8a56c;
-}
-
-
-/* HERO DESCRIPTION */
-
-.architecture-hero p {
-  max-width: 540px;
-
-  margin: 0 0 32px;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 13px;
-
-  line-height: 1.85;
-
-  font-weight: 400;
-
-  color: rgba(255, 250, 242, 0.78);
+  justify-content: flex-start;
 }
 
 
 /* =========================================================
-   BUTTONS
+   HERO HEADING
    ========================================================= */
 
-.architecture-primary-btn,
-.architecture-outline-btn {
-  min-height: 52px;
+.architecture-hero-content h1 {
+  margin: 0;
 
-  padding: 0 25px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(54px, 5.2vw, 82px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -2.5px;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  color: #fffaf1;
 
-  gap: 20px;
+  text-align: left;
+}
+
+.architecture-hero-content h1 em {
+  display: inline-block;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+
+  color: #d3a762;
+}
+
+
+/* =========================================================
+   HERO GOLD LINE
+   ========================================================= */
+
+.architecture-hero-content .architecture-gold-line {
+  margin: 28px 0 28px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.architecture-hero-content > p {
+  width: min(520px, 100%);
+
+  margin: 0 0 38px;
 
   font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
 
+  color: rgba(255, 250, 241, 0.86);
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.architecture-hero-content .architecture-primary-btn {
+  min-width: 248px;
+  width: 248px;
+  height: 56px;
+
+  margin: 0;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #d2aa68;
+  border-radius: 0;
+
+  background: #d2aa68;
+  color: #211e19;
+
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
 
-  font-weight: 600;
-
-  letter-spacing: 0.18em;
-
-  text-transform: uppercase;
-
-  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
 
   transition:
-    background 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    transform 0.35s ease;
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
+.architecture-hero-content .architecture-primary-btn span {
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 300;
 
-/* GOLD BUTTON */
-
-.architecture-primary-btn {
-  border: 1px solid #c8a56c;
-
-  background: #c8a56c;
-
-  color: #211d18;
+  flex-shrink: 0;
 }
 
-.architecture-primary-btn:hover {
-  background: #ddc18e;
-
-  border-color: #ddc18e;
+.architecture-hero-content .architecture-primary-btn:hover {
+  background: #e0bb7b;
+  border-color: #e0bb7b;
 
   transform: translateY(-2px);
-}
-
-.architecture-primary-btn span {
-  font-size: 17px;
-
-  transition: transform 0.3s ease;
-}
-
-.architecture-primary-btn:hover span {
-  transform: translateX(4px);
-}
-
-
-/* OUTLINE BUTTON */
-
-.architecture-outline-btn {
-  border: 1px solid rgba(200, 165, 108, 0.65);
-
-  background: transparent;
-
-  color: #c8a56c;
-}
-
-.architecture-outline-btn:hover {
-  background: #c8a56c;
-
-  border-color: #c8a56c;
-
-  color: #211d18;
-
-  transform: translateY(-2px);
-}
-
-.architecture-outline-btn span {
-  font-size: 17px;
-
-  transition: transform 0.3s ease;
-}
-
-.architecture-outline-btn:hover span {
-  transform: translateX(4px);
 }
 
 
@@ -295,414 +1192,669 @@
 .architecture-philosophy {
   position: relative;
 
-  padding: 125px 7vw 135px;
+  width: 100%;
 
-  background: #f4f0e9;
-}
+  padding: 90px 7vw 95px;
 
-
-/* SECTION HEADING */
-
-.architecture-section-heading {
-  max-width: 720px;
-
-  margin: 0 auto 80px;
-
-  text-align: center;
-}
-
-.architecture-section-heading > span {
-  display: block;
-
-  margin-bottom: 18px;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.27em;
-
-  text-transform: uppercase;
-
-  color: #9c7a47;
-}
-
-.architecture-section-heading h2 {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(38px, 4.5vw, 64px);
-
-  line-height: 1.08;
-
-  font-weight: 400;
-
-  letter-spacing: -0.025em;
-
-  color: #29251f;
-}
-
-
-/* SMALL GOLD LINE */
-
-.architecture-small-line {
-  width: 48px;
-  height: 1px;
-
-  margin: 28px auto;
-
-  background: #b99660;
-}
-
-
-/* SECTION DESCRIPTION */
-
-.architecture-section-heading p {
-  max-width: 580px;
-
-  margin: 0 auto;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 14px;
-
-  line-height: 1.9;
-
-  color: #716b61;
-}
-
-
-/* =========================================================
-   DESIGN PRINCIPLES
-   ========================================================= */
-
-.architecture-principles {
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-}
-
-
-/* PRINCIPLE */
-
-.architecture-principle {
-  position: relative;
-
-  min-height: 250px;
-
-  padding: 20px 48px;
-
-  border-left: 1px solid rgba(103, 85, 59, 0.2);
-}
-
-.architecture-principle:last-child {
-  border-right: 1px solid rgba(103, 85, 59, 0.2);
-}
-
-
-/* NUMBER */
-
-.principle-number {
-  display: block;
-
-  margin-bottom: 42px;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 11px;
-
-  letter-spacing: 0.15em;
-
-  color: #b18c57;
-}
-
-
-/* TITLE */
-
-.architecture-principle h3 {
-  margin: 0 0 15px;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 25px;
-
-  line-height: 1.2;
-
-  font-weight: 400;
-
-  color: #2c2822;
-}
-
-
-/* TEXT */
-
-.architecture-principle p {
-  margin: 0;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 13px;
-
-  line-height: 1.8;
-
-  color: #777066;
-}
-
-
-/* =========================================================
-   ARCHITECTURAL EXCELLENCE
-   ========================================================= */
-
-.architecture-excellence {
-  display: grid;
-
-  grid-template-columns: 1.05fr 0.95fr;
-
-  min-height: 720px;
-
-  background: #211e1a;
-}
-
-
-/* IMAGE */
-
-.architecture-excellence-image {
-  position: relative;
-
-  min-height: 650px;
+  background: #f5f0e7;
 
   overflow: hidden;
 }
 
-.architecture-excellence-image img {
-  width: 100%;
-  height: 100%;
 
-  display: block;
+/* =========================================================
+   SUBTLE VERTICAL GOLD DETAIL
+   ========================================================= */
 
-  object-fit: cover;
-}
-
-
-/* IMAGE OVERLAY */
-
-.architecture-excellence-image::after {
+.architecture-philosophy::before {
   content: "";
 
   position: absolute;
-  inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent 65%,
-      rgba(33, 30, 26, 0.78) 100%
-    );
-}
+  top: 0;
+  left: 50%;
 
+  width: 1px;
+  height: 75px;
 
-/* CONTENT */
+  background: linear-gradient(
+    to bottom,
+    #cda25f,
+    transparent
+  );
 
-.architecture-excellence-content {
-  align-self: center;
-
-  padding: 90px clamp(45px, 7vw, 110px) 90px 75px;
-
-  color: #fffaf2;
-}
-
-
-/* TITLE */
-
-.architecture-excellence-content h2 {
-  margin: 22px 0 28px;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(42px, 4.5vw, 66px);
-
-  line-height: 1.02;
-
-  font-weight: 400;
-
-  letter-spacing: -0.03em;
-
-  color: #fffaf2;
-}
-
-.architecture-excellence-content h2 em {
-  color: #d0ae77;
-
-  font-weight: 400;
-}
-
-
-/* DESCRIPTION */
-
-.architecture-excellence-content > p {
-  max-width: 540px;
-
-  margin: 0 0 40px;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 14px;
-
-  line-height: 1.9;
-
-  color: rgba(255, 250, 242, 0.68);
+  opacity: 0.7;
 }
 
 
 /* =========================================================
-   FEATURE LIST
+   SECTION HEADING
    ========================================================= */
 
-.architecture-feature-list {
-  margin-bottom: 42px;
-}
+.architecture-section-heading {
+  position: relative;
 
+  max-width: 850px;
 
-/* FEATURE ITEM */
+  margin: 0 auto 68px;
 
-.architecture-feature-list > div {
-  display: flex;
-
-  align-items: center;
-
-  gap: 22px;
-
-  padding: 17px 0;
-
-  border-bottom: 1px solid rgba(208, 174, 119, 0.18);
-}
-
-.architecture-feature-list > div:first-child {
-  border-top: 1px solid rgba(208, 174, 119, 0.18);
-}
-
-
-/* FEATURE NUMBER */
-
-.architecture-feature-list span {
-  width: 25px;
-
-  flex-shrink: 0;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 10px;
-
-  letter-spacing: 0.12em;
-
-  color: #c8a56c;
-}
-
-
-/* FEATURE TEXT */
-
-.architecture-feature-list p {
-  margin: 0;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 12px;
-
-  line-height: 1.6;
-
-  color: rgba(255, 250, 242, 0.8);
+  text-align: center;
 }
 
 
 /* =========================================================
-   CTA
+   SECTION EYEBROW
    ========================================================= */
 
-.architecture-cta {
-  display: flex;
-
+.architecture-section-heading > span {
+  display: inline-flex;
   align-items: center;
+  gap: 16px;
 
-  justify-content: space-between;
+  margin-bottom: 30px;
 
-  gap: 50px;
-
-  padding: 80px 7vw;
-
-  background: #f4f0e9;
-
-  border-top: 1px solid rgba(103, 85, 59, 0.16);
-}
-
-
-/* CTA LABEL */
-
-.architecture-cta > div:first-child > span {
   font-family: "DM Sans", sans-serif;
-
-  font-size: 10px;
-
+  font-size: 9px;
   font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 
-  letter-spacing: 0.25em;
+  color: #b98543;
+}
 
-  color: #9c7a47;
+.architecture-section-heading > span::before,
+.architecture-section-heading > span::after {
+  content: "";
+
+  width: 34px;
+  height: 1px;
+
+  background: #cda25f;
+
+  opacity: 0.8;
 }
 
 
-/* CTA HEADING */
+/* =========================================================
+   SECTION HEADING H2
+   ========================================================= */
 
-.architecture-cta h3 {
-  max-width: 620px;
+.architecture-section-heading h2 {
+  max-width: 760px;
 
-  margin: 15px 0 0;
+  margin: 0 auto;
 
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(30px, 3vw, 46px);
-
-  line-height: 1.15;
-
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 5vw, 72px);
   font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -2px;
 
   color: #29251f;
 }
 
 
-/* CTA BUTTON AREA */
+/* =========================================================
+   SECTION GOLD DIVIDER
+   ========================================================= */
 
-.architecture-cta-actions {
-  display: flex;
+.architecture-section-heading .architecture-small-line {
+  position: relative;
 
-  flex-wrap: wrap;
+  width: 62px;
+  height: 1px;
 
-  gap: 12px;
+  margin: 31px auto 29px;
+
+  background: #cda25f;
+}
+
+.architecture-section-heading .architecture-small-line::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  background: #cda25f;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
 }
 
 
 /* =========================================================
-   SUBTLE HOVER DETAILS
+   SECTION DESCRIPTION
    ========================================================= */
 
-.architecture-principle {
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease;
+.architecture-section-heading > p {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.1px;
+
+  color: #6f665b;
 }
 
+
+/* =========================================================
+   PRINCIPLES — 3 COLUMNS
+   ========================================================= */
+
+.architecture-philosophy .architecture-principles {
+  position: relative;
+
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(103, 87, 68, 0.18);
+  border-bottom: 1px solid rgba(103, 87, 68, 0.18);
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   PRINCIPLE ITEM
+   ========================================================= */
+
+.architecture-philosophy .architecture-principle {
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 42px 48px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+  border-radius: 0;
+}
+
+
+/* =========================================================
+   LEFT / CENTER / RIGHT
+   ========================================================= */
+
+.architecture-philosophy .architecture-principle:nth-child(1) {
+  align-items: flex-start;
+
+  text-align: left;
+}
+
+.architecture-philosophy .architecture-principle:nth-child(2) {
+  align-items: center;
+
+  text-align: center;
+
+  border-left: 1px solid rgba(103, 87, 68, 0.15);
+  border-right: 1px solid rgba(103, 87, 68, 0.15);
+}
+
+.architecture-philosophy .architecture-principle:nth-child(3) {
+  align-items: flex-end;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   PRINCIPLE NUMBER
+   ========================================================= */
+
+.architecture-philosophy .principle-number {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 28px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: #b98543;
+}
+
+.architecture-philosophy .principle-number::after {
+  content: "";
+
+  width: 38px;
+  height: 1px;
+
+  background: #cda25f;
+}
+
+
+/* =========================================================
+   PRINCIPLE HEADING
+   ========================================================= */
+
+.architecture-philosophy .architecture-principle h3 {
+  margin: 0 0 15px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+
+  color: #29251f;
+}
+
+
+/* =========================================================
+   PRINCIPLE DESCRIPTION
+   ========================================================= */
+
+.architecture-philosophy .architecture-principle p {
+  width: 100%;
+  max-width: 340px;
+
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0;
+
+  color: #756c61;
+}
+
+
+/* =========================================================
+   DESCRIPTION ALIGNMENT
+   ========================================================= */
+
+.architecture-philosophy
+.architecture-principle:nth-child(1)
+p {
+  margin-left: 0;
+  margin-right: auto;
+
+  text-align: left;
+}
+
+.architecture-philosophy
+.architecture-principle:nth-child(2)
+p {
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+.architecture-philosophy
+.architecture-principle:nth-child(3)
+p {
+  margin-left: auto;
+  margin-right: 0;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   REMOVE HOVER CARD FEELING
+   ========================================================= */
+
+.architecture-philosophy
 .architecture-principle:hover {
-  transform: translateY(-4px);
+  background: transparent;
+  transform: none;
+  box-shadow: none;
 }
 
-.architecture-principle:hover .principle-number {
-  color: #8e6b3c;
+
+/* =========================================================
+   =========================================================
+   ARCHITECTURAL EXCELLENCE
+   EXACT SCREENSHOT STYLE
+   =========================================================
+   ========================================================= */
+
+.architecture-excellence {
+  width: 100%;
+
+  display: grid;
+
+  /*
+    LEFT = IMAGE
+    RIGHT = CONTENT
+  */
+  grid-template-columns: 57.5% 42.5%;
+
+  align-items: stretch;
+
+  margin: 0;
+  padding: 0;
+
+  background: #24211d;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   EXCELLENCE — LEFT IMAGE
+   FULL IMAGE / NO BLACK SPACE
+   ========================================================= */
+
+.architecture-excellence-image {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #f5f0e7;
+}
+
+.architecture-excellence-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center center;
+}
+
+
+/* =========================================================
+   EXCELLENCE — RIGHT DARK PANEL
+   ========================================================= */
+
+.architecture-excellence-content {
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 62px 5.8vw 58px 5.8vw;
+
+  background: #24211d;
+
+  color: #fffaf1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   EXCELLENCE EYEBROW
+   ========================================================= */
+
+.architecture-excellence-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin: 0 0 42px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 1;
+
+  color: #d2a45e;
+}
+
+.architecture-excellence-eyebrow span {
+  display: block;
+
+  width: 42px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: #d2a45e;
+}
+
+
+/* =========================================================
+   EXCELLENCE HEADING
+   ========================================================= */
+
+.architecture-excellence-content h2 {
+  margin: 0;
+
+  max-width: 650px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(50px, 4.35vw, 72px);
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+
+  color: #fffaf1;
+}
+
+.architecture-excellence-content h2 em {
+  display: inline-block;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-style: italic;
+  font-weight: 400;
+
+  color: #d2a45e;
+}
+
+
+/* =========================================================
+   EXCELLENCE GOLD LINE
+   ========================================================= */
+
+.architecture-excellence-line {
+  width: 44px;
+  height: 1px;
+
+  margin: 34px 0 28px;
+
+  background: #d2a45e;
+}
+
+
+/* =========================================================
+   EXCELLENCE DESCRIPTION
+   ========================================================= */
+
+.architecture-excellence-content > p {
+  width: 100%;
+  max-width: 570px;
+
+  margin: 0 0 38px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.85;
+  letter-spacing: 0;
+
+  color: rgba(255, 250, 241, 0.82);
+}
+
+
+/* =========================================================
+   EXCELLENCE FEATURE LIST
+   ========================================================= */
+
+.architecture-excellence-features {
+  width: 100%;
+  max-width: 570px;
+
+  margin: 0;
+  padding: 0;
+
+  border-top: 1px solid rgba(210, 164, 94, 0.30);
+}
+
+
+/* =========================================================
+   FEATURE ROW
+   ========================================================= */
+
+.architecture-excellence-feature {
+  width: 100%;
+
+  min-height: 62px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  align-items: center;
+
+  border-bottom: 1px solid rgba(210, 164, 94, 0.30);
+}
+
+
+/* =========================================================
+   FEATURE NUMBER
+   ========================================================= */
+
+.architecture-excellence-feature span {
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  color: #d2a45e;
+}
+
+
+/* =========================================================
+   FEATURE TEXT
+   ========================================================= */
+
+.architecture-excellence-feature p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  color: #fffaf1;
+}
+
+
+/* =========================================================
+   EXCELLENCE BUTTON
+   ========================================================= */
+
+.architecture-excellence-button {
+  width: 100%;
+  max-width: 380px;
+
+  height: 60px;
+
+  margin: 38px 0 0;
+  padding: 0 24px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(210, 164, 94, 0.65);
+
+  border-radius: 0;
+
+  background: transparent;
+
+  color: #d2a45e;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+   ========================================================= */
+
+.architecture-excellence-button b {
+  font-family: Arial, sans-serif;
+
+  font-size: 25px;
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+   ========================================================= */
+
+.architecture-excellence-button:hover {
+  background: #d2a45e;
+
+  border-color: #d2a45e;
+
+  color: #24211d;
+
+  transform: translateY(-2px);
 }
 
 
@@ -712,49 +1864,95 @@
 
 @media (max-width: 1000px) {
 
-  .architecture-hero {
-    min-height: 82vh;
-  }
+  /* ---------------- HERO ---------------- */
 
   .architecture-hero-content {
-    width: 88%;
+    width: 620px;
   }
 
-  .architecture-principles {
-    grid-template-columns: 1fr;
+
+  /* ---------------- PHILOSOPHY ---------------- */
+
+  .architecture-philosophy {
+    padding: 80px 5vw 85px;
   }
 
-  .architecture-principle,
-  .architecture-principle:last-child {
-    min-height: auto;
-
-    padding: 35px 25px;
-
-    border-right: none;
-
-    border-bottom: 1px solid rgba(103, 85, 59, 0.2);
+  .architecture-section-heading {
+    margin-bottom: 60px;
   }
 
-  .architecture-principle:last-child {
-    border-bottom: none;
+  .architecture-section-heading h2 {
+    font-size: clamp(44px, 6vw, 62px);
   }
+
+  .architecture-philosophy
+  .architecture-principle {
+    padding: 38px 32px;
+  }
+
+  .architecture-philosophy
+  .architecture-principle h3 {
+    font-size: 24px;
+  }
+
+
+  /* ---------------- EXCELLENCE ---------------- */
 
   .architecture-excellence {
-    grid-template-columns: 1fr;
-  }
-
-  .architecture-excellence-image {
-    min-height: 520px;
+    grid-template-columns: 55% 45%;
   }
 
   .architecture-excellence-content {
-    padding: 80px 8vw;
+    padding: 48px 4vw;
   }
 
-  .architecture-cta {
-    align-items: flex-start;
+  .architecture-excellence-eyebrow {
+    gap: 15px;
 
-    flex-direction: column;
+    margin-bottom: 30px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .architecture-excellence-eyebrow span {
+    width: 30px;
+  }
+
+  .architecture-excellence-content h2 {
+    font-size: clamp(40px, 5vw, 55px);
+
+    letter-spacing: -1.8px;
+  }
+
+  .architecture-excellence-line {
+    margin: 25px 0 22px;
+  }
+
+  .architecture-excellence-content > p {
+    margin-bottom: 27px;
+
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .architecture-excellence-feature {
+    min-height: 52px;
+
+    grid-template-columns: 48px 1fr;
+  }
+
+  .architecture-excellence-feature p {
+    font-size: 10px;
+  }
+
+  .architecture-excellence-button {
+    height: 52px;
+
+    margin-top: 27px;
+
+    font-size: 8px;
+    letter-spacing: 2px;
   }
 }
 
@@ -763,137 +1961,296 @@
    MOBILE
    ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-  /* HERO */
+  /* =======================================================
+     HERO
+     ======================================================= */
 
   .architecture-hero {
-    min-height: 82vh;
+    height: 650px;
   }
 
-  .architecture-hero-overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(13, 12, 10, 0.86),
-        rgba(13, 12, 10, 0.48)
-      ),
-      linear-gradient(
-        0deg,
-        rgba(10, 9, 8, 0.65),
-        transparent 70%
-      );
+  .architecture-hero-image img {
+    object-position: 62% center;
   }
 
   .architecture-hero-content {
-    width: 86%;
+    left: 6%;
 
-    padding: 70px 0 55px;
+    top: 50%;
+
+    width: 88%;
+
+    margin: 0;
+    padding: 0;
+
+    transform: translateY(-50%);
+
+    text-align: left;
   }
 
-  .architecture-eyebrow {
-    font-size: 9px;
-
-    letter-spacing: 0.25em;
+  .architecture-hero-content .architecture-eyebrow {
+    margin-bottom: 32px;
   }
 
-  .architecture-hero h1 {
-    max-width: 100%;
+  .architecture-hero-content h1 {
+    font-size: clamp(47px, 13vw, 65px);
 
-    margin: 18px 0 24px;
+    letter-spacing: -1.8px;
+  }
 
+  .architecture-hero-content > p {
+    width: 100%;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .architecture-hero-content .architecture-primary-btn {
+    width: 215px;
+    min-width: 215px;
+  }
+
+
+  /* =======================================================
+     PHILOSOPHY
+     ======================================================= */
+
+  .architecture-philosophy {
+    padding: 78px 6% 80px;
+  }
+
+  .architecture-philosophy::before {
+    height: 55px;
+  }
+
+  .architecture-section-heading {
+    margin-bottom: 60px;
+  }
+
+  .architecture-section-heading > span {
+    gap: 11px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .architecture-section-heading > span::before,
+  .architecture-section-heading > span::after {
+    width: 22px;
+  }
+
+  .architecture-section-heading h2 {
     font-size: clamp(39px, 11vw, 52px);
 
-    line-height: 1.02;
+    letter-spacing: -1.4px;
   }
 
-  .architecture-hero p {
+  .architecture-section-heading
+  .architecture-small-line {
+    margin: 25px auto;
+  }
+
+  .architecture-section-heading > p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+
+  /* =======================================================
+     PRINCIPLES — MOBILE STACK
+     ======================================================= */
+
+  .architecture-philosophy
+  .architecture-principles {
+    width: 100%;
+
+    grid-template-columns: 1fr !important;
+
+    border-top: 1px solid rgba(103, 87, 68, 0.18);
+    border-bottom: 1px solid rgba(103, 87, 68, 0.18);
+  }
+
+  .architecture-philosophy
+  .architecture-principle,
+
+  .architecture-philosophy
+  .architecture-principle:nth-child(1),
+
+  .architecture-philosophy
+  .architecture-principle:nth-child(2),
+
+  .architecture-philosophy
+  .architecture-principle:nth-child(3) {
+
+    min-height: auto;
+
+    padding: 35px 28px;
+
+    align-items: flex-start !important;
+
+    text-align: left !important;
+
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .architecture-philosophy
+  .architecture-principle
+  + .architecture-principle {
+
+    border-top: 1px solid rgba(103, 87, 68, 0.20) !important;
+  }
+
+  .architecture-philosophy
+  .architecture-principle p,
+
+  .architecture-philosophy
+  .architecture-principle:nth-child(1) p,
+
+  .architecture-philosophy
+  .architecture-principle:nth-child(2) p,
+
+  .architecture-philosophy
+  .architecture-principle:nth-child(3) p {
+
     max-width: 100%;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    text-align: left;
+  }
+
+  .architecture-philosophy
+  .architecture-principle h3 {
+    font-size: 25px;
+  }
+
+
+  /* =======================================================
+     EXCELLENCE — MOBILE
+     ======================================================= */
+
+  .architecture-excellence {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+
+    min-height: 0;
+
+    overflow: hidden;
+  }
+
+
+  /* ---------------- FULL IMAGE ---------------- */
+
+  .architecture-excellence-image {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    overflow: hidden;
+  }
+
+  .architecture-excellence-image img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    object-fit: contain;
+  }
+
+
+  /* ---------------- CONTENT BELOW ---------------- */
+
+  .architecture-excellence-content {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    padding: 65px 7% 70px;
+
+    box-sizing: border-box;
+
+    justify-content: flex-start;
+
+    align-items: flex-start;
+  }
+
+  .architecture-excellence-eyebrow {
+    margin-bottom: 30px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+  .architecture-excellence-eyebrow span {
+    width: 28px;
+  }
+
+  .architecture-excellence-content h2 {
+    max-width: 100%;
+
+    font-size: clamp(42px, 12vw, 58px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.7px;
+  }
+
+  .architecture-excellence-line {
+    margin: 27px 0 25px;
+  }
+
+  .architecture-excellence-content > p {
+    max-width: 100%;
+
+    margin-bottom: 32px;
 
     font-size: 12px;
 
     line-height: 1.8;
   }
 
-  .architecture-hero .architecture-primary-btn {
-    width: auto;
+  .architecture-excellence-features {
+    max-width: 100%;
   }
 
+  .architecture-excellence-feature {
+    min-height: 62px;
 
-  /* PHILOSOPHY */
-
-  .architecture-philosophy {
-    padding: 90px 7vw;
+    grid-template-columns: 48px 1fr;
   }
 
-  .architecture-section-heading {
-    margin-bottom: 55px;
+  .architecture-excellence-feature p {
+    font-size: 11px;
   }
 
-  .architecture-section-heading h2 {
-    font-size: 38px;
-  }
+  .architecture-excellence-button {
+    max-width: 100%;
 
-  .architecture-section-heading p {
-    font-size: 13px;
-  }
+    height: 56px;
 
+    margin-top: 32px;
 
-  /* PRINCIPLES */
+    font-size: 9px;
 
-  .architecture-principle {
-    padding: 32px 10px;
-  }
-
-  .principle-number {
-    margin-bottom: 25px;
-  }
-
-  .architecture-principle h3 {
-    font-size: 23px;
-  }
-
-
-  /* EXCELLENCE */
-
-  .architecture-excellence-image {
-    min-height: 380px;
-  }
-
-  .architecture-excellence-content {
-    padding: 65px 7vw;
-  }
-
-  .architecture-excellence-content h2 {
-    font-size: 43px;
-  }
-
-  .architecture-excellence-content > p {
-    font-size: 13px;
-  }
-
-
-  /* CTA */
-
-  .architecture-cta {
-    padding: 65px 7vw;
-  }
-
-  .architecture-cta h3 {
-    font-size: 34px;
-  }
-
-  .architecture-cta-actions {
-    width: 100%;
-
-    flex-direction: column;
-  }
-
-  .architecture-cta-actions
-  .architecture-primary-btn,
-  .architecture-cta-actions
-  .architecture-outline-btn {
-    width: 100%;
+    letter-spacing: 2.5px;
   }
 }
 
@@ -902,21 +2259,322 @@
    SMALL MOBILE
    ========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
-  .architecture-hero h1 {
-    font-size: 38px;
+  /* ---------------- HERO ---------------- */
+
+  .architecture-hero {
+    min-height: 650px;
   }
 
   .architecture-hero-content {
-    padding-top: 55px;
+    padding-top: 120px;
   }
 
-  .architecture-excellence-content h2 {
+  .architecture-hero-content h1 {
+    font-size: 45px;
+  }
+
+  .architecture-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+
+  /* ---------------- PHILOSOPHY ---------------- */
+
+  .architecture-section-heading h2 {
     font-size: 38px;
   }
 
-  .architecture-section-heading h2 {
-    font-size: 34px;
+  .architecture-section-heading > p {
+    font-size: 11.5px;
+  }
+
+  .architecture-philosophy
+  .architecture-principle {
+    padding: 30px 22px 36px;
+  }
+
+  .architecture-philosophy
+  .architecture-principle h3 {
+    font-size: 23px;
   }
 }
+
+/* ==========================================================================
+   Architecture Excellence Section — Raya Al Qurum
+   ========================================================================== */
+
+.architecture {
+  width: 100%;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background-color: #f2ede4;
+}
+
+.architecture__top {
+  display: flex;
+  width: 100%;
+  min-height: 720px;
+}
+
+/* ---------------------------------- */
+/* Left: Image Panel                  */
+/* ---------------------------------- */
+
+.architecture__image {
+  flex: 1 1 55%;
+  position: relative;
+  overflow: hidden;
+}
+
+.architecture__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------------------------------- */
+/* Right: Dark Panel                  */
+/* ---------------------------------- */
+
+.architecture__panel {
+  flex: 1 1 45%;
+  background: linear-gradient(160deg, #1c1a17 0%, #100f0d 100%);
+  display: flex;
+  align-items: center;
+  padding: 4vw 4vw;
+}
+
+.architecture__panel-inner {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.architecture__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.architecture__eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background-color: #c9a24b;
+  display: inline-block;
+}
+
+.architecture__eyebrow-text {
+  color: #c9a24b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.architecture__title {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.15;
+  color: #f7f4ee;
+  margin: 0;
+}
+
+.architecture__title em {
+  font-style: italic;
+  color: #c9a24b;
+  font-weight: 400;
+}
+
+.architecture__title-underline {
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #c9a24b;
+  margin: 28px 0 24px;
+}
+
+.architecture__description {
+  color: #cfc9bf;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 480px;
+  margin: 0 0 36px;
+}
+
+/* ---------------------------------- */
+/* Feature Rows                       */
+/* ---------------------------------- */
+
+.architecture__features {
+  border-top: 1px solid rgba(201, 162, 75, 0.25);
+  margin-bottom: 40px;
+}
+
+.architecture__feature-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.25);
+}
+
+.architecture__feature-number {
+  color: #c9a24b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  min-width: 26px;
+}
+
+.architecture__feature-label {
+  color: #f0ece3;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* ---------------------------------- */
+/* CTA Button                         */
+/* ---------------------------------- */
+
+.architecture__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: transparent;
+  border: 1px solid #c9a24b;
+  color: #c9a24b;
+  padding: 16px 30px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.architecture__cta:hover {
+  background-color: #c9a24b;
+  color: #100f0d;
+}
+
+.architecture__cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.architecture__cta:hover .architecture__cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ---------------------------------- */
+/* Bottom Caption Strip                */
+/* ---------------------------------- */
+
+.architecture__caption {
+  text-align: center;
+  padding: 56px 20px;
+}
+
+.architecture__caption-eyebrow {
+  color: #8a8378;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.architecture__caption-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  color: #26241f;
+  margin: 0 0 18px;
+}
+
+.architecture__caption-underline {
+  display: inline-block;
+  width: 70px;
+  height: 2px;
+  background-color: #c9a24b;
+}
+
+/* ==========================================================================
+   Responsive — Tablet
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .architecture__top {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .architecture__image {
+    flex: none;
+    height: 460px;
+  }
+
+  .architecture__panel {
+    flex: none;
+    padding: 60px 6vw;
+  }
+
+  .architecture__panel-inner {
+    max-width: 640px;
+  }
+
+  .architecture__caption {
+    padding: 48px 20px;
+  }
+}
+
+/* ==========================================================================
+   Responsive — Mobile
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .architecture__image {
+    height: 320px;
+  }
+
+  .architecture__panel {
+    padding: 48px 6vw;
+  }
+
+  .architecture__title {
+    font-size: 2rem;
+  }
+
+  .architecture__description {
+    font-size: 0.95rem;
+  }
+
+  .architecture__feature-row {
+    gap: 18px;
+    padding: 14px 0;
+  }
+
+  .architecture__feature-label {
+    font-size: 0.9rem;
+  }
+
+  .architecture__cta {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 22px;
+  }
+
+  .architecture__caption-title {
+    font-size: 1.15rem;
+    padding: 0 8px;
+  }
+}
+
+

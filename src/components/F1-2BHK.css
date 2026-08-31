@@ -1,0 +1,25 @@
+/* =========================================================
+   F1 · 2 BHK
+   Only small F1-specific adjustments
+   Common residence styles remain untouched
+========================================================= */
+
+.f1-unit-header {
+  position: relative;
+}
+
+.f1-details {
+  position: relative;
+}
+
+.f1-layout-details {
+  position: relative;
+}
+
+.f1-sales-offer {
+  position: relative;
+}
+
+.f1-bottom {
+  position: relative;
+}

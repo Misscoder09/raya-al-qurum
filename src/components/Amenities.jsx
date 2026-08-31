@@ -129,17 +129,87 @@ const bottomFeatures = [
     number: "02",
     title: "WELLNESS",
     subtitle: "& FITNESS",
-    icon: (
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M18 25v14" />
-        <path d="M13 28v8" />
-        <path d="M23 21v22" />
-        <path d="M41 21v22" />
-        <path d="M46 28v8" />
-        <path d="M51 25v14" />
-        <path d="M23 32h18" />
-      </svg>
-    ),
+icon: (
+  <svg
+    viewBox="0 0 64 64"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    {/* Head */}
+    <circle
+      cx="40"
+      cy="10"
+      r="6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.8"
+    />
+
+    {/* Body */}
+    <path
+      d="M36 17
+         C33 19 31 23 30 28
+         L27 38
+         C26 41 27 44 30 46"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* Left arm */}
+    <path
+      d="M34 19
+         L25 23
+         C22 25 20 29 19 33"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* Right arm */}
+    <path
+      d="M35 19
+         L40 29
+         L51 29"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* Back leg */}
+    <path
+      d="M29 43
+         L21 53
+         L9 53"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* Front leg */}
+    <path
+      d="M29 43
+         L39 51
+         L39 61"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+),
+
+    
+  
   },
 
   {
