@@ -1,0 +1,595 @@
+/* =========================================================
+   RAYA AL QURUM — EXTERIOR GALLERY
+========================================================= */
+
+.exterior-section {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 85% 8%,
+      rgba(201, 166, 112, 0.08),
+      transparent 32%
+    ),
+    #151411;
+
+  color: #f3eee5;
+  padding: 55px 0 25px;
+  overflow: hidden;
+}
+
+/* REMOVE DECORATIVE VERTICAL LINE */
+.exterior-section::before {
+  display: none !important;
+}
+
+.exterior-inner {
+  position: relative;
+  z-index: 1;
+
+  width: min(1380px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.exterior-header {
+  margin-bottom: 32px;
+}
+
+.exterior-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #c9a670;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  margin-bottom: 17px;
+}
+
+.exterior-eyebrow span {
+  width: 28px;
+  height: 1px;
+
+  background: #c9a670;
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.exterior-heading-row {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+
+  gap: 60px;
+  align-items: end;
+}
+
+.exterior-heading-row h2 {
+  margin: 0;
+
+  color: #f3eee5 !important;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(46px, 5.5vw, 82px);
+
+  font-weight: 400;
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.exterior-heading-row h2 em {
+  display: block;
+
+  color: #c9a670 !important;
+
+  font-style: italic;
+  font-weight: 400;
+
+  margin-top: 6px;
+}
+
+.exterior-intro {
+  max-width: 410px;
+
+  padding-bottom: 2px;
+
+  justify-self: end;
+}
+
+.exterior-intro p {
+  margin: 0;
+
+  color: rgba(243, 238, 229, 0.72) !important;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   REMOVE HORIZONTAL LINE
+========================================================= */
+
+.exterior-line {
+  display: none !important;
+}
+
+
+/* =========================================================
+   MAIN GALLERY
+   1 LARGE + 2 STACKED
+========================================================= */
+
+.exterior-gallery {
+  display: grid;
+
+  grid-template-columns: 1.7fr 1fr;
+
+  gap: 6px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   IMAGE BOXES
+========================================================= */
+
+.exterior-featured,
+.exterior-small,
+.exterior-bottom-card {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #151411;
+
+  border: none;
+
+  cursor: pointer;
+
+  line-height: 0;
+
+  transition: transform 0.35s ease;
+}
+
+.exterior-featured:hover,
+.exterior-small:hover,
+.exterior-bottom-card:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FEATURED IMAGE
+========================================================= */
+
+.exterior-featured {
+  width: 100%;
+
+  /*
+    Fixed visual ratio.
+    This keeps the left image height controlled
+    and prevents uneven empty space.
+  */
+  aspect-ratio: 1.55 / 1;
+}
+
+.exterior-featured img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.exterior-featured:hover img {
+  transform: scale(1.015);
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   TWO EQUAL IMAGES
+========================================================= */
+
+.exterior-side {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr;
+
+  gap: 6px;
+
+  min-height: 0;
+}
+
+.exterior-small {
+  width: 100%;
+  min-height: 0;
+
+  aspect-ratio: auto;
+}
+
+.exterior-small img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.exterior-small:hover img {
+  transform: scale(1.015);
+}
+
+
+/* =========================================================
+   BOTTOM GALLERY
+   3 IMAGES IN ONE ROW
+========================================================= */
+
+.exterior-bottom-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 6px;
+
+  margin-top: 6px;
+}
+
+.exterior-bottom-card {
+  width: 100%;
+
+  aspect-ratio: 1.35 / 1;
+}
+
+.exterior-bottom-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.exterior-bottom-card:hover img {
+  transform: scale(1.015);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.exterior-lightbox {
+  position: fixed;
+
+  z-index: 9999;
+
+  inset: 0;
+
+  background: rgba(9, 8, 7, 0.97);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+}
+
+.lightbox-content {
+  width: min(1300px, 90vw);
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* =========================================================
+   LIGHTBOX BUTTONS
+========================================================= */
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(21, 20, 17, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  color: #f3eee5;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: #c9a670;
+
+  border-color: #c9a670;
+
+  color: #151411;
+}
+
+.lightbox-close {
+  top: 28px;
+  right: 32px;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  font-size: 26px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .exterior-section {
+    padding: 50px 0 65px;
+  }
+
+  .exterior-inner {
+    width: min(100% - 40px, 1380px);
+  }
+
+  .exterior-heading-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .exterior-intro {
+    max-width: 600px;
+    justify-self: start;
+  }
+
+  /*
+    Tablet:
+    Large image on top,
+    two images underneath
+  */
+  .exterior-gallery {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .exterior-featured {
+    aspect-ratio: 1.7 / 1;
+  }
+
+  .exterior-side {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+
+    gap: 6px;
+  }
+
+  .exterior-small {
+    aspect-ratio: 1.35 / 1;
+  }
+
+  .exterior-bottom-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 6px;
+
+    margin-top: 6px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .exterior-section {
+padding: 45px 0 35px;  }
+
+  .exterior-inner {
+    width: calc(100% - 30px);
+  }
+
+  .exterior-header {
+    margin-bottom: 28px;
+  }
+
+  .exterior-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 16px;
+  }
+
+  .exterior-heading-row {
+    gap: 18px;
+  }
+
+  .exterior-heading-row h2 {
+    font-size: 46px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+  }
+
+  .exterior-intro {
+    max-width: 100%;
+  }
+
+  .exterior-intro p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+
+  /* MOBILE GALLERY */
+
+  .exterior-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+  .exterior-featured {
+    aspect-ratio: 1.4 / 1;
+  }
+
+  .exterior-side {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: none;
+
+    gap: 6px;
+  }
+
+  .exterior-small {
+    aspect-ratio: 1.35 / 1;
+  }
+
+
+  /* BOTTOM */
+
+  .exterior-bottom-grid {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+
+    margin-top: 6px;
+  }
+
+  .exterior-bottom-card {
+    aspect-ratio: 1.35 / 1;
+  }
+
+
+  /* LIGHTBOX */
+
+  .exterior-lightbox {
+    padding: 18px;
+  }
+
+  .lightbox-content {
+    width: 94vw;
+    height: 80vh;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+
+  .lightbox-close {
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+  }
+}

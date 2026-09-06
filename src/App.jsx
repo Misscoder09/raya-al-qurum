@@ -6,6 +6,7 @@ import Amenities from "./components/Amenities";
 import InvestmentAdvantages from "./components/WhyInvest/InvestmentAdvantages";
 import PaymentPlan from "./components/WhyInvest/PaymentPlan";
 import EnquiryForm from "./components/contact/EnquiryForm";
+import Exterior from "./components/Exterior";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -381,6 +382,9 @@ function App() {
  
  {/* ================= DAY & NIGHT ================= */}
 <DayNight />
+
+{/* ================= GALLERY — EXTERIOR ================= */}
+<Exterior />
 
         {/* ================= FLOOR PLANS ================= */}
 
