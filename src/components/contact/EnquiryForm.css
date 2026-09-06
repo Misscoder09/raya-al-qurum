@@ -1,0 +1,755 @@
+/* =========================================================
+   RAYA AL QURUM
+   ENQUIRY FORM
+   PREMIUM CONTACT SECTION
+========================================================= */
+
+.enquiry-form-section {
+  position: relative;
+  width: 100vw;
+  min-height: 760px;
+
+  margin-left: calc(50% - 50vw);
+
+  padding: 110px 7%;
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  color: #f4efe6;
+  background: #151310;
+}
+
+
+/* =========================================================
+   BUILDING BACKGROUND
+========================================================= */
+
+.enquiry-building-bg {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100vw;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center center;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   DARK LUXURY OVERLAY
+========================================================= */
+
+.enquiry-bg-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 9, 8, 0.88) 0%,
+      rgba(10, 9, 8, 0.76) 32%,
+      rgba(10, 9, 8, 0.69) 57%,
+      rgba(10, 9, 8, 0.80) 100%
+    );
+}
+
+
+/* =========================================================
+   SUBTLE DARK DEPTH
+========================================================= */
+
+.enquiry-form-section::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.22) 100%
+    );
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.enquiry-form-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1380px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.enquiry-form-intro {
+  width: 100%;
+  max-width: 540px;
+
+  text-align: left;
+
+  padding-top: 4px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.enquiry-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #c9a670;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.enquiry-form-intro h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(44px, 4.3vw, 68px);
+
+  line-height: 1.06;
+
+  font-weight: 400;
+
+  color: #f4efe6;
+
+  text-align: left;
+
+  max-width: 520px;
+}
+
+
+.enquiry-form-intro h2 span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #c9a670;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   GOLD DIVIDER
+========================================================= */
+
+.enquiry-line {
+  width: 72px;
+  height: 1px;
+
+  margin: 34px 0 30px;
+
+  background: #c9a670;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.enquiry-form-intro p {
+  width: 100%;
+  max-width: 475px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  color: rgba(244, 239, 230, 0.84);
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.enquiry-note {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  margin-top: 34px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+
+  color: rgba(244, 239, 230, 0.78);
+
+  text-align: left;
+}
+
+
+.enquiry-note-line {
+  flex: 0 0 auto;
+
+  width: 34px;
+  height: 1px;
+
+  background: #c9a670;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+========================================================= */
+
+.enquiry-form-wrapper {
+  width: 100%;
+
+  padding: 44px;
+
+  box-sizing: border-box;
+
+  background: rgba(14, 13, 11, 0.82);
+
+  border: 1px solid rgba(201, 166, 112, 0.48);
+
+  backdrop-filter: blur(6px);
+
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.44),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+
+  text-align: left;
+}
+
+
+.enquiry-form {
+  width: 100%;
+
+  margin: 0;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.enquiry-form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 26px;
+}
+
+
+/* =========================================================
+   FIELDS
+========================================================= */
+
+.enquiry-field {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-bottom: 25px;
+
+  text-align: left;
+}
+
+
+.enquiry-field label {
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  color: #d3ad72;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
+
+.enquiry-field input,
+.enquiry-field select,
+.enquiry-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(244, 239, 230, 0.22);
+
+  border-radius: 0;
+
+  outline: none;
+
+  background: rgba(0, 0, 0, 0.32);
+
+  color: #f4efe6;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 14px;
+
+  text-align: left;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
+
+.enquiry-field input,
+.enquiry-field select {
+  height: 54px;
+
+  padding: 0 17px;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.enquiry-field textarea {
+  min-height: 130px;
+
+  padding: 16px 17px;
+
+  resize: vertical;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.enquiry-field input::placeholder,
+.enquiry-field textarea::placeholder {
+  color: rgba(244, 239, 230, 0.44);
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.enquiry-field input:focus,
+.enquiry-field select:focus,
+.enquiry-field textarea:focus {
+  border-color: #c9a670;
+
+  background: rgba(0, 0, 0, 0.44);
+
+  box-shadow:
+    0 0 0 1px rgba(201, 166, 112, 0.12);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.enquiry-field select {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #c9a670 50%
+    ),
+    linear-gradient(
+      135deg,
+      #c9a670 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 20px) 23px,
+    calc(100% - 15px) 23px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+
+.enquiry-field select option {
+  background: #24221f;
+
+  color: #f4efe6;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.enquiry-message-field {
+  margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.enquiry-submit-btn {
+  width: 100%;
+
+  min-height: 58px;
+
+  padding: 0 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border: 1px solid #c9a670;
+
+  background: #c9a670;
+
+  color: #201d18;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.enquiry-submit-arrow {
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+
+.enquiry-submit-btn:hover {
+  background: transparent;
+
+  color: #c9a670;
+
+  border-color: #c9a670;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .enquiry-form-section {
+    min-height: auto;
+
+    padding: 90px 6%;
+  }
+
+
+  .enquiry-building-bg {
+    width: 100vw;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  .enquiry-bg-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10, 9, 8, 0.86) 0%,
+        rgba(10, 9, 8, 0.82) 100%
+      );
+  }
+
+
+  .enquiry-form-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .enquiry-form-intro {
+    max-width: 700px;
+
+    text-align: left;
+  }
+
+
+  .enquiry-form-intro h2 {
+    max-width: 650px;
+  }
+
+
+  .enquiry-form-intro p {
+    max-width: 650px;
+  }
+
+
+  .enquiry-form-wrapper {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0;
+
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .enquiry-form-section {
+    min-height: auto;
+
+    padding: 70px 5%;
+  }
+
+
+  .enquiry-building-bg {
+    width: 100vw;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  .enquiry-bg-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10, 9, 8, 0.89) 0%,
+        rgba(10, 9, 8, 0.95) 100%
+      );
+  }
+
+
+  .enquiry-form-container {
+    gap: 40px;
+  }
+
+
+  .enquiry-form-intro {
+    max-width: 100%;
+
+    text-align: left;
+  }
+
+
+  .enquiry-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+  }
+
+
+  .enquiry-form-intro h2 {
+    font-size: 42px;
+
+    line-height: 1.08;
+
+    text-align: left;
+  }
+
+
+  .enquiry-line {
+    margin: 28px 0 24px;
+  }
+
+
+  .enquiry-form-intro p {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    text-align: left;
+  }
+
+
+  .enquiry-note {
+    margin-top: 30px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.3px;
+
+    justify-content: flex-start;
+
+    text-align: left;
+  }
+
+
+  .enquiry-form-wrapper {
+    width: 100%;
+
+    padding: 28px 22px;
+
+    box-sizing: border-box;
+  }
+
+
+  .enquiry-form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .enquiry-field {
+    margin-bottom: 22px;
+  }
+
+
+  .enquiry-submit-btn {
+    min-height: 55px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .enquiry-form-section {
+    padding: 60px 5%;
+  }
+
+
+  .enquiry-form-intro h2 {
+    font-size: 36px;
+  }
+
+
+  .enquiry-form-wrapper {
+    padding: 24px 18px;
+  }
+}

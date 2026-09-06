@@ -2303,278 +2303,420 @@ p {
   }
 }
 
-/* ==========================================================================
-   Architecture Excellence Section — Raya Al Qurum
-   ========================================================================== */
+/* =========================================================
+   ARCHITECTURAL EXCELLENCE
+   CLEAN EDITORIAL VERSION
+   ========================================================= */
 
-.architecture {
+.architecture-excellence {
   width: 100%;
-  font-family: "Poppins", "Segoe UI", sans-serif;
-  background-color: #f2ede4;
-}
-
-.architecture__top {
-  display: flex;
-  width: 100%;
-  min-height: 720px;
-}
-
-/* ---------------------------------- */
-/* Left: Image Panel                  */
-/* ---------------------------------- */
-
-.architecture__image {
-  flex: 1 1 55%;
-  position: relative;
+  display: grid;
+  grid-template-columns: 56% 44%;
+  margin: 0;
+  padding: 0;
+  background: #24211d;
   overflow: hidden;
 }
 
-.architecture__image img {
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.architecture-excellence-image {
+  width: 100%;
+  overflow: hidden;
+  background: #24211d;
+}
+
+.architecture-excellence-image img {
+  display: block;
   width: 100%;
   height: 100%;
+  min-height: 560px;
   object-fit: cover;
-  display: block;
+  object-position: center;
 }
 
-/* ---------------------------------- */
-/* Right: Dark Panel                  */
-/* ---------------------------------- */
 
-.architecture__panel {
-  flex: 1 1 45%;
-  background: linear-gradient(160deg, #1c1a17 0%, #100f0d 100%);
-  display: flex;
-  align-items: center;
-  padding: 4vw 4vw;
-}
+/* =========================================================
+   CONTENT
+   ========================================================= */
 
-.architecture__panel-inner {
-  max-width: 560px;
+.architecture-excellence-content {
   width: 100%;
-  margin: 0 auto;
+  box-sizing: border-box;
+
+  padding: 78px 6vw 78px 5.5vw;
+
+  background: #24211d;
+  color: #fffaf1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.architecture__eyebrow {
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.architecture-excellence-eyebrow {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 28px;
-}
+  gap: 18px;
 
-.architecture__eyebrow-line {
-  width: 32px;
-  height: 1px;
-  background-color: #c9a24b;
-  display: inline-block;
-}
+  margin-bottom: 34px;
 
-.architecture__eyebrow-text {
-  color: #c9a24b;
-  font-size: 13px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
+  line-height: 1;
   text-transform: uppercase;
+
+  color: #d2a45e;
 }
 
-.architecture__title {
-  font-family: "Playfair Display", "Georgia", serif;
-  font-weight: 500;
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
-  line-height: 1.15;
-  color: #f7f4ee;
-  margin: 0;
-}
-
-.architecture__title em {
-  font-style: italic;
-  color: #c9a24b;
-  font-weight: 400;
-}
-
-.architecture__title-underline {
+.architecture-excellence-eyebrow span {
   display: block;
-  width: 70px;
-  height: 2px;
-  background-color: #c9a24b;
-  margin: 28px 0 24px;
+  width: 34px;
+  height: 1px;
+  flex-shrink: 0;
+  background: #d2a45e;
 }
 
-.architecture__description {
-  color: #cfc9bf;
-  font-size: 1rem;
-  line-height: 1.75;
-  font-weight: 300;
-  max-width: 480px;
-  margin: 0 0 36px;
-}
 
-/* ---------------------------------- */
-/* Feature Rows                       */
-/* ---------------------------------- */
+/* =========================================================
+   HEADING
+   ========================================================= */
 
-.architecture__features {
-  border-top: 1px solid rgba(201, 162, 75, 0.25);
-  margin-bottom: 40px;
-}
+.architecture-excellence-content h2 {
+  margin: 0;
 
-.architecture__feature-row {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(201, 162, 75, 0.25);
-}
-
-.architecture__feature-number {
-  color: #c9a24b;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  min-width: 26px;
-}
-
-.architecture__feature-label {
-  color: #f0ece3;
-  font-size: 1rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 4.2vw, 68px);
   font-weight: 400;
-  letter-spacing: 0.2px;
+  line-height: 1;
+  letter-spacing: -2px;
+
+  color: #fffaf1;
 }
 
-/* ---------------------------------- */
-/* CTA Button                         */
-/* ---------------------------------- */
-
-.architecture__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  background: transparent;
-  border: 1px solid #c9a24b;
-  color: #c9a24b;
-  padding: 16px 30px;
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.architecture-excellence-content h2 em {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #d2a45e;
 }
 
-.architecture__cta:hover {
-  background-color: #c9a24b;
-  color: #100f0d;
+
+/* =========================================================
+   GOLD LINE
+   ========================================================= */
+
+.architecture-excellence-line {
+  width: 42px;
+  height: 1px;
+
+  margin: 30px 0 25px;
+
+  background: #d2a45e;
 }
 
-.architecture__cta-arrow {
-  transition: transform 0.3s ease;
-}
 
-.architecture__cta:hover .architecture__cta-arrow {
-  transform: translateX(4px);
-}
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
 
-/* ---------------------------------- */
-/* Bottom Caption Strip                */
-/* ---------------------------------- */
+.architecture-excellence-content > p {
+  width: 100%;
+  max-width: 500px;
 
-.architecture__caption {
-  text-align: center;
-  padding: 56px 20px;
-}
+  margin: 0 0 32px;
 
-.architecture__caption-eyebrow {
-  color: #8a8378;
+  font-family: "DM Sans", sans-serif;
   font-size: 13px;
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: 0;
+
+  color: rgba(255, 250, 241, 0.76);
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.architecture-excellence-features {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0;
+
+  border-top: 1px solid rgba(210, 164, 94, 0.25);
+}
+
+.architecture-excellence-feature {
+  width: 100%;
+  min-height: 58px;
+
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(210, 164, 94, 0.25);
+}
+
+.architecture-excellence-feature span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin: 0 0 14px;
+  letter-spacing: 1.5px;
+
+  color: #d2a45e;
 }
 
-.architecture__caption-title {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-  color: #26241f;
-  margin: 0 0 18px;
+.architecture-excellence-feature p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: #fffaf1;
 }
 
-.architecture__caption-underline {
-  display: inline-block;
-  width: 70px;
-  height: 2px;
-  background-color: #c9a24b;
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .architecture-excellence {
+    grid-template-columns: 53% 47%;
+  }
+
+  .architecture-excellence-image img {
+    min-height: 500px;
+  }
+
+  .architecture-excellence-content {
+    padding: 55px 4vw;
+  }
+
+  .architecture-excellence-content h2 {
+    font-size: clamp(40px, 5vw, 55px);
+  }
+
+  .architecture-excellence-content > p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .architecture-excellence-feature {
+    min-height: 54px;
+  }
+
+  .architecture-excellence-feature p {
+    font-size: 11px;
+  }
 }
 
-/* ==========================================================================
-   Responsive — Tablet
-   ========================================================================== */
 
-@media (max-width: 1024px) {
-  .architecture__top {
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .architecture-excellence {
+    display: flex;
     flex-direction: column;
-    min-height: auto;
-  }
-
-  .architecture__image {
-    flex: none;
-    height: 460px;
-  }
-
-  .architecture__panel {
-    flex: none;
-    padding: 60px 6vw;
-  }
-
-  .architecture__panel-inner {
-    max-width: 640px;
-  }
-
-  .architecture__caption {
-    padding: 48px 20px;
-  }
-}
-
-/* ==========================================================================
-   Responsive — Mobile
-   ========================================================================== */
-
-@media (max-width: 640px) {
-  .architecture__image {
-    height: 320px;
-  }
-
-  .architecture__panel {
-    padding: 48px 6vw;
-  }
-
-  .architecture__title {
-    font-size: 2rem;
-  }
-
-  .architecture__description {
-    font-size: 0.95rem;
-  }
-
-  .architecture__feature-row {
-    gap: 18px;
-    padding: 14px 0;
-  }
-
-  .architecture__feature-label {
-    font-size: 0.9rem;
-  }
-
-  .architecture__cta {
     width: 100%;
-    justify-content: center;
-    padding: 15px 22px;
   }
 
-  .architecture__caption-title {
-    font-size: 1.15rem;
-    padding: 0 8px;
+
+  /* IMAGE */
+
+  .architecture-excellence-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .architecture-excellence-image img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+
+  /* CONTENT */
+
+  .architecture-excellence-content {
+    width: 100%;
+
+    padding: 58px 7% 62px;
+
+    box-sizing: border-box;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+
+  /* EYEBROW */
+
+  .architecture-excellence-eyebrow {
+    margin-bottom: 28px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+    gap: 14px;
+  }
+
+  .architecture-excellence-eyebrow span {
+    width: 28px;
+  }
+
+
+  /* HEADING */
+
+  .architecture-excellence-content h2 {
+    max-width: 100%;
+
+    font-size: clamp(42px, 12vw, 57px);
+    line-height: 0.98;
+    letter-spacing: -1.6px;
+  }
+
+
+  /* LINE */
+
+  .architecture-excellence-line {
+    margin: 27px 0 24px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .architecture-excellence-content > p {
+    max-width: 100%;
+
+    margin-bottom: 30px;
+
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+
+  /* FEATURES */
+
+  .architecture-excellence-features {
+    max-width: 100%;
+  }
+
+  .architecture-excellence-feature {
+    min-height: 58px;
+    grid-template-columns: 45px 1fr;
+  }
+
+  .architecture-excellence-feature p {
+    font-size: 11px;
   }
 }
 
 
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .architecture-excellence-content {
+    padding: 52px 7% 58px;
+  }
+
+  .architecture-excellence-content h2 {
+    font-size: 42px;
+  }
+
+  .architecture-excellence-content > p {
+    font-size: 11.5px;
+  }
+
+  .architecture-excellence-feature p {
+    font-size: 10.5px;
+  }
+}
+/* =========================================================
+   ARCHITECTURE — SOFT END / NO LINE
+   ========================================================= */
+
+.architecture-page {
+  border-bottom: none !important;
+}
+
+
+/* Remove any separator line */
+.architecture-page::after {
+  display: none !important;
+}
+
+
+/* =========================================================
+   LAST TEXT / CTA AREA
+   ========================================================= */
+
+.architecture-final-cta {
+  background: #eee8dc !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  padding: 28px 7vw 32px;
+  text-align: center;
+}
+
+
+/* Small text */
+.architecture-final-cta .cta-eyebrow {
+  color: #6f665b;
+}
+
+
+/* Main text */
+.architecture-final-cta h3 {
+  color: #29251f;
+}
+
+
+/* =========================================================
+   IF YOUR TEXT IS NOT INSIDE .architecture-final-cta
+   ========================================================= */
+
+.architecture-page > section:last-child {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .architecture-final-cta {
+    padding: 24px 6% 28px;
+    background: #eee8dc !important;
+  }
+
+}

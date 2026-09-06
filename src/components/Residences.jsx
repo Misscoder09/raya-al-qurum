@@ -218,7 +218,729 @@ function ResidenceDetails({ residence, onClose }) {
           </button>
         </div>
 
-        <header className="details-header">
+        {/* =====================================================
+    1 BHK · ALL AVAILABLE FLATS OVERVIEW
+===================================================== */}
+
+{residence.id === "1bhk" && residence.unit === "F2" && (
+  <section className="one-bhk-overview">
+
+    <div className="one-bhk-overview-inner">
+
+      <div className="one-bhk-overview-heading">
+        <span>RAYA AL QURUM · 1 BHK RESIDENCES</span>
+
+        <h2>
+          Explore our <em>1 BHK residences.</em>
+        </h2>
+
+        <p>
+          Choose from the available one-bedroom residences below.
+          Explore the area, pricing and key features of each unit.
+        </p>
+      </div>
+
+
+      <div className="one-bhk-unit-list">
+        {/* F2 */}
+<button
+  type="button"
+  className="one-bhk-unit-row"
+  onClick={() =>
+    document.getElementById("f2-detail")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+>
+  <div className="unit-row-number">01</div>
+
+  <div className="unit-row-main">
+    <span>1 BHK</span>
+    <strong>F2</strong>
+  </div>
+
+  <div className="unit-row-detail">
+    <span>AREA</span>
+    <strong>65.02 SQ.M.</strong>
+  </div>
+
+  <div className="unit-row-detail">
+    <span>BEDROOM</span>
+    <strong>1</strong>
+  </div>
+
+  <div className="unit-row-detail">
+    <span>BATHROOM</span>
+    <strong>1</strong>
+  </div>
+
+  <div className="unit-row-price">
+    <span>FROM</span>
+    <strong>OMR 48,765.000</strong>
+  </div>
+
+  <div className="unit-row-arrow">↗</div>
+</button>
+
+        {/* F6 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f6-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">01</div>
+
+          <div className="unit-row-main">
+            <span>1 BHK</span>
+            <strong>F6</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>65.02 SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+
+        {/* F7 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f7-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">02</div>
+
+          <div className="unit-row-main">
+            <span>1 BHK</span>
+            <strong>F7</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>— SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+
+        {/* F8 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f8-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">03</div>
+
+          <div className="unit-row-main">
+            <span>1 BHK</span>
+            <strong>F8</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>— SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+
+        {/* F12 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f12-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">04</div>
+
+          <div className="unit-row-main">
+            <span>1 BHK</span>
+            <strong>F12</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>— SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+)}
+
+{/* =====================================================
+    2 BHK · ALL AVAILABLE FLATS OVERVIEW
+===================================================== */}
+
+{residence.id === "2bhk" && residence.unit === "F1" && (
+  <section className="one-bhk-overview two-bhk-overview">
+
+    <div className="one-bhk-overview-inner">
+
+      <div className="one-bhk-overview-heading">
+        <span>RAYA AL QURUM · 2 BHK RESIDENCES</span>
+
+        <h2>
+          Explore our <em>2 BHK residences.</em>
+        </h2>
+
+        <p>
+          Choose from the available two-bedroom residences below.
+          Explore the area, pricing and key features of each unit.
+        </p>
+      </div>
+
+      <div className="one-bhk-unit-list">
+
+        {/* F1 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f1-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">01</div>
+
+          <div className="unit-row-main">
+            <span>2 BHK</span>
+            <strong>F1</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>90.64 SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>3</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR 71,379</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+        {/* F3 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f3-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">02</div>
+
+          <div className="unit-row-main">
+            <span>2 BHK</span>
+            <strong>F3</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>— SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>—</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+        {/* F5 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f5-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">03</div>
+
+          <div className="unit-row-main">
+            <span>2 BHK</span>
+            <strong>F5</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>— SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>—</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+        {/* F9 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f9-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">04</div>
+
+          <div className="unit-row-main">
+            <span>2 BHK</span>
+            <strong>F9</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>— SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>—</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+        {/* F11 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f11-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">05</div>
+
+          <div className="unit-row-main">
+            <span>2 BHK</span>
+            <strong>F11</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>— SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>—</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR —</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+)}
+
+{/* =====================================================
+    2 BHK + STUDY · ALL AVAILABLE FLATS OVERVIEW
+    F14 / F15
+===================================================== */}
+
+{residence.id === "2bhk-study" && residence.unit === "F14" && (
+  <section className="one-bhk-overview two-bhk-overview two-bhk-study-overview">
+
+    <div className="one-bhk-overview-inner">
+
+      <div className="one-bhk-overview-heading">
+
+        <span>RAYA AL QURUM · 2 BHK + STUDY RESIDENCES</span>
+
+        <h2>
+          Explore our <em>2 BHK + Study residences.</em>
+        </h2>
+
+        <p>
+          Choose from the available two-bedroom residences with study
+          spaces below. Explore the area, pricing and key features
+          of each unit.
+        </p>
+
+      </div>
+
+
+      <div className="one-bhk-unit-list">
+
+        {/* F14 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f14-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+
+          <div className="unit-row-number">
+            01
+          </div>
+
+          <div className="unit-row-main">
+            <span>2 BHK + STUDY</span>
+            <strong>F14</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>94.72 SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR 78,144.000</strong>
+          </div>
+
+          <div className="unit-row-arrow">
+            ↗
+          </div>
+
+        </button>
+
+
+        {/* F15 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f15-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+
+          <div className="unit-row-number">
+            02
+          </div>
+
+          <div className="unit-row-main">
+            <span>2 BHK + STUDY</span>
+            <strong>F15</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>109.01 SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>2</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>3</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR 81,757.500</strong>
+          </div>
+
+          <div className="unit-row-arrow">
+            ↗
+          </div>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+)}
+
+
+{/* =====================================================
+    3 BHK · ALL AVAILABLE FLATS OVERVIEW
+===================================================== */}
+
+{residence.id === "3bhk" && residence.unit === "F4" && (
+  <section className="one-bhk-overview three-bhk-overview">
+
+    <div className="one-bhk-overview-inner">
+
+      <div className="one-bhk-overview-heading">
+        <span>RAYA AL QURUM · 3 BHK RESIDENCES</span>
+
+        <h2>
+          Explore our <em>3 BHK residences.</em>
+        </h2>
+
+        <p>
+          Choose from the available three-bedroom residences below.
+          Explore the area, pricing and key features of each unit.
+        </p>
+      </div>
+
+
+      <div className="one-bhk-unit-list">
+
+        {/* F4 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f4-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">01</div>
+
+          <div className="unit-row-main">
+            <span>3 BHK</span>
+            <strong>F4</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>123.35 SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>3</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>3</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR 101,764</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+
+        {/* F10 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f10-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">02</div>
+
+          <div className="unit-row-main">
+            <span>3 BHK</span>
+            <strong>F10</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>127.95 SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>3</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>4</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR 95,962.500</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+)}
+
+        <header id="f2-detail" className="details-header">
           <div className="details-title">
             <span>RAYA AL QURUM · RESIDENCES</span>
 
@@ -233,6 +955,8 @@ function ResidenceDetails({ residence, onClose }) {
             <span>{residence.type}</span>
           </div>
         </header>
+        
+        
 {residence.unit !== "F1" && (
 
         <section className="detail-layout-section">
@@ -589,6 +1313,9 @@ function ResidenceDetails({ residence, onClose }) {
 
   </section>
 )}
+
+
+
 {/* F1 · 2 BHK */}
 {residence.id === "2bhk" && residence.unit === "F1" && (
    <>
@@ -601,11 +1328,16 @@ function ResidenceDetails({ residence, onClose }) {
 )}
 
 
+
 {/* =====================================================
     F14 · 2 BHK + STUDY — SALES OFFER
 ===================================================== */}
 
 {residence.id === "2bhk-study" && residence.unit === "F14" && (
+
+
+
+
   <section className="sales-offer-section f14-sales-offer">
 
     <div className="sales-offer-inner">

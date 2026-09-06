@@ -1,0 +1,613 @@
+/* =========================================================
+   RAYA AL QURUM
+   PAYMENT PLAN
+   PREMIUM CREAM EDITORIAL DESIGN
+========================================================= */
+
+.payment-plan-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 0 125px;
+  background: #f4efe6;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.payment-plan-section::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  top: -350px;
+  left: -220px;
+  border: 1px solid rgba(181, 139, 82, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.payment-plan-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -260px;
+  top: 80px;
+  border-radius: 50%;
+  background: rgba(201, 166, 112, 0.08);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.payment-plan-container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.payment-plan-heading {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.payment-plan-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  color: #b58b52;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADING ROW
+========================================================= */
+
+.payment-plan-title-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.payment-plan-line {
+  position: relative;
+  display: block;
+  width: 78px;
+  height: 1px;
+  margin: 0 auto;
+  background: #c9a670;
+}
+
+.payment-plan-line::after {
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 8px;
+  color: #b58b52;
+  background: #f4efe6;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.payment-plan-title-row h2 {
+  margin: 0;
+  color: #29231e;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.03;
+  font-weight: 400;
+  letter-spacing: -1.8px;
+  text-align: center;
+}
+
+.payment-plan-title-row h2 em {
+  color: #b58b52;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.payment-plan-intro {
+  max-width: 680px;
+  margin: 24px auto 0;
+  color: #655e55;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLE OUTER
+========================================================= */
+
+.payment-plan-table-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(181, 139, 82, 0.42);
+  border-radius: 15px;
+  background: #eee6d9;
+  box-shadow:
+    0 18px 45px rgba(70, 55, 38, 0.08),
+    0 3px 12px rgba(70, 55, 38, 0.05);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.payment-plan-table {
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.payment-plan-row {
+  display: grid;
+  grid-template-columns: 1.55fr 0.7fr 1.25fr;
+  min-height: 54px;
+  border-bottom: 1px solid rgba(122, 101, 75, 0.15);
+}
+
+.payment-plan-row:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.payment-plan-header {
+  min-height: 58px;
+  background: #ded1bf;
+  border-bottom: 1px solid rgba(181, 139, 82, 0.35);
+}
+
+.payment-plan-header .payment-plan-cell {
+  color: #2d2823;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   CELLS
+========================================================= */
+
+.payment-plan-cell {
+  display: flex;
+  align-items: center;
+  padding: 13px 20px;
+  color: #38322c;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.stage-cell {
+  justify-content: flex-start;
+}
+
+.percentage-cell {
+  justify-content: center;
+  border-left: 1px solid rgba(122, 101, 75, 0.12);
+  border-right: 1px solid rgba(122, 101, 75, 0.12);
+}
+
+.due-cell {
+  justify-content: flex-start;
+}
+
+
+/* =========================================================
+   NORMAL ROWS
+========================================================= */
+
+.payment-plan-row:not(.payment-plan-header):not(.payment-total-row) {
+  background: #f7f2ea;
+}
+
+.payment-plan-row:nth-child(even):not(.payment-plan-header):not(.payment-total-row) {
+  background: #eee7dc;
+}
+
+.payment-plan-row:not(.payment-plan-header):not(.payment-total-row):hover {
+  background: #e9dece;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.payment-stage-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  margin-right: 14px;
+  border: 1px solid rgba(181, 139, 82, 0.55);
+  border-radius: 50%;
+  color: #9c713c;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   STAGE NAME
+========================================================= */
+
+.payment-stage-name {
+  color: #38322c;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   PERCENTAGE
+========================================================= */
+
+.payment-percentage {
+  color: #a8793d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FEATURED ROWS
+   DOWN PAYMENT + FINAL PAYMENT
+========================================================= */
+
+.featured-payment-row {
+  background:
+    linear-gradient(
+      90deg,
+      #eee1ce 0%,
+      #f5ecdf 50%,
+      #eee1ce 100%
+    ) !important;
+
+  border-top: 1px solid rgba(181, 139, 82, 0.28);
+  border-bottom: 1px solid rgba(181, 139, 82, 0.28);
+}
+
+.featured-payment-row .payment-stage-name {
+  color: #2d2823;
+  font-weight: 600;
+}
+
+.featured-payment-row .payment-stage-number {
+  border-color: #b58b52;
+  color: #9c713c;
+}
+
+.featured-payment-row .payment-percentage {
+  color: #a8793d;
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.payment-total-row {
+  min-height: 64px;
+  background: #ded0bc;
+  border-top: 1px solid rgba(181, 139, 82, 0.38);
+}
+
+.payment-total-row .payment-plan-cell {
+  color: #2d2823;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.payment-total-row .percentage-cell {
+  color: #a8793d;
+}
+
+.payment-total-percentage {
+  color: #a8793d;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.payment-plan-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 850px;
+  margin: 32px auto 0;
+  padding: 21px 28px;
+  border: 1px solid rgba(181, 139, 82, 0.32);
+  border-radius: 12px;
+  background: rgba(255, 252, 247, 0.62);
+  box-shadow: 0 8px 25px rgba(70, 55, 38, 0.04);
+  text-align: center;
+}
+
+
+/* =========================================================
+   NOTE ICON
+========================================================= */
+
+.payment-note-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  min-width: 39px;
+  height: 39px;
+  border: 1px solid rgba(181, 139, 82, 0.55);
+  border-radius: 50%;
+  color: #b58b52;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   NOTE CONTENT
+========================================================= */
+
+.payment-note-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.payment-note-label {
+  color: #a8793d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.payment-note-content p {
+  margin: 0;
+  color: #655e55;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .payment-plan-section {
+    padding: 100px 0 105px;
+  }
+
+  .payment-plan-container {
+    width: min(100% - 48px, 760px);
+  }
+
+  .payment-plan-heading {
+    margin-bottom: 48px;
+  }
+
+  .payment-plan-row {
+    grid-template-columns: 1.4fr 0.65fr 1.1fr;
+  }
+
+  .payment-plan-cell {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+  .payment-stage-number {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+
+  .payment-stage-name {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .payment-plan-section {
+    padding: 78px 0 82px;
+  }
+
+  .payment-plan-container {
+    width: calc(100% - 32px);
+  }
+
+  .payment-plan-heading {
+    margin-bottom: 38px;
+  }
+
+  .payment-plan-eyebrow {
+    margin-bottom: 16px;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .payment-plan-title-row {
+    gap: 16px;
+  }
+
+  .payment-plan-line {
+    width: 58px;
+  }
+
+  .payment-plan-title-row h2 {
+    font-size: 39px;
+    line-height: 1.07;
+    letter-spacing: -1px;
+  }
+
+  .payment-plan-intro {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* TABLE SCROLL */
+
+  .payment-plan-table-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 11px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .payment-plan-table {
+    min-width: 650px;
+  }
+
+  .payment-plan-row {
+    grid-template-columns: 1.55fr 0.7fr 1.25fr;
+  }
+
+  .payment-plan-cell {
+    padding: 12px 14px;
+  }
+
+  .payment-plan-header .payment-plan-cell {
+    font-size: 11px;
+  }
+
+  .payment-stage-number {
+    width: 27px;
+    min-width: 27px;
+    height: 27px;
+    margin-right: 9px;
+  }
+
+  .payment-stage-name {
+    font-size: 12px;
+  }
+
+  .payment-percentage {
+    font-size: 14px;
+  }
+
+  .featured-payment-row .payment-percentage {
+    font-size: 17px;
+  }
+
+  .payment-total-row {
+    min-height: 58px;
+  }
+
+
+  /* NOTE */
+
+  .payment-plan-note {
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 23px;
+    padding: 19px;
+  }
+
+  .payment-note-icon {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .payment-note-content p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .payment-plan-container {
+    width: calc(100% - 24px);
+  }
+
+  .payment-plan-title-row h2 {
+    font-size: 34px;
+  }
+
+  .payment-plan-intro {
+    font-size: 13px;
+  }
+}

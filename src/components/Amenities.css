@@ -1,846 +1,772 @@
 /* =========================================================
    RAYA AL QURUM
    ROOFTOP LIFESTYLE AMENITIES
-   PREMIUM LIGHT EDITORIAL
-   ========================================================= */
+   PREMIUM EDITORIAL LAYOUT
+========================================================= */
 
-.rooftop-section {
+.amenities-section {
   width: 100%;
-  padding: 105px 4.2vw 90px;
-  background: #f7f3eb;
-  color: #27231f;
+  background: #f4efe6;
+  color: #171512;
   overflow: hidden;
+  font-family: "Manrope", sans-serif;
 }
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
-.rooftop-header {
-  max-width: 1500px;
-  margin: 0 auto 52px;
-}
-
-.rooftop-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
-  color: #b58a4b;
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-}
-
-.rooftop-eyebrow span {
-  width: 48px;
-  height: 1px;
-  background: #b58a4b;
-}
-
-.rooftop-heading-row {
-  display: grid;
-  grid-template-columns: 1.5fr 0.7fr;
-  align-items: end;
-  gap: 70px;
-}
-
-.rooftop-heading-row h2 {
-  margin: 0;
-  color: #27231f;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(58px, 7vw, 102px);
-  font-weight: 400;
-  line-height: 0.82;
-  letter-spacing: -0.055em;
-}
-
-.rooftop-heading-row h2 em {
-  display: block;
-  margin-top: 8px;
-  color: #b58a4b;
-  font-size: 0.79em;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
-}
-
-.rooftop-heading-copy {
-  padding-bottom: 8px;
-}
-
-.rooftop-heading-copy p {
-  max-width: 400px;
-  margin: 0;
-  color: #706960;
-  font-family: "DM Sans", sans-serif;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.heading-decoration {
-  display: flex;
-  align-items: center;
-  width: 125px;
-  margin-top: 23px;
-}
-
-.heading-decoration span {
-  flex: 1;
-  height: 1px;
-  background: rgba(181, 138, 75, 0.42);
-}
-
-.heading-decoration i {
-  width: 7px;
-  height: 7px;
-  margin: 0 9px;
-  border: 1px solid #b58a4b;
-  transform: rotate(45deg);
+.amenities-header {
+  width: 100%;
+  padding: 58px 5vw 42px;
+  box-sizing: border-box;
+  background: #f4efe6;
 }
 
 /* =========================================================
-   MAIN GRID
-   ========================================================= */
+   EYEBROW
+========================================================= */
 
-.rooftop-main {
-  max-width: 1500px;
+.amenities-eyebrow {
+  width: max-content;
+  margin: 0 auto 42px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ae8248;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.eyebrow-line {
+  width: 38px;
+  height: 1px;
+  background: #ae8248;
+}
+
+/* =========================================================
+   HEADER TITLE
+========================================================= */
+
+.amenities-heading-wrap {
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
+  display: block;
+}
+
+.amenities-main-heading {
+  text-align: left;
+}
+
+.amenities-main-heading h1 {
+  margin: 0;
+  color: #11100e;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(76px, 7.2vw, 108px);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+}
+
+.amenities-main-heading h2 {
+  margin: 16px 0 0 4px;
+  color: #b4864b;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(31px, 3vw, 43px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+/* =========================================================
+   INTRO / ORNAMENT REMOVED
+========================================================= */
+
+.amenities-intro {
+  display: none;
+}
+
+.heading-ornament {
+  display: none;
+}
+
+/* =========================================================
+   MAIN ROOFTOP AREA
+========================================================= */
+
+.rooftop-content {
+  width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.48fr) minmax(470px, 0.82fr);
-  gap: 52px;
+  grid-template-columns: 65% 35%;
   align-items: stretch;
+  background: #f4efe6;
 }
 
 /* =========================================================
    IMAGE
-   ========================================================= */
+========================================================= */
 
-.rooftop-image-box {
+.rooftop-image-wrap {
   position: relative;
   width: 100%;
-  height: 650px;
+  background: #ded6c9;
   overflow: hidden;
-  background: #ded7ca;
-}
-
-.rooftop-image-box > img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.rooftop-image-box:hover > img {
-  transform: scale(1.035);
-}
-
-.rooftop-image-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.02) 45%,
-      rgba(0, 0, 0, 0.18) 100%
-    );
-  pointer-events: none;
 }
 
 .rooftop-image-frame {
-  position: absolute;
-  inset: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  pointer-events: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rooftop-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.rooftop-image-frame:hover img {
+  transform: scale(1.012);
 }
 
 /* =========================================================
-   IMAGE CAPTION
-   ========================================================= */
+   IMAGE FRAME
+========================================================= */
 
-.rooftop-image-caption {
+.rooftop-image-inner-frame {
   position: absolute;
-  left: 28px;
-  bottom: 27px;
-  min-width: 255px;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: rgba(28, 25, 21, 0.94);
-  color: #fffaf2;
+  inset: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  z-index: 3;
 }
 
-.caption-logo {
-  width: 31px;
-  height: 35px;
+/* =========================================================
+   IMAGE BRANDING
+========================================================= */
+
+.rooftop-image-label {
+  position: absolute;
+  left: 28px;
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.label-r {
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid rgba(181, 138, 75, 0.55);
-  color: #c39a5d;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
 }
 
-.rooftop-image-caption strong,
-.rooftop-image-caption span {
+.rooftop-image-label strong {
   display: block;
-  font-family: "DM Sans", sans-serif;
+  color: #dfbd82;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
 }
 
-.rooftop-image-caption strong {
-  margin-bottom: 5px;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-}
-
-.rooftop-image-caption span {
-  color: #c39a5d;
-  font-size: 8px;
-  letter-spacing: 0.18em;
+.rooftop-image-label small {
+  display: block;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 6px;
+  letter-spacing: 0.19em;
 }
 
 /* =========================================================
    RIGHT DETAILS
-   ========================================================= */
+========================================================= */
 
 .rooftop-details {
   min-width: 0;
+  margin-top: -58px;
+  padding: 38px 4.2vw 30px 34px;
+  background: #f4efe6;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 4;
 }
+
+/* =========================================================
+   ELEVATED HEADING
+========================================================= */
 
 .rooftop-details-heading {
-  padding: 7px 0 27px;
-  text-align: center;
-  border-bottom: 1px solid rgba(70, 62, 52, 0.16);
+  padding-bottom: 20px;
+  margin: 0;
 }
 
-.rooftop-details-heading > span {
+.detail-count {
   display: block;
-  margin-bottom: 18px;
-  color: #b58a4b;
-  font-family: "DM Sans", sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.25em;
+  margin-bottom: 11px;
+  color: #b4864b;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
 }
 
 .rooftop-details-heading h3 {
+  max-width: 430px;
   margin: 0;
-  color: #2d2823;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(30px, 2.55vw, 42px);
+  color: #151311;
+  font-family: "Playfair Display", serif;
+
+  /* Slightly reduced for better balance */
+  font-size: clamp(34px, 2.8vw, 46px);
+
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+/* =========================================================
+   SMALL ORNAMENT
+========================================================= */
+
+.small-ornament {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.small-ornament span {
+  width: 27px;
+  height: 1px;
+  background: rgba(174, 130, 72, 0.5);
+}
+
+.small-ornament i {
+  color: #b4864b;
+  font-size: 9px;
+  font-style: normal;
+}
+
+/* =========================================================
+   AMENITY LIST
+========================================================= */
+
+.amenity-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 22px;
+  border-top: 1px solid rgba(65, 57, 47, 0.18);
+}
+
+/* =========================================================
+   AMENITY ROW
+========================================================= */
+
+.amenity-row {
+  position: relative;
+  min-width: 0;
+  min-height: 108px;
+  display: block;
+  padding: 16px 4px 16px 0;
+  border-bottom: 1px solid rgba(65, 57, 47, 0.18);
+  box-sizing: border-box;
+
+  transition:
+    background 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.amenity-row:hover {
+  padding-left: 4px;
+  background: rgba(177, 138, 82, 0.035);
+}
+
+/* =========================================================
+   AMENITY TITLE
+========================================================= */
+
+.amenity-title {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  align-items: start;
+  gap: 7px;
+}
+
+.amenity-title > span {
+  display: block;
+  padding-top: 2px;
+  color: #b4864b;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.amenity-title h4 {
+  margin: 0;
+  color: #171512;
+
+  /* Improved readability */
+  font-size: 10px;
+
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.13em;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.amenity-copy {
+  min-width: 0;
+}
+
+.amenity-copy p {
+  max-width: 220px;
+  margin: 9px 0 0 32px;
+  color: #5b544b;
+
+  /* Increased from 8.5px */
+  font-size: 12px;
+
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   REMOVE ARROWS
+========================================================= */
+
+.amenity-arrow {
+  display: none;
+}
+
+/* =========================================================
+   BOTTOM DARK LUXURY STRIP
+========================================================= */
+
+.moments-strip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr repeat(4, 1fr);
+  background: #201e1a;
+  border-top: 1px solid rgba(180, 140, 82, 0.28);
+}
+
+/* =========================================================
+   INTRO PANEL
+========================================================= */
+
+.moments-intro {
+  min-height: 168px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.moments-copy {
+  padding-left: 17px;
+  border-left: 1px solid #b4864b;
+}
+
+.moments-copy > span {
+  display: block;
+  color: #b4864b;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+
+.moments-copy h3 {
+  margin: 10px 0 0;
+  color: #f4efe6;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
   font-weight: 400;
   line-height: 1.04;
   letter-spacing: -0.025em;
 }
 
-.gold-divider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 23px;
-}
-
-.gold-divider::before,
-.gold-divider::after {
-  content: "";
-  width: 48px;
-  height: 1px;
-  background: rgba(181, 138, 75, 0.4);
-}
-
-.gold-divider i {
-  width: 6px;
-  height: 6px;
-  margin: 0 8px;
-  border: 1px solid #b58a4b;
-  transform: rotate(45deg);
-}
-
-/* =========================================================
-   AMENITY LIST
-   ========================================================= */
-
-.amenity-list {
-  width: 100%;
-}
-
-.amenity-item {
-  min-height: 128px;
-  display: grid;
-  grid-template-columns: 82px minmax(0, 1fr) 28px;
-  align-items: center;
-  gap: 22px;
-  border-bottom: 1px solid rgba(70, 62, 52, 0.15);
-  transition:
-    background 0.35s ease,
-    padding 0.35s ease,
-    border-color 0.35s ease;
-}
-
-.amenity-item:hover {
-  padding-left: 9px;
-  padding-right: 7px;
-  background: rgba(255, 255, 255, 0.52);
-}
-
-/* =========================================================
-   ICON BOX
-   ========================================================= */
-
-.amenity-icon {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(181, 138, 75, 0.38);
-  background: rgba(255, 255, 255, 0.24);
-  transition:
-    background 0.35s ease,
-    border-color 0.35s ease,
-    transform 0.35s ease;
-}
-
-.amenity-icon svg {
-  width: 42px;
-  height: 42px;
-  fill: none;
-  stroke: #b58a4b;
-  stroke-width: 1.45;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: stroke 0.35s ease;
-}
-
-.amenity-item:hover .amenity-icon {
-  background: #b58a4b;
-  border-color: #b58a4b;
-  transform: translateY(-2px);
-}
-
-.amenity-item:hover .amenity-icon svg {
-  stroke: #fffaf2;
-}
-
-/* =========================================================
-   CONTENT
-   ========================================================= */
-
-.amenity-info {
-  min-width: 0;
-}
-
-.amenity-topline {
-  display: flex;
-  align-items: baseline;
-  gap: 17px;
-  margin-bottom: 8px;
-}
-
-.amenity-number {
-  flex: 0 0 auto;
-  color: #b58a4b;
-  font-family: "DM Sans", sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-}
-
-.amenity-content h4,
-.amenity-topline h4 {
-  margin: 0;
-  color: #29251f;
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-}
-
-.amenity-info p {
-  max-width: 330px;
-  margin: 0;
-  color: #756e65;
-  font-family: "DM Sans", sans-serif;
-  font-size: 11px;
-  line-height: 1.7;
-}
-
-/* =========================================================
-   ARROW
-   ========================================================= */
-
-.amenity-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  color: #b58a4b;
-}
-
-.amenity-arrow span {
-  display: inline-block;
-  font-family: "DM Sans", sans-serif;
-  font-size: 21px;
-  font-weight: 300;
-  transition: transform 0.35s ease;
-}
-
-.amenity-item:hover .amenity-arrow span {
-  transform: translateX(5px);
-}
-
-/* =========================================================
-   BOTTOM STRIP
-   ========================================================= */
-
-.rooftop-bottom {
-  max-width: 1500px;
-  min-height: 170px;
-  margin: 30px auto 0;
-  display: grid;
-  grid-template-columns: 125px 1.25fr 2fr;
-  align-items: stretch;
-  border: 1px solid rgba(181, 138, 75, 0.38);
-  background: rgba(251, 248, 241, 0.86);
-}
-
-/* =========================================================
-   DECORATION
-   ========================================================= */
-
-.bottom-decoration {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bottom-decoration svg {
-  width: 62px;
-  height: 78px;
-  fill: none;
-  stroke: #b58a4b;
-  stroke-width: 0.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* =========================================================
-   BOTTOM TITLE
-   ========================================================= */
-
-.bottom-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px 30px;
-  border-right: 1px solid rgba(70, 62, 52, 0.14);
-}
-
-.bottom-title > span {
+.moments-copy h3 em {
   display: block;
-  margin-bottom: 8px;
-  color: #b58a4b;
-  font-family: "DM Sans", sans-serif;
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-}
-
-.bottom-title h3 {
-  margin: 0;
-  color: #2c2722;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 0.98;
-}
-
-.bottom-title h3 em {
-  display: block;
-  margin-top: 5px;
-  color: #b58a4b;
-  font-size: 0.68em;
+  color: #c69b5d;
   font-style: italic;
 }
 
-.bottom-line {
+/* =========================================================
+   ORNAMENT
+========================================================= */
+
+.moments-ornament {
+  margin-top: 14px;
   display: flex;
   align-items: center;
-  width: 100px;
-  margin-top: 15px;
+  gap: 8px;
 }
 
-.bottom-line span {
-  flex: 1;
+.moments-ornament span {
+  width: 23px;
   height: 1px;
-  background: rgba(181, 138, 75, 0.4);
+  background: rgba(197, 155, 94, 0.55);
 }
 
-.bottom-line i {
-  width: 5px;
-  height: 5px;
-  margin: 0 6px;
-  border: 1px solid #b58a4b;
-  transform: rotate(45deg);
+.moments-ornament i {
+  color: #c59b5e;
+  font-size: 8px;
+  font-style: normal;
 }
 
 /* =========================================================
-   BOTTOM FEATURES
-   ========================================================= */
+   FEATURE PANELS
+========================================================= */
 
-.bottom-features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.bottom-feature {
+.moment-feature {
   position: relative;
-  min-width: 0;
+  min-height: 168px;
+  padding: 28px 26px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 10px;
-  text-align: center;
-  border-right: 1px solid rgba(70, 62, 52, 0.14);
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease;
+  justify-content: flex-end;
+  background: #201e1a;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  transition: background 0.3s ease;
 }
 
-.bottom-feature:last-child {
+.moment-feature:last-child {
   border-right: 0;
 }
 
-.bottom-feature:hover {
-  background: rgba(255, 255, 255, 0.58);
+.moment-feature:hover {
+  background: #27241f;
 }
 
-.feature-number {
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.moment-number {
   position: absolute;
-  top: 15px;
-  color: #b58a4b;
-  font-family: "DM Sans", sans-serif;
+  top: 23px;
+  left: 26px;
+  color: #b4864b;
+  font-family: "Playfair Display", serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   HIDE SVG
+========================================================= */
+
+.feature-svg {
+  display: none;
+}
+
+/* =========================================================
+   FEATURE TEXT
+========================================================= */
+
+.moment-feature strong {
+  display: block;
+  color: #f4efe6;
   font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  letter-spacing: 0.19em;
 }
 
-.feature-icon {
-  margin-bottom: 9px;
+.moment-feature small {
+  display: block;
+  margin-top: 7px;
+  color: #968e83;
+  font-size: 6.5px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
 }
 
-.feature-icon svg {
-  width: 34px;
-  height: 34px;
-  fill: none;
-  stroke: #b58a4b;
-  stroke-width: 1.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 0.3s ease;
-}
+/* =========================================================
+   GOLD LINE
+========================================================= */
 
-.bottom-feature:hover .feature-icon svg {
-  transform: translateY(-3px);
-}
-
-.bottom-feature strong,
-.bottom-feature > span:last-child {
-  font-family: "DM Sans", sans-serif;
-}
-
-.bottom-feature strong {
-  color: #302b25;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-}
-
-.bottom-feature > span:last-child {
-  margin-top: 3px;
-  color: #302b25;
-  font-size: 9px;
-  letter-spacing: 0.08em;
+.moment-feature::after {
+  content: "";
+  position: absolute;
+  left: 26px;
+  bottom: 22px;
+  width: 23px;
+  height: 1px;
+  background: #b4864b;
 }
 
 /* =========================================================
    LARGE TABLET
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
 
-  .rooftop-heading-row {
-    grid-template-columns: 1fr;
-    gap: 28px;
+  .amenities-header {
+    padding: 52px 5vw 38px;
   }
 
-  .rooftop-heading-copy p {
-    max-width: 560px;
+  .amenities-heading-wrap {
+    display: block;
   }
 
-  .rooftop-main {
-    grid-template-columns: 1fr;
-    gap: 45px;
+  .amenities-main-heading h1 {
+    font-size: clamp(65px, 8vw, 95px);
   }
 
-  .rooftop-image-box {
-    height: 620px;
+  .amenities-main-heading h2 {
+    font-size: clamp(28px, 3.4vw, 38px);
   }
 
-  .rooftop-details-heading {
-    text-align: left;
+  .rooftop-content {
+    grid-template-columns: 60% 40%;
   }
 
-  .gold-divider {
-    justify-content: flex-start;
+  .rooftop-details {
+    margin-top: -45px;
+    padding: 30px 3.5vw 32px 28px;
   }
 
-  .rooftop-bottom {
-    grid-template-columns: 110px 1fr;
+  .rooftop-details-heading h3 {
+    font-size: 40px;
   }
 
-  .bottom-features {
+  .amenity-list {
+    column-gap: 18px;
+  }
+
+  .amenity-row {
+    min-height: 108px;
+  }
+
+  .amenity-copy p {
+    font-size: 11px;
+  }
+
+  .moments-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .moments-intro {
     grid-column: 1 / -1;
     min-height: 145px;
-    border-top: 1px solid rgba(70, 62, 52, 0.14);
+  }
+
+  .moment-feature {
+    min-height: 150px;
   }
 }
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
 
-  .rooftop-section {
-    padding: 85px 25px 70px;
+  .amenities-header {
+    padding: 48px 25px 35px;
   }
 
-  .rooftop-heading-row h2 {
-    font-size: clamp(52px, 10vw, 78px);
+  .amenities-eyebrow {
+    margin-bottom: 30px;
   }
 
-  .rooftop-main {
-    gap: 38px;
+  .amenities-main-heading {
+    text-align: center;
   }
 
-  .rooftop-image-box {
-    height: 560px;
+  .amenities-main-heading h1 {
+    font-size: 68px;
   }
 
-  .amenity-item {
-    grid-template-columns: 72px minmax(0, 1fr) 25px;
-    gap: 18px;
+  .amenities-main-heading h2 {
+    margin-left: 0;
+    font-size: 30px;
   }
 
-  .amenity-icon {
-  width: 68px;
-  height: 68px;
+  .rooftop-content {
+    grid-template-columns: 1fr;
+  }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .rooftop-image-wrap {
+    height: auto;
+  }
 
-  flex-shrink: 0;
+  .rooftop-image-frame img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
 
-  border: 1px solid rgba(181, 138, 75, 0.38);
-  background: rgba(255, 255, 255, 0.32);
+  .rooftop-details {
+    margin-top: 0;
+    padding: 42px 25px 45px;
+  }
 
-  transition:
-    background 0.35s ease,
-    border-color 0.35s ease,
-    transform 0.35s ease;
-}
+  .rooftop-details-heading {
+    transform: none;
+  }
 
-.amenity-item:hover .amenity-icon {
-  background: #b58a4b;
-  border-color: #b58a4b;
-  transform: translateY(-2px);
-}
+  .rooftop-details-heading h3 {
+    max-width: 500px;
+    font-size: 43px;
+  }
 
-.amenity-item:hover .amenity-icon svg {
-  stroke: #fffaf2;
-}
-.amenity-icon svg {
-  width: 42px;
-  height: 42px;
-  display: block;
+  .amenity-list {
+    column-gap: 22px;
+  }
 
-  fill: none;
-  stroke: #b58a4b;
-  stroke-width: 1.45;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  .amenity-copy p {
+    font-size: 12px;
+  }
 
-  overflow: visible;
-}
+  .moment-feature {
+    min-height: 160px;
+    padding: 28px 25px;
+  }
 }
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 520px) {
 
-  .rooftop-section {
-    padding: 70px 18px 60px;
+  .amenities-header {
+    padding: 42px 20px 32px;
   }
 
-  .rooftop-header {
-    margin-bottom: 35px;
+  .amenities-eyebrow {
+    font-size: 7px;
+    margin-bottom: 27px;
   }
 
-  .rooftop-eyebrow {
-    margin-bottom: 22px;
-    font-size: 8px;
+  .amenities-main-heading h1 {
+    font-size: 48px;
   }
 
-  .rooftop-eyebrow span {
-    width: 34px;
+  .amenities-main-heading h2 {
+    margin-top: 12px;
+    font-size: 24px;
   }
 
-  .rooftop-heading-row {
-    gap: 22px;
+  .rooftop-image-wrap {
+    height: auto;
   }
 
-  .rooftop-heading-row h2 {
-    font-size: clamp(45px, 14vw, 68px);
+  .rooftop-image-frame img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
   }
 
-  .rooftop-heading-copy p {
-    font-size: 12px;
+  .rooftop-image-inner-frame {
+    inset: 9px;
   }
 
-  .rooftop-main {
-    gap: 35px;
+  .rooftop-image-label {
+    left: 18px;
+    bottom: 18px;
   }
 
-  .rooftop-image-box {
-    height: 430px;
-  }
-
-  .rooftop-image-frame {
-    inset: 10px;
-  }
-
-  .rooftop-image-caption {
-    left: 17px;
-    bottom: 17px;
-    min-width: auto;
-    padding: 12px 14px;
-  }
-
-  .caption-logo {
-    font-size: 23px;
-  }
-
-  .rooftop-details-heading h3 {
-    font-size: 31px;
-  }
-
-  .amenity-item {
-    grid-template-columns: 58px minmax(0, 1fr) 18px;
-    gap: 13px;
-    min-height: 120px;
-  }
-
-  .amenity-icon {
-    width: 52px;
-    height: 52px;
-  }
-
-  .amenity-icon svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .amenity-topline {
-    gap: 9px;
-    margin-bottom: 6px;
-  }
-
-  .amenity-number {
-    font-size: 8px;
-  }
-
-  .amenity-topline h4 {
-    font-size: 9px;
-    letter-spacing: 0.07em;
-  }
-
-  .amenity-info p {
-    font-size: 9.5px;
-    line-height: 1.6;
-  }
-
-  .amenity-arrow span {
+  .label-r {
+    width: 36px;
+    height: 36px;
     font-size: 17px;
   }
 
-  .rooftop-bottom {
+  .rooftop-image-label strong {
+    font-size: 6px;
+  }
+
+  .rooftop-image-label small {
+    font-size: 5px;
+  }
+
+  .rooftop-details {
+    margin-top: 0;
+    padding: 38px 20px 40px;
+  }
+
+  .rooftop-details-heading {
+    padding-bottom: 23px;
+  }
+
+  .rooftop-details-heading h3 {
+    font-size: 35px;
+  }
+
+  .amenity-list {
     grid-template-columns: 1fr;
+  }
+
+  .amenity-row {
     min-height: auto;
+    padding: 18px 0;
   }
 
-  .bottom-decoration {
-    display: none;
+  .amenity-title h4 {
+    font-size: 10px;
   }
 
-  .bottom-title {
-    padding: 28px 20px;
+  .amenity-copy p {
+    max-width: 100%;
+    margin-left: 32px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .moments-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .moments-intro {
+    grid-column: auto;
+    min-height: 150px;
+    padding: 28px 25px;
+  }
+
+  .moment-feature {
+    min-height: 138px;
+    padding: 28px 25px;
     border-right: 0;
-    text-align: center;
-    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .bottom-title h3 {
-    font-size: 29px;
+  .moment-feature:last-child {
+    border-bottom: 0;
   }
 
-  .bottom-features {
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 230px;
+  .moment-number {
+    top: 21px;
+    left: 25px;
   }
 
-  .bottom-feature {
-    min-height: 115px;
+  .moment-feature::after {
+    left: 25px;
+    bottom: 20px;
   }
-
-  .bottom-feature:nth-child(2) {
-    border-right: 0;
-  }
-
-  .bottom-feature:nth-child(3),
-  .bottom-feature:nth-child(4) {
-    border-top: 1px solid rgba(70, 62, 52, 0.14);
-  }
-}
-/* =========================================================
-   FINAL AMENITY ICON FIX
-   ========================================================= */
-
-.amenity-icon svg {
-  width: 43px;
-  height: 43px;
-  display: block;
-  overflow: visible;
-
-  fill: none;
-  stroke: #b58a4b;
-  stroke-width: 1.35;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.amenity-item:hover .amenity-icon svg {
-  stroke: #fffaf2;
 }

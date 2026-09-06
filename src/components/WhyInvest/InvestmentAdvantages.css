@@ -1,316 +1,1714 @@
 /* =========================================================
    RAYA AL QURUM
-   WHY INVEST · INVESTMENT ADVANTAGES
-   COMPLETELY ISOLATED CSS
-   ========================================================= */
+   INVESTMENT ADVANTAGES
+   Luxury Editorial / Premium Real Estate
+========================================================= */
 
-.investment-advantages {
-  position: relative;
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap");
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.investment-page {
+  --raya-black: #11110f;
+  --raya-black-soft: #191916;
+  --raya-charcoal: #24231f;
+
+  --raya-ivory: #f5f1e8;
+  --raya-cream: #ebe5d8;
+  --raya-sand: #ddd7ca;
+  --raya-white: #ffffff;
+
+  --raya-gold: #b79a62;
+  --raya-gold-light: #d3bc8a;
+  --raya-gold-dark: #806a42;
+
+  --raya-text: #25241f;
+  --raya-muted: #77746c;
+
+  --raya-border: rgba(183, 154, 98, 0.28);
+  --raya-border-light: rgba(36, 36, 31, 0.14);
+
   width: 100%;
-  padding: 120px 0 130px;
-  background: #f5f0e8;
-  color: #26231f;
   overflow: hidden;
-  box-sizing: border-box;
-}
 
-.investment-advantages *,
-.investment-advantages *::before,
-.investment-advantages *::after {
-  box-sizing: border-box;
+  background: var(--raya-ivory);
+  color: var(--raya-text);
+
+  font-family: "Inter", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 
 /* =========================================================
-   CONTAINER
-   ========================================================= */
+   RESET
+========================================================= */
 
-.investment-advantages-container {
-  width: min(1240px, calc(100% - 80px));
+.investment-page *,
+.investment-page *::before,
+.investment-page *::after {
+  box-sizing: border-box;
+}
+
+.investment-page h1,
+.investment-page h2,
+.investment-page h3,
+.investment-page p {
+  margin-top: 0;
+}
+
+.investment-page h1,
+.investment-page h2,
+.investment-page h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.investment-container {
+  width: min(1240px, calc(100% - 96px));
   margin: 0 auto;
 }
 
 
 /* =========================================================
-   HEADING
-   ========================================================= */
+   EYEBROW
+========================================================= */
 
-.investment-advantages-heading {
-  max-width: 850px;
-  margin-bottom: 75px;
-}
-
-.investment-advantages-heading > span {
+.investment-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 
-  margin-bottom: 24px;
+  color: var(--raya-gold);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  line-height: 1.4;
+
   text-transform: uppercase;
-
-  color: #a7834d;
+  white-space: nowrap;
 }
 
-.investment-advantages-heading > span::before {
+.investment-eyebrow::before {
   content: "";
-  display: block;
 
-  width: 34px;
+  width: 28px;
   height: 1px;
+  flex: 0 0 auto;
 
-  background: #b8955e;
-}
-
-.investment-advantages-heading h2 {
-  margin: 0;
-
-  font-family: "Playfair Display", serif;
-  font-size: clamp(44px, 5vw, 72px);
-  line-height: 1.04;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-
-  color: #26231f;
-}
-
-.investment-advantages-heading p {
-  margin: 28px 0 0;
-
-  max-width: 570px;
-
-  font-family: "Manrope", sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-
-  color: #716b63;
+  background: currentColor;
 }
 
 
 /* =========================================================
-   INVESTMENT HIGHLIGHTS GRID
-   ========================================================= */
-
-.investment-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  border-top: 1px solid rgba(52, 45, 37, 0.16);
-  border-left: 1px solid rgba(52, 45, 37, 0.16);
-}
-
+   HERO
+========================================================= */
 
 /* =========================================================
-   HIGHLIGHT CARD
-   ========================================================= */
+   HERO — ORIGINAL SOURCE RESTORE
+========================================================= */
 
-.investment-highlight {
+.investment-hero {
   position: relative;
-
-  min-height: 300px;
-  padding: 38px 38px 42px;
-
-  border-right: 1px solid rgba(52, 45, 37, 0.16);
-  border-bottom: 1px solid rgba(52, 45, 37, 0.16);
-
-  background: rgba(255, 252, 246, 0.42);
-
-  transition:
-    background 0.35s ease,
-    transform 0.35s ease;
-}
-
-.investment-highlight:hover {
-  background: rgba(255, 252, 246, 0.8);
-}
-
-
-/* =========================================================
-   NUMBER
-   ========================================================= */
-
-.investment-number {
-  display: block;
-
-  margin-bottom: 52px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-
-  color: #a7834d;
-}
-
-
-/* =========================================================
-   CARD TITLE
-   ========================================================= */
-
-.investment-highlight h3 {
-  margin: 0 0 16px;
-
-  font-family: "Playfair Display", serif;
-  font-size: 27px;
-  line-height: 1.2;
-  font-weight: 500;
-
-  color: #29251f;
-}
-
-
-/* =========================================================
-   CARD DESCRIPTION
-   ========================================================= */
-
-.investment-highlight p {
-  max-width: 310px;
-
-  margin: 0;
-
-  font-family: "Manrope", sans-serif;
-  font-size: 14px;
-  line-height: 1.75;
-
-  color: #716b63;
-}
-
-
-/* =========================================================
-   ROI / APPRECIATION VALUE
-   ========================================================= */
-
-.investment-highlight strong {
-  display: block;
-
-  margin: -3px 0 12px;
-
-  font-family: "Playfair Display", serif;
-  font-size: 42px;
-  line-height: 1;
-
-  font-weight: 500;
-
-  color: #a7834d;
-}
-
-
-/* =========================================================
-   BOTTOM FEATURE GRID
-   ========================================================= */
-
-.investment-bottom-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  margin-top: 80px;
-
-  gap: 24px;
-}
-
-
-/* =========================================================
-   BOTTOM FEATURE CARDS
-   ========================================================= */
-
-.investment-bottom-card {
-  position: relative;
-
-  min-height: 330px;
-  padding: 48px;
-
-  background: #26231f;
-  color: #f8f3eb;
-
+  width: 100%;
   overflow: hidden;
+  background: #11110f;
+  color: var(--raya-white);
+  aspect-ratio: 1343 / 599;
 }
 
-.investment-bottom-card::after {
+.investment-hero-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.investment-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 8, 7, 0.62) 0%,
+      rgba(8, 8, 7, 0.34) 34%,
+      rgba(8, 8, 7, 0.10) 70%,
+      rgba(8, 8, 7, 0.02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.06) 0%,
+      rgba(0, 0, 0, 0.38) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO FRAME
+========================================================= */
+
+.investment-hero-frame {
+  position: absolute;
+  inset: 28px;
+  z-index: 2;
+
+  border: 1px solid rgba(210, 187, 137, 0.30);
+
+  pointer-events: none;
+}
+
+.investment-hero-frame::before,
+.investment-hero-frame::after {
   content: "";
 
   position: absolute;
 
-  right: -90px;
-  bottom: -100px;
-
-  width: 280px;
-  height: 280px;
-
-  border: 1px solid rgba(190, 157, 103, 0.22);
-  border-radius: 50%;
+  width: 34px;
+  height: 34px;
 }
 
-.investment-bottom-card > span {
+.investment-hero-frame::before {
+  top: -1px;
+  left: -1px;
+
+  border-top: 1px solid var(--raya-gold-light);
+  border-left: 1px solid var(--raya-gold-light);
+}
+
+.investment-hero-frame::after {
+  right: -1px;
+  bottom: -1px;
+
+  border-right: 1px solid var(--raya-gold-light);
+  border-bottom: 1px solid var(--raya-gold-light);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.investment-hero-content {
+  position: absolute;
+  z-index: 3;
+
+  top: 31%;
+  left: 50%;
+
+  width: min(1240px, calc(100% - 96px));
+
+  transform: translateX(-50%);
+
+  text-align: left;
+}
+
+.investment-hero-content .investment-eyebrow {
+  color: #e0c48f;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.80),
+    0 1px 4px rgba(0, 0, 0, 0.90);
+}
+
+.investment-hero-content .investment-eyebrow::before {
+  width: 45px;
+
+  background: var(--raya-gold-light);
+
+  box-shadow:
+    0 0 8px rgba(210, 187, 137, 0.45);
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.investment-hero-content h1 {
+  max-width: 850px;
+
+  margin: 22px 0 27px;
+
+  color: #fffaf2;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 6vw, 94px);
+  font-weight: 400;
+
+  line-height: 0.90;
+  letter-spacing: -0.055em;
+
+  text-shadow:
+    0 3px 20px rgba(0, 0, 0, 0.75),
+    0 1px 5px rgba(0, 0, 0, 0.95);
+}
+
+.investment-hero-content h1 span {
   display: block;
 
-  margin-bottom: 38px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-
-  color: #c5a56f;
+  color: var(--raya-gold-light);
+  font-weight: 400;
 }
 
-.investment-bottom-card h3 {
-  position: relative;
-  z-index: 1;
+
+/* =========================================================
+   HERO SUBTITLE
+========================================================= */
+
+.investment-hero-content p {
+  max-width: 560px;
 
   margin: 0;
 
-  font-family: "Playfair Display", serif;
-  font-size: clamp(30px, 3vw, 42px);
-  line-height: 1.12;
-  font-weight: 500;
+  color: #fffaf2;
 
-  color: #f8f3eb;
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.90),
+    0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
-.investment-bottom-card p {
+.investment-hero-content p::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 28px;
+  height: 1px;
+
+  margin-right: 12px;
+
+  vertical-align: middle;
+
+  background: var(--raya-gold-light);
+}
+
+
+/* =========================================================
+   HERO SCROLL
+========================================================= */
+
+.hero-scroll-mark {
+  position: absolute;
+
+  right: 42px;
+  bottom: 42px;
+
+  z-index: 4;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: rgba(247, 243, 235, 0.70);
+
+  font-size: 8px;
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+
+  transition: color 0.3s ease;
+}
+
+.hero-scroll-mark i {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  background: var(--raya-gold);
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-scroll-mark:hover {
+  color: var(--raya-gold-light);
+}
+
+.hero-scroll-mark:hover i {
+  width: 50px;
+  background: var(--raya-gold-light);
+}
+
+
+/* =========================================================
+   COMMON SECTION HEADING
+========================================================= */
+
+.section-heading {
   position: relative;
   z-index: 1;
 
-  max-width: 480px;
+  max-width: 820px;
 
-  margin: 25px 0 0;
+  margin-bottom: 62px;
+}
 
-  font-family: "Manrope", sans-serif;
-  font-size: 14px;
-  line-height: 1.8;
+.section-heading h2 {
+  margin: 22px 0;
 
-  color: rgba(248, 243, 235, 0.68);
+  font-size: clamp(54px, 5.5vw, 80px);
+  font-weight: 300;
+
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+}
+
+.section-heading h2 span {
+  color: var(--raya-gold-dark);
+  font-style: italic;
+}
+
+.section-heading p {
+  max-width: 530px;
+
+  margin: 0;
+
+  color: var(--raya-muted);
+
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   RAYA AL QURUM
+   WHY AL QURUM — LUXURY EDITORIAL
+   Premium Real Estate / Quiet Luxury
+========================================================= */
+
+.why-qurum-section {
+  position: relative;
+  width: 100%;
+  padding: 108px 0 110px;
+  overflow: hidden;
+  background: #f5f1e8;
+  color: #24231f;
+}
+
+/* VERY SUBTLE BACKGROUND BRANDING */
+.why-qurum-section::before {
+  content: "RAYA";
+  position: absolute;
+  top: -34px;
+  right: -28px;
+  color: rgba(183, 154, 98, 0.035);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(180px, 17vw, 260px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.09em;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.why-qurum-section .investment-container {
+  position: relative;
+  z-index: 2;
+  width: min(1240px, calc(100% - 90px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP EDITORIAL HEADER
+========================================================= */
+
+.why-qurum-top {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+
+  gap: 70px;
+  align-items: center;
+
+  margin-bottom: 70px;
+}
+
+
+/* LEFT SIDE */
+
+.why-qurum-top > div {
+  max-width: 780px;
+}
+
+
+/* EYEBROW */
+
+.why-qurum-top .investment-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 26px;
+
+  color: #ad8b51;
+
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+}
+
+.why-qurum-top .investment-eyebrow::before {
+  width: 30px;
+  height: 1px;
+  background: #ad8b51;
+}
+
+
+/* MAIN HEADING */
+
+.why-qurum-top h2 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #171614;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 6vw, 88px);
+  font-weight: 300;
+
+  line-height: 0.84;
+  letter-spacing: -0.055em;
+}
+
+
+/* GOLD SECOND LINE */
+
+.why-qurum-top h2 span {
+  display: block;
+
+  color: #947646;
+
+  font-style: italic;
+  font-weight: 300;
+}
+
+
+/* RIGHT INTRO */
+
+.why-qurum-top > p {
+  max-width: 405px;
+
+  margin: 0 0 5px auto;
+
+  color: #7b776f;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+
+  line-height: 1.95;
+  letter-spacing: 0.01em;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+========================================================= */
+
+.why-qurum-image {
+  position: relative;
+  z-index: 2;
+
+  width: 80%;
+
+  margin: 0 0 65px;
+
+  overflow: hidden;
+
+  background: #d8d2c5;
+
+  border: 1px solid rgba(183, 154, 98, 0.24);
+
+  border-radius: 0;
+
+  box-shadow:
+    0 24px 55px rgba(42, 35, 24, 0.08);
+  isolation: isolate;
+
+}
+
+
+/* INNER IMAGE FRAME */
+
+.why-qurum-image::before {
+  content: "";
+
+  position: absolute;
+  inset: 9px;
+
+  z-index: 3;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  pointer-events: none;
+}
+
+
+/* BOTTOM BRAND LABEL */
+
+.why-qurum-image::after {
+  content: "RAYA AL QURUM";
+
+  position: absolute;
+
+  left: 26px;
+  bottom: 25px;
+
+  z-index: 5;
+
+  padding: 10px 14px;
+
+  color: #d8bd86;
+
+  background: rgba(18, 18, 15, 0.82);
+
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* IMAGE */
+.why-qurum-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+    aspect-ratio: auto;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: scale(1);
+
+  transition:
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+}
+
+
+/* VERY SUBTLE IMAGE HOVER */
+
+.why-qurum-image:hover img {
+  transform: scale(1.018);
+
+  filter: saturate(0.98) contrast(1.01);
+}
+
+
+/* =========================================================
+   GOLD CORNER DETAIL
+========================================================= */
+
+.why-qurum-image {
+  isolation: isolate;
+}
+
+.why-qurum-image > img {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* TOP LEFT CORNER */
+
+.why-qurum-image .image-corner,
+.why-qurum-image::marker {
+  display: none;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.qurum-features {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(36, 35, 31, 0.15);
+  border-left: 1px solid rgba(36, 35, 31, 0.15);
+}
+
+
+/* FEATURE CARD */
+
+.qurum-features > div {
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 25px 28px 28px;
+
+  border-right: 1px solid rgba(36, 35, 31, 0.15);
+  border-bottom: 1px solid rgba(36, 35, 31, 0.15);
+
+  background: transparent;
+
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease;
+}
+
+
+/* GOLD MICRO LINE */
+
+.qurum-features > div::after {
+  content: "";
+
+  position: absolute;
+
+  left: 28px;
+  bottom: 0;
+
+  width: 28px;
+  height: 1px;
+
+  background: #b79a62;
+
+  opacity: 0.65;
+
+  transition: width 0.45s ease;
+}
+
+
+/* HOVER */
+
+.qurum-features > div:hover {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(183, 154, 98, 0.075),
+      rgba(183, 154, 98, 0.018)
+    );
+
+  border-color: rgba(183, 154, 98, 0.28);
+}
+
+
+/* EXTEND GOLD LINE */
+
+.qurum-features > div:hover::after {
+  width: 58px;
+}
+
+
+/* =========================================================
+   FEATURE NUMBER
+========================================================= */
+
+.qurum-features span {
+  display: block;
+
+  color: #b49359;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.qurum-features h3 {
+  margin: 58px 0 13px;
+
+  color: #25231f;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+
+  transition: color 0.35s ease;
+}
+
+
+.qurum-features > div:hover h3 {
+  color: #8e7145;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
+
+.qurum-features p {
+  max-width: 225px;
+
+  margin: 0;
+
+  color: #77736b;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10.5px;
+  font-weight: 300;
+
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+
+/* =========================================================
+   DESKTOP LARGE
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .why-qurum-section {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+
+  .why-qurum-section .investment-container {
+    width: min(1320px, calc(100% - 120px));
+  }
+
+  .why-qurum-top {
+    grid-template-columns: 1.2fr 0.65fr;
+    gap: 100px;
+    margin-bottom: 72px;
+  }
+
+  .why-qurum-top h2 {
+    font-size: 92px;
+  }
+
+  .why-qurum-image {
+    margin-bottom: 82px;
+  }
+
+  .qurum-features > div {
+    min-height: 245px;
+    padding: 27px 30px;
+  }
+
+  .qurum-features h3 {
+    margin-top: 64px;
+    font-size: 34px;
+  }
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
-  .investment-advantages {
-    padding: 100px 0 110px;
+  .why-qurum-section {
+    padding: 95px 0 90px;
   }
 
-  .investment-advantages-container {
-    width: min(100% - 50px, 850px);
+  .why-qurum-section .investment-container {
+    width: min(100% - 60px, 900px);
   }
 
-  .investment-highlights {
+  .why-qurum-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 52px;
+  }
+
+  .why-qurum-top > p {
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .why-qurum-top h2 {
+    font-size: clamp(55px, 7vw, 76px);
+  }
+
+  .why-qurum-image {
+    margin-bottom: 62px;
+  }
+
+  
+
+  .qurum-features {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .investment-highlight {
-    min-height: 280px;
+  .qurum-features > div {
+    min-height: 225px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .why-qurum-section {
+    padding: 78px 0 76px;
   }
 
-  .investment-bottom-grid {
+  .why-qurum-section .investment-container {
+    width: calc(100% - 34px);
+  }
+
+
+  /* BACKGROUND WORD */
+
+  .why-qurum-section::before {
+    top: 18px;
+    right: -24px;
+
+    font-size: 125px;
+  }
+
+
+  /* HEADER */
+
+  .why-qurum-top {
+    gap: 25px;
+    margin-bottom: 42px;
+  }
+
+
+  .why-qurum-top .investment-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 8px;
+    letter-spacing: 0.25em;
+  }
+
+  .why-qurum-top .investment-eyebrow::before {
+    width: 23px;
+  }
+
+
+  .why-qurum-top h2 {
+    font-size: 49px;
+    line-height: 0.88;
+    letter-spacing: -0.045em;
+  }
+
+
+  .why-qurum-top > p {
+    max-width: 330px;
+
+    font-size: 11px;
+    line-height: 1.85;
+  }
+
+
+  /* IMAGE */
+
+  .why-qurum-image {
+    margin-bottom: 48px;
+  }
+
+  .why-qurum-image::before {
+    inset: 6px;
+  }
+
+  .why-qurum-image::after {
+    left: 16px;
+    bottom: 16px;
+
+    padding: 8px 10px;
+
+    font-size: 6.5px;
+    letter-spacing: 0.24em;
+  }
+
+  .why-qurum-image img {
+    object-fit: cover;
+  }
+
+
+  /* FEATURES */
+
+  .qurum-features {
     grid-template-columns: 1fr;
+  }
+
+  .qurum-features > div {
+    min-height: 190px;
+
+    padding: 22px 23px 25px;
+  }
+
+  .qurum-features > div::after {
+    left: 23px;
+  }
+
+  .qurum-features h3 {
+    margin-top: 48px;
+
+    font-size: 29px;
+  }
+
+  .qurum-features p {
+    max-width: 280px;
+
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .why-qurum-section {
+    padding: 68px 0;
+  }
+
+  .why-qurum-section .investment-container {
+    width: calc(100% - 28px);
+  }
+
+  .why-qurum-top h2 {
+    font-size: 44px;
+  }
+
+  .why-qurum-top > p {
+    font-size: 10px;
+  }
+
+  
+
+  .qurum-features > div {
+    min-height: 180px;
+  }
+
+  .qurum-features h3 {
+    font-size: 27px;
+  }
+}
+
+
+
+
+  
+
+
+
+
+/* =========================================================
+   KEY ADVANTAGES
+========================================================= */
+
+.key-advantages {
+  position: relative;
+
+  padding: 120px 0;
+
+  background:
+    radial-gradient(
+      circle at 88% 7%,
+      rgba(183, 154, 98, 0.09),
+      transparent 28%
+    ),
+    var(--raya-ivory);
+}
+
+.key-advantages::before {
+  content: "RAYA";
+
+  position: absolute;
+
+  top: 20px;
+  right: -40px;
+
+  color: rgba(183, 154, 98, 0.035);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 215px;
+
+  line-height: 1;
+  letter-spacing: -0.09em;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ADVANTAGES GRID
+========================================================= */
+
+.advantages-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--raya-border-light);
+  border-left: 1px solid var(--raya-border-light);
+}
+
+.advantage-card {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 30px 32px 34px;
+
+  overflow: hidden;
+
+  border-right: 1px solid var(--raya-border-light);
+  border-bottom: 1px solid var(--raya-border-light);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.advantage-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--raya-gold),
+      transparent
+    );
+
+  transform: scaleX(0);
+
+  transition: transform 0.5s ease;
+}
+
+.advantage-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(183, 154, 98, 0.15),
+      rgba(183, 154, 98, 0.035)
+    );
+
+  border-color: rgba(183, 154, 98, 0.45);
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 16px 40px rgba(90, 70, 35, 0.08);
+}
+
+.advantage-card:hover::after {
+  transform: scaleX(1);
+}
+
+.advantage-number {
+  color: var(--raya-gold);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+
+  letter-spacing: 0.08em;
+}
+
+.advantage-line {
+  width: 40px;
+  height: 1px;
+
+  margin: 48px 0 25px;
+
+  background: var(--raya-gold);
+
+  opacity: 0.65;
+
+  transition: width 0.45s ease;
+}
+
+.advantage-card:hover .advantage-line {
+  width: 70px;
+}
+
+.advantage-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 30px;
+  font-weight: 400;
+
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+
+  transition: color 0.4s ease;
+}
+
+.advantage-card:hover h3 {
+  color: var(--raya-gold-dark);
+}
+
+.advantage-card p {
+  max-width: 275px;
+
+  margin: 0;
+
+  color: var(--raya-muted);
+
+  font-size: 11px;
+  font-weight: 300;
+
+  line-height: 1.75;
+}
+
+.advantage-arrow {
+  position: absolute;
+
+  right: 27px;
+  bottom: 25px;
+
+  color: var(--raya-gold);
+
+  font-size: 18px;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+.advantage-card:hover .advantage-arrow {
+  color: var(--raya-gold-dark);
+
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   PRIME LOCATION — CLEAN FINAL
+   ROW 1: IMAGE LEFT / TEXT RIGHT
+   ROW 2: TEXT LEFT / MAP RIGHT
+========================================================= */
+
+.location-section {
+  position: relative;
+  width: 100%;
+  padding: 95px 0 105px;
+
+  background: var(--raya-black);
+  color: var(--raya-white);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   OUTER FRAME
+========================================================= */
+
+.location-section::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+
+  border: 1px solid rgba(183, 154, 98, 0.12);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.location-content {
+  position: relative;
+  z-index: 1;
+
+  width: min(1240px, calc(100% - 80px));
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 85px;
+}
+
+
+/* =========================================================
+   ROWS
+========================================================= */
+
+.location-row {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  gap: 68px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   ROW 1
+   IMAGE LEFT / TEXT RIGHT
+========================================================= */
+
+.location-row-one {
+  align-items: center;
+}
+
+.location-row-one .location-image-main {
+  order: 1;
+}
+
+.location-row-one .location-text {
+  order: 2;
+}
+
+
+/* =========================================================
+   ROW 2
+   TEXT LEFT / MAP RIGHT
+========================================================= */
+
+.location-row-two {
+  align-items: center;
+}
+
+.location-row-two .location-text {
+  order: 1;
+}
+
+.location-row-two .location-image-map {
+  order: 2;
+}
+
+
+/* =========================================================
+   TEXT AREA
+========================================================= */
+
+.location-text {
+  width: 100%;
+  max-width: 560px;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.location-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin: 0 0 25px;
+
+  color: var(--raya-gold-light);
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.location-eyebrow span {
+  display: block;
+
+  width: 42px;
+  height: 1px;
+
+  flex: 0 0 auto;
+
+  background: var(--raya-gold);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.location-text h2 {
+  margin: 0 0 25px;
+
+  color: var(--raya-white);
+
+  font-size: clamp(48px, 4.2vw, 68px);
+  font-weight: 300;
+
+  line-height: 0.93;
+  letter-spacing: -0.045em;
+
+  text-align: left;
+}
+
+.location-text h2 em,
+.location-text h2 span {
+  color: var(--raya-gold-light);
+  font-style: italic;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.location-intro {
+  margin: 0 0 32px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+  font-weight: 300;
+
+  line-height: 1.45;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   POINTS CONTAINER
+========================================================= */
+
+.location-points {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   EACH POINT
+========================================================= */
+
+.location-point {
+  width: 100%;
+
+  display: grid;
+
+  /*
+    Fixed first column keeps every dot
+    perfectly aligned.
+  */
+  grid-template-columns: 8px minmax(0, 1fr);
+
+  column-gap: 15px;
+
+  align-items: start;
+
+  margin: 0;
+  padding: 19px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+
+  text-align: left;
+}
+
+.location-point:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+
+/* =========================================================
+   DOT
+========================================================= */
+
+.location-dot {
+  display: block;
+
+  width: 4px;
+  height: 4px;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background: var(--raya-gold);
+}
+
+
+/* =========================================================
+   POINT TEXT
+========================================================= */
+
+.location-point p {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 13px;
+  font-weight: 300;
+
+  line-height: 1.7;
+
+  text-align: left;
+}
+
+.location-point strong {
+  color: rgba(255, 255, 255, 0.94);
+
+  font-weight: 500;
+}
+
+.location-point p span {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+
+/* =========================================================
+   SECOND ROW TEXT
+========================================================= */
+
+.location-text-second {
+  width: 100%;
+  max-width: 560px;
+
+  padding: 0;
+
+  text-align: left;
+}
+
+.location-row-two .location-point {
+  padding: 21px 0;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPERS
+   NO CARD
+   NO EXTRA BOX
+========================================================= */
+
+.location-image-main,
+.location-image-map {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: transparent;
+
+  border: 0;
+  outline: 0;
+}
+
+
+/* =========================================================
+   FULL IMAGES
+   NO CROPPING
+========================================================= */
+
+.location-image-main img,
+.location-image-map img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+  border: 0;
+  outline: 0;
+}
+
+
+/* =========================================================
+   IMAGE LABELS
+========================================================= */
+
+.location-image-label,
+.location-map-label {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  z-index: 5;
+
+  padding: 10px 14px;
+
+  background: rgba(16, 16, 14, 0.92);
+
+  color: var(--raya-gold-light);
+
+  font-size: 8px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.location-map-label {
+  color: var(--raya-white);
+}
+
+
+/* =========================================================
+   REMOVE OLD CARD / DECORATION IF STILL PRESENT
+========================================================= */
+
+.location-visual,
+.location-card {
+  background: transparent !important;
+
+  border: 0 !important;
+
+  box-shadow: none !important;
+
+  min-height: 0 !important;
+
+  padding: 0 !important;
+}
+
+.location-visual::before,
+.location-visual::after,
+.location-card::before,
+.location-card::after {
+  display: none !important;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   PREVENT OLD CENTER ALIGNMENT FROM AFFECTING POINTS
+========================================================= */
+
+.location-row-one .location-point,
+.location-row-two .location-point,
+.location-row-one .location-point p,
+.location-row-two .location-point p {
+  text-align: left;
+}
+
+.location-row-one .location-points,
+.location-row-two .location-points {
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .location-section {
+    padding: 80px 0 90px;
+  }
+
+  .location-content {
+    width: min(900px, calc(100% - 50px));
+    gap: 65px;
+  }
+
+  .location-row {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .location-row-one .location-image-main,
+  .location-row-one .location-text,
+  .location-row-two .location-text,
+  .location-row-two .location-image-map {
+    order: initial;
+  }
+
+  .location-text,
+  .location-text-second {
+    width: 100%;
+    max-width: 760px;
+
+    padding: 0;
+  }
+
+  .location-image-main,
+  .location-image-map {
+    width: 100%;
   }
 
 }
@@ -318,77 +1716,3739 @@
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 650px) {
 
-  .investment-advantages {
-    padding: 80px 0 90px;
+  .location-section {
+    padding: 65px 0 75px;
   }
 
-  .investment-advantages-container {
-    width: calc(100% - 36px);
+  .location-section::before {
+    inset: 12px;
   }
 
-  .investment-advantages-heading {
-    margin-bottom: 55px;
+  .location-content {
+    width: calc(100% - 32px);
+    gap: 48px;
   }
 
-  .investment-advantages-heading h2 {
-    font-size: clamp(38px, 11vw, 52px);
+  .location-row {
+    gap: 32px;
   }
 
-  .investment-advantages-heading p {
-    font-size: 14px;
-    line-height: 1.7;
+  .location-eyebrow {
+    margin-bottom: 20px;
+    font-size: 8px;
   }
 
-  .investment-highlights {
-    grid-template-columns: 1fr;
+  .location-eyebrow span {
+    width: 30px;
   }
 
-  .investment-highlight {
-    min-height: auto;
-    padding: 30px 26px 35px;
+  .location-text h2 {
+    font-size: clamp(42px, 11vw, 54px);
+    line-height: 0.94;
   }
 
-  .investment-number {
-    margin-bottom: 35px;
+  .location-intro {
+    margin-bottom: 25px;
+    font-size: 18px;
   }
 
-  .investment-highlight h3 {
-    font-size: 25px;
+  .location-point {
+    grid-template-columns: 7px minmax(0, 1fr);
+
+    column-gap: 12px;
+
+    padding: 16px 0;
   }
 
-  .investment-highlight p {
-    max-width: none;
-    font-size: 13px;
+  .location-point p {
+    font-size: 12px;
+    line-height: 1.65;
   }
 
-  .investment-highlight strong {
-    font-size: 38px;
+  .location-row-two .location-point {
+    padding: 16px 0;
   }
 
-  .investment-bottom-grid {
-    margin-top: 55px;
-    gap: 16px;
-  }
+  .location-image-label,
+  .location-map-label {
+    left: 10px;
+    bottom: 10px;
 
-  .investment-bottom-card {
-    min-height: 290px;
-    padding: 35px 28px;
-  }
+    padding: 8px 10px;
 
-  .investment-bottom-card > span {
-    margin-bottom: 30px;
-  }
-
-  .investment-bottom-card h3 {
-    font-size: 32px;
-  }
-
-  .investment-bottom-card p {
-    font-size: 13px;
+    font-size: 6px;
+    letter-spacing: 0.18em;
   }
 
 }
+
+/* =========================================================
+   ITC
+========================================================= */
+
+.itc-section {
+  position: relative;
+  padding: 72px 0 65px;
+  overflow: hidden;
+  background: var(--raya-cream);
+}
+
+.itc-section::after {
+  content: "ITC";
+  position: absolute;
+  right: -25px;
+  bottom: -80px;
+
+  color: rgba(183, 154, 98, 0.045);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 285px;
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.itc-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 68px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.itc-left {
+  min-width: 0;
+}
+
+.itc-heading {
+  padding-bottom: 30px;
+}
+
+.itc-heading h2 {
+  margin: 20px 0 0;
+
+  max-width: 720px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(52px, 5vw, 76px);
+  font-weight: 300;
+  line-height: 0.90;
+  letter-spacing: -0.05em;
+}
+
+.itc-heading h2 span {
+  color: var(--raya-gold-dark);
+  font-style: italic;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.itc-image {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 3px;
+
+  /* keeps the client's wide image proportion */
+  aspect-ratio: 1.93 / 1;
+}
+
+.itc-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.itc-image:hover img {
+  transform: scale(1.012);
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.itc-content {
+  min-width: 0;
+
+  padding-left: 52px;
+
+  border-left: 1px solid var(--raya-border);
+}
+
+.itc-small-title {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--raya-gold-dark);
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   RIGHT MAIN HEADING
+========================================================= */
+
+.itc-content h3 {
+  margin: 0 auto 36px;
+
+  max-width: 570px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(31px, 2.5vw, 38px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+
+  color: var(--raya-black);
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ITC ADVANTAGES
+========================================================= */
+
+.itc-list {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.itc-list > div {
+  position: relative;
+
+  padding: 20px 0 20px 27px;
+
+  border-top: 1px solid var(--raya-border-light);
+
+  transition:
+    background 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.itc-list > div:last-child {
+  border-bottom: 1px solid var(--raya-border-light);
+}
+
+.itc-list > div:hover {
+  padding-left: 32px;
+
+  background: rgba(183, 154, 98, 0.055);
+}
+
+
+/* Gold dot */
+
+.itc-list > div::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 29px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--raya-gold);
+}
+
+
+/* Benefit title */
+
+.itc-list strong {
+  display: block;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: var(--raya-black);
+}
+
+
+/* Benefit description */
+
+.itc-list p {
+  max-width: 540px;
+
+  margin: 6px 0 0;
+
+  color: var(--raya-muted);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .itc-section {
+    padding: 65px 0 70px;
+  }
+
+  .itc-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .itc-heading {
+    padding-bottom: 25px;
+  }
+
+  .itc-image {
+    aspect-ratio: 1.93 / 1;
+  }
+
+  .itc-content {
+    padding-left: 0;
+    padding-top: 45px;
+
+    border-left: none;
+    border-top: 1px solid var(--raya-border);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .itc-section {
+    padding: 58px 0 65px;
+  }
+
+  .itc-grid {
+    gap: 34px;
+  }
+
+  .itc-heading h2 {
+    font-size: 48px;
+    line-height: 0.92;
+  }
+
+  .itc-image {
+    aspect-ratio: 1.75 / 1;
+  }
+
+  .itc-content {
+    padding-top: 34px;
+  }
+
+  .itc-content h3 {
+    margin-bottom: 30px;
+
+    font-size: 31px;
+    line-height: 1.08;
+  }
+
+  .itc-list > div {
+    padding: 19px 0 19px 22px;
+  }
+
+  .itc-list > div:hover {
+    padding-left: 26px;
+  }
+
+  .itc-list strong {
+    font-size: 21px;
+  }
+
+  .itc-list p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+}
+
+
+/* =========================================================
+   RESIDENTIAL MIX — REFINED LUXURY
+========================================================= */
+
+.unit-section {
+  width: 100%;
+  padding: 78px 0 105px;
+  background: var(--raya-ivory);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.unit-section .section-heading {
+  margin-bottom: 58px;
+}
+
+.unit-section .section-heading h2 {
+  margin-top: 20px;
+}
+
+/* 4 RESIDENCE CARDS */
+
+.unit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--raya-border-light);
+  border-left: 1px solid var(--raya-border-light);
+}
+
+.unit-card {
+  position: relative;
+  min-height: 300px;
+  padding: 27px;
+  overflow: hidden;
+
+  border-right: 1px solid var(--raya-border-light);
+  border-bottom: 1px solid var(--raya-border-light);
+
+  background: transparent;
+
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.unit-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(183, 154, 98, 0.15),
+      rgba(183, 154, 98, 0.035)
+    );
+
+  border-color: rgba(183, 154, 98, 0.45);
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 16px 38px rgba(90, 70, 35, 0.08);
+}
+
+/* NUMBER */
+
+.unit-index {
+  color: var(--raya-gold);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+/* ARROW */
+
+.unit-arrow {
+  position: absolute;
+  top: 24px;
+  right: 27px;
+
+  color: var(--raya-gold);
+  font-size: 18px;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+.unit-card:hover .unit-arrow {
+  color: var(--raya-gold-dark);
+  transform: translate(4px, -4px);
+}
+
+/* CONTENT */
+
+.unit-card-content {
+  position: absolute;
+  left: 27px;
+  right: 27px;
+  bottom: 27px;
+}
+
+.unit-card h3 {
+  margin: 0 0 11px;
+
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+
+  transition: color 0.4s ease;
+}
+
+.unit-card p {
+  max-width: 245px;
+  margin: 0;
+
+  color: var(--raya-muted);
+
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.unit-card:hover h3 {
+  color: var(--raya-gold-dark);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .unit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .unit-card {
+    min-height: 280px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .unit-section {
+    padding: 65px 0 80px;
+  }
+
+  .unit-section .section-heading {
+    margin-bottom: 42px;
+  }
+
+  .unit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .unit-card {
+    min-height: 250px;
+  }
+
+  .unit-card h3 {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================================
+   MIXED USE — PREMIUM EDITORIAL
+========================================================= */
+
+.mixed-section {
+  position: relative;
+  padding: 82px 0 105px;
+  background: #e8dfd0;
+  overflow: hidden;
+}
+
+.mixed-heading {
+  max-width: 820px;
+  margin-bottom: 58px;
+}
+
+.mixed-heading h2 {
+  margin-top: 20px;
+}
+
+
+/* =========================================================
+   MIXED USE CARDS
+========================================================= */
+
+.mixed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: var(--raya-border);
+
+  border-top: 1px solid var(--raya-border);
+  border-left: 1px solid var(--raya-border);
+}
+
+.mixed-card {
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 28px;
+
+  overflow: hidden;
+
+  background: var(--raya-ivory);
+
+  border-right: 1px solid var(--raya-border);
+  border-bottom: 1px solid var(--raya-border);
+
+  transition:
+    transform 0.45s ease,
+    background 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* NUMBER */
+
+.mixed-card > span {
+  position: relative;
+  z-index: 2;
+
+  color: var(--raya-gold);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+}
+
+
+/* CARD CONTENT */
+
+.mixed-card-content {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 30px;
+}
+
+.mixed-card h3 {
+  margin: 0 0 11px;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+}
+
+.mixed-card p {
+  max-width: 275px;
+
+  margin: 0;
+
+  color: var(--raya-muted);
+
+  font-size: 11px;
+  font-weight: 300;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.mixed-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(183, 154, 98, 0.17),
+      rgba(183, 154, 98, 0.045)
+    );
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 16px 38px rgba(90, 70, 35, 0.09);
+}
+
+
+/* =========================================================
+   FEATURED BLACK CARD
+========================================================= */
+
+.mixed-card.featured {
+  background: var(--raya-black);
+  color: var(--raya-white);
+}
+
+.mixed-card.featured:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(183, 154, 98, 0.22),
+      rgba(183, 154, 98, 0.08)
+    ),
+    var(--raya-black);
+}
+
+.mixed-card.featured h3 {
+  color: var(--raya-white);
+}
+
+.mixed-card.featured p {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .mixed-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mixed-card {
+    min-height: 270px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .mixed-section {
+    padding: 65px 0 80px;
+  }
+
+  .mixed-heading {
+    margin-bottom: 42px;
+  }
+
+  .mixed-card {
+    min-height: 250px;
+  }
+
+  .mixed-card h3 {
+    font-size: 29px;
+  }
+
+}
+
+
+/* =========================================================
+   ROOFTOP LIFESTYLE
+========================================================= */
+
+.rooftop-section {
+  width: 100%;
+  position: relative;
+  padding: 70px 0 125px;
+  background: #10100f;
+  color: #f4efe6;
+  overflow: hidden;
+}
+
+.rooftop-section .investment-container {
+  width: min(1240px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.rooftop-heading {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+
+.rooftop-heading .investment-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a670;
+}
+
+.rooftop-heading h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 5vw, 74px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -2px;
+  color: #f4efe6;
+}
+
+.rooftop-heading h2 span {
+  color: #c9a670;
+}
+
+
+/* =========================================================
+   IMAGE + AMENITIES
+   IMPORTANT:
+   IMAGE HEIGHT NOW CONTROLS THE WHOLE DESKTOP ROW
+========================================================= */
+
+.rooftop-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  width: 100%;
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   ROOFTOP IMAGE
+   FULL IMAGE — NO BLACK BARS — NO CROPPING
+========================================================= */
+
+.rooftop-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: transparent;
+  align-self: start;
+}
+
+.rooftop-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  /*
+     The image box now has the same proportion
+     as the original rooftop image.
+  */
+  object-fit: cover;
+  object-position: center center;
+    image-rendering: auto;
+
+}
+
+
+/* =========================================================
+   AMENITIES GRID
+========================================================= */
+
+.rooftop-list {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(201, 166, 112, 0.28);
+  border-left: 1px solid rgba(201, 166, 112, 0.28);
+
+  /*
+     Prevent the content from making the whole
+     section taller than the image.
+  */
+  min-height: 0;
+}
+
+
+/* =========================================================
+   AMENITY ITEM
+========================================================= */
+
+.rooftop-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 0;
+  min-width: 0;
+
+  padding: 18px 22px;
+
+  border-right: 1px solid rgba(201, 166, 112, 0.28);
+  border-bottom: 1px solid rgba(201, 166, 112, 0.28);
+
+  background: #10100f;
+
+  overflow: hidden;
+}
+
+.rooftop-item:hover {
+  background: #141412;
+}
+
+
+/* =========================================================
+   ROOFTOP ICONS
+   KEEPING YOUR PHOSPHOR ICONS
+========================================================= */
+
+.rooftop-icon {
+  width: 62px;
+  min-width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 18px;
+
+  color: #eee9df;
+}
+
+.rooftop-icon svg {
+  display: block;
+
+  width: 52px;
+  height: 52px;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.rooftop-item > div:last-child {
+  min-width: 0;
+}
+
+.rooftop-item h3 {
+  margin: 0 0 7px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 21px;
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: #f4efe6;
+}
+
+.rooftop-item p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11.5px;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: #9d968d;
+
+  max-width: 210px;
+}
+
+.rooftop-item:nth-child(6) h3 {
+  max-width: 185px;
+}
+
+
+/* =========================================================
+   GOLD MICRO DETAIL
+========================================================= */
+
+.rooftop-item::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: #c9a670;
+
+  transition: width 0.3s ease;
+}
+
+.rooftop-item:hover::before {
+  width: 38px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .rooftop-section {
+    padding: 95px 0;
+  }
+
+  .rooftop-section .investment-container {
+    width: calc(100% - 50px);
+  }
+
+  .rooftop-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .rooftop-image {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+
+    border-right: 1px solid rgba(201, 166, 112, 0.28);
+    border-bottom: none;
+  }
+
+  .rooftop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rooftop-list {
+    height: auto;
+
+    grid-template-rows: auto;
+  }
+
+  .rooftop-item {
+    min-height: 140px;
+    padding: 24px 22px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .rooftop-section {
+    padding: 80px 0 90px;
+  }
+
+  .rooftop-section .investment-container {
+    width: calc(100% - 32px);
+  }
+
+  .rooftop-heading {
+    margin-bottom: 45px;
+  }
+
+  .rooftop-heading::before {
+    top: -22px;
+    width: 38px;
+  }
+
+  .rooftop-heading .investment-eyebrow {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .rooftop-heading h2 {
+    font-size: clamp(40px, 11vw, 55px);
+    letter-spacing: -1px;
+  }
+
+  .rooftop-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .rooftop-list {
+    grid-template-columns: 1fr;
+  }
+
+  .rooftop-item {
+    min-height: 125px;
+    padding: 24px 18px;
+  }
+
+  .rooftop-icon {
+    width: 58px;
+    min-width: 58px;
+    height: 58px;
+    margin-right: 14px;
+  }
+
+  .rooftop-icon svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .rooftop-item h3 {
+    font-size: 19px;
+  }
+
+  .rooftop-item p {
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .rooftop-item {
+    padding: 21px 14px;
+  }
+
+  .rooftop-icon {
+    width: 52px;
+    min-width: 52px;
+    margin-right: 11px;
+  }
+
+  .rooftop-icon svg {
+    width: 41px;
+    height: 41px;
+  }
+
+  .rooftop-item h3 {
+    font-size: 17px;
+  }
+}
+
+
+
+
+
+/* =========================================================
+   INVESTMENT STRENGTH
+========================================================= */
+
+.strength-section {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+
+  background: #f4efe6;
+  color: #171614;
+}
+
+
+/* =========================================================
+   BACKGROUND WORD
+========================================================= */
+
+.strength-section::before {
+  content: "VALUE";
+
+  position: absolute;
+  top: 15px;
+  right: -20px;
+
+  color: rgba(183, 154, 98, 0.10);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 215px;
+  line-height: 1;
+
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.strength-heading {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 0.48fr;
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 58px;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.strength-heading h2 {
+  margin: 22px 0 0;
+
+  color: #171614;
+
+  font-family: "Cormorant Garamond", serif;
+
+  /* INCREASED */
+  font-size: clamp(60px, 5.8vw, 86px);
+
+  font-weight: 300;
+
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+}
+
+.strength-heading h2 span {
+  color: #b79a62;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.strength-heading > p {
+  max-width: 390px;
+  margin: 0;
+
+  color: rgba(23, 22, 20, 0.60);
+
+  font-family: "DM Sans", sans-serif;
+
+  /* INCREASED */
+  font-size: 14px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   STRENGTH GRID
+========================================================= */
+
+.strength-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(23, 22, 20, 0.18);
+  border-left: 1px solid rgba(23, 22, 20, 0.18);
+}
+
+
+/* =========================================================
+   STRENGTH CARD
+========================================================= */
+
+.strength-card {
+  position: relative;
+
+  min-height: 225px;
+  padding: 30px;
+
+  border-right: 1px solid rgba(23, 22, 20, 0.18);
+  border-bottom: 1px solid rgba(23, 22, 20, 0.18);
+
+  background: transparent;
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.strength-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(183, 154, 98, 0.13),
+      rgba(183, 154, 98, 0.035)
+    );
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.strength-card span {
+  color: #b79a62;
+
+  font-family: "Cormorant Garamond", serif;
+
+  /* INCREASED */
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.strength-card h3 {
+  margin: 58px 0 12px;
+
+  color: #171614;
+
+  font-family: "Cormorant Garamond", serif;
+
+  /* INCREASED */
+  font-size: 26px;
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   CARD TITLE HOVER
+========================================================= */
+
+.strength-card:hover h3 {
+  color: #9f814c;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.strength-card p {
+  margin: 0;
+
+  color: rgba(23, 22, 20, 0.56);
+
+  font-family: "DM Sans", sans-serif;
+
+  /* INCREASED */
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   ROI WRAPPER
+========================================================= */
+
+.roi-wrapper {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1px;
+
+  margin-top: 58px;
+
+  background: rgba(23, 22, 20, 0.18);
+}
+
+
+/* =========================================================
+   ROI CARD
+========================================================= */
+
+.roi-card {
+  position: relative;
+
+  min-height: 275px;
+  padding: 40px;
+
+  overflow: hidden;
+
+  background: #f4efe6;
+
+  transition:
+    background 0.45s ease,
+    transform 0.45s ease;
+}
+
+
+/* =========================================================
+   ROI CARD HOVER
+========================================================= */
+
+.roi-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(183, 154, 98, 0.11),
+      rgba(183, 154, 98, 0.025)
+    ),
+    #f4efe6;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ROI GOLD LINE
+========================================================= */
+
+.roi-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 65px;
+  height: 1px;
+
+  background: #b79a62;
+
+  transition: width 0.4s ease;
+}
+
+.roi-card:hover::before {
+  width: 100px;
+}
+
+
+/* =========================================================
+   ROI CIRCLE DETAIL
+========================================================= */
+
+.roi-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -55px;
+  bottom: -90px;
+
+  width: 230px;
+  height: 230px;
+
+  border: 1px solid rgba(183, 154, 98, 0.18);
+
+  border-radius: 50%;
+
+  transition:
+    border-color 0.4s ease,
+    transform 0.5s ease;
+}
+
+.roi-card:hover::after {
+  border-color: rgba(183, 154, 98, 0.32);
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ROI LABEL
+========================================================= */
+
+.roi-card span {
+  display: block;
+
+  color: rgba(23, 22, 20, 0.52);
+
+  font-family: "DM Sans", sans-serif;
+
+  /* INCREASED */
+  font-size: 10px;
+
+  letter-spacing: 0.3em;
+}
+
+
+/* =========================================================
+   ROI NUMBER
+========================================================= */
+
+.roi-card strong {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  margin: 23px 0 0;
+
+  color: #b79a62;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(82px, 8vw, 126px);
+
+  font-weight: 300;
+
+  line-height: 0.78;
+  letter-spacing: -0.065em;
+}
+
+
+/* =========================================================
+   ROI DESCRIPTION
+========================================================= */
+
+.roi-card p {
+  position: relative;
+  z-index: 1;
+
+  margin: 25px 0 0;
+
+  color: rgba(23, 22, 20, 0.52);
+
+  font-family: "DM Sans", sans-serif;
+
+  /* INCREASED */
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .strength-section {
+    padding: 95px 0;
+  }
+
+  .strength-heading {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .strength-heading > p {
+    max-width: 550px;
+  }
+
+  .strength-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roi-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .strength-section {
+    padding: 80px 0 90px;
+  }
+
+  .strength-section::before {
+    font-size: 120px;
+    right: -35px;
+    top: 25px;
+  }
+
+  .strength-heading {
+    gap: 28px;
+    margin-bottom: 45px;
+  }
+
+  .strength-heading h2 {
+    margin-top: 18px;
+
+    /* INCREASED MOBILE */
+    font-size: clamp(48px, 12vw, 64px);
+
+    line-height: 0.92;
+  }
+
+  .strength-heading > p {
+    /* INCREASED MOBILE */
+    font-size: 12.5px;
+
+    line-height: 1.8;
+  }
+
+  .strength-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strength-card {
+    min-height: 195px;
+    padding: 25px;
+  }
+
+  .strength-card span {
+    font-size: 20px;
+  }
+
+  .strength-card h3 {
+    margin-top: 48px;
+
+    /* INCREASED MOBILE */
+    font-size: 23px;
+  }
+
+  .strength-card p {
+    /* INCREASED MOBILE */
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+  .roi-wrapper {
+    margin-top: 45px;
+    grid-template-columns: 1fr;
+  }
+
+  .roi-card {
+    min-height: 240px;
+    padding: 30px;
+  }
+
+  .roi-card span {
+    font-size: 9px;
+  }
+
+  .roi-card strong {
+    font-size: clamp(72px, 18vw, 102px);
+  }
+
+  .roi-card p {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .strength-section {
+    padding: 70px 0 80px;
+  }
+
+  .strength-card {
+    min-height: 185px;
+    padding: 22px;
+  }
+
+  .strength-card h3 {
+    margin-top: 45px;
+    font-size: 21px;
+  }
+
+  .strength-card p {
+    font-size: 11.5px;
+  }
+
+  .roi-card {
+    min-height: 220px;
+    padding: 25px;
+  }
+}
+
+
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.investment-cta {
+  position: relative;
+
+  padding: 125px 0 130px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(183, 154, 98, 0.13),
+      transparent 34%
+    ),
+    var(--raya-ivory);
+}
+
+.investment-cta::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 500px;
+  height: 500px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(183, 154, 98, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.investment-cta::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 350px;
+  height: 350px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(183, 154, 98, 0.06);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.investment-cta .investment-container {
+  position: relative;
+  z-index: 1;
+}
+
+.investment-cta h2 {
+  margin: 25px auto 38px;
+
+  font-size: clamp(58px, 6.4vw, 94px);
+  font-weight: 300;
+
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+}
+
+.investment-cta h2 span {
+  color: var(--raya-gold-dark);
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.investment-cta-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 32px;
+
+  min-width: 190px;
+
+  padding: 17px 24px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--raya-gold-dark);
+
+  background: transparent;
+
+  color: var(--raya-text);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  isolation: isolate;
+
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.investment-cta-button::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background: var(--raya-gold);
+
+  transform: translateY(100%);
+
+  transition: transform 0.45s ease;
+}
+
+.investment-cta-button:hover {
+  color: var(--raya-white);
+
+  border-color: var(--raya-gold);
+
+  box-shadow:
+    0 10px 28px rgba(183, 154, 98, 0.20);
+}
+
+.investment-cta-button:hover::before {
+  transform: translateY(0);
+}
+
+.investment-cta-button span {
+  color: var(--raya-gold);
+
+  font-size: 16px;
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+.investment-cta-button:hover span {
+  color: var(--raya-white);
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .investment-container {
+    width: min(100% - 60px, 900px);
+  }
+
+  /* HERO */
+
+  .investment-hero {
+    aspect-ratio: 1343 / 700;
+  }
+
+  .investment-hero-image {
+    object-position: center center;
+  }
+
+  .investment-hero-content {
+    top: 28%;
+
+    width: min(100% - 60px, 900px);
+  }
+
+  .investment-hero-content h1 {
+    max-width: 720px;
+
+    font-size: clamp(52px, 7vw, 76px);
+  }
+
+  .investment-hero-frame {
+    inset: 22px;
+  }
+
+  .hero-scroll-mark {
+    display: none;
+  }
+
+
+  /* WHY */
+
+  .why-qurum-top {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    align-items: start;
+  }
+
+  .why-qurum-top > p {
+    margin: 0;
+
+    max-width: 600px;
+  }
+
+  .why-qurum-image {
+    margin-bottom: 60px;
+  }
+
+  .why-qurum-image img {
+    min-height: 430px;
+  }
+
+  .qurum-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* ADVANTAGES */
+
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  
+
+
+  /* ITC */
+
+  .itc-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .itc-content {
+    padding-left: 40px;
+  }
+
+
+  /* UNITS */
+
+  .unit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* MIXED */
+
+  .mixed-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  /* STRENGTH */
+
+  .strength-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strength-heading {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .investment-container {
+    width: calc(100% - 36px);
+  }
+
+
+  /* HERO */
+
+  .investment-hero {
+    aspect-ratio: 3 / 2;
+  }
+
+  .investment-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8, 8, 7, 0.60),
+        rgba(8, 8, 7, 0.18)
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.06),
+        rgba(0, 0, 0, 0.38)
+      );
+  }
+
+  .investment-hero-frame {
+    inset: 15px;
+  }
+
+  .investment-hero-content {
+    top: 23%;
+
+    width: calc(100% - 36px);
+  }
+
+  .investment-hero-content .investment-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 0.20em;
+  }
+
+  .investment-hero-content .investment-eyebrow::before {
+    width: 20px;
+  }
+
+  .investment-hero-content h1 {
+    width: 100%;
+
+    margin: 15px 0 20px;
+
+    font-size: 48px;
+
+    line-height: 0.91;
+
+    letter-spacing: -0.045em;
+  }
+
+  .investment-hero-content p {
+    max-width: 320px;
+
+    font-size: 10px;
+
+    line-height: 1.65;
+  }
+
+  .investment-hero-content p::before {
+    width: 18px;
+
+    margin-right: 8px;
+  }
+
+  .hero-scroll-mark {
+    display: none;
+  }
+
+
+  /* SECTION SPACING */
+
+  .why-qurum-section,
+  .key-advantages,
+  .itc-section,
+  .unit-section,
+  .mixed-section,
+  .strength-section {
+    padding: 82px 0;
+  }
+
+  .investment-cta {
+    padding: 92px 0 100px;
+  }
+
+
+  /* HEADINGS */
+
+  .section-heading {
+    margin-bottom: 45px;
+  }
+
+  .section-heading h2,
+  .why-qurum-top h2,
+  .itc-heading h2,
+  .strength-heading h2 {
+    font-size: 48px;
+
+    line-height: 0.90;
+  }
+
+
+  /* WHY */
+
+  .why-qurum-section::before {
+    top: 20px;
+    right: -30px;
+
+    font-size: 130px;
+  }
+
+  .why-qurum-top {
+    gap: 25px;
+
+    margin-bottom: 42px;
+  }
+
+  .why-qurum-top .investment-eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .why-qurum-top > p {
+    max-width: 100%;
+
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .why-qurum-image {
+    margin-bottom: 48px;
+
+    outline-offset: 7px;
+  }
+
+  .why-qurum-image img {
+    min-height: 0;
+
+    height: auto;
+
+    object-fit: contain;
+  }
+
+  .why-qurum-image::after {
+    left: 14px;
+    bottom: 14px;
+
+    padding: 7px 9px;
+
+    font-size: 7px;
+  }
+
+  .qurum-features {
+    grid-template-columns: 1fr;
+  }
+
+  .qurum-features > div {
+    min-height: 205px;
+
+    padding: 25px;
+  }
+
+  .qurum-features h3 {
+    margin-top: 55px;
+
+    font-size: 28px;
+  }
+
+
+  /* ADVANTAGES */
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-card {
+    min-height: 270px;
+
+    padding: 27px;
+  }
+
+  .advantage-line {
+    margin-top: 42px;
+  }
+
+  .advantage-card h3 {
+    font-size: 29px;
+  }
+
+
+
+
+
+
+  /* ITC */
+
+  .itc-content {
+    padding-left: 23px;
+  }
+
+  .itc-content h3 {
+    font-size: 29px;
+  }
+
+  .itc-list > div {
+    padding: 17px 0 17px 22px;
+  }
+
+
+  /* UNITS */
+
+  .unit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .unit-card {
+    min-height: 270px;
+  }
+
+  .unit-card-content {
+    bottom: 27px;
+  }
+
+  .unit-card h3 {
+    font-size: 38px;
+  }
+
+
+  /* MIXED */
+
+  .mixed-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mixed-card {
+    min-height: 265px;
+  }
+
+  .mixed-card h3 {
+    font-size: 30px;
+  }
+
+
+  /* STRENGTH */
+
+  .strength-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strength-card {
+    min-height: 205px;
+  }
+
+  .strength-card h3 {
+    margin-top: 57px;
+  }
+
+
+  /* ROI */
+
+  .roi-wrapper {
+    grid-template-columns: 1fr;
+
+    margin-top: 45px;
+  }
+
+  .roi-card {
+    min-height: 245px;
+
+    padding: 32px 27px;
+  }
+
+  .roi-card strong {
+    font-size: 82px;
+  }
+
+
+  /* CTA */
+
+  .investment-cta::before {
+    width: 330px;
+    height: 330px;
+  }
+
+  .investment-cta::after {
+    width: 230px;
+    height: 230px;
+  }
+
+  .investment-cta h2 {
+    font-size: 51px;
+  }
+
+  .investment-cta-button {
+    min-width: 175px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .investment-container {
+    width: calc(100% - 28px);
+  }
+
+  .investment-hero {
+    aspect-ratio: 3 / 2;
+  }
+
+  .investment-hero-content {
+    top: 22%;
+
+    width: calc(100% - 28px);
+  }
+
+  .investment-hero-content .investment-eyebrow {
+    font-size: 7px;
+
+    letter-spacing: 0.17em;
+  }
+
+  .investment-hero-content h1 {
+    font-size: 42px;
+
+    line-height: 0.91;
+  }
+
+  .investment-hero-content p {
+    font-size: 9px;
+  }
+
+  .section-heading h2,
+  .why-qurum-top h2,
+  .itc-heading h2,
+  .strength-heading h2 {
+    font-size: 43px;
+  }
+
+  .roi-card strong {
+    font-size: 70px;
+  }
+
+  .investment-cta h2 {
+    font-size: 46px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .investment-page *,
+  .investment-page *::before,
+  .investment-page *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+
+
+
+/* =========================================================
+   RAYA AL QURUM
+   INVESTMENT ADVANTAGES — LUXURY EDITORIAL OVERRIDE
+   Paste at the VERY END of InvestmentAdvantages.css
+========================================================= */
+
+.investment-page {
+  --luxury-ivory: #f4f0e7;
+  --luxury-ivory-2: #eee8dc;
+  --luxury-white: #fbf8f1;
+  --luxury-black: #151513;
+  --luxury-black-2: #20201c;
+  --luxury-gold: #b29158;
+  --luxury-gold-light: #d4bb86;
+  --luxury-gold-dark: #8a6c3e;
+  --luxury-text: #181713;
+  --luxury-muted: #77736a;
+}
+
+
+/* =========================================================
+   KEY ADVANTAGES — MAIN SECTION
+========================================================= */
+
+.key-advantages {
+  position: relative;
+  padding: 125px 0 130px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(183, 154, 98, 0.12),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 8% 90%,
+      rgba(183, 154, 98, 0.06),
+      transparent 25%
+    ),
+    var(--luxury-ivory);
+
+  color: var(--luxury-text);
+}
+
+
+/* Huge subtle RAYA watermark */
+
+.key-advantages::before {
+  content: "RAYA";
+  position: absolute;
+  top: -48px;
+  right: -25px;
+
+  color: rgba(142, 111, 58, 0.045);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(180px, 19vw, 290px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.09em;
+
+  pointer-events: none;
+}
+
+
+/* Subtle luxury glow */
+
+.key-advantages::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 42%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(178, 145, 88, 0.35)
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.key-advantages .section-heading {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  margin-bottom: 68px;
+}
+
+
+/* Investment Advantages label */
+
+.key-advantages .investment-eyebrow {
+  color: var(--luxury-gold);
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.30em;
+}
+
+.key-advantages .investment-eyebrow::before {
+  width: 30px;
+  height: 1px;
+
+  background: var(--luxury-gold);
+}
+
+
+/* Main heading */
+
+.key-advantages .section-heading h2 {
+  margin: 25px 0 25px;
+
+  color: #14130f;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 6.1vw, 88px);
+  font-weight: 300;
+
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+}
+
+
+/* Gold second line */
+
+.key-advantages .section-heading h2 span {
+  display: block;
+
+  color: var(--luxury-gold-dark);
+
+  font-style: italic;
+  font-weight: 300;
+}
+
+
+/* Description */
+
+.key-advantages .section-heading p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #77736a;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+
+  line-height: 1.9;
+  letter-spacing: 0.015em;
+}
+
+
+/* =========================================================
+   ADVANTAGES GRID
+========================================================= */
+
+.key-advantages .advantages-grid {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border: 1px solid rgba(44, 41, 34, 0.14);
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.key-advantages .advantage-card {
+  position: relative;
+
+  min-height: 325px;
+
+  padding: 32px 34px 34px;
+
+  overflow: hidden;
+
+  border: 0;
+  border-right: 1px solid rgba(44, 41, 34, 0.14);
+  border-bottom: 1px solid rgba(44, 41, 34, 0.14);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.72),
+      rgba(238, 231, 217, 0.56)
+    );
+
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s ease,
+    background 0.55s ease,
+    border-color 0.55s ease;
+}
+
+
+/* Remove unwanted double borders */
+
+.key-advantages .advantage-card:nth-child(3n) {
+  border-right: 0;
+}
+
+
+/* Bottom row */
+
+.key-advantages .advantage-card:nth-child(n + 4) {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   MARBLE-LIKE CARD TEXTURE
+========================================================= */
+
+.key-advantages .advantage-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.48;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 20%,
+      rgba(255, 255, 255, 0.95),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 85% 80%,
+      rgba(184, 157, 108, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      transparent 20%,
+      rgba(155, 130, 88, 0.045) 21%,
+      transparent 22%,
+      transparent 48%,
+      rgba(155, 130, 88, 0.035) 49%,
+      transparent 50%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Very subtle luxury diagonal detail */
+
+.key-advantages .advantage-card::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--luxury-gold),
+    transparent
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.55s ease;
+}
+
+
+/* =========================================================
+   FIRST CARD — DARK FEATURED CARD
+========================================================= */
+
+.key-advantages .advantage-card:first-child {
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(183, 154, 98, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #24241f 0%,
+      #151513 62%,
+      #10100e 100%
+    );
+
+  border-color: rgba(183, 154, 98, 0.38);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(210, 187, 137, 0.10),
+    0 20px 45px rgba(30, 25, 17, 0.13);
+}
+
+
+/* Dark card texture */
+
+.key-advantages .advantage-card:first-child::before {
+  opacity: 0.65;
+
+  background:
+    radial-gradient(
+      ellipse at 75% 18%,
+      rgba(210, 187, 137, 0.16),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.025) 41%,
+      transparent 42%,
+      transparent 65%,
+      rgba(210, 187, 137, 0.035) 66%,
+      transparent 67%
+    );
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.key-advantages .advantage-number {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+
+  color: var(--luxury-gold);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+
+/* Dark card number */
+
+.key-advantages .advantage-card:first-child .advantage-number {
+  color: var(--luxury-gold-light);
+}
+
+
+/* =========================================================
+   ICONS
+   CSS-generated luxury line icons
+========================================================= */
+
+.key-advantages .advantage-card {
+  --icon-size: 68px;
+}
+
+
+/* Icon container */
+
+.key-advantages .advantage-card .advantage-number::after {
+  position: absolute;
+
+  top: -3px;
+  left: 0;
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--luxury-gold);
+
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+
+  opacity: 0.92;
+
+  transform: translateX(315px);
+}
+
+
+/* Individual visual symbols */
+
+.key-advantages .advantage-card:nth-child(1)
+  .advantage-number::after {
+  content: "⌖";
+}
+
+.key-advantages .advantage-card:nth-child(2)
+  .advantage-number::after {
+  content: "⌂";
+}
+
+.key-advantages .advantage-card:nth-child(3)
+  .advantage-number::after {
+  content: "◎";
+}
+
+.key-advantages .advantage-card:nth-child(4)
+  .advantage-number::after {
+  content: "◇";
+}
+
+.key-advantages .advantage-card:nth-child(5)
+  .advantage-number::after {
+  content: "○";
+}
+
+.key-advantages .advantage-card:nth-child(6)
+  .advantage-number::after {
+  content: "◫";
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.key-advantages .advantage-line {
+  position: relative;
+  z-index: 2;
+
+  width: 40px;
+  height: 1px;
+
+  margin: 48px 0 26px;
+
+  background: var(--luxury-gold);
+
+  opacity: 0.72;
+
+  transition:
+    width 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.key-advantages .advantage-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 13px;
+
+  color: #171612;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(29px, 2.35vw, 36px);
+  font-weight: 400;
+
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+/* First card title */
+
+.key-advantages .advantage-card:first-child h3 {
+  color: #f7f1e6;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.key-advantages .advantage-card p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 285px;
+
+  margin: 0;
+
+  color: #77736b;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+
+  transition: color 0.4s ease;
+}
+
+
+/* First card description */
+
+.key-advantages .advantage-card:first-child p {
+  color: rgba(247, 241, 230, 0.62);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.key-advantages .advantage-arrow {
+  position: absolute;
+
+  right: 30px;
+  bottom: 27px;
+
+  z-index: 4;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--luxury-gold);
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.35s ease;
+}
+
+
+/* Dark card arrow */
+
+.key-advantages .advantage-card:first-child .advantage-arrow {
+  color: var(--luxury-gold-light);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.key-advantages .advantage-card:hover {
+  z-index: 5;
+
+  transform: translateY(-7px);
+
+  border-color: rgba(183, 154, 98, 0.48);
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(183, 154, 98, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #faf7ef,
+      #eee8dc
+    );
+
+  box-shadow:
+    0 22px 50px rgba(77, 61, 36, 0.12),
+    0 4px 12px rgba(77, 61, 36, 0.06);
+}
+
+
+.key-advantages .advantage-card:hover::after {
+  transform: scaleX(1);
+}
+
+
+.key-advantages .advantage-card:hover .advantage-line {
+  width: 72px;
+  opacity: 1;
+}
+
+
+.key-advantages .advantage-card:hover h3 {
+  color: var(--luxury-gold-dark);
+  transform: translateX(2px);
+}
+
+
+.key-advantages .advantage-card:hover .advantage-arrow {
+  color: var(--luxury-gold-dark);
+  transform: translate(5px, -5px);
+}
+
+
+/* =========================================================
+   FIRST CARD HOVER
+========================================================= */
+
+.key-advantages .advantage-card:first-child:hover {
+  background:
+    radial-gradient(
+      circle at 78% 15%,
+      rgba(183, 154, 98, 0.22),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      #2b2a24,
+      #151513 75%
+    );
+
+  box-shadow:
+    0 24px 55px rgba(25, 22, 16, 0.25),
+    inset 0 0 0 1px rgba(210, 187, 137, 0.18);
+}
+
+
+.key-advantages .advantage-card:first-child:hover h3 {
+  color: #fffaf0;
+}
+
+
+/* =========================================================
+   GOLD CORNER DETAIL
+========================================================= */
+
+.key-advantages .advantage-card:nth-child(1)::marker {
+  display: none;
+}
+
+
+/* Top-right decorative corner */
+
+.key-advantages .advantage-card .advantage-arrow::before {
+  content: "";
+
+  position: absolute;
+
+  top: -12px;
+  right: -8px;
+
+  width: 18px;
+  height: 18px;
+
+  border-top: 1px solid rgba(183, 154, 98, 0.22);
+  border-right: 1px solid rgba(183, 154, 98, 0.22);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+
+.key-advantages .advantage-card:hover .advantage-arrow::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .key-advantages {
+    padding: 105px 0 110px;
+  }
+
+  .key-advantages .section-heading {
+    margin-bottom: 55px;
+  }
+
+  .key-advantages .section-heading h2 {
+    font-size: clamp(52px, 7vw, 74px);
+  }
+
+  .key-advantages .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .key-advantages .advantage-card {
+    min-height: 300px;
+  }
+
+  .key-advantages .advantage-card:nth-child(3n) {
+    border-right: 1px solid rgba(44, 41, 34, 0.14);
+  }
+
+  .key-advantages .advantage-card:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .key-advantages .advantage-card:nth-child(n + 4) {
+    border-bottom: 1px solid rgba(44, 41, 34, 0.14);
+  }
+
+  .key-advantages .advantage-card:nth-child(n + 5) {
+    border-bottom: 0;
+  }
+
+  .key-advantages .advantage-card .advantage-number::after {
+    transform: translateX(235px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .key-advantages {
+    padding: 82px 0 88px;
+  }
+
+  .key-advantages::before {
+    top: 10px;
+    right: -35px;
+
+    font-size: 125px;
+  }
+
+  .key-advantages .section-heading {
+    margin-bottom: 45px;
+  }
+
+  .key-advantages .section-heading h2 {
+    margin: 20px 0;
+
+    font-size: 49px;
+    line-height: 0.89;
+  }
+
+  .key-advantages .section-heading p {
+    max-width: 330px;
+
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .key-advantages .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .key-advantages .advantage-card,
+  .key-advantages .advantage-card:nth-child(n) {
+    min-height: 275px;
+
+    padding: 27px;
+
+    border-right: 0;
+    border-bottom: 1px solid rgba(44, 41, 34, 0.14);
+  }
+
+  .key-advantages .advantage-card:last-child {
+    border-bottom: 0;
+  }
+
+  .key-advantages .advantage-card .advantage-number::after {
+    top: -5px;
+    right: 5px;
+    left: auto;
+
+    transform: none;
+  }
+
+  .key-advantages .advantage-line {
+    margin-top: 43px;
+    margin-bottom: 24px;
+  }
+
+  .key-advantages .advantage-card h3 {
+    font-size: 30px;
+  }
+
+  .key-advantages .advantage-card p {
+    max-width: 260px;
+    font-size: 10.5px;
+  }
+
+  .key-advantages .advantage-arrow {
+    right: 24px;
+    bottom: 23px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .key-advantages .section-heading h2 {
+    font-size: 43px;
+  }
+
+  .key-advantages .advantage-card {
+    min-height: 260px !important;
+  }
+
+  .key-advantages .advantage-card h3 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   HERO — ORIGINAL SOURCE RESTORE
+   No design change; preserves the original hero image behavior.
+========================================================= */
+
+.investment-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #11110f;
+  color: var(--raya-white);
+  aspect-ratio: 1343 / 599;
+}
+
+.investment-hero-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.investment-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 8, 7, 0.62) 0%,
+      rgba(8, 8, 7, 0.34) 34%,
+      rgba(8, 8, 7, 0.10) 70%,
+      rgba(8, 8, 7, 0.02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.06) 0%,
+      rgba(0, 0, 0, 0.38) 100%
+    );
+}
+
+
+/* =========================================================
+   WHY AL QURUM — FINAL FIX
+   Only this section is changed.
+========================================================= */
+
+.why-qurum-top {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.why-qurum-top > div:first-child {
+  max-width: 500px;
+  text-align: left;
+}
+
+.why-qurum-top > div:last-child {
+  width: 100%;
+  max-width: none;
+}
+
+.why-qurum-top > div:first-child h2 {
+  max-width: 500px;
+  margin: 0;
+  font-size: clamp(54px, 5vw, 76px);
+  line-height: 0.93;
+  letter-spacing: -0.045em;
+  font-weight: 300;
+}
+
+.why-qurum-top > div:first-child > p {
+  max-width: 430px;
+  margin: 28px 0 0;
+  color: #77746c;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.why-qurum-image {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 0 0 auto;
+}
+
+.why-qurum-image img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center;
+}
+
+@media (max-width: 1050px) {
+  .why-qurum-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: start;
+    margin-bottom: 58px;
+  }
+
+  .why-qurum-top > div:first-child {
+    max-width: 700px;
+  }
+
+  .why-qurum-top > div:last-child {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .why-qurum-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .why-qurum-image img {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .why-qurum-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 42px;
+  }
+
+  .why-qurum-top > div:first-child {
+    max-width: 100%;
+  }
+
+  .why-qurum-top > div:first-child h2 {
+    max-width: 100%;
+    font-size: 54px;
+    line-height: 0.94;
+    letter-spacing: -0.04em;
+  }
+
+  .why-qurum-top > div:first-child > p {
+    max-width: 100%;
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .why-qurum-image {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 42px;
+  }
+
+  .why-qurum-image img {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .why-qurum-top {
+    gap: 24px;
+  }
+
+  .why-qurum-top > div:first-child h2 {
+    font-size: 46px;
+    line-height: 0.94;
+  }
+
+  .why-qurum-top > div:first-child > p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   HERO — RESTORE FULL-WIDTH ORIGINAL DISPLAY
+   No black side bars.
+========================================================= */
+.investment-hero {
+  background: #11110f;
+}
+
+.investment-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+/* =========================================================
+   HERO — RESTORE ORIGINAL FULL IMAGE FRAMING
+========================================================= */
+
+.investment-hero {
+  aspect-ratio: 1343 / 599 !important;
+}
+
+.investment-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* =========================================================
+   FINAL HERO IMAGE FIX — PASTE AT VERY END
+========================================================= */
+
+.investment-page .investment-hero {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.investment-page .investment-hero-image {
+  position: relative !important;
+  inset: auto !important;
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  object-fit: fill !important;
+  object-position: center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+/* Keep hero text over the image */
+.investment-page .investment-hero-content {
+  position: absolute !important;
+  z-index: 5 !important;
+}
+
+/* Keep overlay over image */
+.investment-page .investment-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+}
+
+/* Keep decorative frame over image */
+.investment-page .investment-hero-frame {
+  position: absolute !important;
+  z-index: 4 !important;
+}
+/* =========================================================
+   INVESTMENT ADVANTAGES — LEFT ALIGNED TEXT
+========================================================= */
+
+.key-advantages .section-heading {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 0 68px;
+}
+
+/* Small label */
+.key-advantages .investment-eyebrow {
+  margin: 0 0 24px;
+}
+
+/* Main heading */
+.key-advantages .section-heading h2 {
+  max-width: 850px;
+
+  margin: 0 0 28px;
+
+  text-align: left;
+
+  font-size: clamp(58px, 6.1vw, 88px);
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+/* Gold second line */
+.key-advantages .section-heading h2 span {
+  display: block;
+
+  margin-left: 55px;
+
+  text-align: left;
+}
+
+/* Description */
+.key-advantages .section-heading p {
+  max-width: 600px;
+
+  margin: 0;
+
+  text-align: left;
+
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .key-advantages .section-heading {
+    margin-bottom: 55px;
+  }
+
+  .key-advantages .section-heading h2 {
+    max-width: 760px;
+    margin: 0 0 25px;
+  }
+
+  .key-advantages .section-heading h2 span {
+    margin-left: 35px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .key-advantages .section-heading {
+    margin-bottom: 45px;
+  }
+
+  .key-advantages .investment-eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .key-advantages .section-heading h2 {
+    max-width: 100%;
+
+    margin: 0 0 22px;
+
+    font-size: 48px;
+    line-height: 0.90;
+  }
+
+  .key-advantages .section-heading h2 span {
+    margin-left: 0;
+  }
+
+  .key-advantages .section-heading p {
+    max-width: 330px;
+
+    margin: 0;
+
+    text-align: left;
+
+    font-size: 10.5px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================================================
+   INVESTMENT ADVANTAGES — FINAL TEXT SPACING
+========================================================= */
+
+/* Reduce overall empty space */
+.key-advantages {
+  padding: 90px 0 85px;
+}
+
+
+/* Heading block */
+.key-advantages .section-heading {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 0 45px;
+}
+
+
+/* INVESTMENT ADVANTAGES */
+.key-advantages .investment-eyebrow {
+  margin: 0 0 20px;
+
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.32em;
+
+  transform: translateY(-8px);
+}
+
+
+/* Main heading */
+.key-advantages .section-heading h2 {
+  max-width: 900px;
+
+  margin: 0 0 25px;
+
+  text-align: left;
+
+  font-size: clamp(62px, 6.4vw, 94px);
+  line-height: 0.90;
+  letter-spacing: -0.055em;
+}
+
+
+/* Gold second line */
+.key-advantages .section-heading h2 span {
+  display: block;
+
+  margin-left: 55px;
+
+  text-align: left;
+}
+
+
+/* Description / sub-heading */
+.key-advantages .section-heading p {
+  max-width: 640px;
+
+  margin: 0;
+
+  color: #77736a;
+
+  font-size: 13px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .key-advantages {
+    padding: 75px 0 70px;
+  }
+
+  .key-advantages .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .key-advantages .investment-eyebrow {
+    transform: translateY(-5px);
+  }
+
+  .key-advantages .section-heading h2 {
+    max-width: 800px;
+    font-size: clamp(56px, 7vw, 78px);
+  }
+
+  .key-advantages .section-heading h2 span {
+    margin-left: 40px;
+  }
+
+  .key-advantages .section-heading p {
+    max-width: 600px;
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .key-advantages {
+    padding: 65px 0 60px;
+  }
+
+  .key-advantages .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .key-advantages .investment-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 9px;
+    letter-spacing: 0.24em;
+
+    transform: translateY(-3px);
+  }
+
+  .key-advantages .section-heading h2 {
+    max-width: 100%;
+
+    margin-bottom: 20px;
+
+    font-size: 48px;
+    line-height: 0.91;
+  }
+
+  .key-advantages .section-heading h2 span {
+    margin-left: 0;
+  }
+
+  .key-advantages .section-heading p {
+    max-width: 340px;
+
+    font-size: 11px;
+    line-height: 1.75;
+  }
+}
+
+
+
+

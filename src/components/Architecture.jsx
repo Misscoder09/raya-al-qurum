@@ -118,21 +118,22 @@ const Architecture = () => {
 
       </section>
       
+
 {/* =========================================================
     ARCHITECTURAL EXCELLENCE
     ========================================================= */}
 
 <section className="architecture-excellence">
 
-  {/* ================= LEFT IMAGE ================= */}
+  {/* IMAGE */}
   <div className="architecture-excellence-image">
     <img
       src="/images/architecture-detail.jpeg"
-      alt="Raya Al Qurum Architecture"
+      alt="Raya Al Qurum Architectural Detail"
     />
   </div>
 
-  {/* ================= RIGHT CONTENT ================= */}
+  {/* CONTENT */}
   <div className="architecture-excellence-content">
 
     <div className="architecture-excellence-eyebrow">
@@ -149,9 +150,10 @@ const Architecture = () => {
     <div className="architecture-excellence-line"></div>
 
     <p>
-      From the proportions of the façade to the relationship between light,
-      landscape and living spaces, every detail has been considered to create
-      an enduring architectural character.
+      From the proportions of the façade to the relationship
+      between light, landscape and living spaces, every detail
+      has been considered to create an enduring architectural
+      character.
     </p>
 
     <div className="architecture-excellence-features">
@@ -173,21 +175,11 @@ const Architecture = () => {
 
     </div>
 
-    <button
-      className="architecture-excellence-button"
-      onClick={() => {
-        document
-          .getElementById("architecture-philosophy")
-          ?.scrollIntoView({ behavior: "smooth" });
-      }}
-    >
-      <span>EXPLORE ARCHITECTURE</span>
-      <b>→</b>
-    </button>
-
   </div>
 
 </section>
+
+  
 
 
       {/* ================= CTA ================= */}

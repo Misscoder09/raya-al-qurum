@@ -4,6 +4,8 @@ import Architecture from "./components/Architecture";
 import DayNight from "./components/DayNight";
 import Amenities from "./components/Amenities";
 import InvestmentAdvantages from "./components/WhyInvest/InvestmentAdvantages";
+import PaymentPlan from "./components/WhyInvest/PaymentPlan";
+import EnquiryForm from "./components/contact/EnquiryForm";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -148,7 +150,7 @@ function App() {
     </div>
 
     <a
-      href="#contact"
+      href="#enquiry-form"
       className="mobile-enquire"
       onClick={() => setMenuOpen(false)}
     >
@@ -266,7 +268,7 @@ function App() {
 
 </nav>
 
-<a href="#contact" className="nav-cta">
+<a href="#enquiry-form" className="nav-cta">
   Enquire Now
   <span>↗</span>
 </a>
@@ -325,14 +327,18 @@ function App() {
       <span>↗</span>
     </a>
 
-    <a href="#contact" className="outline-button">
+    <a href="#enquiry-form" className="outline-button">
       Register Your Interest
     </a>
-    <a href="#contact" className="outline-button">
+  
+ <a
+  href="/pdf/RayaAlQurm_OPBrochure.pdf"
+  className="outline-button"
+  download="RayaAlQurm_OPBrochure.pdf"
+>
   Download Brochure
   <span>↓</span>
-</a>
-    
+</a>  
 
   </div>
 
@@ -490,6 +496,7 @@ function App() {
                 AL QURUM
               </div>
 
+
               <div className="map-label label-two">
                 <span></span>
                 MUSCAT
@@ -502,9 +509,10 @@ function App() {
         </section>
 
 
-        {/* ================= INVESTMENT ================= */}
-<InvestmentAdvantages />
-           
+{/* ================= INVESTMENT ================= */}
+<section id="investment">
+  <InvestmentAdvantages />
+</section>           
 
             
           
@@ -556,88 +564,12 @@ function App() {
         </section>
 
 
-        {/* ================= PAYMENT PLAN ================= */}
-        <section className="payment section">
+      {/* ================= PAYMENT PLAN ================= */}
+<PaymentPlan />
 
-          <div className="payment-heading">
+{/* ================= ENQUIRY FORM ================= */}
+<EnquiryForm />
 
-            <div className="eyebrow dark-eyebrow">
-              <span></span>
-              PAYMENT PLAN
-            </div>
-
-            <h2>
-              A clear path
-              <br />
-              to <i>ownership.</i>
-            </h2>
-
-          </div>
-
-
-          <div className="payment-plan">
-
-            <div className="payment-step">
-              <span>01</span>
-              <strong>20%</strong>
-              <h3>Initial Payment</h3>
-              <p>Secure your residence with the initial payment.</p>
-            </div>
-
-            <div className="payment-line"></div>
-
-            <div className="payment-step">
-              <span>02</span>
-              <strong>60%</strong>
-              <h3>During Construction</h3>
-              <p>Structured installments throughout construction.</p>
-            </div>
-
-            <div className="payment-line"></div>
-
-            <div className="payment-step">
-              <span>03</span>
-              <strong>20%</strong>
-              <h3>At Handover</h3>
-              <p>Final payment upon completion and handover.</p>
-            </div>
-
-          </div>
-
-        </section>
-
-
-        {/* ================= CTA ================= */}
-        <section className="cta" id="contact">
-
-          <div className="cta-overlay"></div>
-
-          <div className="cta-content">
-
-            <div className="eyebrow light-eyebrow">
-              <span></span>
-              REGISTER YOUR INTEREST
-            </div>
-
-            <h2>
-              Your place in
-              <br />
-              <i>Muscat's future.</i>
-            </h2>
-
-            <p>
-              Discover residences, investment opportunities
-              and ownership options at Raya Al Qurum.
-            </p>
-
-            <a href="mailto:info@rayaalqurum.com" className="gold-button">
-              Get In Touch
-              <span>↗</span>
-            </a>
-
-          </div>
-
-        </section>
 
       </main>
 

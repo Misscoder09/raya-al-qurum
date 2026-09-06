@@ -2255,3 +2255,247 @@
 
 
 
+/* =====================================================
+   1 BHK · PREMIUM UNIT OVERVIEW
+===================================================== */
+
+.one-bhk-overview {
+  width: 100%;
+  padding: 70px 6vw 55px;
+  background: var(--cream);
+  border-top: 1px solid rgba(150, 120, 75, 0.18);
+  border-bottom: 1px solid rgba(150, 120, 75, 0.22);
+}
+
+.one-bhk-overview-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.one-bhk-overview-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 42px;
+}
+
+.one-bhk-overview-heading > span {
+  display: block;
+  margin-bottom: 14px;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--gold);
+}
+
+.one-bhk-overview-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--charcoal);
+}
+
+.one-bhk-overview-heading h2 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.one-bhk-overview-heading p {
+  max-width: 620px;
+  margin: 18px auto 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+
+/* =====================================================
+   UNIT ROWS
+===================================================== */
+
+.one-bhk-unit-list {
+  width: 100%;
+  border-top: 1px solid rgba(150, 120, 75, 0.28);
+}
+
+.one-bhk-unit-row {
+  width: 100%;
+  min-height: 92px;
+
+  display: grid;
+  grid-template-columns:
+    55px
+    minmax(130px, 1.2fr)
+    minmax(130px, 1fr)
+    minmax(100px, .8fr)
+    minmax(110px, .8fr)
+    minmax(150px, 1.1fr)
+    45px;
+
+  align-items: center;
+  gap: 18px;
+
+  padding: 18px 10px;
+
+  border: 0;
+  border-bottom: 1px solid rgba(150, 120, 75, 0.25);
+
+  background: transparent;
+
+  color: var(--charcoal);
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background .35s ease,
+    padding .35s ease;
+}
+
+.one-bhk-unit-row:hover {
+  background: rgba(255, 255, 255, 0.42);
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+
+/* NUMBER */
+
+.unit-row-number {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: var(--gold);
+}
+
+
+/* UNIT */
+
+.unit-row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.unit-row-main span {
+  font-size: 8px;
+  letter-spacing: 2.5px;
+  color: var(--gold);
+}
+
+.unit-row-main strong {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+/* DETAILS */
+
+.unit-row-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.unit-row-detail span,
+.unit-row-price span {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: var(--muted);
+}
+
+.unit-row-detail strong {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+
+
+/* PRICE */
+
+.unit-row-price {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.unit-row-price strong {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+
+/* ARROW */
+
+.unit-row-arrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(150, 120, 75, 0.35);
+  border-radius: 50%;
+
+  font-size: 15px;
+  color: var(--gold);
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease;
+}
+
+.one-bhk-unit-row:hover .unit-row-arrow {
+  background: var(--gold);
+  color: var(--cream);
+  transform: translate(2px, -2px);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .one-bhk-overview {
+    padding: 55px 22px 40px;
+  }
+
+  .one-bhk-overview-heading {
+    margin-bottom: 30px;
+  }
+
+  .one-bhk-overview-heading p {
+    font-size: 13px;
+  }
+
+  .one-bhk-unit-row {
+    grid-template-columns: 35px 1fr 45px;
+    gap: 12px;
+    padding: 20px 5px;
+  }
+
+  .unit-row-detail,
+  .unit-row-price {
+    display: none;
+  }
+
+  .unit-row-main strong {
+    font-size: 23px;
+  }
+
+  .unit-row-arrow {
+    justify-self: end;
+  }
+
+}
