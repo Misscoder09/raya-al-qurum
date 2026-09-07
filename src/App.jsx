@@ -383,9 +383,10 @@ function App() {
  {/* ================= DAY & NIGHT ================= */}
 <DayNight />
 
-{/* ================= GALLERY — EXTERIOR ================= */}
-<Exterior />
-
+{/* ================= GALLERY ================= */}
+<section id="gallery">
+  <Exterior />
+</section>
         {/* ================= FLOOR PLANS ================= */}
 
 <section className="floor-plans section" id="floor-plans">
