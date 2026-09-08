@@ -7,6 +7,7 @@ import InvestmentAdvantages from "./components/WhyInvest/InvestmentAdvantages";
 import PaymentPlan from "./components/WhyInvest/PaymentPlan";
 import EnquiryForm from "./components/contact/EnquiryForm";
 import Exterior from "./components/Exterior";
+import ContactDetails from "./components/contact/ContactDetails";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -258,7 +259,7 @@ function App() {
 
   {/* CONTACT */}
   <div className="nav-dropdown">
-    <a href="#contact">Contact</a>
+    <a href="#enquiry-form">Contact</a>
 
     <div className="submenu">
       <a href="#enquiry-form">Enquiry Form</a>
@@ -573,8 +574,10 @@ function App() {
 <PaymentPlan />
 
 {/* ================= ENQUIRY FORM ================= */}
-<EnquiryForm />
-
+<section id="contact">
+  <EnquiryForm />
+  <ContactDetails />
+</section>
 
       </main>
 

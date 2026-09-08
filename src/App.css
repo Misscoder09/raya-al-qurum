@@ -71,17 +71,24 @@ footer {
 ===================================================== */
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  height: auto;
+  z-index: 1000;
+
+  background: rgba(15, 15, 13, 0.18);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .nav-container {
   width: min(1420px, 92%);
   max-width: 1420px;
-  height: 104px;
+  height: 86px;
   margin: auto;
   display: flex;
   align-items: center;
