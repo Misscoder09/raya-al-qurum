@@ -8,6 +8,7 @@ import PaymentPlan from "./components/WhyInvest/PaymentPlan";
 import EnquiryForm from "./components/contact/EnquiryForm";
 import Exterior from "./components/Exterior";
 import ContactDetails from "./components/contact/ContactDetails";
+import Videos from "./components/Videos";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -387,6 +388,7 @@ function App() {
 {/* ================= GALLERY ================= */}
 <section id="gallery">
   <Exterior />
+  <Videos />
 </section>
         {/* ================= FLOOR PLANS ================= */}
 

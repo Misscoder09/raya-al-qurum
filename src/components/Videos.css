@@ -1,0 +1,502 @@
+/* =========================================
+   VIDEO SECTION
+   ========================================= */
+
+.videos-section {
+  position: relative;
+
+  width: 100%;
+  height: 570px;
+
+  padding: 20px 7%;
+  margin: 0;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 65% 50%,
+      rgba(174, 132, 65, 0.14),
+      transparent 38%
+    ),
+    linear-gradient(
+      110deg,
+      #141311 0%,
+      #1e1b17 52%,
+      #2a2118 100%
+    );
+}
+
+
+/* =========================================
+   SECTION NAME
+   ========================================= */
+
+.videos-section-label {
+  position: absolute;
+
+  top: 18px;
+  left: 7%;
+
+  z-index: 5;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  color: var(--gold-light);
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.videos-content {
+  width: 100%;
+  max-width: 1120px;
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   VIDEO
+   ========================================= */
+
+.video-wrapper {
+  flex: 0 0 auto;
+
+  width: auto;
+  height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/*
+   Video ki original aspect ratio preserve rahegi.
+   Width automatically calculate hogi.
+   Isse stretching / pixel distortion nahi hogi.
+*/
+
+.video-wrapper video {
+  display: block;
+
+  width: auto;
+  height: 520px;
+
+  max-width: 500px;
+
+  object-fit: contain;
+  object-position: center;
+
+  filter: none;
+  transform: none;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   TEXT AREA
+   ========================================= */
+
+.videos-info {
+  flex: 0 0 390px;
+
+  width: 390px;
+  max-width: 390px;
+
+  padding: 0;
+
+  text-align: left;
+
+  /*
+    Text ko video ke visual center ke saath
+    properly align rakhta hai.
+  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   EYEBROW
+   ========================================= */
+
+.videos-eyebrow {
+  display: block;
+
+  margin: 0 0 14px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  color: var(--gold-light);
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.videos-info.is-visible .videos-eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.videos-title {
+  margin: 0;
+
+  max-width: 390px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 35px;
+
+  line-height: 1.17;
+
+  font-weight: 400;
+
+  color: #f3eadc;
+
+  letter-spacing: -0.25px;
+}
+
+
+/* =========================================
+   WORD ANIMATION
+   ========================================= */
+
+.word {
+  display: inline-block;
+
+  margin-right: 0.16em;
+
+  opacity: 0;
+
+  transform: translateY(16px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay: calc(var(--word-index) * 0.04s);
+}
+
+.videos-info.is-visible .word {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   GOLD LINE
+   ========================================= */
+
+.videos-line {
+  width: 42px;
+  height: 1px;
+
+  margin: 18px 0;
+
+  background: var(--gold);
+
+  opacity: 0;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.7s ease;
+
+  transition-delay: 0.75s;
+}
+
+.videos-info.is-visible .videos-line {
+  opacity: 1;
+
+  transform: scaleX(1);
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.videos-description {
+  max-width: 350px;
+
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: rgba(243, 234, 220, 0.58);
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+
+  transition-delay: 0.9s;
+}
+
+.videos-info.is-visible .videos-description {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 950px) {
+
+  .videos-section {
+    height: 550px;
+
+    padding: 18px 5%;
+  }
+
+
+  .videos-section-label {
+    left: 5%;
+  }
+
+
+  .videos-content {
+    max-width: 900px;
+
+    gap: 50px;
+  }
+
+
+  .video-wrapper {
+    height: 500px;
+  }
+
+
+  .video-wrapper video {
+    height: 500px;
+
+    max-width: 380px;
+  }
+
+
+  .videos-info {
+    flex: 0 0 340px;
+
+    width: 340px;
+
+    max-width: 340px;
+  }
+
+
+  .videos-title {
+    max-width: 340px;
+
+    font-size: 32px;
+
+    line-height: 1.18;
+  }
+
+
+  .videos-description {
+    max-width: 320px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .videos-section {
+    height: auto;
+
+    min-height: auto;
+
+    padding: 48px 20px 42px;
+  }
+
+
+  .videos-section-label {
+    top: 18px;
+
+    left: 20px;
+  }
+
+
+  .videos-content {
+    width: 100%;
+
+    height: auto;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+    justify-content: flex-start;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE VIDEO
+     ----------------------------------------- */
+
+  .video-wrapper {
+    width: 100%;
+
+    height: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+  }
+
+
+  .video-wrapper video {
+    width: auto;
+
+    height: 540px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE TEXT
+     ----------------------------------------- */
+
+  .videos-info {
+    width: 100%;
+
+    max-width: 430px;
+
+    flex: 0 0 auto;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+
+  .videos-eyebrow {
+    margin-bottom: 14px;
+  }
+
+
+  .videos-title {
+    width: 100%;
+
+    max-width: 430px;
+
+    font-size: 34px;
+
+    line-height: 1.17;
+  }
+
+
+  .videos-line {
+    margin: 18px auto;
+
+    transform-origin: center;
+  }
+
+
+  .videos-description {
+    max-width: 390px;
+
+    margin: 0 auto;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 430px) {
+
+  .videos-section {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+
+  .video-wrapper video {
+    height: 500px;
+
+    max-width: 100%;
+  }
+
+
+  .videos-title {
+    font-size: 30px;
+
+    line-height: 1.18;
+  }
+
+
+  .videos-description {
+    font-size: 11.5px;
+  }
+}
