@@ -9,6 +9,7 @@ import EnquiryForm from "./components/contact/EnquiryForm";
 import Exterior from "./components/Exterior";
 import ContactDetails from "./components/contact/ContactDetails";
 import Videos from "./components/Videos";
+import AmenitiesGallery from "./components/AmenitiesGallery";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -128,7 +129,7 @@ function App() {
       <div className="mobile-submenu">
         <a href="#exterior" onClick={() => setMenuOpen(false)}>Exterior</a>
         <a href="#interiors" onClick={() => setMenuOpen(false)}>Interiors</a>
-        <a href="#gallery-amenities" onClick={() => setMenuOpen(false)}>
+        <a href="#amenities-gallery" onClick={() => setMenuOpen(false)}>
           Amenities
         </a>
         <a href="#videos" onClick={() => setMenuOpen(false)}>Videos</a>
@@ -252,7 +253,7 @@ function App() {
     <div className="submenu">
       <a href="#exterior">Exterior</a>
       <a href="#interiors">Interiors</a>
-      <a href="#gallery-amenities">Amenities</a>
+      <a href="#amenities-gallery">Amenities</a>
       <a href="#videos">Videos</a>
     </div>
   </div>
@@ -388,6 +389,7 @@ function App() {
 {/* ================= GALLERY ================= */}
 <section id="gallery">
   <Exterior />
+  <AmenitiesGallery />
   <Videos />
 </section>
         {/* ================= FLOOR PLANS ================= */}

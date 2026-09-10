@@ -1,0 +1,657 @@
+/* =========================================================
+   RAYA AL QURUM — AMENITIES GALLERY
+========================================================= */
+
+.amenities-gallery {
+  position: relative;
+  background: #c9a670;
+  color: #151411;
+  padding: 55px 0 25px;
+  overflow: hidden;
+}
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.amenities-gallery-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1380px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.amenities-gallery-header {
+  margin-bottom: 32px;
+}
+
+.amenities-gallery-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #151411;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  margin-bottom: 17px;
+}
+
+.amenities-gallery-eyebrow span {
+  width: 28px;
+  height: 1px;
+  background: #151411;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.amenities-gallery-heading-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(280px, 0.8fr);
+
+  gap: 60px;
+  align-items: end;
+}
+
+.amenities-gallery-heading-row h2 {
+  margin: 0;
+
+  color: #151411;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(46px, 5.5vw, 82px);
+  font-weight: 400;
+
+  line-height: 0.98;
+  letter-spacing: -2px;
+}
+
+.amenities-gallery-heading-row h2 em {
+  display: block;
+
+  color: #151411;
+
+  font-style: italic;
+  font-weight: 400;
+
+  margin-top: 6px;
+}
+
+.amenities-gallery-intro {
+  max-width: 410px;
+  padding-bottom: 4px;
+
+  justify-self: end;
+}
+
+.amenities-gallery-intro p {
+  margin: 0;
+
+  color: rgba(21, 20, 17, 0.78);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SHOWCASE
+========================================================= */
+
+.amenities-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* =========================================================
+   EACH GROUP
+   1 LARGE + 3 IMAGES
+========================================================= */
+
+.amenities-showcase-group {
+  display: grid;
+
+  grid-template-columns: 1.55fr 1fr;
+
+  gap: 6px;
+
+  min-height: 0;
+}
+
+/* =========================================================
+   IMAGE BOXES
+========================================================= */
+
+.amenity-featured,
+.amenity-small {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #151411;
+
+  border: none;
+
+  cursor: pointer;
+
+  line-height: 0;
+
+  min-width: 0;
+
+  transition: transform 0.35s ease;
+}
+
+.amenity-featured:hover,
+.amenity-small:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   LARGE IMAGE
+========================================================= */
+
+.amenity-featured {
+  width: 100%;
+  height: 520px;
+
+  min-height: 0;
+}
+
+/*
+   IMPORTANT:
+   FILL = image completely fills the available box.
+   No crop.
+   No top/bottom blank space.
+*/
+
+.amenity-featured img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: fill;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.amenity-featured:hover img {
+  transform: scale(1.015);
+}
+
+/* =========================================================
+   RIGHT SIDE
+   3 IMAGES
+========================================================= */
+
+.amenity-side-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-rows: 1fr 1fr;
+
+  gap: 6px;
+
+  min-height: 0;
+
+  height: 520px;
+}
+
+/* First right image spans complete width */
+
+.amenity-small:first-child {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   SMALL IMAGES
+========================================================= */
+
+.amenity-small {
+  width: 100%;
+  height: 100%;
+
+  min-height: 0;
+}
+
+.amenity-small img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  /*
+     FULL IMAGE AREA
+     No crop
+     No blank area
+  */
+
+  object-fit: fill;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.amenity-small:hover img {
+  transform: scale(1.015);
+}
+
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
+
+.amenity-image-caption {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 55px 22px 20px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(10, 9, 7, 0.78),
+      rgba(10, 9, 7, 0)
+    );
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.amenity-featured:hover .amenity-image-caption,
+.amenity-small:hover .amenity-image-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.amenity-image-caption span {
+  display: block;
+
+  color: #f3eee5;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.4px;
+}
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.amenities-lightbox {
+  position: fixed;
+
+  z-index: 9999;
+
+  inset: 0;
+
+  background: rgba(9, 8, 7, 0.97);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+}
+
+.amenities-lightbox-content {
+  width: min(1300px, 90vw);
+  height: 90vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.amenities-lightbox-content img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  /*
+     Lightbox mein image completely visible
+  */
+
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =========================================================
+   LIGHTBOX BUTTONS
+========================================================= */
+
+.amenities-lightbox-close,
+.amenities-lightbox-prev,
+.amenities-lightbox-next {
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(21, 20, 17, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  color: #f3eee5;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.amenities-lightbox-close:hover,
+.amenities-lightbox-prev:hover,
+.amenities-lightbox-next:hover {
+  background: #c9a670;
+
+  border-color: #c9a670;
+
+  color: #151411;
+}
+
+/* CLOSE */
+
+.amenities-lightbox-close {
+  top: 28px;
+  right: 32px;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  font-size: 26px;
+}
+
+/* PREVIOUS / NEXT */
+
+.amenities-lightbox-prev,
+.amenities-lightbox-next {
+  top: 50%;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+.amenities-lightbox-prev {
+  left: 30px;
+}
+
+.amenities-lightbox-next {
+  right: 30px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .amenities-gallery {
+    padding: 50px 0 65px;
+  }
+
+  .amenities-gallery-inner {
+    width: min(100% - 40px, 1380px);
+  }
+
+  /* HEADER */
+
+  .amenities-gallery-heading-row {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .amenities-gallery-intro {
+    max-width: 600px;
+
+    justify-self: start;
+  }
+
+  /* GALLERY */
+
+  .amenities-showcase-group {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+  /*
+     Featured becomes full width
+  */
+
+  .amenity-featured {
+    width: 100%;
+    height: 500px;
+  }
+
+  /*
+     Right images underneath
+  */
+
+  .amenity-side-grid {
+    width: 100%;
+    height: 360px;
+
+    min-height: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .amenities-gallery {
+    padding: 45px 0 35px;
+  }
+
+  .amenities-gallery-inner {
+    width: calc(100% - 30px);
+  }
+
+  /* HEADER */
+
+  .amenities-gallery-header {
+    margin-bottom: 28px;
+  }
+
+  .amenities-gallery-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 16px;
+  }
+
+  .amenities-gallery-heading-row {
+    gap: 18px;
+  }
+
+  .amenities-gallery-heading-row h2 {
+    font-size: 46px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+  }
+
+  .amenities-gallery-intro {
+    max-width: 100%;
+  }
+
+  .amenities-gallery-intro p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  /* =======================================================
+     MOBILE GALLERY
+  ======================================================= */
+
+  .amenities-showcase {
+    gap: 6px;
+  }
+
+  .amenities-showcase-group {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+  /* FEATURED */
+
+  .amenity-featured {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1.4 / 1;
+  }
+
+  .amenity-featured img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+  }
+
+  /* RIGHT SIDE */
+
+  .amenity-side-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: none;
+
+    gap: 6px;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+  }
+
+  .amenity-small {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1.35 / 1;
+  }
+
+  .amenity-small:first-child {
+    grid-column: auto;
+  }
+
+  .amenity-small img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+  }
+
+  /* CAPTIONS ALWAYS VISIBLE ON MOBILE */
+
+  .amenity-image-caption {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  /* =======================================================
+     LIGHTBOX MOBILE
+  ======================================================= */
+
+  .amenities-lightbox {
+    padding: 18px;
+  }
+
+  .amenities-lightbox-content {
+    width: 94vw;
+
+    height: 80vh;
+  }
+
+  .amenities-lightbox-content img {
+    object-fit: contain;
+  }
+
+  .amenities-lightbox-prev,
+  .amenities-lightbox-next {
+    width: 44px;
+    height: 44px;
+  }
+
+  .amenities-lightbox-prev {
+    left: 8px;
+  }
+
+  .amenities-lightbox-next {
+    right: 8px;
+  }
+
+  .amenities-lightbox-close {
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+  }
+}
