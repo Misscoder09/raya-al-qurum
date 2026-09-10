@@ -65,9 +65,9 @@ function App() {
         Amenities
       </a>
       <div className="mobile-submenu">
-        <a href="#rooftop-lifestyle" onClick={() => setMenuOpen(false)}>
-          Rooftop & Lifestyle Amenities
-        </a>
+        <a href="#rooftop-amenities" onClick={() => setMenuOpen(false)}>
+  Rooftop & Lifestyle Amenities
+</a>
       </div>
     </div>
 
@@ -201,9 +201,9 @@ function App() {
     <a href="#amenities">Amenities</a>
 
     <div className="submenu">
-      <a href="#rooftop-lifestyle">
-        Rooftop & Lifestyle Amenities
-      </a>
+      <a href="#rooftop-amenities">
+  Rooftop & Lifestyle Amenities
+</a>
     </div>
   </div>
 

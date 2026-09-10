@@ -120,8 +120,7 @@ export default function Amenities() {
           MAIN ROOFTOP AREA
       ===================================================== */}
 
-      <div className="rooftop-content">
-
+<div className="rooftop-content" id="rooftop-amenities">
         {/* LEFT IMAGE */}
 
         <div className="rooftop-image-wrap">
