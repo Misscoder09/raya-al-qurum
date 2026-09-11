@@ -10,6 +10,8 @@ import Exterior from "./components/Exterior";
 import ContactDetails from "./components/contact/ContactDetails";
 import Videos from "./components/Videos";
 import AmenitiesGallery from "./components/AmenitiesGallery";
+import AlQurum from "./components/Location/AlQurum";
+import Connectivity from "./components/Location/Connectivity";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -144,7 +146,7 @@ function App() {
         <a href="#enquiry-form" onClick={() => setMenuOpen(false)}>
           Enquiry Form
         </a>
-        <a href="#contact-location" onClick={() => setMenuOpen(false)}>
+        <a href="#connectivity" onClick={() => setMenuOpen(false)}>
           Location
         </a>
         <a href="#contact-details" onClick={() => setMenuOpen(false)}>
@@ -265,7 +267,7 @@ function App() {
 
     <div className="submenu">
       <a href="#enquiry-form">Enquiry Form</a>
-      <a href="#contact-location">Location</a>
+      <a href="#connectivity">Location</a>
       <a href="#contact-details">Contact Details</a>
     </div>
   </div>
@@ -455,68 +457,13 @@ function App() {
         <Amenities />
 
 
-        {/* ================= LOCATION ================= */}
-        <section className="location section" id="location">
 
-          <div className="section-number">03</div>
-
-          <div className="location-grid">
-
-            <div className="location-copy">
-
-              <div className="eyebrow dark-eyebrow">
-                <span></span>
-                LOCATION
-              </div>
-
-              <h2>
-                In the heart
-                <br />
-                of <i>Al Qurum.</i>
-              </h2>
-
-              <p>
-                Positioned in one of Muscat's most established and
-                desirable districts, Raya Al Qurum places residents
-                close to the city's key destinations, lifestyle
-                offerings and everyday conveniences.
-              </p>
-
-              <a href="#contact" className="dark-button">
-                Explore the opportunity
-                <span>↗</span>
-              </a>
-
-            </div>
+{/* ================= AL QURUM ================= */}
+<AlQurum />
+<Connectivity />
 
 
-            <div className="location-visual">
-
-              <div className="map-grid"></div>
-
-              <div className="map-center">
-                <div className="map-ring"></div>
-                <div className="map-pin">R</div>
-                <strong>RAYA AL QURUM</strong>
-                <span>MUSCAT, OMAN</span>
-              </div>
-
-              <div className="map-label label-one">
-                <span></span>
-                AL QURUM
-              </div>
-
-
-              <div className="map-label label-two">
-                <span></span>
-                MUSCAT
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
+        
 
 
 {/* ================= INVESTMENT ================= */}

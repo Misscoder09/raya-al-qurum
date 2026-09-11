@@ -1,0 +1,451 @@
+/* =========================================
+   AL QURUM SECTION
+   ========================================= */
+
+.al-qurum-section {
+  position: relative;
+  width: 100%;
+  padding: 48px 6% 52px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background: #111111;
+}
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.al-qurum-container {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.al-qurum-heading {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.al-qurum-label {
+  display: block;
+  margin-bottom: 5px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+
+  color: var(--gold-light);
+}
+
+.al-qurum-heading h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(46px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 0.98;
+
+  color: #ffffff;
+}
+
+.al-qurum-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin: 14px auto 0;
+}
+
+.al-qurum-line span {
+  width: 54px;
+  height: 1px;
+
+  background: rgba(199, 165, 109, 0.7);
+}
+
+.al-qurum-line i {
+  font-size: 12px;
+  font-style: normal;
+
+  color: var(--gold-light);
+}
+
+/* =========================================
+   GRID
+   ========================================= */
+
+.al-qurum-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(320px, 0.85fr);
+
+  gap: 52px;
+  align-items: center;
+}
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.al-qurum-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  background: #1a1a1a;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.al-qurum-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+.al-qurum-image-wrap:hover .al-qurum-image {
+  transform: scale(1.025);
+  filter: brightness(1.04);
+}
+
+/* =========================================
+   IMAGE OVERLAY
+   ========================================= */
+
+.al-qurum-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.28),
+    transparent 28%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   IMAGE CAPTION
+   ========================================= */
+
+.al-qurum-image-caption {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+
+  color: #ffffff;
+  z-index: 2;
+}
+
+/* =========================================
+   COPY
+   ========================================= */
+
+.al-qurum-copy {
+  padding-right: 1%;
+  color: #ffffff;
+}
+
+.al-qurum-copy-label {
+  display: block;
+  margin-bottom: 11px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+
+  color: var(--gold-light);
+}
+
+.al-qurum-copy h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 3.7vw, 58px);
+  font-weight: 400;
+  line-height: 1.04;
+
+  color: #ffffff;
+}
+
+.al-qurum-copy h3 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.al-qurum-copy-line {
+  width: 50px;
+  height: 1px;
+  margin: 20px 0 20px;
+
+  background: var(--gold-light);
+}
+
+.al-qurum-copy p {
+  margin: 0 0 15px;
+  max-width: 500px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.72;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* =========================================
+   LOCATION DETAIL
+   ========================================= */
+
+.al-qurum-location-detail {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-top: 21px;
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(199, 165, 109, 0.28);
+}
+
+.detail-dot {
+  position: relative;
+
+  width: 8px;
+  height: 8px;
+
+  border: 1px solid var(--gold-light);
+  border-radius: 50%;
+}
+
+.detail-dot::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+
+  background: var(--gold-light);
+  border-radius: 50%;
+}
+
+.al-qurum-location-detail small {
+  display: block;
+  margin-bottom: 2px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  color: var(--gold-light);
+}
+
+.al-qurum-location-detail strong {
+  display: block;
+
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+/* =========================================
+   SCROLL REVEAL INITIAL STATE
+   ========================================= */
+
+.al-qurum-label,
+.al-qurum-heading h2,
+.al-qurum-line,
+.al-qurum-copy-label,
+.al-qurum-copy h3,
+.al-qurum-copy-line,
+.al-qurum-copy p,
+.al-qurum-location-detail {
+  opacity: 0;
+  transform: translateY(42px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================
+   SCROLL REVEAL ACTIVE STATE
+   ========================================= */
+
+.al-qurum-visible .al-qurum-label {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.05s;
+}
+
+.al-qurum-visible .al-qurum-heading h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s;
+}
+
+.al-qurum-visible .al-qurum-line {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.28s;
+}
+
+.al-qurum-visible .al-qurum-copy-label {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.40s;
+}
+
+.al-qurum-visible .al-qurum-copy h3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.52s;
+}
+
+.al-qurum-visible .al-qurum-copy-line {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.65s;
+}
+
+.al-qurum-visible .al-qurum-copy p:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.76s;
+}
+
+.al-qurum-visible .al-qurum-copy p:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.88s;
+}
+
+.al-qurum-visible .al-qurum-location-detail {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .al-qurum-section {
+    padding: 45px 6% 48px;
+  }
+
+  .al-qurum-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .al-qurum-copy {
+    padding-right: 0;
+  }
+
+  .al-qurum-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .al-qurum-section {
+    padding: 40px 5% 45px;
+  }
+
+  .al-qurum-heading {
+    margin-bottom: 28px;
+  }
+
+  .al-qurum-heading h2 {
+    font-size: 42px;
+  }
+
+  .al-qurum-line span {
+    width: 43px;
+  }
+
+  .al-qurum-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .al-qurum-image-caption {
+    left: 15px;
+    bottom: 14px;
+
+    font-size: 7px;
+    letter-spacing: 1.7px;
+  }
+
+  .al-qurum-copy h3 {
+    font-size: 38px;
+  }
+
+  .al-qurum-copy p {
+    font-size: 13.5px;
+    line-height: 1.72;
+  }
+
+  .al-qurum-location-detail {
+    margin-top: 18px;
+    padding-top: 14px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .al-qurum-label,
+  .al-qurum-heading h2,
+  .al-qurum-line,
+  .al-qurum-copy-label,
+  .al-qurum-copy h3,
+  .al-qurum-copy-line,
+  .al-qurum-copy p,
+  .al-qurum-location-detail {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .al-qurum-image {
+    transition: none;
+  }
+}

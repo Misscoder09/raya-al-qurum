@@ -1,0 +1,930 @@
+/* =========================================================
+   RAYA AL QURUM
+   LOCATION & CONNECTIVITY
+========================================================= */
+
+.raya-connectivity {
+  width: 100%;
+  min-height: auto;
+
+  padding: 45px 4% 0;
+
+  box-sizing: border-box;
+
+  background: #f4ece2;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   NO SIDE LINES
+========================================================= */
+
+.location-section-heading {
+  width: 100%;
+
+  margin: 0 auto 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0;
+}
+
+.location-section-heading .heading-line {
+  display: none !important;
+}
+
+.location-section-heading h2 {
+  margin: 0;
+
+  color: #9b7047;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 27px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: 1.6px;
+
+  white-space: nowrap;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MAIN LOCATION LAYOUT
+========================================================= */
+
+.location-layout {
+  width: 100%;
+  max-width: 1420px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    340px
+    minmax(0, 1fr);
+
+  grid-template-rows:
+    auto
+    auto;
+
+  column-gap: 45px;
+  row-gap: 65px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   CATEGORY POSITIONS
+========================================================= */
+
+.wellbeing-category {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.learning-category {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.everyday-category {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.connectivity-category {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
+/* =========================================================
+   CATEGORY HEADING
+   NO SIDE LINES
+========================================================= */
+
+.category-heading {
+  width: 100%;
+
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0;
+}
+
+.category-heading span {
+  display: none !important;
+}
+
+.category-heading h3 {
+  margin: 0;
+
+  color: #183b5d;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: 1.3px;
+
+  white-space: nowrap;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   CARDS ROW
+========================================================= */
+
+.category-items {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    1px
+    minmax(0, 1fr);
+
+  column-gap: 18px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   GOLD CARD
+========================================================= */
+
+.location-card {
+  width: 100%;
+
+  height: 155px;
+  min-height: 155px;
+
+  padding: 15px 12px;
+
+  box-sizing: border-box;
+
+  background: #b88a55;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow:
+    0 5px 18px rgba(76, 49, 24, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(76, 49, 24, 0.13);
+}
+
+
+/* =========================================================
+   ICON + TIME
+========================================================= */
+
+.location-card-top {
+  width: 100%;
+
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.icon-wrap {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 62px;
+}
+
+.location-icon {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter: none;
+
+  transition: transform 0.25s ease;
+}
+
+.location-card:hover .location-icon {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.location-time {
+  min-width: 43px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+}
+
+.location-time span {
+  margin: 0;
+
+  color: #f7efe3;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 39px;
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -1.5px;
+}
+
+.location-time small {
+  margin-top: 7px;
+
+  color: #f7efe3;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.location-card-title {
+  width: 100%;
+
+  margin-top: 3px;
+
+  color: #f7efe3;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.55px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   CARD ARABIC
+========================================================= */
+
+.location-card-arabic {
+  width: 100%;
+
+  margin-top: 5px;
+
+  color: #f7efe3;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.35;
+
+  direction: rtl;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   CARD DIVIDER
+========================================================= */
+
+.card-divider {
+  width: 1px;
+
+  height: 82px;
+
+  background: #b88a55;
+
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   CENTER COMPASS
+========================================================= */
+
+.compass-area {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.compass-image {
+  width: 310px;
+  height: 310px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================================
+   LOCATION SCAN
+   NO SIDE LINES
+========================================================= */
+
+.location-scan {
+  width: 100%;
+
+  margin: 15px auto 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0;
+}
+
+.scan-line {
+  display: none !important;
+}
+
+.scan-location-image {
+  width: 190px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   LOCATION FOOTER
+   REDUCED EXTRA SPACE
+========================================================= */
+
+.location-footer {
+  position: relative;
+
+  width: 100%;
+  max-width: 1420px;
+
+  height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+   LEFT OF QR + SLIGHTLY UP
+========================================================= */
+
+.footer-brand {
+  position: absolute;
+
+  left: 40px;
+  bottom: 22px;
+
+  padding: 0;
+
+  z-index: 2;
+}
+
+.footer-brand h3 {
+  margin: 0;
+
+  color: #183b5d;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  line-height: 1.2;
+}
+
+.footer-brand p {
+  margin: 9px 0 0;
+
+  color: #183b5d;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  letter-spacing: 1.2px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   FOOTER QR
+========================================================= */
+
+.footer-qr {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 187px;
+  height: 82px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+.footer-qr img {
+  width: 187px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .location-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      300px
+      minmax(0, 1fr);
+
+    column-gap: 25px;
+  }
+
+  .location-card {
+    height: 150px;
+    min-height: 150px;
+  }
+
+  .location-card-top {
+    gap: 8px;
+  }
+
+  .location-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .icon-wrap {
+    width: 55px;
+    height: 55px;
+
+    flex-basis: 55px;
+  }
+
+  .location-time span {
+    font-size: 35px;
+  }
+
+  .compass-image {
+    width: 275px;
+    height: 275px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .raya-connectivity {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .location-section-heading {
+    margin-bottom: 45px;
+  }
+
+  .location-section-heading h2 {
+    font-size: 22px;
+  }
+
+  .location-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      260px
+      minmax(0, 1fr);
+
+    column-gap: 12px;
+
+    row-gap: 55px;
+  }
+
+  .location-card {
+    height: 145px;
+    min-height: 145px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .category-items {
+    column-gap: 9px;
+  }
+
+  .category-heading {
+    gap: 0;
+  }
+
+  .category-heading h3 {
+    font-size: 14px;
+  }
+
+  .location-card-title {
+    font-size: 9px;
+  }
+
+  .location-card-arabic {
+    font-size: 9px;
+  }
+
+  .location-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .icon-wrap {
+    width: 50px;
+    height: 50px;
+
+    flex-basis: 50px;
+  }
+
+  .location-time span {
+    font-size: 31px;
+  }
+
+  .compass-image {
+    width: 235px;
+    height: 235px;
+  }
+
+  .footer-brand {
+    left: 25px;
+    bottom: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .raya-connectivity {
+    min-height: auto;
+
+    padding: 48px 5% 0;
+  }
+
+  .location-section-heading {
+    margin-bottom: 42px;
+  }
+
+  .location-section-heading h2 {
+    font-size: 18px;
+
+    letter-spacing: 0.9px;
+  }
+
+  .location-layout {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 48px;
+  }
+
+  .location-category {
+    width: 100%;
+  }
+
+  .wellbeing-category,
+  .learning-category,
+  .everyday-category,
+  .connectivity-category {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .wellbeing-category {
+    order: 1;
+  }
+
+  .learning-category {
+    order: 2;
+  }
+
+  .compass-area {
+    order: 3;
+
+    width: 100%;
+
+    min-height: 280px;
+  }
+
+  .everyday-category {
+    order: 4;
+  }
+
+  .connectivity-category {
+    order: 5;
+  }
+
+  .category-heading {
+    margin-bottom: 22px;
+  }
+
+  .category-heading h3 {
+    font-size: 15px;
+  }
+
+  .location-card {
+    height: 145px;
+    min-height: 145px;
+
+    border-radius: 14px;
+  }
+
+  .location-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .location-time span {
+    font-size: 32px;
+  }
+
+  .location-card-title {
+    font-size: 9px;
+  }
+
+  .location-card-arabic {
+    font-size: 9px;
+  }
+
+  .compass-image {
+    width: 280px;
+    height: 280px;
+  }
+
+
+  /* SCAN */
+
+  .location-scan {
+    width: 100%;
+
+    margin-top: 0;
+
+    gap: 0;
+  }
+
+  .scan-location-image {
+    width: 155px;
+  }
+
+
+  /* FOOTER */
+
+  .location-footer {
+    height: 75px;
+
+    margin-top: 0;
+  }
+
+  .footer-brand {
+    left: 5px;
+    bottom: 18px;
+  }
+
+  .footer-brand h3 {
+    font-size: 17px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .footer-brand p {
+    font-size: 6px;
+
+    letter-spacing: 0.8px;
+  }
+
+  .footer-qr {
+    width: 155px;
+    height: 75px;
+  }
+
+  .footer-qr img {
+    width: 155px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .location-section-heading h2 {
+    font-size: 16px;
+  }
+
+  .category-items {
+    column-gap: 6px;
+  }
+
+  .location-card {
+    height: 135px;
+    min-height: 135px;
+
+    padding: 10px 4px;
+
+    border-radius: 12px;
+  }
+
+  .location-card-top {
+    gap: 4px;
+  }
+
+  .location-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .icon-wrap {
+    width: 45px;
+    height: 45px;
+
+    flex-basis: 45px;
+  }
+
+  .location-time span {
+    font-size: 28px;
+  }
+
+  .location-time small {
+    font-size: 8px;
+  }
+
+  .location-card-title {
+    font-size: 8px;
+  }
+
+  .location-card-arabic {
+    font-size: 8px;
+  }
+
+  .compass-image {
+    width: 245px;
+    height: 245px;
+  }
+
+
+  /* FOOTER */
+
+  .location-footer {
+    height: 68px;
+
+    margin-top: 0;
+  }
+
+  .footer-brand {
+    left: 3px;
+    bottom: 16px;
+  }
+
+  .footer-brand h3 {
+    font-size: 15px;
+
+    letter-spacing: 2px;
+  }
+
+  .footer-brand p {
+    font-size: 5px;
+
+    letter-spacing: 0.6px;
+  }
+
+  .footer-qr {
+    width: 135px;
+    height: 68px;
+  }
+
+  .footer-qr img {
+    width: 135px;
+  }
+}
