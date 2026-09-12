@@ -40,12 +40,12 @@ export default function F7OneBHK() {
       "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
 
     area: "70.73 m²",
-    price: "OMR 55,700.000",
+    price: "OMR 58,484.869",
 
     bedrooms: "1",
     baths: "2",
-    utility: "1",
-    balcony: "—",
+    utility: "_",
+    balcony: "_",
 
     unitLayout:
       "/images/Residences/F7-1BHK-unit-layout.png",
