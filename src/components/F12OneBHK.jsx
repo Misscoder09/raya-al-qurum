@@ -52,8 +52,7 @@ export default function F8OneBHK() {
   };
 
   return (
-    <section className="f6-one-bhk">
-
+  <section id="f12-detail" className="f12-one-bhk">
       {/* =====================================================
           F12 · HEADER
       ===================================================== */}

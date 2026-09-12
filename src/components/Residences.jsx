@@ -103,7 +103,7 @@ const residences = [
     description:
       "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
     area: "65.02 SQ.M.",
-    price: "OMR 48,765.000",
+    price: "OMR 51,203.250",
     bedrooms: "1",
     baths: "1",
     utility: "1",
@@ -218,6 +218,70 @@ function ResidenceDetails({ residence, onClose }) {
           </button>
         </div>
 
+        <div className="flat-switcher">
+  <span className="flat-switcher-label">Explore Flats</span>
+
+  <button
+    type="button"
+    onClick={() =>
+      document.getElementById("f2-detail")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  >
+    F2
+  </button>
+
+  <button
+    type="button"
+    onClick={() =>
+      document.getElementById("f6-detail")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  >
+    F6
+  </button>
+
+  <button
+    type="button"
+    onClick={() =>
+      document.getElementById("f7-detail")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  >
+    F7
+  </button>
+
+  <button
+    type="button"
+    onClick={() =>
+      document.getElementById("f8-detail")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  >
+    F8
+  </button>
+
+  <button
+    type="button"
+    onClick={() =>
+      document.getElementById("f12-detail")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  >
+    F12
+  </button>
+</div>
+
         {/* =====================================================
     1 BHK · ALL AVAILABLE FLATS OVERVIEW
 ===================================================== */}
@@ -277,7 +341,7 @@ function ResidenceDetails({ residence, onClose }) {
 
   <div className="unit-row-price">
     <span>FROM</span>
-    <strong>OMR 48,765.000</strong>
+    <strong>OMR 51,203.250</strong>
   </div>
 
   <div className="unit-row-arrow">↗</div>

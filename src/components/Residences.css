@@ -2499,3 +2499,370 @@
   }
 
 }
+
+/* =====================================================
+   RESIDENCE — STICKY TOPBAR + FLAT SWITCHER
+===================================================== */
+
+/* =====================================================
+   TOP STICKY BAR
+===================================================== */
+
+.detail-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+
+  margin: 0;
+  padding: 12px 5vw 10px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* SOLID BACKGROUND — CONTENT HIDE */
+  background-color: #f5efe3 !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  isolation: isolate;
+}
+
+/* Back to Residences */
+
+.back-residences {
+  padding: 6px 0;
+  line-height: 1;
+}
+
+/* Close button */
+
+.detail-close {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   STICKY FLAT SWITCHER
+===================================================== */
+
+.flat-switcher {
+  position: sticky;
+  top: 61px;
+  z-index: 999;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 10px 5vw;
+  margin: 0;
+
+  /* FULL SOLID CREAM — NO CONTENT SHOW THROUGH */
+  background-color: #f5efe3 !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  isolation: isolate;
+}
+
+/* Flat switcher label */
+
+.flat-switcher-label {
+  margin-right: 6px;
+
+  color: #1b1a17;
+
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Flat buttons */
+
+.flat-switcher button {
+  min-width: 43px;
+
+  padding: 7px 13px;
+
+  border: 1px solid #a77b3d;
+  border-radius: 999px;
+
+  background: transparent;
+  color: #1b1a17;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.flat-switcher button:hover {
+  background: #a77b3d;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.flat-switcher button:focus-visible {
+  outline: 2px solid #a77b3d;
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   RESIDENCE DETAIL MODAL
+===================================================== */
+
+.residence-detail-modal {
+  position: relative;
+  isolation: isolate;
+
+  background: #f5efe3 !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .detail-topbar {
+    padding: 10px 20px 8px;
+  }
+
+  .flat-switcher {
+    top: 55px;
+
+    gap: 7px;
+    padding: 9px 20px;
+  }
+
+  .flat-switcher-label {
+    width: auto;
+
+    margin-right: 4px;
+    margin-bottom: 0;
+
+    font-size: 10px;
+  }
+
+  .flat-switcher button {
+    min-width: 40px;
+
+    padding: 7px 11px;
+    font-size: 10px;
+  }
+
+  .detail-close {
+    width: 36px;
+    height: 36px;
+  }
+
+}
+
+
+/* =====================================================
+   FINAL FIX — REMOVE SPACE BETWEEN STICKY BARS
+===================================================== */
+
+.detail-topbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  background: #f5efe3 !important;
+  background-image: none !important;
+}
+
+.flat-switcher {
+  position: sticky !important;
+
+  /* TOPBAR KE BILKUL NEECHE */
+  top: 0 !important;
+
+  z-index: 999 !important;
+
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  background: #f5efe3 !important;
+  background-image: none !important;
+}
+
+/* No gap from parent */
+
+.residence-detail-modal {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  background: #f5efe3 !important;
+}
+
+
+/* =====================================================
+   FINAL — STICKY BARS FIX
+===================================================== */
+
+/* Back to Residences bar */
+
+.detail-topbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+
+  background-color: #f5efe3 !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Explore Flats bar */
+
+.flat-switcher {
+  position: sticky !important;
+  top: 61px !important;
+  z-index: 999 !important;
+
+  background-color: #f5efe3 !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  margin: 0 !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .flat-switcher {
+    top: 55px !important;
+  }
+}
+
+
+/* =====================================================
+   FINAL FIX — FILL GAP BETWEEN STICKY BARS
+===================================================== */
+
+.detail-topbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+
+  background: #f5efe3 !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Explore Flats */
+
+.flat-switcher {
+  position: sticky !important;
+  top: 61px !important;
+  z-index: 999 !important;
+
+  background: #f5efe3 !important;
+  background-image: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  margin: 0 !important;
+}
+
+/* FILL THE SPACE ABOVE EXPLORE FLATS */
+
+.flat-switcher::before {
+  content: "";
+
+  position: absolute;
+
+  top: -20px;
+  left: 0;
+  right: 0;
+
+  height: 20px;
+
+  background: #f5efe3 !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  pointer-events: none;
+}
+
+/* LONG GOLD LINE IN THE MIDDLE OF GAP */
+
+.flat-switcher::after {
+  content: "";
+
+  position: absolute;
+
+  top: -10px;
+  left: 5vw;
+  right: 5vw;
+
+  height: 1px;
+
+  background: #a77b3d !important;
+
+  pointer-events: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .flat-switcher {
+    top: 55px !important;
+  }
+
+  .flat-switcher::before {
+    top: -20px;
+    height: 20px;
+  }
+
+  .flat-switcher::after {
+    left: 20px;
+    right: 20px;
+  }
+}

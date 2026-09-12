@@ -52,8 +52,7 @@ export default function F8OneBHK() {
   };
 
   return (
-    <section className="f6-one-bhk">
-
+  <section id="f8-detail" className="f8-one-bhk">
       {/* =====================================================
           F8 · HEADER
       ===================================================== */}

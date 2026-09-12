@@ -58,8 +58,7 @@ export default function F7OneBHK() {
   };
 
   return (
-    <section className="f7-one-bhk">
-
+  <section id="f7-detail" className="f7-one-bhk">
       {/* =====================================================
           F7 · HEADER
       ===================================================== */}

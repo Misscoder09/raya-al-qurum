@@ -49,8 +49,8 @@ export default function F6OneBHK() {
 
   };
 
-  return (
-    <section className="f6-one-bhk">
+  return ( 
+  <section id="f6-detail" className="f6-one-bhk">
 
       {/* =====================================================
           F6 · HEADER
