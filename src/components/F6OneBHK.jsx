@@ -37,7 +37,7 @@ export default function F6OneBHK() {
     description:
       "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
     area: "69.45 m²",
-    price: "OMR 54,692.000",
+    price: "OMR 57,426.470",
     bedrooms: "1",
     baths: "1 + 1",
     utility: "1",
@@ -295,7 +295,7 @@ export default function F6OneBHK() {
         </div>
 
         <div>
-          <span>Bathrooms</span>
+          <span>Bathrooms + powder</span>
           <strong>{residence.baths}</strong>
         </div>
 
@@ -390,7 +390,7 @@ export default function F6OneBHK() {
 
             <div>
               <strong>{residence.baths}</strong>
-              <span>BATHROOMS</span>
+              <span>BATHROOMS + POWDER</span>
             </div>
 
             <div>
@@ -466,7 +466,7 @@ export default function F6OneBHK() {
 
         <div className="sales-info-item">
           <span>INDICATIVE PRICE</span>
-          <strong>OMR 54,692.000</strong>
+          <strong>OMR 57,426.470</strong>
         </div>
 
       </div>

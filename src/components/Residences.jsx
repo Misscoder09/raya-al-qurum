@@ -372,7 +372,7 @@ function ResidenceDetails({ residence, onClose }) {
             })
           }
         >
-          <div className="unit-row-number">01</div>
+          <div className="unit-row-number">02</div>
 
           <div className="unit-row-main">
             <span>1 BHK</span>
@@ -414,7 +414,7 @@ function ResidenceDetails({ residence, onClose }) {
             })
           }
         >
-          <div className="unit-row-number">02</div>
+          <div className="unit-row-number">03</div>
 
           <div className="unit-row-main">
             <span>1 BHK</span>
@@ -456,7 +456,7 @@ function ResidenceDetails({ residence, onClose }) {
             })
           }
         >
-          <div className="unit-row-number">03</div>
+          <div className="unit-row-number">04</div>
 
           <div className="unit-row-main">
             <span>1 BHK</span>
@@ -498,7 +498,7 @@ function ResidenceDetails({ residence, onClose }) {
             })
           }
         >
-          <div className="unit-row-number">04</div>
+          <div className="unit-row-number">05</div>
 
           <div className="unit-row-main">
             <span>1 BHK</span>
@@ -540,7 +540,7 @@ function ResidenceDetails({ residence, onClose }) {
             })
           }
         >
-          <div className="unit-row-number">05</div>
+          <div className="unit-row-number">06</div>
 
           <div className="unit-row-main">
             <span>1 BHK</span>
