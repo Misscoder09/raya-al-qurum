@@ -55,9 +55,8 @@ export default function F13OneBHK() {
       "/images/Residences/F13-1BHK-study-layout-details.png",
   };
 
-  return (
-    <section className="f6-one-bhk">
-
+return (
+  <section id="f13-detail" className="f6-one-bhk">
       {/* =====================================================
           F13 · HEADER
       ===================================================== */}

@@ -280,6 +280,19 @@ function ResidenceDetails({ residence, onClose }) {
   >
     F12
   </button>
+
+  <button
+    onClick={() =>
+      document
+        .getElementById("f13-detail")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  >
+    F13
+  </button>
+
+
+  
 </div>
 
         {/* =====================================================
@@ -338,6 +351,7 @@ function ResidenceDetails({ residence, onClose }) {
     <span>BATHROOM</span>
     <strong>1</strong>
   </div>
+  
 
   <div className="unit-row-price">
     <span>FROM</span>
@@ -367,7 +381,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>65.02 SQ.M.</strong>
+            <strong>69.45 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -382,7 +396,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 57,426.470</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -409,7 +423,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>— SQ.M.</strong>
+            <strong>70.73 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -424,7 +438,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 58,484.869</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -451,7 +465,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>— SQ.M.</strong>
+            <strong>69.80 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -466,7 +480,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 57,715.875</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -493,7 +507,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>— SQ.M.</strong>
+            <strong>86.85 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -508,7 +522,49 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 71,814.094</strong>
+          </div>
+
+          <div className="unit-row-arrow">↗</div>
+        </button>
+
+        
+        {/* F13 */}
+        <button
+          type="button"
+          className="one-bhk-unit-row"
+          onClick={() =>
+            document.getElementById("f13-detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <div className="unit-row-number">05</div>
+
+          <div className="unit-row-main">
+            <span>1 BHK</span>
+            <strong>F13</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>AREA</span>
+            <strong>81.78 SQ.M.</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BEDROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-detail">
+            <span>BATHROOM</span>
+            <strong>1</strong>
+          </div>
+
+          <div className="unit-row-price">
+            <span>FROM</span>
+            <strong>OMR 70,841.925</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
