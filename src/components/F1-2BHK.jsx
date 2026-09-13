@@ -49,8 +49,7 @@ export default function F1TwoBHK() {
   };
 
   return (
-    <section className="f1-two-bhk">
-
+<section id="f1-detail" className="f1-two-bhk">
       {/* =====================================================
           F1 · HEADER
       ===================================================== */}

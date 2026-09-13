@@ -36,8 +36,8 @@ export default function F11TwoBHK() {
     title: "Refined 2 Bedroom Living",
     description:
       "A thoughtfully planned two-bedroom residence designed for comfortable, elegant and efficient modern living.",
-    area: "89.72 m²",
-    price: "OMR 70,655.000",
+    area: "89.72 SQ.M.",
+    price: "OMR 74,187.225",
     bedrooms: "2",
     baths: "2 + 1",
     utility: "—",
@@ -50,8 +50,7 @@ export default function F11TwoBHK() {
   };
 
   return (
-    <section className="f6-one-bhk">
-
+<section id="f11-detail" className="f11-two-bhk">
       {/* =====================================================
           F11 · HEADER
       ===================================================== */}
@@ -466,7 +465,7 @@ export default function F11TwoBHK() {
 
         <div className="sales-info-item">
           <span>INDICATIVE PRICE</span>
-          <strong>OMR 70,655.000</strong>
+          <strong>OMR 74,187.225</strong>
         </div>
 
       </div>

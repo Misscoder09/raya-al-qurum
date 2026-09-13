@@ -123,7 +123,7 @@ const residences = [
     description:
       "A spacious two-bedroom home with carefully considered living, dining and private bedroom spaces.",
     area: "90.64 SQ.M.",
-    price: "OMR 71,379",
+    price: "OMR 71,379.000",
     bedrooms: "2",
     baths: "3",
     utility: "1",
@@ -139,13 +139,12 @@ const residences = [
   description:
     "A thoughtfully planned two-bedroom residence with a dedicated study, generous living spaces and three balconies designed for comfortable contemporary living.",
   area: "94.72 SQ.M.",
-  price: "OMR 78,144.000",
+  price: "OMR 82,051.200",
   bedrooms: "2",
   baths: "2",
   utility: "1 / 1",
   utilityLabel: "UTILITY / STUDY",
-
-  balcony: "3",
+  balconies: "3",
 
   // F14 IMAGES
   unitLayout: "/images/Residences/F14-2BHK-Study-unit-layout.png",
@@ -218,82 +217,217 @@ function ResidenceDetails({ residence, onClose }) {
           </button>
         </div>
 
-        <div className="flat-switcher">
-  <span className="flat-switcher-label">Explore Flats</span>
 
-  <button
-    type="button"
-    onClick={() =>
-      document.getElementById("f2-detail")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  >
-    F2
-  </button>
-
-  <button
-    type="button"
-    onClick={() =>
-      document.getElementById("f6-detail")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  >
-    F6
-  </button>
-
-  <button
-    type="button"
-    onClick={() =>
-      document.getElementById("f7-detail")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  >
-    F7
-  </button>
-
-  <button
-    type="button"
-    onClick={() =>
-      document.getElementById("f8-detail")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  >
-    F8
-  </button>
-
-  <button
-    type="button"
-    onClick={() =>
-      document.getElementById("f12-detail")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  >
-    F12
-  </button>
-
-  <button
-    onClick={() =>
-      document
-        .getElementById("f13-detail")
-        ?.scrollIntoView({ behavior: "smooth", block: "start" })
-    }
-  >
-    F13
-  </button>
+{/*  FLAT SWITCHER */}
 
 
-  
-</div>
+   {/* 1 BHK flats */}
+{residence.id === "1bhk" && (
+  <div className="flat-switcher">
+    <span className="flat-switcher-label">Explore Flats</span>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f2-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F2
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f6-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F6
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f7-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F7
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f8-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F8
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f12-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F12
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f13-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F13
+    </button>
+  </div>
+)}
+
+{/* 2 BHK flats */}
+{residence.id === "2bhk" && (
+  <div className="flat-switcher">
+    <span className="flat-switcher-label">Explore Flats</span>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f1-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F1
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f3-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F3
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f5-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F5
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f9-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F9
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f11-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F11
+    </button>
+  </div>
+)}
+
+{/* 2 BHK + STUDY · FLAT SWITCHER */}
+{residence.id === "2bhk-study" && (
+  <div className="flat-switcher">
+    <span className="flat-switcher-label">Explore Flats</span>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f14-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F14
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f15-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F15
+    </button>
+  </div>
+)}
+{/* 3 BHK · FLAT SWITCHER */}
+{residence.id === "3bhk" && (
+  <div className="flat-switcher">
+    <span className="flat-switcher-label">Explore Flats</span>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f4-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F4
+    </button>
+
+    <button
+      type="button"
+      onClick={() =>
+        document.getElementById("f10-detail")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    >
+      F10
+    </button>
+  </div>
+)}
+
 
         {/* =====================================================
     1 BHK · ALL AVAILABLE FLATS OVERVIEW
@@ -636,7 +770,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR 71,379</strong>
+            <strong>OMR 71,379.000</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -662,7 +796,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>— SQ.M.</strong>
+            <strong>110.68 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -677,7 +811,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 95,876.550</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -703,7 +837,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>— SQ.M.</strong>
+            <strong>93.72 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -713,12 +847,12 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>BATHROOM</span>
-            <strong>—</strong>
+            <strong>3</strong>
           </div>
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 77,494.730</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -744,7 +878,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>— SQ.M.</strong>
+            <strong>92.12 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -754,12 +888,12 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>BATHROOM</span>
-            <strong>—</strong>
+            <strong>3</strong>
           </div>
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 76,171.725</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -785,7 +919,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>AREA</span>
-            <strong>— SQ.M.</strong>
+            <strong>89.72 SQ.M.</strong>
           </div>
 
           <div className="unit-row-detail">
@@ -794,13 +928,13 @@ function ResidenceDetails({ residence, onClose }) {
           </div>
 
           <div className="unit-row-detail">
-            <span>BATHROOM</span>
-            <strong>—</strong>
+            <span>BATH + POWDER</span>
+            <strong>2 + 1</strong>
           </div>
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR —</strong>
+            <strong>OMR 74,187.225</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -880,7 +1014,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR 78,144.000</strong>
+            <strong>OMR 82,051.200</strong>
           </div>
 
           <div className="unit-row-arrow">
@@ -922,13 +1056,13 @@ function ResidenceDetails({ residence, onClose }) {
           </div>
 
           <div className="unit-row-detail">
-            <span>BATHROOM</span>
-            <strong>3</strong>
+            <span>BATHROOM + POWDER</span>
+            <strong>2 + 1</strong>
           </div>
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR 81,757.500</strong>
+            <strong>OMR 85,845.375</strong>
           </div>
 
           <div className="unit-row-arrow">
@@ -1005,7 +1139,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR 101,764</strong>
+            <strong>OMR 106,851.94</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -1047,7 +1181,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-price">
             <span>FROM</span>
-            <strong>OMR 95,962.500</strong>
+            <strong>OMR 100,760.625</strong>
           </div>
 
           <div className="unit-row-arrow">↗</div>
@@ -1504,7 +1638,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="sales-info-item">
             <span>INDICATIVE PRICE</span>
-            <strong>OMR 78,144.000</strong>
+            <strong>OMR 82,051.200</strong>
           </div>
 
         </div>
@@ -1559,7 +1693,7 @@ function ResidenceDetails({ residence, onClose }) {
 
   <div>
     <span>INDICATIVE PRICE</span>
-    <strong>OMR 78,144.000</strong>
+    <strong>OMR 82,051.200</strong>
   </div>
 
 </section>
@@ -1771,7 +1905,7 @@ function ResidenceDetails({ residence, onClose }) {
         <small>INDICATIVE SELLING PRICE</small>
 
         <strong>
-          OMR 81,757.500
+          OMR 85,845.375
         </strong>
 
       </div>
@@ -1891,7 +2025,7 @@ function ResidenceDetails({ residence, onClose }) {
 
             <div className="sales-info-item">
               <span>INDICATIVE PRICE</span>
-              <strong>OMR 81,757.500</strong>
+              <strong>OMR 85,845.375</strong>
             </div>
 
           </div>
@@ -1946,7 +2080,7 @@ function ResidenceDetails({ residence, onClose }) {
 
       <div>
         <span>INDICATIVE PRICE</span>
-        <strong>OMR 81,757.500</strong>
+        <strong>OMR 85,845.375</strong>
       </div>
 
     </section>
@@ -1997,6 +2131,7 @@ function ResidenceDetails({ residence, onClose }) {
             <div className="sales-info-item">
               <span>UNIT TYPE</span>
               <strong>F4 · 3 BHK</strong>
+
             </div>
 
             <div className="sales-info-item">

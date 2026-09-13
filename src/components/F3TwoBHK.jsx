@@ -39,8 +39,8 @@ export default function F3TwoBHK() {
     description:
       "A thoughtfully planned two-bedroom residence with a dedicated maid room, designed to provide comfortable, elegant and efficient modern living.",
 
-    area: "110.68 m²",
-    price: "OMR 91,311.000",
+    area: "110.68 SQ.M.",
+    price: "OMR 95,876.550",
 
     bedrooms: "2",
     baths: "3",
@@ -145,8 +145,7 @@ export default function F3TwoBHK() {
   ];
 
   return (
-    <section className="f6-one-bhk">
-
+<section id="f3-detail" className="f6-one-bhk">
       {/* =====================================================
           F3 · HEADER
       ===================================================== */}
@@ -834,7 +833,7 @@ export default function F3TwoBHK() {
                 </span>
 
                 <strong>
-                  OMR 91,311.000
+                  OMR 95,876.550
                 </strong>
 
               </div>

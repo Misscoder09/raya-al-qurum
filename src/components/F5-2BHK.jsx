@@ -37,10 +37,10 @@ export default function F5TwoBHK() {
     description:
       "A thoughtfully planned two-bedroom residence designed for comfortable, elegant and efficient modern living.",
     area: "93.72 m²",
-    price: "OMR 73,805.000",
+    price: "OMR 77,494.730",
     bedrooms: "2",
     baths: "3",
-    utility: "1",
+    utility: "_",
     balcony: "2",
 
     // F5 images
@@ -50,8 +50,7 @@ export default function F5TwoBHK() {
   };
 
   return (
-    <section className="f6-one-bhk">
-
+<section id="f5-detail" className="f5-two-bhk">
       {/* =====================================================
           F5 · HEADER
       ===================================================== */}
@@ -466,7 +465,7 @@ export default function F5TwoBHK() {
 
         <div className="sales-info-item">
           <span>INDICATIVE PRICE</span>
-          <strong>OMR 73,805.000</strong>
+          <strong>OMR 77,494.730</strong>
         </div>
 
       </div>
