@@ -38,8 +38,8 @@ export default function F13OneBHK() {
     description:
       "A thoughtfully planned one-bedroom residence with a dedicated study, designed for comfortable, elegant and efficient modern living.",
 
-    area: "81.78 m²",
-    price: "OMR 67,469.000",
+    area: "81.78 SQ.M.",
+    price: "OMR 70,841.925",
 
     bedrooms: "1",
     baths: "1+1",
@@ -491,7 +491,7 @@ return (
 
               <div className="sales-info-item">
                 <span>INDICATIVE PRICE</span>
-                <strong>OMR 67,469.000</strong>
+                <strong>OMR 70,841.925</strong>
               </div>
 
             </div>

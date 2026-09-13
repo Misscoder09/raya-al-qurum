@@ -38,8 +38,8 @@ export default function F8OneBHK() {
     description:
       "A thoughtfully planned one-bedroom residence designed for comfortable, elegant and efficient modern living.",
 
-    area: "69.80 m²",
-    price: "OMR 54,968.000",
+    area: "69.80 SQ.M.",
+    price: "OMR 57,715.875",
 
     bedrooms: "1",
     baths: "2",
@@ -513,7 +513,7 @@ export default function F8OneBHK() {
 
               <div className="sales-info-item">
                 <span>INDICATIVE PRICE</span>
-                <strong>OMR 54,968.000</strong>
+                <strong>OMR 57,715.875</strong>
               </div>
 
             </div>
