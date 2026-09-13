@@ -1,0 +1,107 @@
+.itc-ownership {
+  background: #11100e;
+  color: #f5efe3;
+  padding: 120px 7%;
+  scroll-margin-top: 100px;
+}
+
+.itc-ownership-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Eyebrow */
+.itc-ownership-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #c7a56d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+}
+
+.itc-ownership-eyebrow span {
+  display: block;
+  width: 35px;
+  height: 1px;
+  background: #c7a56d;
+}
+
+/* Main content */
+.itc-ownership-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Heading */
+.itc-ownership-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: left;
+  color: #f5efe3;
+  margin: 0;
+}
+
+.itc-ownership-heading h2 i {
+  color: #c7a56d;
+  font-style: italic;
+}
+
+/* Paragraph text */
+.itc-ownership-text {
+  padding-top: 8px;
+  text-align: left;
+}
+
+.itc-ownership-text p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #c8c0b4;
+  margin: 0 0 30px;
+}
+
+.itc-ownership-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .itc-ownership {
+    padding: 80px 6%;
+  }
+
+  .itc-ownership-eyebrow {
+    margin-bottom: 40px;
+  }
+
+  .itc-ownership-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .itc-ownership-heading h2 {
+    font-size: 42px;
+    text-align: left;
+  }
+
+  .itc-ownership-text {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .itc-ownership-text p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+
+

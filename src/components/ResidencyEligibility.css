@@ -1,0 +1,147 @@
+.residency-eligibility {
+  width: 100%;
+  background: #11100e;
+  color: #f5efe3;
+  padding: 75px 7% 90px;
+  box-sizing: border-box;
+  scroll-margin-top: 100px;
+}
+
+.residency-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Eyebrow */
+
+.residency-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #c7a56d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  margin-bottom: 38px;
+}
+
+.residency-eyebrow span {
+  width: 35px;
+  height: 1px;
+  background: #c7a56d;
+  flex-shrink: 0;
+}
+
+/* Main Content */
+
+.residency-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 55px;
+  align-items: start;
+}
+
+/* Heading */
+
+.residency-heading h2 {
+  margin: 0;
+  color: #f5efe3;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.residency-heading h2 i {
+  color: #c7a56d;
+  font-style: italic;
+}
+
+/* Right Text */
+
+.residency-text {
+  max-width: 560px;
+  padding-top: 4px;
+}
+
+.residency-text p {
+  margin: 0;
+  color: #c8c0b4;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .residency-eligibility {
+    padding: 70px 6% 80px;
+  }
+
+  .residency-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .residency-heading h2 {
+    font-size: 56px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .residency-eligibility {
+    padding: 60px 6% 70px;
+  }
+
+  .residency-eyebrow {
+    gap: 10px;
+    margin-bottom: 32px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .residency-eyebrow span {
+    width: 28px;
+  }
+
+  .residency-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .residency-heading h2 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .residency-text {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .residency-text p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .residency-heading h2 {
+    font-size: 38px;
+  }
+
+  .residency-text p {
+    font-size: 14px;
+  }
+}

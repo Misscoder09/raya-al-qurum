@@ -12,6 +12,10 @@ import Videos from "./components/Videos";
 import AmenitiesGallery from "./components/AmenitiesGallery";
 import AlQurum from "./components/Location/AlQurum";
 import Connectivity from "./components/Location/Connectivity";
+import ITCOwnership from "./components/ITCOwnership";
+import FreeholdOwnership from "./components/FreeholdOwnership";
+import ResidencyEligibility from "./components/ResidencyEligibility";
+import FAQs from "./components/FAQs";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -94,11 +98,11 @@ function App() {
     </div>
 
     <div className="mobile-menu-item">
-      <a href="#ITCownership" onClick={() => setMenuOpen(false)}>
+      <a href="#itc-ownership" onClick={() => setMenuOpen(false)}>
         ITC Ownership
       </a>
       <div className="mobile-submenu">
-        <a href="#freehold" onClick={() => setMenuOpen(false)}>
+        <a href="#freehold-ownership" onClick={() => setMenuOpen(false)}>
           Freehold Ownership
         </a>
         <a href="#residency-eligibility" onClick={() => setMenuOpen(false)}>
@@ -225,10 +229,10 @@ function App() {
 
   {/* ITC OWNERSHIP */}
   <div className="nav-dropdown">
-    <a href="#ITCownership">ITC Ownership</a>
+    <a href="#itc-ownership">ITC Ownership</a>
 
     <div className="submenu">
-      <a href="#freehold">Freehold Ownership</a>
+      <a href="#freehold-ownership">Freehold Ownership</a>
       <a href="#residency-eligibility">Residency Eligibility</a>
       <a href="#faqs">FAQs</a>
     </div>
@@ -472,54 +476,19 @@ function App() {
 </section>           
 
             
-          
+          {/* ================= ITC OWNERSHIP ================= */}
+
+<ITCOwnership />
+
+{/* ================= FREEHOLD OWNERSHIP ================= */}
+<FreeholdOwnership />
 
 
-        {/* ================= OWNERSHIP ================= */}
-        <section className="ownership section-dark">
+{/* ================= RESIDENCY ELIGIBILITY ================= */}
+<ResidencyEligibility />
 
-          <div className="ownership-inner">
-
-            <div className="eyebrow light-eyebrow">
-              <span></span>
-              OWNERSHIP
-            </div>
-
-            <h2>
-              A smarter way
-              <br />
-              to <i>own in Muscat.</i>
-            </h2>
-
-            <p>
-              Raya Al Qurum offers an opportunity to own a premium
-              residence in one of Muscat's established locations,
-              subject to applicable ITC ownership regulations.
-            </p>
-
-            <div className="ownership-points">
-
-              <div>
-                <strong>ITC</strong>
-                <span>Integrated Tourism Complex</span>
-              </div>
-
-              <div>
-                <strong>FREEHOLD</strong>
-                <span>Eligible ownership opportunity</span>
-              </div>
-
-              <div>
-                <strong>VALUE</strong>
-                <span>Designed for long-term appeal</span>
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
-
+{/* ================= FAQS ================= */}
+<FAQs />
 
       {/* ================= PAYMENT PLAN ================= */}
 <PaymentPlan />

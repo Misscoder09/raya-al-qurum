@@ -1,0 +1,268 @@
+.freehold-ownership {
+  background: #f3e4df;
+  color: #1b1a17;
+  padding: 75px 7% 90px;
+  scroll-margin-top: 100px;
+}
+
+.freehold-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Eyebrow */
+
+.freehold-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #a77b3d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 38px;
+}
+
+.freehold-eyebrow span {
+  width: 35px;
+  height: 1px;
+  background: #a77b3d;
+}
+
+/* Main Content */
+
+.freehold-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 55px;
+  align-items: start;
+}
+
+/* Heading */
+
+.freehold-heading {
+  padding-top: 0;
+}
+
+.freehold-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1b1a17;
+  margin: 0;
+}
+
+.freehold-heading h2 i {
+  color: #a77b3d;
+  font-style: italic;
+}
+
+/* Right Side Text */
+
+.freehold-text {
+  padding-top: 4px;
+  max-width: 560px;
+}
+
+.freehold-text p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5f584f;
+  margin: 0 0 22px;
+  text-align: left;
+}
+
+.freehold-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Benefits */
+
+.freehold-benefits {
+  margin-top: 55px;
+}
+
+.freehold-benefits h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #1b1a17;
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+/* Gold Rounded Benefit Cards */
+
+.freehold-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.freehold-benefits-grid > div {
+  background: #c7a56d;
+  border: 1px solid #c7a56d;
+  border-radius: 26px;
+  padding: 28px 22px;
+  min-height: 155px;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  text-align: center !important;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Hover Effect */
+
+.freehold-benefits-grid > div:hover {
+  background: #1b1a17;
+  border-color: #1b1a17;
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(27, 26, 23, 0.18);
+}
+
+/* Benefit Number */
+
+.freehold-benefits-grid > div span {
+  display: block !important;
+  width: 100% !important;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1b1a17;
+
+  text-align: center !important;
+  margin: 0 0 15px !important;
+
+  transition: color 0.35s ease;
+}
+
+/* Benefit Text */
+
+.freehold-benefits-grid > div p {
+  display: block !important;
+  width: 100% !important;
+  max-width: 190px;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #1b1a17;
+
+  text-align: center !important;
+  text-wrap: balance;
+
+  transition: color 0.35s ease;
+}
+
+/* Hover Text Color */
+
+.freehold-benefits-grid > div:hover span,
+.freehold-benefits-grid > div:hover p {
+  color: #f5efe3;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .freehold-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .freehold-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .freehold-ownership {
+    padding: 60px 6% 70px;
+  }
+
+  .freehold-eyebrow {
+    margin-bottom: 32px;
+  }
+
+  .freehold-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .freehold-heading h2 {
+    font-size: 42px;
+  }
+
+  .freehold-text {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .freehold-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .freehold-benefits {
+    margin-top: 50px;
+  }
+
+  .freehold-benefits h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .freehold-benefits-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .freehold-benefits-grid > div {
+    padding: 24px 18px;
+    min-height: 150px;
+    border-radius: 22px;
+  }
+
+  .freehold-benefits-grid > div p {
+    max-width: 160px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .freehold-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .freehold-benefits-grid > div {
+    border-radius: 24px;
+  }
+
+  .freehold-benefits-grid > div p {
+    max-width: 220px;
+  }
+}
