@@ -1342,8 +1342,8 @@ function ResidenceDetails({ residence, onClose }) {
     </div>
 
     <div className="feature-info">
-      <strong>{residence.balcony}</strong>
-      <span>BALCONY</span>
+      <strong>{residence.balconies}</strong>
+      <span>BALCONIES</span>
     </div>
   </div>
 
@@ -1394,9 +1394,9 @@ function ResidenceDetails({ residence, onClose }) {
           </div>
 
           <div className="detail-reveal">
-            <span>Balcony</span>
-            <strong>{residence.balcony}</strong>
-          </div>
+            <span>Balconies</span>
+<strong>{residence.balconies}</strong>    
+      </div>
         </section>
 )}
 {residence.unit !== "F1" && (
@@ -1462,7 +1462,7 @@ function ResidenceDetails({ residence, onClose }) {
               </div>
 
               <div>
-                <strong>{residence.balcony}</strong>
+                <strong>{residence.balconies}</strong>
                 <span>BALCONIES</span>
               </div>
             </div>
@@ -1813,14 +1813,14 @@ function ResidenceDetails({ residence, onClose }) {
             </div>
 
             <div className="feature-info">
-              <strong>3</strong>
-              <span>BATHROOM</span>
+              <strong>2 + 1</strong>
+              <span>BATH + POWDER</span>
             </div>
 
           </div>
 
 
-          {/* UTILITY / STUDY */}
+          {/* STUDY */}
 
           <div className="unit-feature">
 
@@ -1837,7 +1837,7 @@ function ResidenceDetails({ residence, onClose }) {
 
             <div className="feature-info">
               <strong>1</strong>
-              <span>UTILITY / STUDY</span>
+              <span>STUDY</span>
             </div>
 
           </div>
@@ -1953,8 +1953,8 @@ function ResidenceDetails({ residence, onClose }) {
           </div>
 
           <div>
-            <strong>109.01</strong>
-            <span>SQ.M.</span>
+            <strong>1</strong>
+            <span>balcony</span>
           </div>
 
         </div>

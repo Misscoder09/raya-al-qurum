@@ -16,6 +16,7 @@ import ITCOwnership from "./components/ITCOwnership";
 import FreeholdOwnership from "./components/FreeholdOwnership";
 import ResidencyEligibility from "./components/ResidencyEligibility";
 import FAQs from "./components/FAQs";
+import Interior from "./components/Interior";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -395,6 +396,7 @@ function App() {
 {/* ================= GALLERY ================= */}
 <section id="gallery">
   <Exterior />
+  <Interior />
   <AmenitiesGallery />
   <Videos />
 </section>
