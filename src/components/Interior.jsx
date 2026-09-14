@@ -32,6 +32,14 @@ const interiorImages = [
     title: "Powder Room",
   },
   {
+    src: "/images/gallery interiors/utility-room.jpg",
+    title: "Utility Room",
+  },
+   {
+    src: "/images/gallery interiors/dressing-room.jpg",
+    title: "Dressing Room",
+  },
+  {
     src: "/images/gallery interiors/balcony.jpg",
     title: "Balcony",
   },
@@ -65,6 +73,14 @@ const Interior = () => {
               className={`interior-card interior-card-${index + 1}`}
               key={image.src}
               onClick={() => setSelectedImage(image)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  setSelectedImage(image);
+                }
+              }}
+              aria-label={`View ${image.title}`}
             >
               <img
                 src={image.src}
@@ -106,6 +122,7 @@ const Interior = () => {
           </span>
         </div>
       )}
+
     </section>
   );
 };

@@ -1,41 +1,50 @@
 
+/* =========================================
+   INTERIOR SECTION
+========================================= */
+
 .interior-section {
   width: 100%;
   background: #f5efe3;
-  padding: 100px 7% 110px;
+  padding: 55px 5% 100px;
   color: #1b1a17;
   box-sizing: border-box;
   scroll-margin-top: 110px;
 }
 
 .interior-inner {
-  width: 100%;
-  max-width: 1180px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Heading */
+/* =========================================
+   HEADING
+========================================= */
 
 .interior-heading {
   max-width: 650px;
-  margin-bottom: 55px;
+  margin: 0 0 40px;
+  text-align: left;
 }
 
 .interior-eyebrow {
-  display: block;
-  font-size: 12px;
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 4px;
   font-weight: 600;
-  letter-spacing: 3px;
   color: #a77b3d;
   margin-bottom: 18px;
+  text-align: left;
 }
 
 .interior-heading h2 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(40px, 5vw, 68px);
+  font-size: clamp(38px, 4vw, 64px);
+  line-height: 1.1;
   font-weight: 400;
-  line-height: 1.12;
-  margin: 0 0 25px;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+  text-align: left;
 }
 
 .interior-heading h2 em {
@@ -44,79 +53,180 @@
 }
 
 .interior-heading p {
-  max-width: 520px;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #625b50;
+  font-family: "DM Sans", sans-serif;
+  max-width: 470px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #6c665d;
   margin: 0;
+  text-align: left;
 }
 
-/* Gallery Grid */
+/* =========================================
+   IMAGE GRID
+========================================= */
 
 .interior-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  gap: 12px;
 }
 
-/* Image Cards */
+/* =========================================
+   IMAGE CARDS
+========================================= */
 
 .interior-card {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 440px;
   overflow: hidden;
   cursor: pointer;
   background: #e8dfd0;
+  isolation: isolate;
+  animation: interiorReveal 0.9s ease both;
 }
-
-.interior-card-1,
-.interior-card-4 {
-  height: 400px;
-}
-
-/* Full Image Visible */
 
 .interior-card img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
-  object-position: center;
-  transition: transform 0.6s ease;
+  object-fit: cover;
+  transition:
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
 }
 
-/* Overlay */
+/* Premium image hover */
+
+.interior-card:hover img {
+  transform: scale(1.045);
+  filter: brightness(0.88);
+}
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.interior-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 17, 13, 0.65) 0%,
+    rgba(20, 17, 13, 0.12) 42%,
+    transparent 75%
+  );
+  opacity: 0.75;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.interior-card:hover::after {
+  opacity: 1;
+}
 
 .interior-card-overlay {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  z-index: 2;
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 24px;
-  background: linear-gradient(
-    to top,
-    rgba(27, 26, 23, 0.75),
-    transparent
-  );
+  align-items: center;
   color: #fff;
-  font-size: 17px;
-  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.interior-card:hover .interior-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .interior-plus {
-  font-size: 28px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
   font-weight: 300;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
-.interior-card:hover img {
-  transform: scale(1.02);
+.interior-card:hover .interior-plus {
+  background: rgba(255, 255, 255, 0.18);
+  transform: rotate(90deg);
 }
 
-/* Lightbox */
+/* =========================================
+   STAGGERED IMAGE REVEAL
+========================================= */
+
+.interior-card-1 {
+  animation-delay: 0.05s;
+}
+
+.interior-card-2 {
+  animation-delay: 0.12s;
+}
+
+.interior-card-3 {
+  animation-delay: 0.19s;
+}
+
+.interior-card-4 {
+  animation-delay: 0.26s;
+}
+
+.interior-card-5 {
+  animation-delay: 0.33s;
+}
+
+.interior-card-6 {
+  animation-delay: 0.40s;
+}
+
+.interior-card-7 {
+  animation-delay: 0.47s;
+}
+
+.interior-card-8 {
+  animation-delay: 0.54s;
+}
+
+.interior-card-9 {
+  animation-delay: 0.61s;
+}
+
+@keyframes interiorReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   LIGHTBOX
+========================================= */
 
 .interior-lightbox {
   position: fixed;
@@ -126,69 +236,138 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 70px 30px 30px;
+  padding: 60px;
   box-sizing: border-box;
+  animation: interiorLightboxIn 0.35s ease;
 }
 
 .interior-lightbox img {
   max-width: 92%;
-  max-height: 82vh;
+  max-height: 86vh;
   width: auto;
   height: auto;
   object-fit: contain;
-}
-
-.interior-lightbox-title {
-  color: #fff;
-  font-size: 16px;
-  margin-top: 18px;
+  display: block;
 }
 
 .interior-close {
   position: absolute;
-  top: 22px;
-  right: 30px;
-  border: none;
+  top: 25px;
+  right: 32px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   background: transparent;
   color: #fff;
-  font-size: 40px;
+  border-radius: 50%;
+  font-size: 27px;
   font-weight: 300;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-/* Responsive */
+.interior-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.interior-lightbox-title {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+@keyframes interiorLightboxIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width: 768px) {
   .interior-section {
-    padding: 70px 5% 80px;
+    padding: 55px 20px 80px;
   }
 
   .interior-heading {
-    margin-bottom: 35px;
-  }
-
-  .interior-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .interior-card,
-  .interior-card-1,
-  .interior-card-4 {
-    height: 300px;
+    margin-bottom: 32px;
   }
 
   .interior-heading h2 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   .interior-heading p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .interior-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .interior-card {
+    height: 230px;
   }
 
   .interior-card-overlay {
-    padding: 18px;
-    font-size: 15px;
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+    font-size: 11px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .interior-plus {
+    width: 25px;
+    height: 25px;
+    font-size: 17px;
+  }
+
+  .interior-lightbox {
+    padding: 25px;
+  }
+
+  .interior-lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  .interior-close {
+    top: 15px;
+    right: 15px;
+  }
+
+  .interior-lightbox-title {
+    bottom: 18px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .interior-card,
+  .interior-card img,
+  .interior-card-overlay,
+  .interior-plus {
+    animation: none;
+    transition: none;
   }
 }
