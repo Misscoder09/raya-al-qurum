@@ -17,6 +17,7 @@ import FreeholdOwnership from "./components/FreeholdOwnership";
 import ResidencyEligibility from "./components/ResidencyEligibility";
 import FAQs from "./components/FAQs";
 import Interior from "./components/Interior";
+import FloorPlans from "./components/FloorPlans";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -400,64 +401,10 @@ function App() {
   <AmenitiesGallery />
   <Videos />
 </section>
-        {/* ================= FLOOR PLANS ================= */}
+        
+{/* ================= FLOOR PLANS ================= */}
 
-<section className="floor-plans section" id="floor-plans">
-
-  <div className="section-top">
-    <div>
-      <div className="eyebrow dark-eyebrow">
-        <span></span>
-        FLOOR PLANS
-      </div>
-
-      <h2>
-        Spaces designed
-        <br />
-        around <i>life.</i>
-      </h2>
-    </div>
-
-    <p>
-      Explore thoughtfully planned layouts created
-      for comfort, functionality and modern living.
-    </p>
-  </div>
-
-  <div className="floor-plan-grid">
-
-    <div className="floor-plan-card">
-      <span>01</span>
-      <h3>1 BHK Floor Plan</h3>
-      <p>Efficiently planned for contemporary urban living.</p>
-      <a href="#1bhk">View 1 BHK ↗</a>
-    </div>
-
-    <div className="floor-plan-card">
-      <span>02</span>
-      <h3>2 BHK Floor Plan</h3>
-      <p>Spacious planning designed for comfortable family living.</p>
-      <a href="#2bhk">View 2 BHK ↗</a>
-    </div>
-
-    <div className="floor-plan-card">
-      <span>03</span>
-      <h3>2 BHK + Study</h3>
-      <p>Flexible spaces designed for work and everyday life.</p>
-      <a href="#2bhk-study">View Layout ↗</a>
-    </div>
-
-    <div className="floor-plan-card">
-      <span>04</span>
-      <h3>3 BHK Floor Plan</h3>
-      <p>Generous layouts created for elevated family living.</p>
-      <a href="#3bhk">View 3 BHK ↗</a>
-    </div>
-
-  </div>
-
-</section>
-
+<FloorPlans />
 
         {/* ================= AMENITIES ================= */}
         <Amenities />

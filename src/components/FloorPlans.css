@@ -1,0 +1,476 @@
+
+/* =========================================
+   RAYA AL QURUM — FLOOR PLANS
+   Cream Pink Luxury Design
+========================================= */
+
+.floor-plans-section {
+  width: 100%;
+  background: #f3e7df;
+  color: #1b1a17;
+  padding: 90px 6% 95px;
+  box-sizing: border-box;
+  scroll-margin-top: 110px;
+}
+
+.floor-plans-inner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HERO — TEXT LEFT / IMAGE RIGHT
+========================================= */
+
+.floor-plans-hero {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 55px;
+  margin-bottom: 70px;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.floor-plans-heading {
+  text-align: left;
+  max-width: 470px;
+  margin: 0;
+}
+
+.floor-plans-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  color: #a77b3d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+}
+
+.floor-plans-eyebrow span {
+  width: 38px;
+  height: 1px;
+  background: #a77b3d;
+  flex-shrink: 0;
+}
+
+.floor-plans-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 4vw, 60px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin: 0 0 22px;
+}
+
+.floor-plans-heading h2 em {
+  color: #a77b3d;
+  font-style: italic;
+}
+
+.floor-plans-heading p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #76645b;
+  max-width: 390px;
+  margin: 0;
+}
+
+/* =========================================
+   ORIGINAL FLOOR PLAN IMAGE
+   NO BOX / NO BORDER
+========================================= */
+
+.floor-plan-image-wrapper {
+  width: 100%;
+  max-width: 700px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.floor-plan-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* =========================================
+   APARTMENT TYPES HEADING
+========================================= */
+
+.floor-plans-subheading {
+  text-align: center;
+  margin: 0 0 28px;
+}
+
+.floor-plans-subheading .floor-plans-eyebrow {
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.floor-plans-subheading h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.floor-plans-subheading p {
+  font-family: "DM Sans", sans-serif;
+  color: #76645b;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================================
+   4 COMPACT CARDS — ONE ROW
+========================================= */
+
+.floor-plans-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+/* CARD */
+
+.floor-plan-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 20px 18px 21px;
+  border: 1px solid rgba(167, 123, 61, 0.3);
+  border-radius: 18px;
+  background: rgba(255, 250, 247, 0.55);
+  text-decoration: none;
+  color: #1b1a17;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* TOP NUMBER + ARROW */
+
+.floor-plan-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.floor-plan-number {
+  font-family: "DM Sans", sans-serif;
+  color: #a77b3d;
+  font-size: 10px;
+  letter-spacing: 2px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.floor-plan-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c5a16f;
+  border-radius: 50%;
+  color: #a77b3d;
+  font-size: 15px;
+  flex-shrink: 0;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* CARD CONTENT */
+
+.floor-plan-card-content {
+  display: block;
+  min-width: 0;
+}
+
+.floor-plan-card h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  margin: 0 0 10px;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.floor-plan-card p {
+  font-family: "DM Sans", sans-serif;
+  color: #76645b;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  max-width: 100%;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.floor-plan-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "DM Sans", sans-serif;
+  color: #a77b3d;
+  font-size: 11px;
+  white-space: nowrap;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.floor-plan-link span {
+  margin-left: 0;
+  transition: transform 0.35s ease;
+}
+
+/* =========================================
+   LUXURY HOVER EFFECT
+========================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .floor-plan-card:hover {
+    background: #fffaf7;
+    border-color: #a77b3d;
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(100, 65, 45, 0.09);
+  }
+
+  .floor-plan-card:hover .floor-plan-number {
+    transform: translateX(3px);
+  }
+
+  .floor-plan-card:hover .floor-plan-arrow {
+    background: #a77b3d;
+    color: #fff;
+    transform: rotate(45deg);
+  }
+
+  .floor-plan-card:hover h4 {
+    color: #a77b3d;
+    transform: translateX(3px);
+  }
+
+  .floor-plan-card:hover p {
+    transform: translateX(3px);
+  }
+
+  .floor-plan-card:hover .floor-plan-link {
+    transform: translateX(3px);
+  }
+
+  .floor-plan-card:hover .floor-plan-link span {
+    transform: translateX(4px);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .floor-plans-hero {
+    gap: 35px;
+  }
+
+  .floor-plans-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .floor-plan-card {
+    padding: 22px 24px;
+  }
+
+  .floor-plan-card h4 {
+    font-size: 27px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .floor-plans-section {
+    padding: 70px 5% 75px;
+  }
+
+  .floor-plans-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 55px;
+  }
+
+  .floor-plans-heading {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .floor-plans-heading .floor-plans-eyebrow {
+    justify-content: center;
+  }
+
+  .floor-plans-heading p {
+    margin: 0 auto;
+  }
+
+  .floor-plan-image-wrapper {
+    max-width: 700px;
+  }
+
+  .floor-plans-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .floor-plan-card {
+    padding: 22px 24px;
+    border-radius: 16px;
+  }
+
+  .floor-plan-card-top {
+    margin-bottom: 14px;
+  }
+
+  .floor-plan-card h4 {
+    font-size: 28px;
+  }
+
+  .floor-plan-card p {
+    max-width: 330px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .floor-plans-heading h2 {
+    font-size: 38px;
+    letter-spacing: -0.5px;
+  }
+
+  .floor-plan-card {
+    padding: 20px;
+  }
+
+  .floor-plan-card h4 {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================================
+   FLOOR PLANS — REDUCE TOP EMPTY SPACE
+========================================= */
+
+.floor-plans-section {
+  padding-top: 30px !important;
+  padding-bottom: 70px !important;
+}
+
+.floor-plans-hero {
+  align-items: center !important;
+  gap: 35px !important;
+  margin-bottom: 45px !important;
+}
+
+/* Text ko thora upar */
+
+.floor-plans-heading {
+  transform: translateY(-5px);
+}
+
+/* Image ko compact aur upar rakho */
+
+.floor-plan-image-wrapper {
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+.floor-plan-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Cards heading ki extra space kam */
+
+.floor-plans-subheading {
+  margin-bottom: 22px !important;
+}
+
+/* Desktop par top spacing */
+
+@media (min-width: 901px) {
+  .floor-plans-hero {
+    min-height: 0 !important;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .floor-plans-section {
+    padding-top: 55px !important;
+  }
+
+  .floor-plans-heading {
+    transform: none;
+  }
+
+  .floor-plans-hero {
+    gap: 25px !important;
+    margin-bottom: 40px !important;
+  }
+}
+
+
+
+/* Arrow stays in original direction */
+
+.floor-plan-card:hover .floor-plan-arrow {
+  transform: none !important;
+  background: #a77b3d;
+  color: #fff;
+}
