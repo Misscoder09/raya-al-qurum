@@ -160,11 +160,11 @@ const residences = [
   description:
     "A generously planned three-bedroom residence offering spacious bedrooms, refined living and dining areas, and thoughtfully arranged utility and balcony spaces for comfortable contemporary living.",
   area: "123.35 SQ.M.",
-  price: "OMR 101,764",
+  price: "OMR 106,851.94",
   bedrooms: "3",
   baths: "3",
   utility: "1",
-  balcony: "1",
+  balconies: "1",
   unitLayout: "/images/Residences/F4-3BHK-unit-layout.png",
   layoutDetails: "/images/Residences/F4-3BHK-layout-details.png",
 
@@ -806,7 +806,7 @@ function ResidenceDetails({ residence, onClose }) {
 
           <div className="unit-row-detail">
             <span>BATHROOM</span>
-            <strong>—</strong>
+            <strong>3</strong>
           </div>
 
           <div className="unit-row-price">
@@ -1194,7 +1194,10 @@ function ResidenceDetails({ residence, onClose }) {
   </section>
 )}
 
-        <header id="f2-detail" className="details-header">
+        <header
+  id={`${residence.unit.toLowerCase()}-detail`}
+  className="details-header"
+>
           <div className="details-title">
             <span>RAYA AL QURUM · RESIDENCES</span>
 
@@ -1343,8 +1346,7 @@ function ResidenceDetails({ residence, onClose }) {
 
     <div className="feature-info">
       <strong>{residence.balconies}</strong>
-      <span>BALCONIES</span>
-    </div>
+<span>{residence.unit === "F4" ? "BALCONY" : "BALCONIES"}</span>    </div>
   </div>
 
 </div>
@@ -1394,8 +1396,8 @@ function ResidenceDetails({ residence, onClose }) {
           </div>
 
           <div className="detail-reveal">
-            <span>Balconies</span>
-<strong>{residence.balconies}</strong>    
+           <span>{residence.unit === "F4" ? "Balcony" : "Balconies"}</span>
+<strong>{residence.balconies}</strong>   
       </div>
         </section>
 )}
@@ -1462,8 +1464,10 @@ function ResidenceDetails({ residence, onClose }) {
               </div>
 
               <div>
-                <strong>{residence.balconies}</strong>
-                <span>BALCONIES</span>
+               <strong>{residence.balconies}</strong>
+<span>
+  {residence.unit === "F4" ? "BALCONY" : "BALCONIES"}
+</span>
               </div>
             </div>
           </div>
@@ -1710,8 +1714,10 @@ function ResidenceDetails({ residence, onClose }) {
         F15 · UNIT HEADER
     ========================= */}
 
-    <section className="details-header f15-unit-header">
-
+<section
+  id="f15-detail"
+  className="details-header f15-unit-header"
+>
       <div className="details-title">
         <span>RAYA AL QURUM · RESIDENCES</span>
 
@@ -2151,7 +2157,7 @@ function ResidenceDetails({ residence, onClose }) {
 
             <div className="sales-info-item">
               <span>INDICATIVE PRICE</span>
-              <strong>OMR 101,764</strong>
+              <strong>OMR 106,851.94</strong>
             </div>
 
           </div>
@@ -2210,8 +2216,10 @@ function ResidenceDetails({ residence, onClose }) {
         F10 · UNIT HEADER
     ========================= */}
 
-    <section className="details-header f10-unit-header">
-
+<section
+  id="f10-detail"
+  className="details-header f10-unit-header"
+>
       <div className="details-title">
 
         <span>RAYA AL QURUM · RESIDENCES</span>
@@ -2408,7 +2416,7 @@ function ResidenceDetails({ residence, onClose }) {
         <small>INDICATIVE SELLING PRICE</small>
 
         <strong>
-          OMR 95,962.500
+          OMR 100,760.625
         </strong>
 
       </div>
@@ -2456,8 +2464,8 @@ function ResidenceDetails({ residence, onClose }) {
           </div>
 
           <div>
-            <strong>127.95</strong>
-            <span>SQ.M.</span>
+            <strong>_</strong>
+            <span>utility</span>
           </div>
 
         </div>
@@ -2529,7 +2537,7 @@ function ResidenceDetails({ residence, onClose }) {
 
             <div className="sales-info-item">
               <span>INDICATIVE PRICE</span>
-              <strong>OMR 95,962.500</strong>
+              <strong>OMR 100,760.625</strong>
             </div>
 
           </div>
@@ -2584,7 +2592,7 @@ function ResidenceDetails({ residence, onClose }) {
 
   <div>
     <span>INDICATIVE PRICE</span>
-    <strong>OMR 95,962.500</strong>
+    <strong>OMR 100,760.625</strong>
   </div>
 
 </section>
