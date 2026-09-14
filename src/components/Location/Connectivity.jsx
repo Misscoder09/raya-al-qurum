@@ -21,6 +21,10 @@ const Connectivity = () => {
         <span className="heading-line"></span>
       </div>
 
+      <div className="nearby-landmarks-heading">
+  <h3>NEARBY LANDMARKS</h3>
+</div>
+
 
       {/* =================================
           MAIN LOCATION LAYOUT

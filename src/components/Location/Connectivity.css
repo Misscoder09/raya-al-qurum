@@ -57,6 +57,39 @@
   text-align: center;
 }
 
+/* =========================================================
+   NEARBY LANDMARKS SUB HEADING
+========================================================= */
+
+.nearby-landmarks-heading {
+  width: 100%;
+  margin: -25px auto 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.nearby-landmarks-heading h3 {
+  margin: 0;
+
+  color: #9b7047;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: 1.3px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
 
 /* =========================================================
    MAIN LOCATION LAYOUT
@@ -699,7 +732,15 @@
 
     letter-spacing: 0.9px;
   }
+  .nearby-landmarks-heading {
+    margin: -20px auto 30px;
+  }
 
+  .nearby-landmarks-heading h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  
   .location-layout {
     display: flex;
 

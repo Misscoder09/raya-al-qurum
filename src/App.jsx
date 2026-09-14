@@ -18,6 +18,7 @@ import ResidencyEligibility from "./components/ResidencyEligibility";
 import FAQs from "./components/FAQs";
 import Interior from "./components/Interior";
 import FloorPlans from "./components/FloorPlans";
+import Map from "./components/Location/Map";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -87,7 +88,7 @@ function App() {
         <a href="#al-qurum" onClick={() => setMenuOpen(false)}>
           Al Qurum
         </a>
-        <a href="#nearby-landmarks" onClick={() => setMenuOpen(false)}>
+        <a href="#connectivity" onClick={() => setMenuOpen(false)}>
           Nearby Landmarks
         </a>
         <a href="#connectivity" onClick={() => setMenuOpen(false)}>
@@ -222,7 +223,7 @@ function App() {
 
     <div className="submenu">
       <a href="#al-qurum">Al Qurum</a>
-      <a href="#nearby-landmarks">Nearby Landmarks</a>
+      <a href="#connectivity">Nearby Landmarks</a>
       <a href="#connectivity">Connectivity</a>
       <a href="#map">Map</a>
     </div>
@@ -411,11 +412,13 @@ function App() {
 
 
 
-{/* ================= AL QURUM ================= */}
-<AlQurum />
-<Connectivity />
+{/* ================= LOCATION ================= */}
+<section id="location" className="location-wrapper">
+  <AlQurum />
+  <Connectivity />
+</section>
 
-
+<Map />
         
 
 
