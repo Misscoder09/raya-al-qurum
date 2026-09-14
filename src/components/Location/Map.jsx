@@ -2,12 +2,12 @@ import "./Map.css";
 
 function Map() {
   return (
-    <section className="map-page" id="map">
-      <div className="map-page-inner">
+    <section className="raya-map-page" id="map">
+      <div className="raya-map-page-inner">
 
         {/* HEADER */}
-        <div className="map-page-heading">
-          <div className="map-label">
+        <div className="raya-map-page-heading">
+          <div className="raya-map-label">
             <span></span>
             MAP
             <span></span>
@@ -24,22 +24,21 @@ function Map() {
         </div>
 
         {/* LOCATION CARDS */}
-        <div className="map-location-grid">
+        <div className="raya-map-location-grid">
 
           {/* OFFICE CARD */}
-          <article className="map-location-card">
+          <article className="raya-map-location-card">
 
-            <div className="map-card-top">
-              <div className="map-pin">
-              </div>
+            <div className="raya-map-card-top">
+              <div className="raya-map-pin"></div>
 
-              <div className="map-card-number">
+              <div className="raya-map-card-number">
                 01 <span></span>
               </div>
             </div>
 
-            <div className="map-card-body">
-              <div className="map-card-text">
+            <div className="raya-map-card-body">
+              <div className="raya-map-card-text">
                 <h2>
                   Raya Al Qurum
                   <br />
@@ -55,19 +54,19 @@ function Map() {
                   href="https://maps.app.goo.gl/tThn4fVpPUw3zjec6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="map-card-link"
+                  className="raya-map-card-link"
                 >
                   View Office Location
                   <span>↗</span>
                 </a>
               </div>
 
-              <div className="map-preview office-preview">
-                <div className="map-road road-one"></div>
-                <div className="map-road road-two"></div>
-                <div className="map-road road-three"></div>
-                <div className="map-water"></div>
-                <div className="map-marker">●</div>
+              <div className="raya-map-preview raya-map-office-preview">
+                <div className="raya-map-road raya-road-one"></div>
+                <div className="raya-map-road raya-road-two"></div>
+                <div className="raya-map-road raya-road-three"></div>
+                <div className="raya-map-water"></div>
+                <div className="raya-map-marker">●</div>
                 <small>Office</small>
               </div>
             </div>
@@ -75,19 +74,18 @@ function Map() {
           </article>
 
           {/* PLOT CARD */}
-          <article className="map-location-card">
+          <article className="raya-map-location-card">
 
-            <div className="map-card-top">
-              <div className="map-pin">
-              </div>
+            <div className="raya-map-card-top">
+              <div className="raya-map-pin"></div>
 
-              <div className="map-card-number">
+              <div className="raya-map-card-number">
                 02 <span></span>
               </div>
             </div>
 
-            <div className="map-card-body">
-              <div className="map-card-text">
+            <div className="raya-map-card-body">
+              <div className="raya-map-card-text">
                 <h2>
                   Raya Al Qurum
                   <br />
@@ -103,19 +101,19 @@ function Map() {
                   href="https://www.google.com/maps/place/23%C2%B036'01.2%22N+58%C2%B030'04.6%22E/@23.6003189,58.5014862,409m/data=!3m1!1e3!4m4!3m3!8m2!3d23.600322!4d58.501286?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="map-card-link"
+                  className="raya-map-card-link"
                 >
                   View Plot Location
                   <span>↗</span>
                 </a>
               </div>
 
-              <div className="map-preview plot-preview">
-                <div className="map-road road-one"></div>
-                <div className="map-road road-two"></div>
-                <div className="map-road road-three"></div>
-                <div className="map-water"></div>
-                <div className="map-marker">●</div>
+              <div className="raya-map-preview raya-map-plot-preview">
+                <div className="raya-map-road raya-road-one"></div>
+                <div className="raya-map-road raya-road-two"></div>
+                <div className="raya-map-road raya-road-three"></div>
+                <div className="raya-map-water"></div>
+                <div className="raya-map-marker">●</div>
                 <small>Plot Location</small>
               </div>
             </div>

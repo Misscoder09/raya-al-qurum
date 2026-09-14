@@ -27,7 +27,6 @@ const ContactDetails = () => {
           </p>
         </div>
 
-
         {/* ================= THREE MAIN CARDS ================= */}
         <div className="contact-details-grid">
 
@@ -61,7 +60,7 @@ const ContactDetails = () => {
 
                 <a href="tel:+96879929990">
                   <span>Phone Number</span>
-                   7992 9990
+                  7992 9990
                 </a>
 
                 <a
@@ -86,7 +85,6 @@ const ContactDetails = () => {
               </div>
             )}
           </div>
-
 
           {/* ================= FIND US CARD ================= */}
           <div
@@ -139,7 +137,6 @@ const ContactDetails = () => {
                   </a>
                 </div>
 
-
                 <div className="location-detail">
                   <span>Raya Al Qurum Plot Location</span>
 
@@ -161,7 +158,6 @@ const ContactDetails = () => {
               </div>
             )}
           </div>
-
 
           {/* ================= OFFICE CARD ================= */}
           <div
@@ -220,7 +216,6 @@ const ContactDetails = () => {
           </div>
 
         </div>
-
 
         {/* ================= FOLLOW US ================= */}
         <div

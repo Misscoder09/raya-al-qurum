@@ -1,69 +1,54 @@
 /* =====================================================
-   RAYA AL QURUM — MAP PAGE
-===================================================== */
+   RAYA AL QURUM — UNIQUE MAP PAGE
+   ===================================================== */
 
-.map-page {
+.raya-map-page {
   width: 100%;
-  background: #fbf8f1;
-  color: #171513;
   padding: 32px 6% 65px;
   box-sizing: border-box;
+  background: #fbf8f1;
+  color: #171513;
   scroll-margin-top: 100px;
 }
 
-.map-page-inner {
+.raya-map-page-inner {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
 }
 
-/* =====================================================
-   PAGE HEADING
-===================================================== */
-
-.map-page-heading {
+.raya-map-page-heading {
   max-width: 950px;
   margin: 0 auto 34px;
   text-align: center;
 }
 
-/* =====================================================
-   MAP LABEL
-===================================================== */
-
-.map-label {
+.raya-map-label {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 11px;
   margin: 0 0 15px;
-
-  color: #aa7d3c !important;
-  font-family: "Playfair Display", serif !important;
-  font-size: 25px !important;
-  font-weight: 500 !important;
+  color: #aa7d3c;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 500;
   letter-spacing: 3px;
   line-height: 1.2;
-  text-align: center;
 }
 
-.map-label span {
+.raya-map-label span {
   display: block;
   width: 5px;
   height: 5px;
   min-width: 5px;
   border-radius: 50%;
-  background: #aa7d3c !important;
+  background: #aa7d3c;
 }
 
-/* =====================================================
-   MAIN PAGE HEADING
-===================================================== */
-
-.map-page-heading h1 {
+.raya-map-page-heading h1 {
   margin: 0;
   color: #171513;
-
   font-family: "Playfair Display", serif;
   font-size: clamp(44px, 5vw, 68px);
   font-weight: 500;
@@ -71,53 +56,43 @@
   letter-spacing: -1.5px;
 }
 
-.map-page-heading h1 em {
-  display: inline;
+.raya-map-page-heading h1 em {
   color: #aa7d3c;
   font-style: normal;
 }
 
-.map-page-heading p {
+.raya-map-page-heading p {
   max-width: 760px;
   margin: 17px auto 0;
-
   color: #6d665d;
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
   line-height: 1.65;
 }
 
-/* =====================================================
-   CARDS GRID
-===================================================== */
+/* GRID */
 
-.map-location-grid {
+.raya-map-location-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px;
   align-items: stretch;
 }
 
-/* =====================================================
-   LOCATION CARD
-===================================================== */
+/* CARDS */
 
-.map-location-card {
+.raya-map-location-card {
   position: relative;
   min-width: 0;
   min-height: 300px;
   overflow: hidden;
-
   padding: 28px 30px;
-
   border: 1px solid #c69a58;
   border-radius: 27px;
-
   background: #fbf8f1;
   color: #171513;
-
+  box-sizing: border-box;
   box-shadow: 0 10px 26px rgba(70, 48, 20, 0.04);
-
   transition:
     background 0.35s ease,
     color 0.35s ease,
@@ -126,45 +101,30 @@
     box-shadow 0.35s ease;
 }
 
-.map-location-card:hover {
+.raya-map-location-card:hover {
   background: #171513;
   color: #ffffff;
   border-color: #171513;
-
   transform: translateY(-4px);
-
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.16);
 }
 
-/* =====================================================
-   CARD TOP
-===================================================== */
+/* CARD TOP */
 
-.map-card-top {
+.raya-map-card-top {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   margin-bottom: 22px;
 }
 
-/* =====================================================
-   REMOVE GOLD CIRCLE
-===================================================== */
-
-/* Circle completely remove */
-.map-pin {
-  display: none !important;
+.raya-map-pin {
+  display: none;
 }
 
-/* =====================================================
-   CARD NUMBER
-===================================================== */
-
-.map-card-number {
+.raya-map-card-number {
   display: flex;
   align-items: center;
-
   color: #aa7d3c;
   font-family: "DM Sans", sans-serif;
   font-size: 13px;
@@ -172,394 +132,236 @@
   letter-spacing: 3px;
 }
 
-/* 01 / 02 ke saath wali lines completely remove */
-.map-card-number span {
-  display: none !important;
+.raya-map-card-number span {
+  display: none;
 }
 
-/* =====================================================
-   CARD BODY
-===================================================== */
+/* CARD BODY */
 
-.map-card-body {
+.raya-map-card-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 145px;
-
   align-items: center;
   gap: 24px;
 }
 
-.map-card-text {
+.raya-map-card-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   min-width: 0;
   text-align: left;
 }
 
-/* =====================================================
-   CARD MAIN HEADING
-===================================================== */
-
-.map-card-text h2 {
+.raya-map-card-text h2 {
   margin: 0 0 14px;
-
   color: #171513;
   font-family: "Playfair Display", serif;
-
   font-size: clamp(26px, 2.4vw, 34px);
   font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.5px;
-
   transition: color 0.35s ease;
 }
 
-/* Main heading gold on hover */
-.map-location-card:hover .map-card-text h2 {
+.raya-map-location-card:hover .raya-map-card-text h2 {
   color: #c9a66d;
 }
 
-/* =====================================================
-   CARD PARAGRAPH
-===================================================== */
-
-.map-card-text p {
+.raya-map-card-text p {
   max-width: 360px;
   margin: 0 0 21px;
-
   color: #6d665d;
   font-family: "DM Sans", sans-serif;
-
   font-size: 13px;
   line-height: 1.7;
-
   transition: color 0.35s ease;
 }
 
-/* Paragraph white on hover */
-.map-location-card:hover .map-card-text p {
+.raya-map-location-card:hover .raya-map-card-text p {
   color: #ffffff;
 }
 
-/* =====================================================
-   CARD LINK
-===================================================== */
+/* LINK */
 
-.map-card-link {
+.raya-map-card-link {
   display: inline-flex;
   align-items: center;
   gap: 20px;
-
   padding-bottom: 8px;
-
   border-bottom: 1px solid #aa7d3c;
-
   color: #aa7d3c;
   font-family: "DM Sans", sans-serif;
-
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
-
-  transition:
-    color 0.35s ease,
-    border-color 0.35s ease;
 }
 
-.map-card-link span {
+.raya-map-card-link span {
   font-size: 17px;
   transition: transform 0.35s ease;
 }
 
-.map-card-link:hover span {
+.raya-map-card-link:hover span {
   transform: translateX(4px);
 }
 
-/* Link white on black hover card */
-.map-location-card:hover .map-card-link {
+.raya-map-location-card:hover .raya-map-card-link {
   color: #ffffff;
   border-color: #c9a66d;
 }
 
-/* =====================================================
-   MAP PREVIEW
-===================================================== */
+/* MAP PREVIEW */
 
-.map-preview {
+.raya-map-preview {
   position: relative;
   width: 100%;
   height: 170px;
   overflow: hidden;
-
   border: 1px solid #d7bd91;
   border-radius: 21px;
-
   background:
-    linear-gradient(
-      135deg,
-      #eee6d6 25%,
-      transparent 25%
-    ) 0 0 / 35px 35px,
-
-    linear-gradient(
-      315deg,
-      #e0d3bc 25%,
-      transparent 25%
-    ) 0 0 / 42px 42px,
-
+    linear-gradient(135deg, #eee6d6 25%, transparent 25%) 0 0 / 35px 35px,
+    linear-gradient(315deg, #e0d3bc 25%, transparent 25%) 0 0 / 42px 42px,
     #f7f0e4;
-
-  transition: border-color 0.35s ease;
 }
 
-.map-location-card:hover .map-preview {
-  border-color: #8b7658;
-}
-
-/* =====================================================
-   MAP WATER
-===================================================== */
-
-.map-water {
+.raya-map-water {
   position: absolute;
   top: -25px;
   right: -25px;
-
   width: 95px;
   height: 260px;
-
   background: #b8d4df;
   transform: rotate(18deg);
 }
 
-/* =====================================================
-   MAP ROADS
-===================================================== */
-
-.map-road {
+.raya-map-road {
   position: absolute;
   height: 2px;
-
   background: #ffffff;
   box-shadow: 0 0 0 1px #d4c6b0;
 }
 
-.road-one {
+.raya-road-one {
   width: 250px;
   top: 70px;
   left: -35px;
   transform: rotate(35deg);
 }
 
-.road-two {
+.raya-road-two {
   width: 260px;
   top: 115px;
   left: -30px;
   transform: rotate(-28deg);
 }
 
-.road-three {
+.raya-road-three {
   width: 240px;
   top: 145px;
   left: -25px;
   transform: rotate(12deg);
 }
 
-/* =====================================================
-   MAP MARKER
-===================================================== */
-
-.map-marker {
+.raya-map-marker {
   position: absolute;
   top: 50%;
   left: 48%;
-
   width: 29px;
   height: 29px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 5px solid rgba(170, 125, 60, 0.25);
   border-radius: 50%;
-
   background: #aa7d3c;
   color: #ffffff;
-
   font-size: 10px;
   transform: translate(-50%, -50%);
 }
 
-/* =====================================================
-   MAP PREVIEW LABEL
-===================================================== */
-
-.map-preview small {
+.raya-map-preview small {
   position: absolute;
   bottom: 11px;
   left: 11px;
-
   padding: 5px 8px;
-
   background: rgba(251, 248, 241, 0.92);
   color: #5f574d;
-
   font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 }
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* TABLET */
 
 @media (max-width: 1050px) {
-  .map-location-card {
+  .raya-map-location-card {
     padding: 27px;
   }
 
-  .map-card-body {
+  .raya-map-card-body {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .map-preview {
+  .raya-map-preview {
     height: 145px;
   }
 
-  .map-card-text h2 {
+  .raya-map-card-text h2 {
     font-size: 32px;
   }
 }
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media (max-width: 768px) {
-  .map-page {
+  .raya-map-page {
     padding: 34px 6% 55px;
   }
 
-  .map-page-heading {
-    margin-bottom: 30px;
-  }
-
-  .map-label {
-    font-size: 24px !important;
-    letter-spacing: 3px;
-    gap: 9px;
-  }
-
-  .map-label span {
-    width: 4px;
-    height: 4px;
-    min-width: 4px;
-  }
-
-  .map-page-heading h1 {
-    font-size: 46px;
-    letter-spacing: -1px;
-  }
-
-  .map-page-heading p {
-    font-size: 14px;
-  }
-
-  .map-location-grid {
+  .raya-map-location-grid {
     grid-template-columns: 1fr;
     gap: 22px;
   }
 
-  .map-location-card {
+  .raya-map-location-card {
     min-height: auto;
     padding: 26px;
     border-radius: 24px;
   }
 
-  .map-card-top {
-    margin-bottom: 20px;
-  }
-
-  .map-card-body {
+  .raya-map-card-body {
     grid-template-columns: 1fr 145px;
     gap: 18px;
   }
 
-  .map-card-text h2 {
-    font-size: 30px;
-  }
-
-  .map-card-text p {
-    font-size: 13px;
-  }
-
-  .map-preview {
+  .raya-map-preview {
     height: 160px;
   }
 }
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
 @media (max-width: 520px) {
-  .map-page {
+  .raya-map-page {
     padding: 30px 5% 48px;
   }
 
-  .map-page-heading {
-    margin-bottom: 26px;
-  }
-
-  .map-label {
-    font-size: 22px !important;
-    letter-spacing: 2.5px;
-  }
-
-  .map-page-heading h1 {
+  .raya-map-page-heading h1 {
     font-size: 40px;
-    letter-spacing: -0.8px;
   }
 
-  .map-page-heading p {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .map-location-card {
+  .raya-map-location-card {
     padding: 24px;
     border-radius: 22px;
   }
 
-  .map-card-top {
-    margin-bottom: 18px;
-  }
-
-  .map-card-body {
+  .raya-map-card-body {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .map-card-text h2 {
-    font-size: 29px;
-    line-height: 1.13;
-  }
-
-  .map-card-text p {
-    max-width: 100%;
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  .map-card-link {
-    font-size: 12px;
-  }
-
-  .map-preview {
+  .raya-map-preview {
     height: 165px;
     border-radius: 19px;
   }
