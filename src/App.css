@@ -1172,7 +1172,7 @@ footer {
 .footer-logo {
   width: 175px;
   padding: 7px 12px;
-  background: var(--cream);
+  background: transparent;
 }
 
 .footer-logo img {
