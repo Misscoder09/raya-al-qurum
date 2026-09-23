@@ -19,12 +19,57 @@ import FAQs from "./components/FAQs";
 import Interior from "./components/Interior";
 import FloorPlans from "./components/FloorPlans";
 import Map from "./components/Location/Map";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import AdminLogin from "./components/Admin/AdminLogin";
+import AdminDashboard from "./components/Admin/AdminDashboard";
+import { supabase } from "./database";
 
 function App() {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [session, setSession] = useState(null);
+  const [checkingSession, setCheckingSession] = useState(true);
 
+  useEffect(() => {
+    const getSession = async () => {
+      const { data } = await supabase.auth.getSession();
+
+      setSession(data.session);
+      setCheckingSession(false);
+    };
+
+    getSession();
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, currentSession) => {
+      setSession(currentSession);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  const isAdminPage = window.location.pathname === "/admin";
+
+  if (isAdminPage) {
+    if (checkingSession) {
+      return <div className="admin-loading">Loading...</div>;
+    }
+
+    if (session) {
+      return <AdminDashboard user={session.user} />;
+    }
+
+    return (
+      <AdminLogin
+        onLogin={(user) => {
+          setSession({ user });
+        }}
+      />
+    );
+  }
   return (
     <div className="site">
 

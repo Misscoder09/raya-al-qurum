@@ -10,6 +10,7 @@
   overflow: hidden;
 }
 
+
 /* =========================================================
    INNER
 ========================================================= */
@@ -20,6 +21,7 @@
   width: min(1380px, calc(100% - 80px));
   margin: 0 auto;
 }
+
 
 /* =========================================================
    HEADER
@@ -50,6 +52,83 @@
   height: 1px;
   background: #151411;
   flex-shrink: 0;
+}
+
+/* =========================================================
+   HEADER TEXT — SCROLL REVEAL
+========================================================= */
+
+.amenities-gallery-header .amenities-gallery-eyebrow,
+.amenities-gallery-header h2,
+.amenities-gallery-header .amenities-gallery-intro {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+
+/* GALLERY / AMENITIES */
+
+.amenities-gallery-header.header-visible
+  .amenities-gallery-eyebrow {
+  animation: amenitiesEyebrowReveal 1.2s ease-out forwards;
+}
+
+
+/* MAIN HEADING */
+
+.amenities-gallery-header.header-visible h2 {
+  animation: amenitiesHeadingReveal 1.4s
+    cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+
+/* DESCRIPTION */
+
+.amenities-gallery-header.header-visible
+  .amenities-gallery-intro {
+  animation: amenitiesIntroReveal 1.4s
+    cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+}
+
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+@keyframes amenitiesEyebrowReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes amenitiesHeadingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes amenitiesIntroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================================================
@@ -110,38 +189,31 @@
   line-height: 1.8;
 }
 
+
 /* =========================================================
-   SHOWCASE
+   AMENITIES SHOWCASE
+   4 IMAGES IN ONE ROW
 ========================================================= */
 
 .amenities-showcase {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* =========================================================
-   EACH GROUP
-   1 LARGE + 3 IMAGES
-========================================================= */
-
-.amenities-showcase-group {
   display: grid;
-
-  grid-template-columns: 1.55fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: 6px;
 
-  min-height: 0;
+  width: 100%;
 }
 
+
 /* =========================================================
-   IMAGE BOXES
+   AMENITY CARD
 ========================================================= */
 
-.amenity-featured,
-.amenity-small {
+.amenity-card {
   position: relative;
+
+  width: 100%;
+  height: 330px;
 
   overflow: hidden;
 
@@ -152,119 +224,58 @@
   cursor: pointer;
 
   line-height: 0;
-
   min-width: 0;
 
   transition: transform 0.35s ease;
 }
 
-.amenity-featured:hover,
-.amenity-small:hover {
+.amenity-card:hover {
   transform: translateY(-1px);
 }
 
+
 /* =========================================================
-   LARGE IMAGE
+   AMENITY IMAGE
 ========================================================= */
 
-.amenity-featured {
-  width: 100%;
-  height: 520px;
-
-  min-height: 0;
-}
-
-/*
-   IMPORTANT:
-   FILL = image completely fills the available box.
-   No crop.
-   No top/bottom blank space.
-*/
-
-.amenity-featured img {
+.amenity-card img {
   width: 100%;
   height: 100%;
 
   display: block;
 
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
 
   margin: 0;
   padding: 0;
-
-  transition:
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.amenity-featured:hover img {
-  transform: scale(1.015);
-}
-
-/* =========================================================
-   RIGHT SIDE
-   3 IMAGES
-========================================================= */
-
-.amenity-side-grid {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  grid-template-rows: 1fr 1fr;
-
-  gap: 6px;
-
-  min-height: 0;
-
-  height: 520px;
-}
-
-/* First right image spans complete width */
-
-.amenity-small:first-child {
-  grid-column: 1 / -1;
-}
-
-/* =========================================================
-   SMALL IMAGES
-========================================================= */
-
-.amenity-small {
-  width: 100%;
-  height: 100%;
-
-  min-height: 0;
-}
-
-.amenity-small img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
 
   /*
-     FULL IMAGE AREA
-     No crop
-     No blank area
+    Slightly dim by default.
+    Hover par image bright hogi.
   */
 
-  object-fit: fill;
-  object-position: center;
-
-  margin: 0;
-  padding: 0;
+  filter: brightness(0.51);
 
   transition:
+    filter 0.45s ease,
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.amenity-small:hover img {
+
+/* =========================================================
+   HOVER — IMAGE BECOMES BRIGHT
+========================================================= */
+
+.amenity-card:hover img {
+  filter: brightness(1);
   transform: scale(1.015);
 }
+
 
 /* =========================================================
    IMAGE CAPTION
+   ALWAYS VISIBLE
 ========================================================= */
 
 .amenity-image-caption {
@@ -274,7 +285,7 @@
   right: 0;
   bottom: 0;
 
-  padding: 55px 22px 20px;
+  padding: 65px 20px 20px;
 
   background:
     linear-gradient(
@@ -285,19 +296,13 @@
 
   pointer-events: none;
 
-  opacity: 0;
+  opacity: 1;
 
-  transform: translateY(8px);
+  transform: translateY(0);
 
   transition:
     opacity 0.35s ease,
     transform 0.35s ease;
-}
-
-.amenity-featured:hover .amenity-image-caption,
-.amenity-small:hover .amenity-image-caption {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .amenity-image-caption span {
@@ -307,13 +312,19 @@
 
   font-family: "Manrope", sans-serif;
 
-  font-size: 12px;
-  font-weight: 500;
+  /*
+    Client requested slightly bigger name
+  */
+  font-size: 16px;
+  font-weight: 600;
 
-  line-height: 1.4;
+  line-height: 1.35;
 
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
+
 
 /* =========================================================
    LIGHTBOX
@@ -352,13 +363,10 @@
 
   display: block;
 
-  /*
-     Lightbox mein image completely visible
-  */
-
   object-fit: contain;
   object-position: center;
 }
+
 
 /* =========================================================
    LIGHTBOX BUTTONS
@@ -396,7 +404,10 @@
   color: #151411;
 }
 
-/* CLOSE */
+
+/* =========================================================
+   CLOSE
+========================================================= */
 
 .amenities-lightbox-close {
   top: 28px;
@@ -410,7 +421,10 @@
   font-size: 26px;
 }
 
-/* PREVIOUS / NEXT */
+
+/* =========================================================
+   PREVIOUS / NEXT
+========================================================= */
 
 .amenities-lightbox-prev,
 .amenities-lightbox-next {
@@ -432,6 +446,7 @@
   right: 30px;
 }
 
+
 /* =========================================================
    TABLET
 ========================================================= */
@@ -445,6 +460,7 @@
   .amenities-gallery-inner {
     width: min(100% - 40px, 1380px);
   }
+
 
   /* HEADER */
 
@@ -460,34 +476,20 @@
     justify-self: start;
   }
 
-  /* GALLERY */
 
-  .amenities-showcase-group {
-    grid-template-columns: 1fr;
+  /* 2 IMAGES PER ROW */
+
+  .amenities-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 6px;
   }
 
-  /*
-     Featured becomes full width
-  */
-
-  .amenity-featured {
-    width: 100%;
-    height: 500px;
-  }
-
-  /*
-     Right images underneath
-  */
-
-  .amenity-side-grid {
-    width: 100%;
-    height: 360px;
-
-    min-height: 0;
+  .amenity-card {
+    height: 330px;
   }
 }
+
 
 /* =========================================================
    MOBILE
@@ -502,6 +504,7 @@
   .amenities-gallery-inner {
     width: calc(100% - 30px);
   }
+
 
   /* HEADER */
 
@@ -539,56 +542,18 @@
     line-height: 1.75;
   }
 
+
   /* =======================================================
      MOBILE GALLERY
   ======================================================= */
 
   .amenities-showcase {
-    gap: 6px;
-  }
-
-  .amenities-showcase-group {
     grid-template-columns: 1fr;
 
     gap: 6px;
   }
 
-  /* FEATURED */
-
-  .amenity-featured {
-    width: 100%;
-
-    height: auto;
-
-    aspect-ratio: 1.4 / 1;
-  }
-
-  .amenity-featured img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: fill;
-  }
-
-  /* RIGHT SIDE */
-
-  .amenity-side-grid {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    grid-template-rows: none;
-
-    gap: 6px;
-
-    width: 100%;
-
-    height: auto;
-
-    min-height: 0;
-  }
-
-  .amenity-small {
+  .amenity-card {
     width: 100%;
 
     height: auto;
@@ -596,24 +561,24 @@
     aspect-ratio: 1.35 / 1;
   }
 
-  .amenity-small:first-child {
-    grid-column: auto;
-  }
-
-  .amenity-small img {
+  .amenity-card img {
     width: 100%;
     height: 100%;
 
-    object-fit: fill;
+    object-fit: cover;
   }
 
-  /* CAPTIONS ALWAYS VISIBLE ON MOBILE */
+
+  /* CAPTION */
 
   .amenity-image-caption {
-    opacity: 1;
-
-    transform: translateY(0);
+    padding: 65px 18px 18px;
   }
+
+  .amenity-image-caption span {
+    font-size: 16px;
+  }
+
 
   /* =======================================================
      LIGHTBOX MOBILE

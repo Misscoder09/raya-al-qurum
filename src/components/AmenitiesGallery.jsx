@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./AmenitiesGallery.css";
 
 const amenities = [
@@ -71,7 +71,34 @@ const amenities = [
 export default function AmenitiesGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const closeLightbox = () => {
+  // Header scroll animation
+  const [headerVisible, setHeaderVisible] = useState(false);
+  const headerRef = useRef(null);
+
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setHeaderVisible(true);
+      } else {
+        setHeaderVisible(false);
+      }
+    },
+    {
+      threshold: 0.05,
+    }
+  );
+
+  if (headerRef.current) {
+    observer.observe(headerRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);  
+
+
+const closeLightbox = () => {
     setSelectedImage(null);
   };
 
@@ -100,13 +127,6 @@ export default function AmenitiesGallery() {
     setSelectedImage(amenities[nextIndex].image);
   };
 
-  /* 16 images → 4 groups of 4 */
-  const galleryGroups = [];
-
-  for (let i = 0; i < amenities.length; i += 4) {
-    galleryGroups.push(amenities.slice(i, i + 4));
-  }
-
   return (
     <>
       <section
@@ -119,7 +139,12 @@ export default function AmenitiesGallery() {
               HEADER
           ========================================= */}
 
-          <div className="amenities-gallery-header">
+          <div
+            ref={headerRef}
+            className={`amenities-gallery-header ${
+              headerVisible ? "header-visible" : ""
+            }`}
+          >
 
             <div className="amenities-gallery-eyebrow">
               <span></span>
@@ -149,64 +174,27 @@ export default function AmenitiesGallery() {
 
 
           {/* =========================================
-              GALLERY GROUPS
+              AMENITIES GRID — 4 IN A ROW
           ========================================= */}
 
           <div className="amenities-showcase">
 
-            {galleryGroups.map((group, groupIndex) => (
+            {amenities.map((amenity, index) => (
 
               <div
-                className="amenities-showcase-group"
-                key={groupIndex}
+                className="amenity-card"
+                key={amenity.image}
+                onClick={() => setSelectedImage(amenity.image)}
               >
 
-                {/* LARGE IMAGE */}
+                <img
+                  src={amenity.image}
+                  alt={amenity.title}
+                  loading={index < 4 ? "eager" : "lazy"}
+                />
 
-                <div
-                  className="amenity-featured"
-                  onClick={() =>
-                    setSelectedImage(group[0].image)
-                  }
-                >
-                  <img
-                    src={group[0].image}
-                    alt={group[0].title}
-                    loading={groupIndex === 0 ? "eager" : "lazy"}
-                  />
-
-                  <div className="amenity-image-caption">
-                    <span>{group[0].title}</span>
-                  </div>
-                </div>
-
-
-                {/* RIGHT SIDE — 3 IMAGES */}
-
-                <div className="amenity-side-grid">
-
-                  {group.slice(1).map((amenity) => (
-
-                    <div
-                      className="amenity-small"
-                      key={amenity.image}
-                      onClick={() =>
-                        setSelectedImage(amenity.image)
-                      }
-                    >
-                      <img
-                        src={amenity.image}
-                        alt={amenity.title}
-                        loading="lazy"
-                      />
-
-                      <div className="amenity-image-caption">
-                        <span>{amenity.title}</span>
-                      </div>
-                    </div>
-
-                  ))}
-
+                <div className="amenity-image-caption">
+                  <span>{amenity.title}</span>
                 </div>
 
               </div>
@@ -265,6 +253,7 @@ export default function AmenitiesGallery() {
 
         </div>
       )}
+
     </>
   );
 }

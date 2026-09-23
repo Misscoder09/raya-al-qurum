@@ -1,0 +1,667 @@
+
+/* =========================================
+   RAYA AL QURUM — ENQUIRY DASHBOARD
+   Clean Luxury Admin Panel
+========================================= */
+
+.admin-dashboard-section {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 42px 7% 45px;
+  background: #f5efe3;
+  color: #1b1a17;
+  font-family: inherit;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+  padding-bottom: 32px;
+}
+
+.admin-dashboard-heading {
+  min-width: 0;
+}
+
+.admin-dashboard-label {
+  margin: 0 0 13px;
+  color: #a77b3d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.admin-dashboard-header h1 {
+  margin: 0;
+  color: #171512;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 4.5vw, 62px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+/* Small gold accent */
+
+.admin-heading-line {
+  width: 40px;
+  height: 1px;
+  margin-top: 17px;
+  background: #b9955c;
+}
+
+.admin-dashboard-welcome {
+  margin: 15px 0 0;
+  color: #7c7163;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.admin-dashboard-email {
+  margin: 5px 0 0;
+  color: #a77b3d;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.admin-logout-button,
+.admin-refresh-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 12px 25px;
+  border: 1px solid #b9955c;
+  border-radius: 0;
+  background: transparent;
+  color: #1b1a17;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.admin-logout-button:hover,
+.admin-refresh-button:hover {
+  background: #a77b3d;
+  border-color: #a77b3d;
+  color: #ffffff;
+}
+
+.admin-logout-button:disabled,
+.admin-refresh-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.admin-logout-button:focus-visible,
+.admin-refresh-button:focus-visible {
+  outline: 2px solid #a77b3d;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   OVERVIEW CARDS
+========================================= */
+
+.admin-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.admin-overview-card {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  min-height: 132px;
+  box-sizing: border-box;
+  padding: 27px 30px;
+  background: #fbf8f1;
+  border: 1px solid rgba(167, 123, 61, 0.28);
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.admin-overview-card:hover {
+  border-color: rgba(167, 123, 61, 0.6);
+  background: #fffdf8;
+}
+
+/* Number box */
+
+.admin-overview-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  box-sizing: border-box;
+  border: 1px solid rgba(167, 123, 61, 0.5);
+  color: #a77b3d;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+}
+
+/* Stat information */
+
+.admin-overview-details {
+  min-width: 0;
+}
+
+.admin-overview-label {
+  margin: 0 0 9px;
+  color: #a77b3d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.admin-overview-details h3 {
+  margin: 0;
+  color: #1b1a17;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.admin-overview-note {
+  margin: 8px 0 0;
+  color: #8a7d6d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   MAIN ENQUIRIES CONTENT
+========================================= */
+
+.admin-dashboard-content {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 34px 36px 36px;
+  background: #fbf8f1;
+  border: 1px solid rgba(167, 123, 61, 0.28);
+}
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.admin-dashboard-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.admin-section-heading {
+  min-width: 0;
+}
+
+.admin-section-eyebrow {
+  margin: 0 0 10px;
+  color: #a77b3d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.admin-dashboard-title-row h2 {
+  margin: 0;
+  color: #1b1a17;
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.admin-section-description {
+  margin: 10px 0 0;
+  color: #8a7d6d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   REFRESH BUTTON
+========================================= */
+
+.admin-refresh-button {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.refresh-icon {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* =========================================
+   LOADING / ERROR
+========================================= */
+
+.admin-dashboard-message,
+.admin-dashboard-error {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 22px 24px;
+  background: #f5efe3;
+  border-left: 2px solid #b9955c;
+  color: #766e62;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.admin-dashboard-message p {
+  margin: 0;
+}
+
+.admin-dashboard-error {
+  border-left-color: #b54a3d;
+  background: rgba(181, 74, 61, 0.055);
+  color: #b54a3d;
+}
+
+/* Loading mark */
+
+.admin-loading-mark {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border: 2px solid rgba(167, 123, 61, 0.25);
+  border-top-color: #a77b3d;
+  border-radius: 50%;
+  animation: admin-loading-spin 0.8s linear infinite;
+}
+
+@keyframes admin-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.admin-empty-state {
+  padding: 48px 25px;
+  text-align: center;
+  background: #f5efe3;
+  border: 1px solid rgba(167, 123, 61, 0.16);
+}
+
+.admin-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 18px;
+  border: 1px solid rgba(167, 123, 61, 0.45);
+  color: #a77b3d;
+  font-size: 20px;
+}
+
+.admin-empty-state h3 {
+  margin: 0;
+  color: #1b1a17;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.admin-empty-state p {
+  max-width: 430px;
+  margin: 12px auto 0;
+  color: #8a7d6d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ENQUIRIES TABLE
+========================================= */
+
+.admin-enquiries-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(167, 123, 61, 0.25);
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-enquiries-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+  background: #fbf8f1;
+  font-size: 13px;
+}
+
+.admin-enquiries-table th {
+  padding: 16px 15px;
+  background: #25221d;
+  color: #f5efe3;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.admin-enquiries-table thead tr {
+  border-bottom: 2px solid #b9955c;
+}
+
+.admin-enquiries-table td {
+  padding: 17px 15px;
+  border-bottom: 1px solid rgba(27, 26, 23, 0.1);
+  color: #403a32;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.admin-enquiries-table tbody tr:nth-child(even) {
+  background: rgba(245, 239, 227, 0.48);
+}
+
+.admin-enquiries-table tbody tr:hover {
+  background: rgba(199, 165, 109, 0.1);
+}
+
+/* Date */
+
+.admin-enquiries-table td:first-child {
+  color: #8a6a3e;
+  white-space: nowrap;
+}
+
+.admin-date {
+  color: #8a6a3e;
+  white-space: nowrap;
+}
+
+/* Client name */
+
+.admin-client-name {
+  color: #1b1a17;
+  font-weight: 600;
+}
+
+/* Unit badge */
+
+.admin-unit-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid rgba(167, 123, 61, 0.35);
+  color: #8a6a3e;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* Message */
+
+.admin-enquiries-table td:nth-child(6) {
+  min-width: 230px;
+  max-width: 360px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.admin-message-text {
+  color: #766e62;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.admin-dashboard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 25px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(167, 123, 61, 0.25);
+}
+
+.admin-dashboard-footer p {
+  margin: 0;
+  color: #a77b3d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.admin-dashboard-footer span {
+  color: #8a7d6d;
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .admin-dashboard-section {
+    padding: 35px 5% 45px;
+  }
+
+  .admin-dashboard-header h1 {
+    font-size: 48px;
+  }
+
+  .admin-overview-card {
+    padding: 22px;
+    gap: 18px;
+  }
+
+  .admin-dashboard-content {
+    padding: 28px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .admin-dashboard-section {
+    min-height: 100vh;
+    padding: 30px 16px 35px;
+  }
+
+  .admin-dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    padding-bottom: 25px;
+  }
+
+  .admin-dashboard-header h1 {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+  }
+
+  .admin-dashboard-welcome {
+    font-size: 12px;
+  }
+
+  .admin-dashboard-email {
+    font-size: 12px;
+  }
+
+  .admin-logout-button {
+    min-height: 42px;
+    padding: 11px 22px;
+  }
+
+  .admin-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .admin-overview-card {
+    min-height: 112px;
+    padding: 22px;
+  }
+
+  .admin-overview-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .admin-overview-details h3 {
+    font-size: 29px;
+  }
+
+  .admin-dashboard-content {
+    padding: 24px 18px 25px;
+  }
+
+  .admin-dashboard-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .admin-dashboard-title-row h2 {
+    font-size: 29px;
+  }
+
+  .admin-refresh-button {
+    min-height: 42px;
+    padding: 11px 22px;
+  }
+
+  .admin-dashboard-message,
+  .admin-dashboard-error {
+    padding: 18px;
+    font-size: 12px;
+  }
+
+  .admin-empty-state {
+    padding: 35px 18px;
+  }
+
+  .admin-enquiries-table th {
+    padding: 14px 13px;
+  }
+
+  .admin-enquiries-table td {
+    padding: 15px 13px;
+  }
+
+  .admin-dashboard-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-logout-button,
+  .admin-refresh-button,
+  .admin-overview-card {
+    transition: none;
+  }
+
+  .admin-loading-mark {
+    animation: none;
+  }
+}
+
+/* =====================================
+   DELETE BUTTON
+===================================== */
+
+.admin-delete-button {
+  border: 1px solid rgba(125, 48, 42, 0.45);
+  background: transparent;
+  color: #8b3f36;
+  padding: 9px 15px;
+  border-radius: 3px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.admin-delete-button:hover {
+  background: #8b3f36;
+  color: #fffaf2;
+  border-color: #8b3f36;
+}
+
+.admin-delete-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-enquiries-table {
+  min-width: 1100px;
+}
+
+@media (max-width: 768px) {
+  .admin-delete-button {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .admin-enquiries-table {
+    min-width: 1000px;
+  }
+}

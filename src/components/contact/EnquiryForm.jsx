@@ -1,10 +1,39 @@
 import React from "react";
+import { supabase } from "../../database";
 import "./EnquiryForm.css";
 
 const EnquiryForm = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic can be added later
+
+    const formData = new FormData(e.target);
+
+    const fullName = formData.get("fullName");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const unitType = formData.get("unitType");
+    const message = formData.get("message");
+
+    const { error } = await supabase
+      .from("enquiries")
+      .insert([
+        {
+          full_name: fullName,
+          email: email,
+          phone: phone,
+          unit_type: unitType,
+          message: message,
+        },
+      ]);
+
+    if (error) {
+      console.error("Enquiry submission error:", error);
+      alert("Something went wrong. Please try again.");
+      return;
+    }
+
+    alert("Thank you! Your enquiry has been submitted successfully.");
+    e.target.reset();
   };
 
   return (
