@@ -64,12 +64,12 @@ const ContactDetails = () => {
                 </a>
 
                 <a
-                  href="https://wa.me/96879929990"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                 href="https://api.whatsapp.com/send?phone=96879929990"
+                 target="_blank"
+                 rel="noopener noreferrer"
                 >
-                  <span>WhatsApp</span>
-                  7992 9990
+                <span>WhatsApp</span>
+                   7992 9990
                 </a>
 
                 <a href="mailto:info@rayaqurum.com">
