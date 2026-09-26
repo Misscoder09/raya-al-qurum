@@ -20,41 +20,26 @@ const advantages = [
   },
   {
     number: "02",
-    title: "Lifestyle + Retail",
-    text: "Residential excellence with active commercial frontage.",
+    title: "Connected Lifestyle",
+    text: "A well-positioned address designed around modern urban living.",
   },
   {
     number: "03",
     title: "Low Price Per Sq. Meter",
     text: "One of the lowest per-square-meter rates in Muscat.",
   },
+ 
   {
     number: "04",
-    title: "ITC Positioning",
-    text: "Integrated Tourism Complex development in an established Muscat address.",
-  },
-  {
-    number: "05",
-    title: "Freehold Opportunity",
-    text: "Opportunities for international buyers subject to applicable regulations.",
-  },
-  {
-    number: "06",
-    title: "Residency Eligibility",
-    text: "Qualifying international property owners may benefit from residency eligibility.",
-  },
-  {
-    number: "07",
     title: "Rental ROI",
     text: "6–7% yearly rental ROI.",
   },
   {
-    number: "08",
+    number: "05",
     title: "Yearly Appreciation",
     text: "8–10% annually.",
   },
 ];
-
 
 
 export default function InvestmentAdvantages() {
@@ -253,7 +238,7 @@ export default function InvestmentAdvantages() {
               </h2>
 
               <p className="location-intro">
-                Connected. Established. Positioned for Growth.
+                A central address shaped by connectivity, lifestyle and prestige.
               </p>
 
             </div>
@@ -394,9 +379,9 @@ export default function InvestmentAdvantages() {
             </span>
 
             <h3>
-              An Address With Oman Residency
+               Ownership With
               <br />
-              Ownership for Family
+              Added Possibilities.
             </h3>
 
 
@@ -490,12 +475,12 @@ export default function InvestmentAdvantages() {
               <div className="mixed-card-content">
 
                 <h3>
-                  Retail Frontage
+                 Active Retail Frontage
                 </h3>
 
-                <p>
-                  Commercial activity at street level.
-                </p>
+                 <p>
+                  Everyday convenience within a connected urban setting.
+                 </p>
 
               </div>
 
@@ -508,13 +493,13 @@ export default function InvestmentAdvantages() {
 
               <div className="mixed-card-content">
 
-                <h3>
-                  Urban Convenience
-                </h3>
+              <h3>
+                 Everyday Convenience
+              </h3>
 
-                <p>
-                  Everyday lifestyle within an active city environment.
-                </p>
+              <p>
+                Essential lifestyle experiences within an active urban environment.
+              </p>
 
               </div>
 
@@ -643,8 +628,7 @@ export default function InvestmentAdvantages() {
 
                 <div>
                   <h3>Gathering Space</h3>
-                  <p>Meeting spaces &amp; Lobby areas available</p>
-                </div>
+                  <p>Thoughtfully designed spaces for connection and social moments.</p>                </div>
 
               </div>
 
@@ -693,7 +677,8 @@ export default function InvestmentAdvantages() {
 
                 <div>
                   <h3>Gaming Zones</h3>
-                  <p>Games for kids.</p>
+                  <p>Dedicated spaces for children's recreation and play.</p>
+                                  
                 </div>
 
               </div>
